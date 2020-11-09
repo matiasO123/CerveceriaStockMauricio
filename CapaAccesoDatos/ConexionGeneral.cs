@@ -1,8 +1,14 @@
 ﻿using System;
-using System.Data;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Data;
 using System.IO;
+using System.Data.Entity;
 using System.Windows.Forms;
+
 
 namespace CapaAccesoDatos
 {
@@ -30,6 +36,7 @@ namespace CapaAccesoDatos
             {
                 miConexion.Open();
                 SQLiteDataAdapter sqlda = new SQLiteDataAdapter(consulta, miConexion);
+                
                 sqlda.Fill(DS);
 
             }

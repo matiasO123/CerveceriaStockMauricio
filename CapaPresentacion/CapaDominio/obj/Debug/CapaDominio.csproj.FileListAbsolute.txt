@@ -1,0 +1,14 @@
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\x86\sqlite3.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\x64\sqlite3.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\CapaDominio.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\CapaDominio.pdb
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\System.Data.SQLite.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\System.Data.SQLite.xml
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\obj\Debug\CapaDominio.csprojAssemblyReference.cache
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\obj\Debug\CapaDominio.csproj.CoreCompileInputs.cache
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\obj\Debug\CapaDominio.csproj.CopyComplete
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\obj\Debug\CapaDominio.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\obj\Debug\CapaDominio.pdb

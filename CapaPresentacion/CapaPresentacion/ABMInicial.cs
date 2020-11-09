@@ -6,8 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
-using CapaAccesoDatos;
+using CapaDominio;
 
 namespace CapaPresentacion
 {
@@ -32,13 +33,15 @@ namespace CapaPresentacion
             comboBoxProveedor.SelectedIndex = 0;
             comboBoxTipo.Items.Insert(0, "Seleccionar el tipo");
             comboBoxTipo.SelectedIndex = 0;
-
-            //Configurando DataGrid
             
-            ConexionGeneral CG = new ConexionGeneral();
-            CG.DBCreator();
-            DS = CG.Consultor("");
+            //Configurando DataGrid
+            DataSet DS = new DataSet();
+            Stock stock = new Stock();
+            DS = stock.MostrarStock();
             dataGridView1.DataSource = DS.Tables[0];
+            dataGridView1.Columns["productoId"].Visible = false;
+            dataGridView1.Columns["productoPrecioCompra"].Visible = false;
+            dataGridView1.Columns["productoPrecioVenta"].Visible = false;
         }
 
         private void botonBuscar_Click(object sender, EventArgs e)
@@ -56,6 +59,49 @@ namespace CapaPresentacion
                 dv = new DataView(DS.Tables[0], "productoTipo = '" + comboBoxTipo.Text + "'", "type Desc", DataViewRowState.CurrentRows);
                 dataGridView1.DataSource = dv;
             }
+        }
+
+        private void botonAgregar_Click(object sender, EventArgs e)
+        {
+            panelNuevoProducto.Visible = true;
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            string codigo, nombre, tipo, descripcion;
+            
+
+            codigo = textBoxCodigo.Text;
+            nombre = textBoxNom.Text;            
+            tipo = comboBoxNuevo.Text;
+            descripcion = textBoxDescripcion.Text;
+            
+            int cantidad = Int32.Parse(textBoxCantidad.Text);
+
+            float precioCompra = float.Parse(textBoxPcompra.Text);
+            float precioVenta = float.Parse(textBoxPventa.Text);
+
+            Stock producto = new Stock();
+
+            if (producto.AgregarProducto(codigo, nombre, tipo, descripcion, cantidad, precioCompra, precioVenta) == true)
+            {
+                MessageBox.Show("se guardo el producto");
+                //MessageBox.Show("Desea agregar el nuevo producto?", "Confirmar", MessageBoxButtons.YesNoCancel);
+                
+            }
+            else
+            {
+                MessageBox.Show("Error al cargar");
+            }
+
+
+            panelNuevoProducto.Visible = false;
+
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            panelNuevoProducto.Visible = false;
         }
     }
 }
