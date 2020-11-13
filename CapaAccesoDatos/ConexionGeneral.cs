@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-using System.Data;
 using System.IO;
 using System.Data.Entity;
 using System.Windows.Forms;
+using System.Data;
 
 
 namespace CapaAccesoDatos
@@ -15,6 +15,7 @@ namespace CapaAccesoDatos
     public class ConexionGeneral
     {
         SQLiteConnection miConexion = new SQLiteConnection("Data Source = database.sqlite3");
+
 
         //Si no existe el archivo lo crea....
         public void DBCreator()
@@ -36,7 +37,7 @@ namespace CapaAccesoDatos
             {
                 miConexion.Open();
                 SQLiteDataAdapter sqlda = new SQLiteDataAdapter(consulta, miConexion);
-                
+
                 sqlda.Fill(DS);
 
             }
@@ -55,26 +56,54 @@ namespace CapaAccesoDatos
 
 
         //Devuelve vacío
-        public bool Ejecutor(string consulta)
+        public bool Ejecutor(string query)
         {
-            DataSet DS = new DataSet();
+            string connectionString = "Data Source = database.sqlite3";
+            bool exito = true;
+            
+            SQLiteConnection miConexion = new SQLiteConnection(connectionString);
+            SQLiteCommand command = new SQLiteCommand(query, miConexion);
+
             try
             {
-                miConexion.Open();
-                SQLiteDataAdapter sqlda = new SQLiteDataAdapter(consulta, miConexion);
-                sqlda.Fill(DS);
-                return true;
+                //SQLiteCommand myCommand = new SQLiteCommand(query, miConexion);
+                miConexion.Open();                
+                command.CommandType = CommandType.Text;
+                command.ExecuteNonQuery();
+                exito = true;
+
             }
             catch
             {
-                return false;
-
+                exito = false;
             }
             finally
             {
                 miConexion.Close();
             }
-        }
 
+            return exito;
+
+            /*DataSet DS = new DataSet();
+            try
+            {
+                //SQLiteCommand myCommand = new SQLiteCommand(query, miConexion);
+                miConexion.Open();
+                SQLiteDataAdapter sqlda = new SQLiteDataAdapter(query, miConexion);
+                sqlda.Fill(DS);
+                return true;
+
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                miConexion.Close();
+            }*/
+
+
+        }
     }
 }

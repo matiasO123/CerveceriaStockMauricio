@@ -45,3 +45,4 @@ C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPrese
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.dll
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.pdb
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.dll.config

@@ -25,6 +25,9 @@ namespace CapaPresentacion
 
         private void ABMInicial_Load(object sender, EventArgs e)
         {
+            
+            
+
             //Configurando controles
             textBoxNombre.Visible = false;
             comboBoxProveedor.Visible = false;
@@ -33,7 +36,7 @@ namespace CapaPresentacion
             comboBoxProveedor.SelectedIndex = 0;
             comboBoxTipo.Items.Insert(0, "Seleccionar el tipo");
             comboBoxTipo.SelectedIndex = 0;
-            
+
             //Configurando DataGrid
             DataSet DS = new DataSet();
             Stock stock = new Stock();
@@ -64,6 +67,16 @@ namespace CapaPresentacion
         private void botonAgregar_Click(object sender, EventArgs e)
         {
             panelNuevoProducto.Visible = true;
+            DataSet DS = new DataSet();
+            Stock stock = new Stock();
+            DS = stock.MostrarProductoTipo();
+            //Agrega el tipo de producto
+            foreach (DataRow row in DS.Tables[0].Rows)
+            {
+                comboBoxNuevo.Items.Add(row["tipoNombre"].ToString());
+            }
+            DS.Clear();
+
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -80,6 +93,7 @@ namespace CapaPresentacion
 
             float precioCompra = float.Parse(textBoxPcompra.Text);
             float precioVenta = float.Parse(textBoxPventa.Text);
+            //Convert.ToSingle(precioCompra);
 
             Stock producto = new Stock();
 
@@ -103,5 +117,7 @@ namespace CapaPresentacion
         {
             panelNuevoProducto.Visible = false;
         }
+
+       
     }
 }

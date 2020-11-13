@@ -12,3 +12,10 @@ C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDomin
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\obj\Debug\CapaDominio.csproj.CopyComplete
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\obj\Debug\CapaDominio.dll
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\obj\Debug\CapaDominio.pdb
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\CapaDominio.dll.config
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\EntityFramework.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\EntityFramework.xml
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaDominio\bin\Debug\EntityFramework.SqlServer.xml

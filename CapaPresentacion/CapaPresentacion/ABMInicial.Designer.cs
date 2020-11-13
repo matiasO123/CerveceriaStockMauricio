@@ -258,7 +258,7 @@
             this.panelNuevoProducto.Controls.Add(this.label3);
             this.panelNuevoProducto.Controls.Add(this.label2);
             this.panelNuevoProducto.Controls.Add(this.label8);
-            this.panelNuevoProducto.Location = new System.Drawing.Point(124, 51);
+            this.panelNuevoProducto.Location = new System.Drawing.Point(124, 43);
             this.panelNuevoProducto.Name = "panelNuevoProducto";
             this.panelNuevoProducto.Size = new System.Drawing.Size(722, 380);
             this.panelNuevoProducto.TabIndex = 11;
@@ -272,10 +272,6 @@
             this.comboBoxNuevo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.comboBoxNuevo.ForeColor = System.Drawing.Color.White;
             this.comboBoxNuevo.FormattingEnabled = true;
-            this.comboBoxNuevo.Items.AddRange(new object[] {
-            "Limpieza",
-            "Cerveza",
-            "Verdura"});
             this.comboBoxNuevo.Location = new System.Drawing.Point(286, 114);
             this.comboBoxNuevo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxNuevo.Name = "comboBoxNuevo";
