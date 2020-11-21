@@ -16,3 +16,21 @@ C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CopyComplete
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\x86\sqlite3.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\x64\sqlite3.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll.config
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\System.Data.SQLite.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\bin\Debug\System.Data.SQLite.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb

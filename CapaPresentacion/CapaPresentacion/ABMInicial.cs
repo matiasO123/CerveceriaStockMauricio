@@ -37,6 +37,14 @@ namespace CapaPresentacion
             comboBoxTipo.Items.Insert(0, "Seleccionar el tipo");
             comboBoxTipo.SelectedIndex = 0;
 
+            DataGridLlenar();
+        }
+
+
+
+
+        private void DataGridLlenar()
+        {
             //Configurando DataGrid
             DataSet DS = new DataSet();
             Stock stock = new Stock();
@@ -101,7 +109,10 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("se guardo el producto");
                 //MessageBox.Show("Desea agregar el nuevo producto?", "Confirmar", MessageBoxButtons.YesNoCancel);
-                
+                //Configurando DataGrid
+
+                DataGridLlenar();
+                panelNuevoProducto.Visible = false;
             }
             else
             {
@@ -109,7 +120,8 @@ namespace CapaPresentacion
             }
 
 
-            panelNuevoProducto.Visible = false;
+            
+
 
         }
 

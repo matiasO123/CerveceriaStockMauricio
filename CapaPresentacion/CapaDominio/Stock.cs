@@ -33,7 +33,7 @@ namespace CapaDominio
 
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("INSERT INTO Producto (productoCodigo, productoNombre, productoTipo,  productoDescripcion, productoCantidad, productoPrecioCompra, productoPrecioVenta) VALUES ('" + codigo + "', '" + nombre + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioCompra + "', '" + precioVenta + "')");
+            return CG.Ejecutor("INSERT INTO Producto (productoCodigo, productoNombre, productoTipo,  productoDesc, productoCantidad, productoPrecioCompra, productoPrecioVenta) VALUES ('" + codigo + "', '" + nombre + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioCompra + "', '" + precioVenta + "')");
             //return consulta;
         }
     }

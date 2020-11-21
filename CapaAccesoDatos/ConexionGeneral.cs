@@ -73,9 +73,10 @@ namespace CapaAccesoDatos
                 exito = true;
 
             }
-            catch
+            catch(Exception e)
             {
                 exito = false;
+                MessageBox.Show("Error: " + e.Message + e);
             }
             finally
             {
