@@ -38,6 +38,9 @@
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelBusquedaProveedor = new System.Windows.Forms.Label();
+            this.labelBusquedaTipo = new System.Windows.Forms.Label();
+            this.labelBusquedaNombre = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.botonLlenarTabla = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -66,9 +69,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.labelBusquedaNombre = new System.Windows.Forms.Label();
-            this.labelBusquedaTipo = new System.Windows.Forms.Label();
-            this.labelBusquedaProveedor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -215,6 +215,7 @@
             this.botonGuardar.TabIndex = 8;
             this.botonGuardar.Text = "Guardar Cambios";
             this.botonGuardar.UseVisualStyleBackColor = true;
+            this.botonGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
             // 
             // panel1
             // 
@@ -234,6 +235,39 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(920, 103);
             this.panel1.TabIndex = 9;
+            // 
+            // labelBusquedaProveedor
+            // 
+            this.labelBusquedaProveedor.AutoSize = true;
+            this.labelBusquedaProveedor.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.labelBusquedaProveedor.Location = new System.Drawing.Point(363, 16);
+            this.labelBusquedaProveedor.Name = "labelBusquedaProveedor";
+            this.labelBusquedaProveedor.Size = new System.Drawing.Size(86, 20);
+            this.labelBusquedaProveedor.TabIndex = 11;
+            this.labelBusquedaProveedor.Text = "Proveedor";
+            this.labelBusquedaProveedor.Visible = false;
+            // 
+            // labelBusquedaTipo
+            // 
+            this.labelBusquedaTipo.AutoSize = true;
+            this.labelBusquedaTipo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.labelBusquedaTipo.Location = new System.Drawing.Point(189, 17);
+            this.labelBusquedaTipo.Name = "labelBusquedaTipo";
+            this.labelBusquedaTipo.Size = new System.Drawing.Size(42, 20);
+            this.labelBusquedaTipo.TabIndex = 10;
+            this.labelBusquedaTipo.Text = "Tipo";
+            this.labelBusquedaTipo.Visible = false;
+            // 
+            // labelBusquedaNombre
+            // 
+            this.labelBusquedaNombre.AutoSize = true;
+            this.labelBusquedaNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.labelBusquedaNombre.Location = new System.Drawing.Point(18, 18);
+            this.labelBusquedaNombre.Name = "labelBusquedaNombre";
+            this.labelBusquedaNombre.Size = new System.Drawing.Size(70, 20);
+            this.labelBusquedaNombre.TabIndex = 9;
+            this.labelBusquedaNombre.Text = "Nombre";
+            this.labelBusquedaNombre.Visible = false;
             // 
             // panel7
             // 
@@ -568,39 +602,6 @@
             this.label8.Size = new System.Drawing.Size(81, 24);
             this.label8.TabIndex = 29;
             this.label8.Text = "Código";
-            // 
-            // labelBusquedaNombre
-            // 
-            this.labelBusquedaNombre.AutoSize = true;
-            this.labelBusquedaNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelBusquedaNombre.Location = new System.Drawing.Point(18, 18);
-            this.labelBusquedaNombre.Name = "labelBusquedaNombre";
-            this.labelBusquedaNombre.Size = new System.Drawing.Size(70, 20);
-            this.labelBusquedaNombre.TabIndex = 9;
-            this.labelBusquedaNombre.Text = "Nombre";
-            this.labelBusquedaNombre.Visible = false;
-            // 
-            // labelBusquedaTipo
-            // 
-            this.labelBusquedaTipo.AutoSize = true;
-            this.labelBusquedaTipo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelBusquedaTipo.Location = new System.Drawing.Point(189, 17);
-            this.labelBusquedaTipo.Name = "labelBusquedaTipo";
-            this.labelBusquedaTipo.Size = new System.Drawing.Size(42, 20);
-            this.labelBusquedaTipo.TabIndex = 10;
-            this.labelBusquedaTipo.Text = "Tipo";
-            this.labelBusquedaTipo.Visible = false;
-            // 
-            // labelBusquedaProveedor
-            // 
-            this.labelBusquedaProveedor.AutoSize = true;
-            this.labelBusquedaProveedor.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelBusquedaProveedor.Location = new System.Drawing.Point(363, 16);
-            this.labelBusquedaProveedor.Name = "labelBusquedaProveedor";
-            this.labelBusquedaProveedor.Size = new System.Drawing.Size(86, 20);
-            this.labelBusquedaProveedor.TabIndex = 11;
-            this.labelBusquedaProveedor.Text = "Proveedor";
-            this.labelBusquedaProveedor.Visible = false;
             // 
             // ABMInicial
             // 

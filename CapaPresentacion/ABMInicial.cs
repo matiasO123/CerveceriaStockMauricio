@@ -231,8 +231,52 @@ namespace CapaPresentacion
             }
         }
 
+        private void botonGuardar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                string codigo, nombre, tipo, descripcion, cantidad, precioCompra, precioVenta, productoId;
+                int idAux, cantidadAux;
+                float precioVaux, precioCaux;
 
-        
+
+                Stock s = new Stock();
+                codigo = dataGridView1.CurrentRow.Cells["productoCodigo"].Value.ToString();
+                nombre = dataGridView1.CurrentRow.Cells["productoNombre"].Value.ToString();
+                tipo = dataGridView1.CurrentRow.Cells["productoTipo"].Value.ToString();
+                descripcion = dataGridView1.CurrentRow.Cells["productoDesc"].Value.ToString();
+                cantidad = dataGridView1.CurrentRow.Cells["productoCantidad"].Value.ToString();
+                precioCompra = dataGridView1.CurrentRow.Cells["productoPrecioCompra"].Value.ToString();
+                precioVenta = dataGridView1.CurrentRow.Cells["productoPrecioVenta"].Value.ToString();
+               
+                productoId = dataGridView1.CurrentRow.Cells["productoId"].Value.ToString();
+                idAux = int.Parse(productoId);
+                cantidadAux = int.Parse(cantidad);
+                precioVaux = float.Parse(precioVenta);
+                precioCaux = float.Parse(precioCompra);
+
+
+                if (s.ModificarStock(idAux, codigo, nombre, tipo, descripcion, cantidadAux, precioCaux, precioVaux) == true)
+                {
+                    MessageBox.Show("La modificacion se realizo con exito");
+                }
+                else
+                {
+                    MessageBox.Show("La modificacion no se pudo realizar");
+                }
+                DataSet DS = new DataSet();
+                s = new Stock();
+                DS = s.MostrarStock();
+                dataGridView1.DataSource = DS.Tables[0];
+
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccione la fila modificar");
+            }
+
+        }
     }
 }
 

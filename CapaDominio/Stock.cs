@@ -171,7 +171,7 @@ namespace CapaDominio
             return exito;
         }
         
-        
+        //NUEVO PRODUCTO
         public bool AgregarProducto(string codigo, string nombre, string tipo, string descripcion, long cantidad, float precioCompra, float precioVenta)
         {
 
@@ -181,6 +181,8 @@ namespace CapaDominio
             //return consulta;
         }
 
+
+        //ELIMINAR PRODUCTO
         public bool EliminarStock(int productoId)
         {
             ConexionGeneral CG = new ConexionGeneral();
@@ -189,6 +191,17 @@ namespace CapaDominio
 
 
         }
+
+        //MODIFICAR PRODUCTO
+        public bool ModificarStock(int productoId, string codigo, string nombre, string tipo, string descripcion, long cantidad, float precioCompra, float precioVenta)
+        {
+            ConexionGeneral CG = new ConexionGeneral();
+
+            return CG.Ejecutor("UPDATE Producto SET productoCodigo = '" + codigo + "', productoNombre = '" + nombre + "', productoTipo = '" + tipo + "',  productoDesc = '" + descripcion + "', productoCantidad = " + cantidad + ", productoPrecioCompra = " + precioCompra + ", productoPrecioVenta = " + precioVenta + " where productoId = " + productoId);
+
+
+        }
+
 
     }
 }
