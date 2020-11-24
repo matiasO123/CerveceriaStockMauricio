@@ -21,6 +21,15 @@ namespace CapaDominio
             return DS;
         }
 
+
+        public DataSet MostrarUnidadMedida()
+        {
+            DataSet DDSS = new DataSet();
+            ConexionGeneral CG = new ConexionGeneral();
+            DDSS = CG.Consultor("SELECT * FROM UnidadMedida");
+            return DDSS;
+        }
+
         public bool AgregarProducto(string codigo, string nombre, string tipo, string descripcion, int cantidad, float precioCompra, float precioVenta)
         {
 

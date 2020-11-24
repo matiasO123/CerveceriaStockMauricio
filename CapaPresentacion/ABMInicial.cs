@@ -85,6 +85,13 @@ namespace CapaPresentacion
             }
             DS.Clear();
 
+            DS = stock.MostrarUnidadMedida();
+            
+            foreach (DataRow row in DS.Tables[0].Rows)
+            {
+                comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
+            }
+
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -130,6 +137,11 @@ namespace CapaPresentacion
             panelNuevoProducto.Visible = false;
         }
 
-       
+        private void panelNuevoProducto_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        
     }
 }

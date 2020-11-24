@@ -40,6 +40,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelNuevoProducto = new System.Windows.Forms.Panel();
+            this.comboBoxUMedida = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.comboBoxNuevo = new System.Windows.Forms.ComboBox();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
@@ -235,7 +237,10 @@
             // 
             // panelNuevoProducto
             // 
+            this.panelNuevoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelNuevoProducto.BackColor = System.Drawing.Color.Black;
+            this.panelNuevoProducto.Controls.Add(this.comboBoxUMedida);
+            this.panelNuevoProducto.Controls.Add(this.label10);
             this.panelNuevoProducto.Controls.Add(this.comboBoxNuevo);
             this.panelNuevoProducto.Controls.Add(this.BtnGuardar);
             this.panelNuevoProducto.Controls.Add(this.BtnCancelar);
@@ -260,9 +265,35 @@
             this.panelNuevoProducto.Controls.Add(this.label8);
             this.panelNuevoProducto.Location = new System.Drawing.Point(124, 43);
             this.panelNuevoProducto.Name = "panelNuevoProducto";
-            this.panelNuevoProducto.Size = new System.Drawing.Size(722, 380);
+            this.panelNuevoProducto.Size = new System.Drawing.Size(722, 417);
             this.panelNuevoProducto.TabIndex = 11;
             this.panelNuevoProducto.Visible = false;
+            this.panelNuevoProducto.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNuevoProducto_Paint);
+            // 
+            // comboBoxUMedida
+            // 
+            this.comboBoxUMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBoxUMedida.BackColor = System.Drawing.Color.Black;
+            this.comboBoxUMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBoxUMedida.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
+            this.comboBoxUMedida.ForeColor = System.Drawing.Color.White;
+            this.comboBoxUMedida.FormattingEnabled = true;
+            this.comboBoxUMedida.Location = new System.Drawing.Point(286, 196);
+            this.comboBoxUMedida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxUMedida.Name = "comboBoxUMedida";
+            this.comboBoxUMedida.Size = new System.Drawing.Size(395, 32);
+            this.comboBoxUMedida.TabIndex = 55;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(42, 204);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(187, 24);
+            this.label10.TabIndex = 54;
+            this.label10.Text = "Unidad de medida";
             // 
             // comboBoxNuevo
             // 
@@ -272,7 +303,7 @@
             this.comboBoxNuevo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.comboBoxNuevo.ForeColor = System.Drawing.Color.White;
             this.comboBoxNuevo.FormattingEnabled = true;
-            this.comboBoxNuevo.Location = new System.Drawing.Point(286, 114);
+            this.comboBoxNuevo.Location = new System.Drawing.Point(286, 121);
             this.comboBoxNuevo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxNuevo.Name = "comboBoxNuevo";
             this.comboBoxNuevo.Size = new System.Drawing.Size(395, 32);
@@ -285,10 +316,10 @@
             this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnGuardar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(355, 321);
+            this.BtnGuardar.Location = new System.Drawing.Point(355, 367);
             this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(154, 43);
+            this.BtnGuardar.Size = new System.Drawing.Size(154, 34);
             this.BtnGuardar.TabIndex = 51;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.UseVisualStyleBackColor = true;
@@ -301,10 +332,10 @@
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Location = new System.Drawing.Point(527, 321);
+            this.BtnCancelar.Location = new System.Drawing.Point(527, 367);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnCancelar.Name = "BtnCancelar";
-            this.BtnCancelar.Size = new System.Drawing.Size(154, 43);
+            this.BtnCancelar.Size = new System.Drawing.Size(154, 34);
             this.BtnCancelar.TabIndex = 50;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
@@ -313,7 +344,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(286, 292);
+            this.panel6.Location = new System.Drawing.Point(286, 334);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(395, 3);
             this.panel6.TabIndex = 48;
@@ -321,7 +352,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(286, 253);
+            this.panel5.Location = new System.Drawing.Point(286, 295);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(395, 3);
             this.panel5.TabIndex = 49;
@@ -329,7 +360,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(286, 216);
+            this.panel4.Location = new System.Drawing.Point(286, 258);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(395, 3);
             this.panel4.TabIndex = 47;
@@ -337,7 +368,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(286, 180);
+            this.panel3.Location = new System.Drawing.Point(286, 181);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(395, 3);
             this.panel3.TabIndex = 46;
@@ -345,7 +376,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(286, 104);
+            this.panel8.Location = new System.Drawing.Point(286, 108);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(395, 3);
             this.panel8.TabIndex = 44;
@@ -353,7 +384,7 @@
             // panel16
             // 
             this.panel16.BackColor = System.Drawing.Color.White;
-            this.panel16.Location = new System.Drawing.Point(286, 66);
+            this.panel16.Location = new System.Drawing.Point(286, 70);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(395, 3);
             this.panel16.TabIndex = 43;
@@ -364,7 +395,7 @@
             this.textBoxPventa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPventa.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxPventa.ForeColor = System.Drawing.Color.White;
-            this.textBoxPventa.Location = new System.Drawing.Point(286, 270);
+            this.textBoxPventa.Location = new System.Drawing.Point(286, 312);
             this.textBoxPventa.Name = "textBoxPventa";
             this.textBoxPventa.Size = new System.Drawing.Size(395, 25);
             this.textBoxPventa.TabIndex = 7;
@@ -375,7 +406,7 @@
             this.textBoxPcompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPcompra.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxPcompra.ForeColor = System.Drawing.Color.White;
-            this.textBoxPcompra.Location = new System.Drawing.Point(286, 233);
+            this.textBoxPcompra.Location = new System.Drawing.Point(286, 275);
             this.textBoxPcompra.Name = "textBoxPcompra";
             this.textBoxPcompra.Size = new System.Drawing.Size(395, 25);
             this.textBoxPcompra.TabIndex = 6;
@@ -386,7 +417,7 @@
             this.textBoxCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCantidad.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxCantidad.ForeColor = System.Drawing.Color.White;
-            this.textBoxCantidad.Location = new System.Drawing.Point(286, 196);
+            this.textBoxCantidad.Location = new System.Drawing.Point(286, 238);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(395, 25);
             this.textBoxCantidad.TabIndex = 5;
@@ -397,7 +428,7 @@
             this.textBoxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDescripcion.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxDescripcion.ForeColor = System.Drawing.Color.White;
-            this.textBoxDescripcion.Location = new System.Drawing.Point(286, 158);
+            this.textBoxDescripcion.Location = new System.Drawing.Point(286, 159);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(395, 25);
             this.textBoxDescripcion.TabIndex = 4;
@@ -408,7 +439,7 @@
             this.textBoxNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNom.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxNom.ForeColor = System.Drawing.Color.White;
-            this.textBoxNom.Location = new System.Drawing.Point(286, 82);
+            this.textBoxNom.Location = new System.Drawing.Point(286, 86);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(395, 25);
             this.textBoxNom.TabIndex = 2;
@@ -419,7 +450,7 @@
             this.textBoxCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCodigo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxCodigo.ForeColor = System.Drawing.Color.White;
-            this.textBoxCodigo.Location = new System.Drawing.Point(286, 44);
+            this.textBoxCodigo.Location = new System.Drawing.Point(286, 48);
             this.textBoxCodigo.Name = "textBoxCodigo";
             this.textBoxCodigo.Size = new System.Drawing.Size(395, 25);
             this.textBoxCodigo.TabIndex = 1;
@@ -429,7 +460,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(42, 236);
+            this.label7.Location = new System.Drawing.Point(42, 278);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 24);
             this.label7.TabIndex = 40;
@@ -440,7 +471,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(42, 273);
+            this.label6.Location = new System.Drawing.Point(42, 315);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 24);
             this.label6.TabIndex = 38;
@@ -451,7 +482,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(42, 123);
+            this.label5.Location = new System.Drawing.Point(42, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 24);
             this.label5.TabIndex = 36;
@@ -462,7 +493,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(42, 199);
+            this.label4.Location = new System.Drawing.Point(42, 240);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 24);
             this.label4.TabIndex = 34;
@@ -473,7 +504,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(42, 85);
+            this.label3.Location = new System.Drawing.Point(42, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 24);
             this.label3.TabIndex = 32;
@@ -484,7 +515,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(42, 161);
+            this.label2.Location = new System.Drawing.Point(42, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 31;
@@ -495,7 +526,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(42, 47);
+            this.label8.Location = new System.Drawing.Point(42, 51);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(81, 24);
             this.label8.TabIndex = 29;
@@ -565,6 +596,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxUMedida;
+        private System.Windows.Forms.Label label10;
     }
 }
 
