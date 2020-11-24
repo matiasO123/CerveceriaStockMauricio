@@ -32,10 +32,20 @@ namespace CapaPresentacion
             textBoxNombre.Visible = false;
             comboBoxProveedor.Visible = false;
             comboBoxTipo.Visible = false;
-            comboBoxProveedor.Items.Insert(0, "Selecciona proveedor");
+            comboBoxProveedor.Items.Insert(0, "");
             comboBoxProveedor.SelectedIndex = 0;
-            comboBoxTipo.Items.Insert(0, "Seleccionar el tipo");
+            comboBoxTipo.Items.Insert(0, "");
             comboBoxTipo.SelectedIndex = 0;
+            panelNuevoProducto.Visible = true;
+            DataSet DS = new DataSet();
+            Stock stock = new Stock();
+            DS = stock.MostrarProductoTipo();
+            //Agrega el tipo de producto
+            foreach (DataRow row in DS.Tables[0].Rows)
+            {
+                comboBoxTipo.Items.Add(row["tipoNombre"].ToString());
+            }
+            DS.Clear();
 
             DataGridLlenar();
         }
@@ -68,6 +78,7 @@ namespace CapaPresentacion
         private void botonAgregar_Click(object sender, EventArgs e)
         {
             panelNuevoProducto.Visible = true;
+            panelNuevoProducto.BringToFront();
             DataSet DS = new DataSet();
             Stock stock = new Stock();
             DS = stock.MostrarProductoTipo();
@@ -141,15 +152,26 @@ namespace CapaPresentacion
         {
             DataSet DS = new DataSet();
             Stock sto = new Stock();
-            DS = sto.MostrarStockFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = DS.Tables[0];
+            string nombre  = textBoxNombre.Text;
+            string tipo = comboBoxTipo.Text;
+            string proveedor = comboBoxProveedor.Text;
+            
+
+            DS = sto.MostrarStockFiltro(nombre, tipo, proveedor );
+            //dataGridView1.DataSource = null;
+            if(DS != null)
+            {
+                dataGridView1.DataSource = DS.Tables[0];
+            }
+            
         }
 
         private void botonLlenarTabla_Click(object sender, EventArgs e)
         {
             DataGridLlenar();
         }
+
+        
     }
 }
 
