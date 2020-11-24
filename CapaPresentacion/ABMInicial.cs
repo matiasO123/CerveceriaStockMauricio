@@ -16,7 +16,8 @@ namespace CapaPresentacion
     {
 
 
-        DataSet DS = new DataSet();
+        DataSet DS = new DataSet();        
+        
         public ABMInicial()
         {
             InitializeComponent();
@@ -29,13 +30,19 @@ namespace CapaPresentacion
 
 
             //Configurando controles
-            textBoxNombre.Visible = false;
+            /*textBoxNombre.Visible = false;
             comboBoxProveedor.Visible = false;
+<<<<<<< HEAD
             comboBoxTipo.Visible = false;
             comboBoxProveedor.Items.Insert(0, "");
+=======
+            comboBoxTipo.Visible = false;*/
+            comboBoxProveedor.Items.Insert(0, "Selecciona proveedor");
+>>>>>>> 33272575e5e95bdf0e97854e2697a92462fbf741
             comboBoxProveedor.SelectedIndex = 0;
             comboBoxTipo.Items.Insert(0, "");
             comboBoxTipo.SelectedIndex = 0;
+<<<<<<< HEAD
             panelNuevoProducto.Visible = true;
             DataSet DS = new DataSet();
             Stock stock = new Stock();
@@ -46,8 +53,20 @@ namespace CapaPresentacion
                 comboBoxTipo.Items.Add(row["tipoNombre"].ToString());
             }
             DS.Clear();
+=======
+            
+>>>>>>> 33272575e5e95bdf0e97854e2697a92462fbf741
 
             DataGridLlenar();
+
+            DataSet DS = new DataSet();
+            Stock stock = new Stock();
+            DS = stock.MostrarProductoTipo();
+            foreach (DataRow row in DS.Tables[0].Rows)
+            {
+                comboBoxTipo.Items.Add(row["tipoNombre"].ToString());
+            }
+            DS.Clear();
         }
 
 
@@ -68,9 +87,13 @@ namespace CapaPresentacion
 
         private void botonBuscar_Click(object sender, EventArgs e)
         {
-            textBoxNombre.Visible = true;
+            DataSet DS = new DataSet();
+            Stock stock = new Stock();
+            DS = stock.MostrarStockFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
+            /*textBoxNombre.Visible = true;
             comboBoxProveedor.Visible = true;
-            comboBoxTipo.Visible = true;
+            comboBoxTipo.Visible = true;*/
+
         }
 
 
@@ -82,6 +105,7 @@ namespace CapaPresentacion
             DataSet DS = new DataSet();
             Stock stock = new Stock();
             DS = stock.MostrarProductoTipo();
+
             //Agrega el tipo de producto
             foreach (DataRow row in DS.Tables[0].Rows)
             {
@@ -112,7 +136,7 @@ namespace CapaPresentacion
             cantidad = textBoxCantidad.Text;
             precioCompra = textBoxPcompra.Text;
             precioVenta = textBoxPventa.Text;
-            //Convert.ToSingle(precioCompra);
+           
 
             Stock producto = new Stock();
             if (producto.ProductoValidar(codigo, nombre, tipo, unidadMedida, cantidad, precioCompra, precioVenta))
@@ -123,16 +147,15 @@ namespace CapaPresentacion
 
                 if (producto.AgregarProducto(codigo, nombre, tipo, descripcion, cantidadEntero, precioCompraEntero, precioVentaEntero) == true)
                 {
-                    MessageBox.Show("se guardo el producto");
-                    //MessageBox.Show("Desea agregar el nuevo producto?", "Confirmar", MessageBoxButtons.YesNoCancel);
-                    //Configurando DataGrid
+                    MessageBox.Show("Se creo el nuevo producto con éxito");
+                    
 
                     DataGridLlenar();
                     panelNuevoProducto.Visible = false;
                 }
                 else
                 {
-                    MessageBox.Show("Error al cargar");
+                    MessageBox.Show("No se pudo guardar el producto");
                 }
             }
 
@@ -171,6 +194,56 @@ namespace CapaPresentacion
             DataGridLlenar();
         }
 
+<<<<<<< HEAD
+=======
+
+       //ELIMINAR PRODUCTO CON MESSAGEBOX si-no-cancelar
+        private void botonEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult oDlgRes;
+
+            oDlgRes = MessageBox.Show("¿Está seguro que desea eliminar el producto seleccionado ?","Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (oDlgRes == DialogResult.Yes)
+            {
+
+                if (dataGridView1.SelectedRows.Count == 0)
+                {
+
+                    MessageBox.Show("Para eliminar el registro debes seleccionar un producto");
+
+                }
+                else
+                {
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {
+                        string Id;
+                        int IdAux;
+                        Id = dataGridView1.CurrentRow.Cells["productoId"].Value.ToString();
+                        IdAux = int.Parse(Id);
+                        Stock p = new Stock();
+                        if (p.EliminarStock(IdAux) == true)
+                        {
+                            MessageBox.Show("El producto se eliminó correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("El producto no se pudo eliminar");
+                        }
+                        DataSet DS = new DataSet();
+                        p = new Stock();
+                        DS = p.MostrarStock();
+                        dataGridView1.DataSource = DS.Tables[0];
+
+
+                    }
+                    
+                }
+
+            }
+        }
+
+>>>>>>> 33272575e5e95bdf0e97854e2697a92462fbf741
         
     }
 }
