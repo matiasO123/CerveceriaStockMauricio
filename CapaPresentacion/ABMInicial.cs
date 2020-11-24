@@ -30,20 +30,16 @@ namespace CapaPresentacion
 
 
             //Configurando controles
-            /*textBoxNombre.Visible = false;
+            textBoxNombre.Visible = false;
             comboBoxProveedor.Visible = false;
-<<<<<<< HEAD
-            comboBoxTipo.Visible = false;
+
             comboBoxProveedor.Items.Insert(0, "");
-=======
-            comboBoxTipo.Visible = false;*/
-            comboBoxProveedor.Items.Insert(0, "Selecciona proveedor");
->>>>>>> 33272575e5e95bdf0e97854e2697a92462fbf741
+
             comboBoxProveedor.SelectedIndex = 0;
             comboBoxTipo.Items.Insert(0, "");
             comboBoxTipo.SelectedIndex = 0;
-<<<<<<< HEAD
-            panelNuevoProducto.Visible = true;
+
+            panelNuevoProducto.Visible = false;
             DataSet DS = new DataSet();
             Stock stock = new Stock();
             DS = stock.MostrarProductoTipo();
@@ -53,20 +49,18 @@ namespace CapaPresentacion
                 comboBoxTipo.Items.Add(row["tipoNombre"].ToString());
             }
             DS.Clear();
-=======
-            
->>>>>>> 33272575e5e95bdf0e97854e2697a92462fbf741
+
 
             DataGridLlenar();
 
-            DataSet DS = new DataSet();
-            Stock stock = new Stock();
-            DS = stock.MostrarProductoTipo();
+            
+            
+            /*DS = stock.MostrarProductoTipo();
             foreach (DataRow row in DS.Tables[0].Rows)
             {
                 comboBoxTipo.Items.Add(row["tipoNombre"].ToString());
             }
-            DS.Clear();
+            DS.Clear();*/
         }
 
 
@@ -90,9 +84,12 @@ namespace CapaPresentacion
             DataSet DS = new DataSet();
             Stock stock = new Stock();
             DS = stock.MostrarStockFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
-            /*textBoxNombre.Visible = true;
+            textBoxNombre.Visible = true;
             comboBoxProveedor.Visible = true;
-            comboBoxTipo.Visible = true;*/
+            comboBoxTipo.Visible = true;
+            labelBusquedaNombre.Visible = true;
+            labelBusquedaTipo.Visible = true;
+            labelBusquedaProveedor.Visible = true;
 
         }
 
@@ -194,8 +191,7 @@ namespace CapaPresentacion
             DataGridLlenar();
         }
 
-<<<<<<< HEAD
-=======
+
 
        //ELIMINAR PRODUCTO CON MESSAGEBOX si-no-cancelar
         private void botonEliminar_Click(object sender, EventArgs e)
@@ -243,7 +239,7 @@ namespace CapaPresentacion
             }
         }
 
->>>>>>> 33272575e5e95bdf0e97854e2697a92462fbf741
+
         
     }
 }
