@@ -154,5 +154,15 @@ namespace CapaDominio
             return CG.Ejecutor("INSERT INTO Producto (productoCodigo, productoNombre, productoTipo,  productoDesc, productoCantidad, productoPrecioCompra, productoPrecioVenta) VALUES ('" + codigo + "', '" + nombre + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioCompra + "', '" + precioVenta + "')");
             //return consulta;
         }
+
+        public bool EliminarStock(int productoId)
+        {
+            ConexionGeneral CG = new ConexionGeneral();
+
+            return CG.Ejecutor("DELETE from Producto where productoId = " + productoId);
+
+
+        }
+
     }
 }

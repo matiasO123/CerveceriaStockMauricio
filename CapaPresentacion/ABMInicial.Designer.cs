@@ -38,6 +38,7 @@
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.botonLlenarTabla = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelNuevoProducto = new System.Windows.Forms.Panel();
             this.comboBoxUMedida = new System.Windows.Forms.ComboBox();
@@ -64,7 +65,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.botonLlenarTabla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -195,6 +195,7 @@
             this.botonEliminar.TabIndex = 7;
             this.botonEliminar.Text = "Eliminar Producto";
             this.botonEliminar.UseVisualStyleBackColor = true;
+            this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
             // botonGuardar
             // 
@@ -226,6 +227,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(920, 87);
             this.panel1.TabIndex = 9;
+            // 
+            // botonLlenarTabla
+            // 
+            this.botonLlenarTabla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.botonLlenarTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonLlenarTabla.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonLlenarTabla.Location = new System.Drawing.Point(725, 25);
+            this.botonLlenarTabla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.botonLlenarTabla.Name = "botonLlenarTabla";
+            this.botonLlenarTabla.Size = new System.Drawing.Size(154, 43);
+            this.botonLlenarTabla.TabIndex = 7;
+            this.botonLlenarTabla.Text = "Rellenar Tabla";
+            this.botonLlenarTabla.UseVisualStyleBackColor = true;
+            this.botonLlenarTabla.Click += new System.EventHandler(this.botonLlenarTabla_Click);
             // 
             // panel2
             // 
@@ -536,20 +551,6 @@
             this.label8.Size = new System.Drawing.Size(81, 24);
             this.label8.TabIndex = 29;
             this.label8.Text = "Código";
-            // 
-            // botonLlenarTabla
-            // 
-            this.botonLlenarTabla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.botonLlenarTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.botonLlenarTabla.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonLlenarTabla.Location = new System.Drawing.Point(725, 25);
-            this.botonLlenarTabla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.botonLlenarTabla.Name = "botonLlenarTabla";
-            this.botonLlenarTabla.Size = new System.Drawing.Size(154, 43);
-            this.botonLlenarTabla.TabIndex = 7;
-            this.botonLlenarTabla.Text = "Rellenar Tabla";
-            this.botonLlenarTabla.UseVisualStyleBackColor = true;
-            this.botonLlenarTabla.Click += new System.EventHandler(this.botonLlenarTabla_Click);
             // 
             // ABMInicial
             // 

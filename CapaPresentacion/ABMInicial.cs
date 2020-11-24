@@ -150,6 +150,53 @@ namespace CapaPresentacion
         {
             DataGridLlenar();
         }
+
+
+       //ELIMINAR PRODUCTO CON MESSAGEBOX si-no-cancelar
+        private void botonEliminar_Click(object sender, EventArgs e)
+        {
+            DialogResult oDlgRes;
+
+            oDlgRes = MessageBox.Show("¿Está seguro que desea eliminar el producto seleccionado ?","Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (oDlgRes == DialogResult.Yes)
+            {
+
+                if (dataGridView1.SelectedRows.Count == 0)
+                {
+
+                    MessageBox.Show("Para eliminar el registro debes seleccionar un producto");
+
+                }
+                else
+                {
+                    if (dataGridView1.SelectedRows.Count > 0)
+                    {
+                        string Id;
+                        int IdAux;
+                        Id = dataGridView1.CurrentRow.Cells["productoId"].Value.ToString();
+                        IdAux = int.Parse(Id);
+                        Stock p = new Stock();
+                        if (p.EliminarStock(IdAux) == true)
+                        {
+                            MessageBox.Show("El producto se eliminó correctamente.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("El producto no se pudo eliminar");
+                        }
+                        DataSet DS = new DataSet();
+                        p = new Stock();
+                        DS = p.MostrarStock();
+                        dataGridView1.DataSource = DS.Tables[0];
+
+
+                    }
+                    
+                }
+
+            }
+        }
     }
 }
 
