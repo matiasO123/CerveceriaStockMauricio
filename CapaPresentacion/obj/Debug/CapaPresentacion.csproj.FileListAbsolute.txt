@@ -1,105 +1,3 @@
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\x86\sqlite3.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\x64\sqlite3.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.exe
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.xml
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.xml
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.exe
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.ABMInicial.resources
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\x86\sqlite3.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\x64\sqlite3.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.exe
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll.config
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.xml
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.xml
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.ABMInicial.resources
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.exe
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.pdb
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.dll.config
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\x86\sqlite3.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\x64\sqlite3.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.exe
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.pdb
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaDominio.dll.config
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.xml
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\System.Data.SQLite.xml
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll.config
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.ABMInicial.resources
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.exe
-C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaPresentacion\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\x86\sqlite3.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\x64\sqlite3.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.exe
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.pdb
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.dll.config
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.xml
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.xml
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMInicial.resources
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.exe
-C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-<<<<<<< HEAD
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\x86\sqlite3.dll
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\x64\sqlite3.dll
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
@@ -118,7 +16,6 @@ D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\Cerveceria
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.xml
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
-D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMInicial.resources
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
@@ -126,31 +23,3 @@ D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\Cerveceria
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-=======
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\x86\sqlite3.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\x64\sqlite3.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.exe
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.pdb
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.dll.config
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.xml
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.xml
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMInicial.resources
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.exe
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
->>>>>>> 33272575e5e95bdf0e97854e2697a92462fbf741

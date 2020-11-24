@@ -53,14 +53,6 @@ namespace CapaPresentacion
 
             DataGridLlenar();
 
-            
-            
-            /*DS = stock.MostrarProductoTipo();
-            foreach (DataRow row in DS.Tables[0].Rows)
-            {
-                comboBoxTipo.Items.Add(row["tipoNombre"].ToString());
-            }
-            DS.Clear();*/
         }
 
 
