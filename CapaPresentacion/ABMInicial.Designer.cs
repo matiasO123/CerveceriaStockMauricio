@@ -64,6 +64,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.botonLlenarTabla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -125,7 +126,7 @@
             this.botonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.botonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonBuscar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonBuscar.Location = new System.Drawing.Point(568, 24);
+            this.botonBuscar.Location = new System.Drawing.Point(545, 25);
             this.botonBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonBuscar.Name = "botonBuscar";
             this.botonBuscar.Size = new System.Drawing.Size(154, 43);
@@ -138,12 +139,13 @@
             // 
             this.textBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(43, 32);
+            this.textBoxNombre.Location = new System.Drawing.Point(20, 33);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Multiline = true;
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(153, 30);
             this.textBoxNombre.TabIndex = 4;
+            this.textBoxNombre.TextChanged += new System.EventHandler(this.Busqueda);
             // 
             // comboBoxTipo
             // 
@@ -155,12 +157,12 @@
             "Limpieza",
             "Cerveza",
             "Verdura"});
-            this.comboBoxTipo.Location = new System.Drawing.Point(216, 32);
+            this.comboBoxTipo.Location = new System.Drawing.Point(193, 33);
             this.comboBoxTipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(153, 25);
             this.comboBoxTipo.TabIndex = 5;
-            this.comboBoxTipo.SelectedIndexChanged += new System.EventHandler(this.comboBoxTipo_SelectedIndexChanged);
+            this.comboBoxTipo.TextChanged += new System.EventHandler(this.Busqueda);
             // 
             // comboBoxProveedor
             // 
@@ -173,11 +175,12 @@
             "Raid",
             "Nike",
             "Quilmes"});
-            this.comboBoxProveedor.Location = new System.Drawing.Point(390, 32);
+            this.comboBoxProveedor.Location = new System.Drawing.Point(367, 33);
             this.comboBoxProveedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxProveedor.Name = "comboBoxProveedor";
             this.comboBoxProveedor.Size = new System.Drawing.Size(153, 25);
             this.comboBoxProveedor.TabIndex = 6;
+            this.comboBoxProveedor.SelectedIndexChanged += new System.EventHandler(this.Busqueda);
             // 
             // botonEliminar
             // 
@@ -214,13 +217,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.botonLlenarTabla);
             this.panel1.Controls.Add(this.comboBoxProveedor);
             this.panel1.Controls.Add(this.botonBuscar);
             this.panel1.Controls.Add(this.textBoxNombre);
             this.panel1.Controls.Add(this.comboBoxTipo);
-            this.panel1.Location = new System.Drawing.Point(173, 68);
+            this.panel1.Location = new System.Drawing.Point(14, 69);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(761, 87);
+            this.panel1.Size = new System.Drawing.Size(920, 87);
             this.panel1.TabIndex = 9;
             // 
             // panel2
@@ -268,12 +272,12 @@
             this.panelNuevoProducto.Size = new System.Drawing.Size(722, 417);
             this.panelNuevoProducto.TabIndex = 11;
             this.panelNuevoProducto.Visible = false;
-            this.panelNuevoProducto.Paint += new System.Windows.Forms.PaintEventHandler(this.panelNuevoProducto_Paint);
             // 
             // comboBoxUMedida
             // 
             this.comboBoxUMedida.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.comboBoxUMedida.BackColor = System.Drawing.Color.Black;
+            this.comboBoxUMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxUMedida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxUMedida.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.comboBoxUMedida.ForeColor = System.Drawing.Color.White;
@@ -282,7 +286,7 @@
             this.comboBoxUMedida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxUMedida.Name = "comboBoxUMedida";
             this.comboBoxUMedida.Size = new System.Drawing.Size(395, 32);
-            this.comboBoxUMedida.TabIndex = 55;
+            this.comboBoxUMedida.TabIndex = 5;
             // 
             // label10
             // 
@@ -299,6 +303,7 @@
             // 
             this.comboBoxNuevo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.comboBoxNuevo.BackColor = System.Drawing.Color.Black;
+            this.comboBoxNuevo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.comboBoxNuevo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.comboBoxNuevo.ForeColor = System.Drawing.Color.White;
@@ -398,7 +403,7 @@
             this.textBoxPventa.Location = new System.Drawing.Point(286, 312);
             this.textBoxPventa.Name = "textBoxPventa";
             this.textBoxPventa.Size = new System.Drawing.Size(395, 25);
-            this.textBoxPventa.TabIndex = 7;
+            this.textBoxPventa.TabIndex = 8;
             // 
             // textBoxPcompra
             // 
@@ -409,7 +414,7 @@
             this.textBoxPcompra.Location = new System.Drawing.Point(286, 275);
             this.textBoxPcompra.Name = "textBoxPcompra";
             this.textBoxPcompra.Size = new System.Drawing.Size(395, 25);
-            this.textBoxPcompra.TabIndex = 6;
+            this.textBoxPcompra.TabIndex = 7;
             // 
             // textBoxCantidad
             // 
@@ -420,7 +425,7 @@
             this.textBoxCantidad.Location = new System.Drawing.Point(286, 238);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(395, 25);
-            this.textBoxCantidad.TabIndex = 5;
+            this.textBoxCantidad.TabIndex = 6;
             // 
             // textBoxDescripcion
             // 
@@ -532,17 +537,31 @@
             this.label8.TabIndex = 29;
             this.label8.Text = "Código";
             // 
+            // botonLlenarTabla
+            // 
+            this.botonLlenarTabla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.botonLlenarTabla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonLlenarTabla.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonLlenarTabla.Location = new System.Drawing.Point(725, 25);
+            this.botonLlenarTabla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.botonLlenarTabla.Name = "botonLlenarTabla";
+            this.botonLlenarTabla.Size = new System.Drawing.Size(154, 43);
+            this.botonLlenarTabla.TabIndex = 7;
+            this.botonLlenarTabla.Text = "Rellenar Tabla";
+            this.botonLlenarTabla.UseVisualStyleBackColor = true;
+            this.botonLlenarTabla.Click += new System.EventHandler(this.botonLlenarTabla_Click);
+            // 
             // ABMInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
-            this.Controls.Add(this.panelNuevoProducto);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panelNuevoProducto);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ABMInicial";
@@ -598,6 +617,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxUMedida;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button botonLlenarTabla;
     }
 }
 

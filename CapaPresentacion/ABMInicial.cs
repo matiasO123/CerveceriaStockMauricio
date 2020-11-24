@@ -20,13 +20,13 @@ namespace CapaPresentacion
         public ABMInicial()
         {
             InitializeComponent();
-            
+
         }
 
         private void ABMInicial_Load(object sender, EventArgs e)
         {
-            
-            
+
+
 
             //Configurando controles
             textBoxNombre.Visible = false;
@@ -47,6 +47,7 @@ namespace CapaPresentacion
         {
             //Configurando DataGrid
             DataSet DS = new DataSet();
+
             Stock stock = new Stock();
             DS = stock.MostrarStock();
             dataGridView1.DataSource = DS.Tables[0];
@@ -62,15 +63,7 @@ namespace CapaPresentacion
             comboBoxTipo.Visible = true;
         }
 
-        private void comboBoxTipo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(comboBoxTipo.SelectedIndex != 0)
-            {
-                DataView dv;
-                dv = new DataView(DS.Tables[0], "productoTipo = '" + comboBoxTipo.Text + "'", "type Desc", DataViewRowState.CurrentRows);
-                dataGridView1.DataSource = dv;
-            }
-        }
+
 
         private void botonAgregar_Click(object sender, EventArgs e)
         {
@@ -86,48 +79,55 @@ namespace CapaPresentacion
             DS.Clear();
 
             DS = stock.MostrarUnidadMedida();
-            
             foreach (DataRow row in DS.Tables[0].Rows)
             {
                 comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
             }
 
+            textBoxCodigo.Focus();
+
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            string codigo, nombre, tipo, descripcion;
-            
+            string codigo, nombre, tipo, descripcion, unidadMedida, cantidad, precioCompra, precioVenta;
+
 
             codigo = textBoxCodigo.Text;
-            nombre = textBoxNom.Text;            
+            nombre = textBoxNom.Text;
             tipo = comboBoxNuevo.Text;
             descripcion = textBoxDescripcion.Text;
-            
-            int cantidad = Int32.Parse(textBoxCantidad.Text);
-
-            float precioCompra = float.Parse(textBoxPcompra.Text);
-            float precioVenta = float.Parse(textBoxPventa.Text);
+            unidadMedida = comboBoxUMedida.Text;
+            cantidad = textBoxCantidad.Text;
+            precioCompra = textBoxPcompra.Text;
+            precioVenta = textBoxPventa.Text;
             //Convert.ToSingle(precioCompra);
 
             Stock producto = new Stock();
-
-            if (producto.AgregarProducto(codigo, nombre, tipo, descripcion, cantidad, precioCompra, precioVenta) == true)
+            if (producto.ProductoValidar(codigo, nombre, tipo, unidadMedida, cantidad, precioCompra, precioVenta))
             {
-                MessageBox.Show("se guardo el producto");
-                //MessageBox.Show("Desea agregar el nuevo producto?", "Confirmar", MessageBoxButtons.YesNoCancel);
-                //Configurando DataGrid
+                long cantidadEntero = long.Parse(cantidad);
+                int precioCompraEntero = int.Parse(precioCompra);
+                int precioVentaEntero = int.Parse(precioVenta);
 
-                DataGridLlenar();
-                panelNuevoProducto.Visible = false;
+                if (producto.AgregarProducto(codigo, nombre, tipo, descripcion, cantidadEntero, precioCompraEntero, precioVentaEntero) == true)
+                {
+                    MessageBox.Show("se guardo el producto");
+                    //MessageBox.Show("Desea agregar el nuevo producto?", "Confirmar", MessageBoxButtons.YesNoCancel);
+                    //Configurando DataGrid
+
+                    DataGridLlenar();
+                    panelNuevoProducto.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Error al cargar");
+                }
             }
-            else
-            {
-                MessageBox.Show("Error al cargar");
-            }
 
 
-            
+
+
 
 
         }
@@ -137,11 +137,19 @@ namespace CapaPresentacion
             panelNuevoProducto.Visible = false;
         }
 
-        private void panelNuevoProducto_Paint(object sender, PaintEventArgs e)
+        private void Busqueda(object sender, EventArgs e)
         {
-
+            DataSet DS = new DataSet();
+            Stock sto = new Stock();
+            DS = sto.MostrarStockFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = DS.Tables[0];
         }
 
-        
+        private void botonLlenarTabla_Click(object sender, EventArgs e)
+        {
+            DataGridLlenar();
+        }
     }
 }
+
