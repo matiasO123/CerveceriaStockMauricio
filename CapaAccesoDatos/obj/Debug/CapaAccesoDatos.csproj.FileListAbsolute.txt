@@ -34,3 +34,5 @@ C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMaur
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
+C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.dll
+C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaAccesoDatos\obj\Debug\CapaAccesoDatos.pdb
