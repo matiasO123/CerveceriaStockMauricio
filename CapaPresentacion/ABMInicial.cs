@@ -16,7 +16,8 @@ namespace CapaPresentacion
     {
 
 
-        DataSet DS = new DataSet();
+        DataSet DS = new DataSet();        
+        
         public ABMInicial()
         {
             InitializeComponent();
@@ -29,15 +30,25 @@ namespace CapaPresentacion
 
 
             //Configurando controles
-            textBoxNombre.Visible = false;
+            /*textBoxNombre.Visible = false;
             comboBoxProveedor.Visible = false;
-            comboBoxTipo.Visible = false;
+            comboBoxTipo.Visible = false;*/
             comboBoxProveedor.Items.Insert(0, "Selecciona proveedor");
             comboBoxProveedor.SelectedIndex = 0;
             comboBoxTipo.Items.Insert(0, "Seleccionar el tipo");
             comboBoxTipo.SelectedIndex = 0;
+            
 
             DataGridLlenar();
+
+            DataSet DS = new DataSet();
+            Stock stock = new Stock();
+            DS = stock.MostrarProductoTipo();
+            foreach (DataRow row in DS.Tables[0].Rows)
+            {
+                comboBoxTipo.Items.Add(row["tipoNombre"].ToString());
+            }
+            DS.Clear();
         }
 
 
@@ -58,9 +69,13 @@ namespace CapaPresentacion
 
         private void botonBuscar_Click(object sender, EventArgs e)
         {
-            textBoxNombre.Visible = true;
+            DataSet DS = new DataSet();
+            Stock stock = new Stock();
+            DS = stock.MostrarStockFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
+            /*textBoxNombre.Visible = true;
             comboBoxProveedor.Visible = true;
-            comboBoxTipo.Visible = true;
+            comboBoxTipo.Visible = true;*/
+
         }
 
 
@@ -71,6 +86,7 @@ namespace CapaPresentacion
             DataSet DS = new DataSet();
             Stock stock = new Stock();
             DS = stock.MostrarProductoTipo();
+
             //Agrega el tipo de producto
             foreach (DataRow row in DS.Tables[0].Rows)
             {
@@ -101,7 +117,7 @@ namespace CapaPresentacion
             cantidad = textBoxCantidad.Text;
             precioCompra = textBoxPcompra.Text;
             precioVenta = textBoxPventa.Text;
-            //Convert.ToSingle(precioCompra);
+           
 
             Stock producto = new Stock();
             if (producto.ProductoValidar(codigo, nombre, tipo, unidadMedida, cantidad, precioCompra, precioVenta))
@@ -112,16 +128,15 @@ namespace CapaPresentacion
 
                 if (producto.AgregarProducto(codigo, nombre, tipo, descripcion, cantidadEntero, precioCompraEntero, precioVentaEntero) == true)
                 {
-                    MessageBox.Show("se guardo el producto");
-                    //MessageBox.Show("Desea agregar el nuevo producto?", "Confirmar", MessageBoxButtons.YesNoCancel);
-                    //Configurando DataGrid
+                    MessageBox.Show("Se creo el nuevo producto con éxito");
+                    
 
                     DataGridLlenar();
                     panelNuevoProducto.Visible = false;
                 }
                 else
                 {
-                    MessageBox.Show("Error al cargar");
+                    MessageBox.Show("No se pudo guardar el producto");
                 }
             }
 
@@ -197,6 +212,8 @@ namespace CapaPresentacion
 
             }
         }
+
+        
     }
 }
 

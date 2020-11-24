@@ -63,9 +63,11 @@ namespace CapaDominio
         {
             DataSet DDSS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();
-            DDSS = CG.Consultor("SELECT * FROM Producto WHERE productoNombre = '" + nombre + "' OR productoNombre = NULL");
+            
+            DDSS = CG.Consultor("SELECT * FROM Producto WHERE productoNombre = '" + nombre + "' OR productoNombre = NULL OR productoTipo = '" + tipo + "' ");
             return DDSS;
         }
+
 
        
         
