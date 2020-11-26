@@ -134,7 +134,7 @@ namespace CapaPresentacion
                 int precioCompraEntero = int.Parse(precioCompra);
                 int precioVentaEntero = int.Parse(precioVenta);
 
-                if (producto.AgregarProducto(codigo, nombre, tipo, descripcion, cantidadEntero, precioCompraEntero, precioVentaEntero) == true)
+                if (producto.AgregarProducto(codigo, nombre, unidadMedida, tipo, descripcion, cantidadEntero, precioCompraEntero, precioVentaEntero) == true)
                 {
                     MessageBox.Show("Se creo el nuevo producto con éxito");
                     
@@ -235,7 +235,7 @@ namespace CapaPresentacion
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                string codigo, nombre, tipo, descripcion, cantidad, precioCompra, precioVenta, productoId;
+                string codigo, nombre, unidad, tipo, descripcion, cantidad, precioCompra, precioVenta, productoId;
                 int idAux, cantidadAux;
                 float precioVaux, precioCaux;
 
@@ -243,6 +243,7 @@ namespace CapaPresentacion
                 Stock s = new Stock();
                 codigo = dataGridView1.CurrentRow.Cells["productoCodigo"].Value.ToString();
                 nombre = dataGridView1.CurrentRow.Cells["productoNombre"].Value.ToString();
+                unidad = dataGridView1.CurrentRow.Cells["productoUnidadMedida"].Value.ToString();
                 tipo = dataGridView1.CurrentRow.Cells["productoTipo"].Value.ToString();
                 descripcion = dataGridView1.CurrentRow.Cells["productoDesc"].Value.ToString();
                 cantidad = dataGridView1.CurrentRow.Cells["productoCantidad"].Value.ToString();
@@ -256,7 +257,7 @@ namespace CapaPresentacion
                 precioCaux = float.Parse(precioCompra);
 
 
-                if (s.ModificarStock(idAux, codigo, nombre, tipo, descripcion, cantidadAux, precioCaux, precioVaux) == true)
+                if (s.ModificarStock(idAux, codigo, nombre, unidad, tipo, descripcion, cantidadAux, precioCaux, precioVaux) == true)
                 {
                     MessageBox.Show("La modificacion se realizo con exito");
                 }

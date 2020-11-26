@@ -172,12 +172,12 @@ namespace CapaDominio
         }
         
         //NUEVO PRODUCTO
-        public bool AgregarProducto(string codigo, string nombre, string tipo, string descripcion, long cantidad, float precioCompra, float precioVenta)
+        public bool AgregarProducto(string codigo, string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioCompra, float precioVenta)
         {
 
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("INSERT INTO Producto (productoCodigo, productoNombre, productoTipo,  productoDesc, productoCantidad, productoPrecioCompra, productoPrecioVenta) VALUES ('" + codigo + "', '" + nombre + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioCompra + "', '" + precioVenta + "')");
+            return CG.Ejecutor("INSERT INTO Producto (productoCodigo, productoNombre, productoUnidadMedida, productoTipo,  productoDesc, productoCantidad, productoPrecioCompra, productoPrecioVenta) VALUES ('" + codigo + "', '" + nombre + "', '" + unidad + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioCompra + "', '" + precioVenta + "')");
             //return consulta;
         }
 
@@ -193,11 +193,11 @@ namespace CapaDominio
         }
 
         //MODIFICAR PRODUCTO
-        public bool ModificarStock(int productoId, string codigo, string nombre, string tipo, string descripcion, long cantidad, float precioCompra, float precioVenta)
+        public bool ModificarStock(int productoId, string codigo, string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioCompra, float precioVenta)
         {
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("UPDATE Producto SET productoCodigo = '" + codigo + "', productoNombre = '" + nombre + "', productoTipo = '" + tipo + "',  productoDesc = '" + descripcion + "', productoCantidad = " + cantidad + ", productoPrecioCompra = " + precioCompra + ", productoPrecioVenta = " + precioVenta + " where productoId = " + productoId);
+            return CG.Ejecutor("UPDATE Producto SET productoCodigo = '" + codigo + "', productoNombre = '" + nombre + "', productoUnidadMedida = '" + unidad + "', productoTipo = '" + tipo + "',  productoDesc = '" + descripcion + "', productoCantidad = " + cantidad + ", productoPrecioCompra = " + precioCompra + ", productoPrecioVenta = " + precioVenta + " where productoId = " + productoId);
 
 
         }
