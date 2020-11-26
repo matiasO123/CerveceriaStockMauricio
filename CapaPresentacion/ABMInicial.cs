@@ -38,6 +38,7 @@ namespace CapaPresentacion
             comboBoxProveedor.SelectedIndex = 0;
             comboBoxTipo.Items.Insert(0, "");
             comboBoxTipo.SelectedIndex = 0;
+           
 
             panelNuevoProducto.Visible = false;
             DataSet DS = new DataSet();

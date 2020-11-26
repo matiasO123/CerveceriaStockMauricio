@@ -33,22 +33,34 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
-            this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.facturaFecha = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxProducto = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.labelPrecio = new System.Windows.Forms.Label();
-            this.comboBoxUnidad = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.productoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoPrecioFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.BtnCancelar = new System.Windows.Forms.Button();
+            this.BtnGuardar = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.panelNuevoProducto = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxCantidad = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panelNuevoProducto.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -101,26 +113,22 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.productoNombre,
+            this.UnidadMedida,
+            this.productoCantidad,
+            this.productoPrecio,
+            this.productoPrecioFin});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(454, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(416, 117);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(480, 268);
+            this.dataGridView1.Size = new System.Drawing.Size(518, 265);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label6.Location = new System.Drawing.Point(180, 283);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Cantidad";
             // 
             // label7
             // 
@@ -155,19 +163,6 @@
             this.textBoxNombre.TabIndex = 8;
             this.textBoxNombre.Visible = false;
             // 
-            // textBoxCantidad
-            // 
-            this.textBoxCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxCantidad.BackColor = System.Drawing.Color.White;
-            this.textBoxCantidad.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCantidad.Location = new System.Drawing.Point(264, 283);
-            this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxCantidad.Multiline = true;
-            this.textBoxCantidad.Name = "textBoxCantidad";
-            this.textBoxCantidad.Size = new System.Drawing.Size(49, 26);
-            this.textBoxCantidad.TabIndex = 9;
-            this.textBoxCantidad.Visible = false;
-            // 
             // facturaFecha
             // 
             this.facturaFecha.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
@@ -175,25 +170,6 @@
             this.facturaFecha.Name = "facturaFecha";
             this.facturaFecha.Size = new System.Drawing.Size(188, 25);
             this.facturaFecha.TabIndex = 10;
-            // 
-            // comboBoxProducto
-            // 
-            this.comboBoxProducto.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
-            this.comboBoxProducto.FormattingEnabled = true;
-            this.comboBoxProducto.Location = new System.Drawing.Point(125, 237);
-            this.comboBoxProducto.Name = "comboBoxProducto";
-            this.comboBoxProducto.Size = new System.Drawing.Size(188, 25);
-            this.comboBoxProducto.TabIndex = 11;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label8.Location = new System.Drawing.Point(43, 283);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 20);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Unidad";
             // 
             // labelPrecio
             // 
@@ -204,15 +180,6 @@
             this.labelPrecio.Size = new System.Drawing.Size(30, 20);
             this.labelPrecio.TabIndex = 14;
             this.labelPrecio.Text = "$...";
-            // 
-            // comboBoxUnidad
-            // 
-            this.comboBoxUnidad.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
-            this.comboBoxUnidad.FormattingEnabled = true;
-            this.comboBoxUnidad.Location = new System.Drawing.Point(125, 284);
-            this.comboBoxUnidad.Name = "comboBoxUnidad";
-            this.comboBoxUnidad.Size = new System.Drawing.Size(50, 25);
-            this.comboBoxUnidad.TabIndex = 15;
             // 
             // pictureBox1
             // 
@@ -239,7 +206,7 @@
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(264, 334);
+            this.textBox1.Location = new System.Drawing.Point(263, 328);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -257,36 +224,201 @@
             this.label10.TabIndex = 19;
             this.label10.Text = "$...";
             // 
+            // productoNombre
+            // 
+            this.productoNombre.HeaderText = "Nombre Producto";
+            this.productoNombre.Name = "productoNombre";
+            // 
+            // UnidadMedida
+            // 
+            this.UnidadMedida.HeaderText = "Bulto";
+            this.UnidadMedida.Name = "UnidadMedida";
+            // 
+            // productoCantidad
+            // 
+            this.productoCantidad.HeaderText = "Cantidad";
+            this.productoCantidad.Name = "productoCantidad";
+            // 
+            // productoPrecio
+            // 
+            this.productoPrecio.HeaderText = "Precio X Bulto";
+            this.productoPrecio.Name = "productoPrecio";
+            // 
+            // productoPrecioFin
+            // 
+            this.productoPrecioFin.HeaderText = "Precio Total";
+            this.productoPrecioFin.Name = "productoPrecioFin";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(125, 237);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(188, 26);
+            this.textBox2.TabIndex = 20;
+            this.textBox2.Visible = false;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F, System.Drawing.FontStyle.Bold);
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(213, 17);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(296, 40);
+            this.label17.TabIndex = 29;
+            this.label17.Text = "Lista de productos";
+            // 
+            // BtnCancelar
+            // 
+            this.BtnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancelar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancelar.ForeColor = System.Drawing.Color.White;
+            this.BtnCancelar.Location = new System.Drawing.Point(527, 367);
+            this.BtnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnCancelar.Name = "BtnCancelar";
+            this.BtnCancelar.Size = new System.Drawing.Size(154, 34);
+            this.BtnCancelar.TabIndex = 50;
+            this.BtnCancelar.Text = "Cancelar";
+            this.BtnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // BtnGuardar
+            // 
+            this.BtnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardar.Location = new System.Drawing.Point(355, 367);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnGuardar.Name = "BtnGuardar";
+            this.BtnGuardar.Size = new System.Drawing.Size(154, 34);
+            this.BtnGuardar.TabIndex = 51;
+            this.BtnGuardar.Text = "Aceptar";
+            this.BtnGuardar.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView2.Location = new System.Drawing.Point(34, 88);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridView2.MultiSelect = false;
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(660, 240);
+            this.dataGridView2.TabIndex = 52;
+            // 
+            // panelNuevoProducto
+            // 
+            this.panelNuevoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelNuevoProducto.BackColor = System.Drawing.Color.Black;
+            this.panelNuevoProducto.Controls.Add(this.dataGridView2);
+            this.panelNuevoProducto.Controls.Add(this.BtnGuardar);
+            this.panelNuevoProducto.Controls.Add(this.BtnCancelar);
+            this.panelNuevoProducto.Controls.Add(this.label17);
+            this.panelNuevoProducto.Location = new System.Drawing.Point(144, 27);
+            this.panelNuevoProducto.Name = "panelNuevoProducto";
+            this.panelNuevoProducto.Size = new System.Drawing.Size(722, 417);
+            this.panelNuevoProducto.TabIndex = 21;
+            this.panelNuevoProducto.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(124, 284);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(50, 26);
+            this.textBox3.TabIndex = 26;
+            this.textBox3.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.label8.Location = new System.Drawing.Point(43, 290);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(62, 20);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Unidad";
+            // 
+            // textBoxCantidad
+            // 
+            this.textBoxCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxCantidad.BackColor = System.Drawing.Color.White;
+            this.textBoxCantidad.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCantidad.Location = new System.Drawing.Point(262, 284);
+            this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxCantidad.Multiline = true;
+            this.textBoxCantidad.Name = "textBoxCantidad";
+            this.textBoxCantidad.Size = new System.Drawing.Size(50, 26);
+            this.textBoxCantidad.TabIndex = 24;
+            this.textBoxCantidad.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.label6.Location = new System.Drawing.Point(182, 290);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(76, 20);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Cantidad";
+            // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
+            this.Controls.Add(this.panelNuevoProducto);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBoxUnidad);
             this.Controls.Add(this.labelPrecio);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBoxProducto);
             this.Controls.Add(this.facturaFecha);
-            this.Controls.Add(this.textBoxCantidad);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.textBoxCantidad);
+            this.Controls.Add(this.label6);
             this.Name = "Factura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cerveceria Mauricio";
+            this.Load += new System.EventHandler(this.Factura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panelNuevoProducto.ResumeLayout(false);
+            this.panelNuevoProducto.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,19 +431,29 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxNombre;
-        private System.Windows.Forms.TextBox textBoxCantidad;
         private System.Windows.Forms.DateTimePicker facturaFecha;
-        private System.Windows.Forms.ComboBox comboBoxProducto;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelPrecio;
-        private System.Windows.Forms.ComboBox comboBoxUnidad;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoPrecio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoPrecioFin;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Panel panelNuevoProducto;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxCantidad;
+        private System.Windows.Forms.Label label6;
     }
 }
