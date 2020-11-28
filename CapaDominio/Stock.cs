@@ -10,7 +10,7 @@ namespace CapaDominio
         int precioCompraEntero = 0;
         int precioVentaEntero = 0;
         int cantidadEntero = 0;
-        string codigo;
+       
         string nombre;
         string tipo;
         string descripcion;
@@ -19,9 +19,7 @@ namespace CapaDominio
 
         //PROPIEDADES
         public int PrecioCompraEntero { get => precioCompraEntero; set => precioCompraEntero = value; }
-        public int PrecioVentaEntero { get => precioVentaEntero; set => precioVentaEntero = value; }
         public int CantidadEntero { get => cantidadEntero; set => cantidadEntero = value; }
-        public string Codigo { get => codigo; set => codigo = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Tipo { get => tipo; set => tipo = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
@@ -101,15 +99,11 @@ namespace CapaDominio
         /// <summary>
         /// CONSULTAS SOBRE DATOS
         /// </summary>
-        public bool ProductoValidar(string codigo, string nombre, string tipo, string unidadMedidad, string cantidad, string precioCompra, string precioVenta)
+        public bool ProductoValidar(string nombre, string tipo, string unidadMedidad, string cantidad, string precioCompra)
         {
             bool exito = false;
-            //VALIDACIONES DE CAMPOS VACÍOS
-            if(codigo == "")
-            {
-                MessageBox.Show("Cargá el código del producto");
-            }
-            else if (nombre == "")
+            //VALIDACIONES DE CAMPOS VACÍOS          
+            if (nombre == "")
             {
                 MessageBox.Show("Cargá el nombre del producto");
             }
@@ -129,11 +123,6 @@ namespace CapaDominio
             {
                 MessageBox.Show("Cargá el precio de compra del producto");
             }
-            else if (precioVenta == "")
-            {
-                MessageBox.Show("Cargá el precio de venta del producto");
-            }
-
             //VALIDACIONES DE FORMATOS CORRECTOS
             else if (int.TryParse(precioCompra, out int precioCompraEntero) == false)
             {
@@ -143,14 +132,7 @@ namespace CapaDominio
             {
                 MessageBox.Show("El precio de compra no puede ser negativo");
             }
-            else if (int.TryParse(precioVenta, out int precioVentaEntero) == false)
-            {
-                MessageBox.Show("El precio de venta debe del producto debe ser un número entero");
-            }
-            else if(precioVentaEntero < 0)
-            {
-                MessageBox.Show("El precio de venta no puede ser negativo");
-            }
+            
             else if(Int64.TryParse(cantidad, out Int64 CantidadEntero) == false)
             {
                 MessageBox.Show("La cantidad del producto debe ser un número entero");
@@ -172,12 +154,12 @@ namespace CapaDominio
         }
         
         //NUEVO PRODUCTO
-        public bool AgregarProducto(string codigo, string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioCompra, float precioVenta)
+        public bool AgregarProducto(string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioCompra)
         {
 
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("INSERT INTO Producto (productoCodigo, productoNombre, productoUnidadMedida, productoTipo,  productoDesc, productoCantidad, productoPrecioCompra, productoPrecioVenta) VALUES ('" + codigo + "', '" + nombre + "', '" + unidad + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioCompra + "', '" + precioVenta + "')");
+            return CG.Ejecutor("INSERT INTO Producto (productoNombre, productoUnidadMedida, productoTipo,  productoDesc, productoCantidad, productoPrecioCompra) VALUES ('" + nombre + "', '" + unidad + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioCompra + "')");
             //return consulta;
         }
 
@@ -193,11 +175,11 @@ namespace CapaDominio
         }
 
         //MODIFICAR PRODUCTO
-        public bool ModificarStock(int productoId, string codigo, string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioCompra, float precioVenta)
+        public bool ModificarStock(int productoId, string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioCompra)
         {
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("UPDATE Producto SET productoCodigo = '" + codigo + "', productoNombre = '" + nombre + "', productoUnidadMedida = '" + unidad + "', productoTipo = '" + tipo + "',  productoDesc = '" + descripcion + "', productoCantidad = " + cantidad + ", productoPrecioCompra = " + precioCompra + ", productoPrecioVenta = " + precioVenta + " where productoId = " + productoId);
+            return CG.Ejecutor("UPDATE Producto SET productoNombre = '" + nombre + "', productoUnidadMedida = '" + unidad + "', productoTipo = '" + tipo + "',  productoDesc = '" + descripcion + "', productoCantidad = " + cantidad + ", productoPrecioCompra = " + precioCompra + "where productoId = " + productoId);
 
 
         }

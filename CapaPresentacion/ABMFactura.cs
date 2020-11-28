@@ -11,9 +11,9 @@ using CapaDominio;
 
 namespace CapaPresentacion
 {
-    public partial class Factura : Form
+    public partial class ABMFactura : Form
     {
-        public Factura()
+        public ABMFactura()
         {
             InitializeComponent();
         }
@@ -23,20 +23,22 @@ namespace CapaPresentacion
             //Configurando DataGrid
             DataSet DS = new DataSet();
 
-            Stock stock = new Stock();
-            DS = stock.MostrarStock();
-            dataGridView1.DataSource = DS.Tables[0];
-            dataGridView1.Columns["productoId"].Visible = false;
-            dataGridView1.Columns["productoPrecioCompra"].Visible = false;
-            dataGridView1.Columns["productoDesc"].Visible = false;
-            dataGridView1.Columns["productoCantidad"].Visible = false;
-            dataGridView1.Columns["productoCodigo"].Visible = false; 
+            ListaPrecios listaPre = new ListaPrecios();
+            DS = listaPre.MostrarListaPrecios();
+            dataGridView2.DataSource = DS.Tables[0];
+            dataGridView2.Columns["listaId"].Visible = false;
 
         }
 
         private void Factura_Load(object sender, EventArgs e)
         {
+            DataGridLlenar();
+        }
 
+        private void agregarProd_Click(object sender, EventArgs e)
+        {
+            panelAgregarProd.Visible = true;
+            
         }
     }
 }

@@ -69,7 +69,7 @@ namespace CapaPresentacion
             dataGridView1.DataSource = DS.Tables[0];
             dataGridView1.Columns["productoId"].Visible = false;
             dataGridView1.Columns["productoPrecioCompra"].Visible = false;
-            dataGridView1.Columns["productoPrecioVenta"].Visible = false;
+            
         }
 
         private void botonBuscar_Click(object sender, EventArgs e)
@@ -109,33 +109,32 @@ namespace CapaPresentacion
                 comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
             }
 
-            textBoxCodigo.Focus();
+            
 
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            string codigo, nombre, tipo, descripcion, unidadMedida, cantidad, precioCompra, precioVenta;
+            string  nombre, tipo, descripcion, unidadMedida, cantidad, precioCompra;
 
 
-            codigo = textBoxCodigo.Text;
             nombre = textBoxNom.Text;
             tipo = comboBoxNuevo.Text;
             descripcion = textBoxDescripcion.Text;
             unidadMedida = comboBoxUMedida.Text;
             cantidad = textBoxCantidad.Text;
             precioCompra = textBoxPcompra.Text;
-            precioVenta = textBoxPventa.Text;
+            
            
 
             Stock producto = new Stock();
-            if (producto.ProductoValidar(codigo, nombre, tipo, unidadMedida, cantidad, precioCompra, precioVenta))
+            if (producto.ProductoValidar(nombre, tipo, unidadMedida, cantidad, precioCompra))
             {
                 long cantidadEntero = long.Parse(cantidad);
                 int precioCompraEntero = int.Parse(precioCompra);
-                int precioVentaEntero = int.Parse(precioVenta);
+               
 
-                if (producto.AgregarProducto(codigo, nombre, unidadMedida, tipo, descripcion, cantidadEntero, precioCompraEntero, precioVentaEntero) == true)
+                if (producto.AgregarProducto(nombre, unidadMedida, tipo, descripcion, cantidadEntero, precioCompraEntero) == true)
                 {
                     MessageBox.Show("Se creo el nuevo producto con éxito");
                     
@@ -236,29 +235,29 @@ namespace CapaPresentacion
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                string codigo, nombre, unidad, tipo, descripcion, cantidad, precioCompra, precioVenta, productoId;
+                string nombre, unidad, tipo, descripcion, cantidad, precioCompra, productoId;
                 int idAux, cantidadAux;
-                float precioVaux, precioCaux;
+                float precioCaux;
 
 
                 Stock s = new Stock();
-                codigo = dataGridView1.CurrentRow.Cells["productoCodigo"].Value.ToString();
+                
                 nombre = dataGridView1.CurrentRow.Cells["productoNombre"].Value.ToString();
                 unidad = dataGridView1.CurrentRow.Cells["productoUnidadMedida"].Value.ToString();
                 tipo = dataGridView1.CurrentRow.Cells["productoTipo"].Value.ToString();
                 descripcion = dataGridView1.CurrentRow.Cells["productoDesc"].Value.ToString();
                 cantidad = dataGridView1.CurrentRow.Cells["productoCantidad"].Value.ToString();
                 precioCompra = dataGridView1.CurrentRow.Cells["productoPrecioCompra"].Value.ToString();
-                precioVenta = dataGridView1.CurrentRow.Cells["productoPrecioVenta"].Value.ToString();
+                
                
                 productoId = dataGridView1.CurrentRow.Cells["productoId"].Value.ToString();
                 idAux = int.Parse(productoId);
                 cantidadAux = int.Parse(cantidad);
-                precioVaux = float.Parse(precioVenta);
+                
                 precioCaux = float.Parse(precioCompra);
 
 
-                if (s.ModificarStock(idAux, codigo, nombre, unidad, tipo, descripcion, cantidadAux, precioCaux, precioVaux) == true)
+                if (s.ModificarStock(idAux, nombre, unidad, tipo, descripcion, cantidadAux, precioCaux) == true)
                 {
                     MessageBox.Show("La modificacion se realizo con exito");
                 }

@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class Factura
+    partial class ABMFactura
     {
         /// <summary>
         /// Required designer variable.
@@ -33,34 +33,34 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
-            this.facturaFecha = new System.Windows.Forms.DateTimePicker();
-            this.labelPrecio = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.productoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoPrecioFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.facturaFecha = new System.Windows.Forms.DateTimePicker();
+            this.labelPrecio = new System.Windows.Forms.Label();
+            this.agregarProd = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnGuardar = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panelNuevoProducto = new System.Windows.Forms.Panel();
+            this.panelAgregarProd = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panelNuevoProducto.SuspendLayout();
+            this.panelAgregarProd.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -130,6 +130,31 @@
             this.dataGridView1.Size = new System.Drawing.Size(518, 265);
             this.dataGridView1.TabIndex = 4;
             // 
+            // productoNombre
+            // 
+            this.productoNombre.HeaderText = "Nombre Producto";
+            this.productoNombre.Name = "productoNombre";
+            // 
+            // UnidadMedida
+            // 
+            this.UnidadMedida.HeaderText = "Bulto";
+            this.UnidadMedida.Name = "UnidadMedida";
+            // 
+            // productoCantidad
+            // 
+            this.productoCantidad.HeaderText = "Cantidad";
+            this.productoCantidad.Name = "productoCantidad";
+            // 
+            // productoPrecio
+            // 
+            this.productoPrecio.HeaderText = "Precio X Bulto";
+            this.productoPrecio.Name = "productoPrecio";
+            // 
+            // productoPrecioFin
+            // 
+            this.productoPrecioFin.HeaderText = "Precio Total";
+            this.productoPrecioFin.Name = "productoPrecioFin";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -181,15 +206,16 @@
             this.labelPrecio.TabIndex = 14;
             this.labelPrecio.Text = "$...";
             // 
-            // pictureBox1
+            // agregarProd
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.round_add_circle_outline_black_18dp;
-            this.pictureBox1.Location = new System.Drawing.Point(319, 231);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
+            this.agregarProd.Image = global::CapaPresentacion.Properties.Resources.round_add_circle_outline_black_18dp;
+            this.agregarProd.Location = new System.Drawing.Point(319, 231);
+            this.agregarProd.Name = "agregarProd";
+            this.agregarProd.Size = new System.Drawing.Size(36, 36);
+            this.agregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.agregarProd.TabIndex = 16;
+            this.agregarProd.TabStop = false;
+            this.agregarProd.Click += new System.EventHandler(this.agregarProd_Click);
             // 
             // label9
             // 
@@ -223,31 +249,6 @@
             this.label10.Size = new System.Drawing.Size(74, 50);
             this.label10.TabIndex = 19;
             this.label10.Text = "$...";
-            // 
-            // productoNombre
-            // 
-            this.productoNombre.HeaderText = "Nombre Producto";
-            this.productoNombre.Name = "productoNombre";
-            // 
-            // UnidadMedida
-            // 
-            this.UnidadMedida.HeaderText = "Bulto";
-            this.UnidadMedida.Name = "UnidadMedida";
-            // 
-            // productoCantidad
-            // 
-            this.productoCantidad.HeaderText = "Cantidad";
-            this.productoCantidad.Name = "productoCantidad";
-            // 
-            // productoPrecio
-            // 
-            this.productoPrecio.HeaderText = "Precio X Bulto";
-            this.productoPrecio.Name = "productoPrecio";
-            // 
-            // productoPrecioFin
-            // 
-            this.productoPrecioFin.HeaderText = "Precio Total";
-            this.productoPrecioFin.Name = "productoPrecioFin";
             // 
             // textBox2
             // 
@@ -324,19 +325,19 @@
             this.dataGridView2.Size = new System.Drawing.Size(660, 240);
             this.dataGridView2.TabIndex = 52;
             // 
-            // panelNuevoProducto
+            // panelAgregarProd
             // 
-            this.panelNuevoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelNuevoProducto.BackColor = System.Drawing.Color.Black;
-            this.panelNuevoProducto.Controls.Add(this.dataGridView2);
-            this.panelNuevoProducto.Controls.Add(this.BtnGuardar);
-            this.panelNuevoProducto.Controls.Add(this.BtnCancelar);
-            this.panelNuevoProducto.Controls.Add(this.label17);
-            this.panelNuevoProducto.Location = new System.Drawing.Point(144, 27);
-            this.panelNuevoProducto.Name = "panelNuevoProducto";
-            this.panelNuevoProducto.Size = new System.Drawing.Size(722, 417);
-            this.panelNuevoProducto.TabIndex = 21;
-            this.panelNuevoProducto.Visible = false;
+            this.panelAgregarProd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelAgregarProd.BackColor = System.Drawing.Color.Black;
+            this.panelAgregarProd.Controls.Add(this.dataGridView2);
+            this.panelAgregarProd.Controls.Add(this.BtnGuardar);
+            this.panelAgregarProd.Controls.Add(this.BtnCancelar);
+            this.panelAgregarProd.Controls.Add(this.label17);
+            this.panelAgregarProd.Location = new System.Drawing.Point(157, 27);
+            this.panelAgregarProd.Name = "panelAgregarProd";
+            this.panelAgregarProd.Size = new System.Drawing.Size(722, 417);
+            this.panelAgregarProd.TabIndex = 21;
+            this.panelAgregarProd.Visible = false;
             // 
             // textBox3
             // 
@@ -384,18 +385,18 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Cantidad";
             // 
-            // Factura
+            // ABMFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
-            this.Controls.Add(this.panelNuevoProducto);
+            this.Controls.Add(this.panelAgregarProd);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.agregarProd);
             this.Controls.Add(this.labelPrecio);
             this.Controls.Add(this.facturaFecha);
             this.Controls.Add(this.textBoxNombre);
@@ -410,15 +411,15 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxCantidad);
             this.Controls.Add(this.label6);
-            this.Name = "Factura";
+            this.Name = "ABMFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cerveceria Mauricio";
             this.Load += new System.EventHandler(this.Factura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panelNuevoProducto.ResumeLayout(false);
-            this.panelNuevoProducto.PerformLayout();
+            this.panelAgregarProd.ResumeLayout(false);
+            this.panelAgregarProd.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,7 +437,7 @@
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.DateTimePicker facturaFecha;
         private System.Windows.Forms.Label labelPrecio;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox agregarProd;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
@@ -450,7 +451,7 @@
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnGuardar;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Panel panelNuevoProducto;
+        private System.Windows.Forms.Panel panelAgregarProd;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxCantidad;
