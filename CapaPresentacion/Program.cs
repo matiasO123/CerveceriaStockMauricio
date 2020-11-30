@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using AccesoDatos;
 namespace CapaPresentacion
 {
     static class Program
@@ -16,7 +16,11 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ABMFactura());
+            ConexionGeneral CG = new ConexionGeneral();
+            CG.DBCreator();
+
+            //Application.Run(new ABMFactura());
+            Application.Run(new ABMInicial());
         }
     }
 }

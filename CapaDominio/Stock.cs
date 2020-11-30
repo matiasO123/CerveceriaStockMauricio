@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using CapaAccesoDatos;
+using AccesoDatos;
 
 namespace CapaDominio
 {

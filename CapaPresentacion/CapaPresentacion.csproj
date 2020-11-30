@@ -120,6 +120,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos\AccesoDatos.csproj">
+      <Project>{7f1dbe96-2014-4547-88a7-1649d459923f}</Project>
+      <Name>AccesoDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaDominio\CapaDominio.csproj">
       <Project>{d7d87ca8-c8b1-4d6c-b466-9f3f28258a3e}</Project>
       <Name>CapaDominio</Name>

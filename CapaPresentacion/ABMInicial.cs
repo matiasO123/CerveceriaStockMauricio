@@ -95,7 +95,7 @@ namespace CapaPresentacion
             DataSet DS = new DataSet();
             Stock stock = new Stock();
             DS = stock.MostrarProductoTipo();
-
+            comboBoxNuevo.Items.Clear();
             //Agrega el tipo de producto
             foreach (DataRow row in DS.Tables[0].Rows)
             {
@@ -103,6 +103,7 @@ namespace CapaPresentacion
             }
             DS.Clear();
 
+            comboBoxUMedida.Items.Clear();
             DS = stock.MostrarUnidadMedida();
             foreach (DataRow row in DS.Tables[0].Rows)
             {
