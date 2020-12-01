@@ -79,7 +79,10 @@ C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMProductos.resources
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMStock.resources
+<<<<<<< HEAD
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\AccesoDatos.dll
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\AccesoDatos.pdb
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMProductos.resources
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMStock.resources
+=======
+>>>>>>> 6e983993571317cc938fe143c8c7eb9fed3ceea6

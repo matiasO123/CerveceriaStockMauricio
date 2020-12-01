@@ -66,6 +66,7 @@ namespace CapaDominio
 
         }
 
+
         public DataSet MostrarProductoFiltro(string nombre, string tipo, string proveedor)
         {
             DataSet DDSS = new DataSet();
@@ -97,7 +98,13 @@ namespace CapaDominio
             
             
             return DDSS;
+
         }       
+
+        
+
+
+
         
         
         
@@ -186,6 +193,7 @@ namespace CapaDominio
             ConexionGeneral CG = new ConexionGeneral();
 
             return CG.Ejecutor("UPDATE Producto SET productoNombre = '" + nombre + "', productoUnidadMedida = '" + unidad + "', productoTipo = '" + tipo + "',  productoDesc = '" + descripcion + "', productoCantidad = " + cantidad + ", productoPrecioVenta = " + precioVenta + " where productoId = " + productoId + " ");
+
 
 
         }

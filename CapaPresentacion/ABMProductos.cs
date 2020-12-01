@@ -68,7 +68,9 @@ namespace CapaPresentacion
             DS = stock.MostrarProducto();
             dataGridView1.DataSource = DS.Tables[0];
             dataGridView1.Columns["productoId"].Visible = false;
-            dataGridView1.Columns["productoPrecioVenta"].Visible = true;
+
+
+
             
         }
 
@@ -98,8 +100,10 @@ namespace CapaPresentacion
             BtnAgregar.Enabled = true;
             botonGuardar.Enabled = false;
             DataSet DS = new DataSet();
+
             Producto producto = new Producto();
             DS = producto.MostrarProductoTipo();
+
             comboBoxNuevo.Items.Clear();
             //Agrega el tipo de producto
             foreach (DataRow row in DS.Tables[0].Rows)
@@ -132,8 +136,6 @@ namespace CapaPresentacion
             cantidad = textBoxCantidad.Text;
             precioVenta = textBoxPventa.Text;
 
-
-            
             Producto producto = new Producto();
             if (producto.ProductoValidar(nombre, tipo, unidadMedida, cantidad, precioVenta))
             {
@@ -148,8 +150,8 @@ namespace CapaPresentacion
 
                     DataGridLlenar();
                     panelNuevoProducto.Visible = false;
+
                     VaciarCampos();
-                    
                 }
                 else
                 {
@@ -203,6 +205,12 @@ namespace CapaPresentacion
             textBoxCantidad.Text = "";
             textBoxPventa.Text = "";
         }
+
+
+
+
+
+
 
 
        //ELIMINAR PRODUCTO CON MESSAGEBOX si-no-cancelar
@@ -277,6 +285,7 @@ namespace CapaPresentacion
                 productoId = dataGridView1.CurrentRow.Cells["productoId"].Value.ToString();
                 
 
+
                 if (p.ProductoValidar(nombre, tipo, unidad, cantidad, precioVenta) == true)
                 {
                     idAux = int.Parse(productoId);
@@ -299,6 +308,7 @@ namespace CapaPresentacion
                     DataGridLlenar();
 
                 }
+
             
            
                 
@@ -306,6 +316,7 @@ namespace CapaPresentacion
                 p = new Producto();
                 DS = p.MostrarProducto();
                 dataGridView1.DataSource = DS.Tables[0];*/
+
 
 
         }
