@@ -66,11 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ABMInicial.cs">
+    <Compile Include="ABMProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABMInicial.Designer.cs">
-      <DependentUpon>ABMInicial.cs</DependentUpon>
+    <Compile Include="ABMProductos.Designer.cs">
+      <DependentUpon>ABMProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="ABMFactura.cs">
       <SubType>Form</SubType>
@@ -78,22 +78,22 @@
     <Compile Include="ABMFactura.Designer.cs">
       <DependentUpon>ABMFactura.cs</DependentUpon>
     </Compile>
-    <Compile Include="ABMListaPrecios.cs">
+    <Compile Include="ABMStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABMListaPrecios.Designer.cs">
-      <DependentUpon>ABMListaPrecios.cs</DependentUpon>
+    <Compile Include="ABMStock.Designer.cs">
+      <DependentUpon>ABMStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ABMInicial.resx">
-      <DependentUpon>ABMInicial.cs</DependentUpon>
+    <EmbeddedResource Include="ABMProductos.resx">
+      <DependentUpon>ABMProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ABMFactura.resx">
       <DependentUpon>ABMFactura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ABMListaPrecios.resx">
-      <DependentUpon>ABMListaPrecios.cs</DependentUpon>
+    <EmbeddedResource Include="ABMStock.resx">
+      <DependentUpon>ABMStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

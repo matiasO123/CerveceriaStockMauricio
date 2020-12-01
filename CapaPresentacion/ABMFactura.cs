@@ -23,7 +23,7 @@ namespace CapaPresentacion
             //Configurando DataGrid
             DataSet DS = new DataSet();
 
-            ListaPrecios listaPre = new ListaPrecios();
+            Stock listaPre = new Stock();
             DS = listaPre.MostrarListaPrecios();
             dataGridView2.DataSource = DS.Tables[0];
             dataGridView2.Columns["listaId"].Visible = false;

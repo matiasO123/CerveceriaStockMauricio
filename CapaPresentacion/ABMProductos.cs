@@ -12,13 +12,13 @@ using CapaDominio;
 
 namespace CapaPresentacion
 {
-    public partial class ABMInicial : Form
+    public partial class ABMProductos : Form
     {
 
 
         DataSet DS = new DataSet();        
         
-        public ABMInicial()
+        public ABMProductos()
         {
             InitializeComponent();
 
@@ -42,7 +42,7 @@ namespace CapaPresentacion
 
             panelNuevoProducto.Visible = false;
             DataSet DS = new DataSet();
-            Stock stock = new Stock();
+            Producto stock = new Producto();
             DS = stock.MostrarProductoTipo();
             //Agrega el tipo de producto
             foreach (DataRow row in DS.Tables[0].Rows)
@@ -64,36 +64,39 @@ namespace CapaPresentacion
             //Configurando DataGrid
             DataSet DS = new DataSet();
 
-            Stock stock = new Stock();
-            DS = stock.MostrarStock();
+            Producto stock = new Producto();
+            DS = stock.MostrarProducto();
             dataGridView1.DataSource = DS.Tables[0];
             dataGridView1.Columns["productoId"].Visible = false;
-            dataGridView1.Columns["productoPrecioCompra"].Visible = false;
+            dataGridView1.Columns["productoPrecioVenta"].Visible = false;
             
         }
 
+        
+
+
+
+        //BOTONES DEL ABM DE PRODUCTOS
         private void botonBuscar_Click(object sender, EventArgs e)
-        {
-            DataSet DS = new DataSet();
-            Stock stock = new Stock();
-            DS = stock.MostrarStockFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
-            textBoxNombre.Visible = true;
-            comboBoxProveedor.Visible = true;
-            comboBoxTipo.Visible = true;
-            labelBusquedaNombre.Visible = true;
-            labelBusquedaTipo.Visible = true;
-            labelBusquedaProveedor.Visible = true;
+                {
+                    DataSet DS = new DataSet();
+                    Producto stock = new Producto();
+                    DS = stock.MostrarProductoFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
+                    textBoxNombre.Visible = true;
+                    comboBoxProveedor.Visible = true;
+                    comboBoxTipo.Visible = true;
+                    labelBusquedaNombre.Visible = true;
+                    labelBusquedaTipo.Visible = true;
+                    labelBusquedaProveedor.Visible = true;
 
-        }
-
-
+                }
 
         private void botonAgregar_Click(object sender, EventArgs e)
         {
             panelNuevoProducto.Visible = true;
             panelNuevoProducto.BringToFront();
             DataSet DS = new DataSet();
-            Stock stock = new Stock();
+            Producto stock = new Producto();
             DS = stock.MostrarProductoTipo();
             comboBoxNuevo.Items.Clear();
             //Agrega el tipo de producto
@@ -116,7 +119,7 @@ namespace CapaPresentacion
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            string  nombre, tipo, descripcion, unidadMedida, cantidad, precioCompra;
+            string  nombre, tipo, descripcion, unidadMedida, cantidad, precioVenta;
 
 
             nombre = textBoxNom.Text;
@@ -124,18 +127,18 @@ namespace CapaPresentacion
             descripcion = textBoxDescripcion.Text;
             unidadMedida = comboBoxUMedida.Text;
             cantidad = textBoxCantidad.Text;
-            precioCompra = textBoxPcompra.Text;
+            precioVenta = textBoxPventa.Text;
             
            
 
-            Stock producto = new Stock();
-            if (producto.ProductoValidar(nombre, tipo, unidadMedida, cantidad, precioCompra))
+            Producto producto = new Producto();
+            if (producto.ProductoValidar(nombre, tipo, unidadMedida, cantidad, precioVenta))
             {
                 long cantidadEntero = long.Parse(cantidad);
-                int precioCompraEntero = int.Parse(precioCompra);
+                int precioVentaEntero = int.Parse(precioVenta);
                
 
-                if (producto.AgregarProducto(nombre, unidadMedida, tipo, descripcion, cantidadEntero, precioCompraEntero) == true)
+                if (producto.AgregarProducto(nombre, unidadMedida, tipo, descripcion, cantidadEntero, precioVentaEntero) == true)
                 {
                     MessageBox.Show("Se creo el nuevo producto con éxito");
                     
@@ -147,7 +150,7 @@ namespace CapaPresentacion
                     textBoxDescripcion.Text = "";
                     comboBoxUMedida.Text = "";
                     textBoxCantidad.Text = "";
-                    textBoxPcompra.Text = "";
+                    textBoxPventa.Text = "";
                 }
                 else
                 {
@@ -170,13 +173,13 @@ namespace CapaPresentacion
         private void Busqueda(object sender, EventArgs e)
         {
             DataSet DS = new DataSet();
-            Stock sto = new Stock();
+            Producto sto = new Producto();
             string nombre  = textBoxNombre.Text;
             string tipo = comboBoxTipo.Text;
             string proveedor = comboBoxProveedor.Text;
             
 
-            DS = sto.MostrarStockFiltro(nombre, tipo, proveedor );
+            DS = sto.MostrarProductoFiltro(nombre, tipo, proveedor );
             //dataGridView1.DataSource = null;
             if(DS != null)
             {
@@ -189,6 +192,12 @@ namespace CapaPresentacion
         {
             DataGridLlenar();
         }
+
+
+
+
+
+
 
 
 
@@ -216,8 +225,8 @@ namespace CapaPresentacion
                         int IdAux;
                         Id = dataGridView1.CurrentRow.Cells["productoId"].Value.ToString();
                         IdAux = int.Parse(Id);
-                        Stock p = new Stock();
-                        if (p.EliminarStock(IdAux) == true)
+                        Producto p = new Producto();
+                        if (p.EliminarProducto(IdAux) == true)
                         {
                             MessageBox.Show("El producto se eliminó correctamente.");
                         }
@@ -226,8 +235,8 @@ namespace CapaPresentacion
                             MessageBox.Show("El producto no se pudo eliminar");
                         }
                         DataSet DS = new DataSet();
-                        p = new Stock();
-                        DS = p.MostrarStock();
+                        p = new Producto();
+                        DS = p.MostrarProducto();
                         dataGridView1.DataSource = DS.Tables[0];
 
 
@@ -247,7 +256,7 @@ namespace CapaPresentacion
                 float precioCaux;
 
 
-                Stock s = new Stock();
+                Producto s = new Producto();
                 
                 nombre = dataGridView1.CurrentRow.Cells["productoNombre"].Value.ToString();
                 unidad = dataGridView1.CurrentRow.Cells["productoUnidadMedida"].Value.ToString();
@@ -264,7 +273,7 @@ namespace CapaPresentacion
                 precioCaux = float.Parse(precioCompra);
 
 
-                if (s.ModificarStock(idAux, nombre, unidad, tipo, descripcion, cantidadAux, precioCaux) == true)
+                if (s.ModificarProducto(idAux, nombre, unidad, tipo, descripcion, cantidadAux, precioCaux) == true)
                 {
                     MessageBox.Show("La modificacion se realizo con exito");
                 }
@@ -273,8 +282,8 @@ namespace CapaPresentacion
                     MessageBox.Show("La modificacion no se pudo realizar");
                 }
                 DataSet DS = new DataSet();
-                s = new Stock();
-                DS = s.MostrarStock();
+                s = new Producto();
+                DS = s.MostrarProducto();
                 dataGridView1.DataSource = DS.Tables[0];
 
 

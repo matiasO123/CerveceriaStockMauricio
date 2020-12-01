@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class ABMInicial
+    partial class ABMProductos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -54,7 +54,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBoxPcompra = new System.Windows.Forms.TextBox();
+            this.textBoxPventa = new System.Windows.Forms.TextBox();
             this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.textBoxNom = new System.Windows.Forms.TextBox();
@@ -115,9 +115,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 48);
+            this.label1.Size = new System.Drawing.Size(247, 48);
             this.label1.TabIndex = 2;
-            this.label1.Text = "STOCK GENERAL";
+            this.label1.Text = "PRODUCTOS";
             // 
             // botonBuscar
             // 
@@ -312,7 +312,7 @@
             this.panelNuevoProducto.Controls.Add(this.panel4);
             this.panelNuevoProducto.Controls.Add(this.panel3);
             this.panelNuevoProducto.Controls.Add(this.panel8);
-            this.panelNuevoProducto.Controls.Add(this.textBoxPcompra);
+            this.panelNuevoProducto.Controls.Add(this.textBoxPventa);
             this.panelNuevoProducto.Controls.Add(this.textBoxCantidad);
             this.panelNuevoProducto.Controls.Add(this.textBoxDescripcion);
             this.panelNuevoProducto.Controls.Add(this.textBoxNom);
@@ -432,16 +432,16 @@
             this.panel8.Size = new System.Drawing.Size(395, 3);
             this.panel8.TabIndex = 44;
             // 
-            // textBoxPcompra
+            // textBoxPventa
             // 
-            this.textBoxPcompra.BackColor = System.Drawing.Color.Black;
-            this.textBoxPcompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPcompra.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
-            this.textBoxPcompra.ForeColor = System.Drawing.Color.White;
-            this.textBoxPcompra.Location = new System.Drawing.Point(286, 296);
-            this.textBoxPcompra.Name = "textBoxPcompra";
-            this.textBoxPcompra.Size = new System.Drawing.Size(395, 25);
-            this.textBoxPcompra.TabIndex = 7;
+            this.textBoxPventa.BackColor = System.Drawing.Color.Black;
+            this.textBoxPventa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPventa.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPventa.ForeColor = System.Drawing.Color.White;
+            this.textBoxPventa.Location = new System.Drawing.Point(286, 296);
+            this.textBoxPventa.Name = "textBoxPventa";
+            this.textBoxPventa.Size = new System.Drawing.Size(395, 25);
+            this.textBoxPventa.TabIndex = 7;
             // 
             // textBoxCantidad
             // 
@@ -483,9 +483,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(42, 299);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 24);
+            this.label7.Size = new System.Drawing.Size(129, 24);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Precio Compra";
+            this.label7.Text = "Precio Venta";
             // 
             // label5
             // 
@@ -531,20 +531,20 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Descripción";
             // 
-            // ABMInicial
+            // ABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
-            this.Controls.Add(this.panelNuevoProducto);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.panelNuevoProducto);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ABMInicial";
+            this.Name = "ABMProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cerveceria Mauricio";
             this.Load += new System.EventHandler(this.ABMInicial_Load);
@@ -580,7 +580,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBoxPcompra;
+        private System.Windows.Forms.TextBox textBoxPventa;
         private System.Windows.Forms.TextBox textBoxCantidad;
         private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.TextBox textBoxNom;
