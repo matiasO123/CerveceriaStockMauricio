@@ -59,14 +59,14 @@
             this.textoDescuento = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.labelPrecioTotal = new System.Windows.Forms.Label();
-            this.productoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelPrecioFinal = new System.Windows.Forms.Label();
+            this.labelPrecioFinalEntero = new System.Windows.Forms.Label();
             this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoPrecioFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelPrecioFinal = new System.Windows.Forms.Label();
-            this.labelPrecioFinalEntero = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -124,8 +124,8 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.productoNombre,
             this.ProductoId,
+            this.productoNombre,
             this.UnidadMedida,
             this.productoCantidad,
             this.productoPrecio,
@@ -425,6 +425,7 @@
             this.textoDescuento.Name = "textoDescuento";
             this.textoDescuento.Size = new System.Drawing.Size(119, 25);
             this.textoDescuento.TabIndex = 31;
+            this.textoDescuento.Text = "0";
             this.textoDescuento.TextChanged += new System.EventHandler(this.actualizarPrecioFinal);
             // 
             // label12
@@ -447,16 +448,36 @@
             this.labelPrecioTotal.Size = new System.Drawing.Size(96, 22);
             this.labelPrecioTotal.TabIndex = 33;
             // 
-            // productoNombre
+            // labelPrecioFinal
             // 
-            this.productoNombre.HeaderText = "Nombre Producto";
-            this.productoNombre.Name = "productoNombre";
+            this.labelPrecioFinal.AutoSize = true;
+            this.labelPrecioFinal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
+            this.labelPrecioFinal.Location = new System.Drawing.Point(719, 405);
+            this.labelPrecioFinal.Name = "labelPrecioFinal";
+            this.labelPrecioFinal.Size = new System.Drawing.Size(90, 43);
+            this.labelPrecioFinal.TabIndex = 34;
+            this.labelPrecioFinal.Text = "Final";
+            // 
+            // labelPrecioFinalEntero
+            // 
+            this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
+            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(815, 405);
+            this.labelPrecioFinalEntero.Name = "labelPrecioFinalEntero";
+            this.labelPrecioFinalEntero.Size = new System.Drawing.Size(119, 37);
+            this.labelPrecioFinalEntero.TabIndex = 35;
             // 
             // ProductoId
             // 
             this.ProductoId.HeaderText = "productoId";
             this.ProductoId.Name = "ProductoId";
             this.ProductoId.Visible = false;
+            // 
+            // productoNombre
+            // 
+            this.productoNombre.HeaderText = "Nombre Producto";
+            this.productoNombre.Name = "productoNombre";
             // 
             // UnidadMedida
             // 
@@ -477,26 +498,6 @@
             // 
             this.productoPrecioFin.HeaderText = "Precio Total";
             this.productoPrecioFin.Name = "productoPrecioFin";
-            // 
-            // labelPrecioFinal
-            // 
-            this.labelPrecioFinal.AutoSize = true;
-            this.labelPrecioFinal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinal.Location = new System.Drawing.Point(719, 405);
-            this.labelPrecioFinal.Name = "labelPrecioFinal";
-            this.labelPrecioFinal.Size = new System.Drawing.Size(90, 43);
-            this.labelPrecioFinal.TabIndex = 34;
-            this.labelPrecioFinal.Text = "Final";
-            // 
-            // labelPrecioFinalEntero
-            // 
-            this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(815, 405);
-            this.labelPrecioFinalEntero.Name = "labelPrecioFinalEntero";
-            this.labelPrecioFinalEntero.Size = new System.Drawing.Size(119, 37);
-            this.labelPrecioFinalEntero.TabIndex = 35;
             // 
             // ABMFactura
             // 
@@ -577,13 +578,13 @@
         private System.Windows.Forms.TextBox textoDescuento;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label labelPrecioTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn productoNombre;
+        private System.Windows.Forms.Label labelPrecioFinal;
+        private System.Windows.Forms.Label labelPrecioFinalEntero;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductoId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn productoNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn UnidadMedida;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoPrecioFin;
-        private System.Windows.Forms.Label labelPrecioFinal;
-        private System.Windows.Forms.Label labelPrecioFinalEntero;
     }
 }

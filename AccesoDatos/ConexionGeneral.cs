@@ -120,6 +120,30 @@ namespace AccesoDatos
 
 
         }
+
+        public string ValorUnico(string consulta)
+        {
+            string precio = "0";
+            using (miConexion)
+            {
+                SQLiteCommand cmd = new SQLiteCommand(consulta, miConexion);
+                try
+                {
+                    miConexion.Open();
+                    precio = (string)cmd.ExecuteScalar().ToString();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("" + e.Message);
+                }
+                finally
+                {
+                    miConexion.Close();
+                }
+            }
+
+            return precio;
+        }
     }
 }
 

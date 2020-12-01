@@ -18,7 +18,9 @@ namespace CapaPresentacion
             InitializeComponent();
 
         }
-        int id;
+        private int id;
+        private int idFactura;
+
         private void DataGridLlenar()
         {
             //Configurando DataGrid
@@ -128,7 +130,53 @@ namespace CapaPresentacion
 
         private void buttonCrearFactura_Click(object sender, EventArgs e)
         {
+            string nombre = textBoxNombre.Text;
+            string fecha = facturaFecha.Text;
+            string descuento = textoDescuento.Text;
+            string total = labelPrecioFinalEntero.Text;
+            bool validado = true;
+            Factura fact = new Factura();
+            if (fact.FacturaValidar(nombre, fecha, descuento, total))
+            {
+                int i = 1;
 
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
+                {
+                    if (fact.ProductoValidar(fila.Cells[1].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString(), i))
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        validado = false;
+                    }
+                }
+                if (validado)
+                {
+                    fact.FacturaCrear(nombre, fecha, descuento, total);
+                    idFactura = fact.FacturaProductoUltimoID();
+                    foreach (DataGridViewRow fila in dataGridView1.Rows)
+                    {
+                        fact.ProductoAgregar(idFactura, fila.Cells[1].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString());
+                        
+                        
+                    }
+                    MessageBox.Show("Factura creada");
+                }
+                        
+                            
+                            
+
+                       
+                
+                
+
+                
+            }
+
+            
         }
+
+
     }
 }
