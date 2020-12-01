@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class ABMInicial
+    partial class ABMProductos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -48,13 +48,13 @@
             this.comboBoxUMedida = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBoxNuevo = new System.Windows.Forms.ComboBox();
-            this.BtnGuardar = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBoxPcompra = new System.Windows.Forms.TextBox();
+            this.textBoxPventa = new System.Windows.Forms.TextBox();
             this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.textBoxNom = new System.Windows.Forms.TextBox();
@@ -63,6 +63,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.BtnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,21 +73,23 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
+            this.dataGridView1.GridColor = System.Drawing.Color.CornflowerBlue;
             this.dataGridView1.Location = new System.Drawing.Point(14, 169);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.Size = new System.Drawing.Size(920, 240);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -115,9 +118,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 48);
+            this.label1.Size = new System.Drawing.Size(247, 48);
             this.label1.TabIndex = 2;
-            this.label1.Text = "STOCK GENERAL";
+            this.label1.Text = "PRODUCTOS";
             // 
             // botonBuscar
             // 
@@ -199,15 +202,16 @@
             // 
             this.botonGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonGuardar.Enabled = false;
             this.botonGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonGuardar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonGuardar.ForeColor = System.Drawing.Color.Black;
-            this.botonGuardar.Location = new System.Drawing.Point(604, 3);
+            this.botonGuardar.ForeColor = System.Drawing.Color.White;
+            this.botonGuardar.Location = new System.Drawing.Point(357, 367);
             this.botonGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonGuardar.Name = "botonGuardar";
-            this.botonGuardar.Size = new System.Drawing.Size(154, 43);
+            this.botonGuardar.Size = new System.Drawing.Size(154, 34);
             this.botonGuardar.TabIndex = 8;
-            this.botonGuardar.Text = "Guardar Cambios";
+            this.botonGuardar.Text = "Guardar ";
             this.botonGuardar.UseVisualStyleBackColor = true;
             this.botonGuardar.Click += new System.EventHandler(this.botonGuardar_Click);
             // 
@@ -291,9 +295,9 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.BtnEditar);
             this.panel2.Controls.Add(this.botonAgregar);
             this.panel2.Controls.Add(this.botonEliminar);
-            this.panel2.Controls.Add(this.botonGuardar);
             this.panel2.Location = new System.Drawing.Point(88, 413);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(761, 50);
@@ -306,13 +310,14 @@
             this.panelNuevoProducto.Controls.Add(this.comboBoxUMedida);
             this.panelNuevoProducto.Controls.Add(this.label10);
             this.panelNuevoProducto.Controls.Add(this.comboBoxNuevo);
-            this.panelNuevoProducto.Controls.Add(this.BtnGuardar);
+            this.panelNuevoProducto.Controls.Add(this.BtnAgregar);
+            this.panelNuevoProducto.Controls.Add(this.botonGuardar);
             this.panelNuevoProducto.Controls.Add(this.BtnCancelar);
             this.panelNuevoProducto.Controls.Add(this.panel5);
             this.panelNuevoProducto.Controls.Add(this.panel4);
             this.panelNuevoProducto.Controls.Add(this.panel3);
             this.panelNuevoProducto.Controls.Add(this.panel8);
-            this.panelNuevoProducto.Controls.Add(this.textBoxPcompra);
+            this.panelNuevoProducto.Controls.Add(this.textBoxPventa);
             this.panelNuevoProducto.Controls.Add(this.textBoxCantidad);
             this.panelNuevoProducto.Controls.Add(this.textBoxDescripcion);
             this.panelNuevoProducto.Controls.Add(this.textBoxNom);
@@ -321,7 +326,7 @@
             this.panelNuevoProducto.Controls.Add(this.label4);
             this.panelNuevoProducto.Controls.Add(this.label3);
             this.panelNuevoProducto.Controls.Add(this.label2);
-            this.panelNuevoProducto.Location = new System.Drawing.Point(124, 43);
+            this.panelNuevoProducto.Location = new System.Drawing.Point(127, 12);
             this.panelNuevoProducto.Name = "panelNuevoProducto";
             this.panelNuevoProducto.Size = new System.Drawing.Size(722, 417);
             this.panelNuevoProducto.TabIndex = 11;
@@ -368,21 +373,21 @@
             this.comboBoxNuevo.Size = new System.Drawing.Size(395, 32);
             this.comboBoxNuevo.TabIndex = 3;
             // 
-            // BtnGuardar
+            // BtnAgregar
             // 
-            this.BtnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BtnAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnGuardar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGuardar.ForeColor = System.Drawing.Color.White;
-            this.BtnGuardar.Location = new System.Drawing.Point(355, 367);
-            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(154, 34);
-            this.BtnGuardar.TabIndex = 51;
-            this.BtnGuardar.Text = "Guardar";
-            this.BtnGuardar.UseVisualStyleBackColor = true;
-            this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
+            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregar.Location = new System.Drawing.Point(185, 367);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(154, 34);
+            this.BtnAgregar.TabIndex = 51;
+            this.BtnAgregar.Text = "Agregar";
+            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnGuardar_Click);
             // 
             // BtnCancelar
             // 
@@ -432,16 +437,16 @@
             this.panel8.Size = new System.Drawing.Size(395, 3);
             this.panel8.TabIndex = 44;
             // 
-            // textBoxPcompra
+            // textBoxPventa
             // 
-            this.textBoxPcompra.BackColor = System.Drawing.Color.Black;
-            this.textBoxPcompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPcompra.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
-            this.textBoxPcompra.ForeColor = System.Drawing.Color.White;
-            this.textBoxPcompra.Location = new System.Drawing.Point(286, 296);
-            this.textBoxPcompra.Name = "textBoxPcompra";
-            this.textBoxPcompra.Size = new System.Drawing.Size(395, 25);
-            this.textBoxPcompra.TabIndex = 7;
+            this.textBoxPventa.BackColor = System.Drawing.Color.Black;
+            this.textBoxPventa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPventa.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxPventa.ForeColor = System.Drawing.Color.White;
+            this.textBoxPventa.Location = new System.Drawing.Point(286, 296);
+            this.textBoxPventa.Name = "textBoxPventa";
+            this.textBoxPventa.Size = new System.Drawing.Size(395, 25);
+            this.textBoxPventa.TabIndex = 7;
             // 
             // textBoxCantidad
             // 
@@ -483,9 +488,9 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(42, 299);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 24);
+            this.label7.Size = new System.Drawing.Size(129, 24);
             this.label7.TabIndex = 40;
-            this.label7.Text = "Precio Compra";
+            this.label7.Text = "Precio Venta";
             // 
             // label5
             // 
@@ -531,7 +536,23 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Descripción";
             // 
-            // ABMInicial
+            // BtnEditar
+            // 
+            this.BtnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditar.ForeColor = System.Drawing.Color.Black;
+            this.BtnEditar.Location = new System.Drawing.Point(604, 4);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(154, 43);
+            this.BtnEditar.TabIndex = 9;
+            this.BtnEditar.Text = "Editar Producto";
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // ABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -544,7 +565,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "ABMInicial";
+            this.Name = "ABMProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cerveceria Mauricio";
             this.Load += new System.EventHandler(this.ABMInicial_Load);
@@ -574,13 +595,13 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelNuevoProducto;
         private System.Windows.Forms.ComboBox comboBoxNuevo;
-        private System.Windows.Forms.Button BtnGuardar;
+        private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBoxPcompra;
+        private System.Windows.Forms.TextBox textBoxPventa;
         private System.Windows.Forms.TextBox textBoxCantidad;
         private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.TextBox textBoxNom;
@@ -596,6 +617,7 @@
         private System.Windows.Forms.Label labelBusquedaProveedor;
         private System.Windows.Forms.Label labelBusquedaTipo;
         private System.Windows.Forms.Label labelBusquedaNombre;
+        private System.Windows.Forms.Button BtnEditar;
     }
 }
 

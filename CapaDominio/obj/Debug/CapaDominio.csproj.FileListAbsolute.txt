@@ -125,3 +125,5 @@ C:\Users\solch\Desktop\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio
 C:\Users\solch\Desktop\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.pdb
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaDominio\bin\Debug\AccesoDatos.dll
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaDominio\bin\Debug\AccesoDatos.pdb
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaDominio\bin\Debug\AccesoDatos.dll
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaDominio\bin\Debug\AccesoDatos.pdb

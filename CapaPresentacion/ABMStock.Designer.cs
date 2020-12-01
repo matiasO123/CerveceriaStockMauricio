@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class ABMListaPrecios
+    partial class ABMStock
     {
         /// <summary>
         /// Required designer variable.
