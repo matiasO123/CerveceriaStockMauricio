@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,24 @@ namespace CapaDominio
 {
      public class Factura
     {
+        public DataSet FacturaMostrar()
+        {
+            ConexionGeneral CG = new ConexionGeneral();
+            
+            return CG.Consultor("SELECT * FROM FACTURA");
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         public void FacturaCrear(string nombre, string fecha, string descuento, string facturaTotal)
         {
             int descuentoEntero = 0; 
@@ -72,6 +91,7 @@ namespace CapaDominio
             
             return Int32.Parse(CG.ValorUnico("SELECT facturaID FROM Factura ORDER BY facturaID DESC LIMIT 1 "));
         }
+
 
 
 
