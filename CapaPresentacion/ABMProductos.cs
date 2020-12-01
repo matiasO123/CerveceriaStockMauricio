@@ -16,12 +16,12 @@ namespace CapaPresentacion
     {
 
         int idProductoGlobal = -1;
-        DataSet DS = new DataSet();        
+        DataSet DS = new DataSet();
         
         public ABMProductos()
         {
             InitializeComponent();
-
+            btnProductos.Enabled = false;
         }
 
         private void ABMInicial_Load(object sender, EventArgs e)
@@ -31,11 +31,11 @@ namespace CapaPresentacion
 
             //Configurando controles
             textBoxNombre.Visible = false;
-            comboBoxProveedor.Visible = false;
+            //comboBoxProveedor.Visible = false;
 
-            comboBoxProveedor.Items.Insert(0, "");
+            //comboBoxProveedor.Items.Insert(0, "");
 
-            comboBoxProveedor.SelectedIndex = 0;
+            //comboBoxProveedor.SelectedIndex = 0;
             comboBoxTipo.Items.Insert(0, "");
             comboBoxTipo.SelectedIndex = 0;
            
@@ -83,13 +83,13 @@ namespace CapaPresentacion
                 {
                     DataSet DS = new DataSet();
                     Producto stock = new Producto();
-                    DS = stock.MostrarProductoFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
+                    //DS = stock.MostrarProductoFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
                     textBoxNombre.Visible = true;
-                    comboBoxProveedor.Visible = true;
+                    //comboBoxProveedor.Visible = true;
                     comboBoxTipo.Visible = true;
                     labelBusquedaNombre.Visible = true;
                     labelBusquedaTipo.Visible = true;
-                    labelBusquedaProveedor.Visible = true;
+                    //labelBusquedaProveedor.Visible = true;
 
                 }
 
@@ -177,10 +177,10 @@ namespace CapaPresentacion
             Producto sto = new Producto();
             string nombre  = textBoxNombre.Text;
             string tipo = comboBoxTipo.Text;
-            string proveedor = comboBoxProveedor.Text;
+            //string proveedor = comboBoxProveedor.Text;
             
 
-            DS = sto.MostrarProductoFiltro(nombre, tipo, proveedor );
+            DS = sto.MostrarProductoFiltro(nombre, tipo);
             //dataGridView1.DataSource = null;
             if(DS != null)
             {
@@ -362,6 +362,38 @@ namespace CapaPresentacion
             idProductoGlobal = Int32.Parse(Convert.ToString(ddss.Tables[0].Rows[0]["productoId"]));
             
         }
+
+        //MENU/////////////////////////////
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            ABMStock stock = new ABMStock();
+            this.Hide();
+            stock.ShowDialog();            
+            this.Close();
+        }
+
+        private void btnFacturas_Click(object sender, EventArgs e)
+        {
+            
+            ABMFactura fac = new ABMFactura();
+            this.Hide();
+            fac.ShowDialog();
+            this.Close();
+            
+        }
+
+        private void btnProductos_Click(object sender, EventArgs e)
+        {
+            
+            ABMProductos prod = new ABMProductos();
+            this.Hide();
+            prod.ShowDialog();
+            this.Close();
+            
+
+        }
+
+        //MENU/////////////////////////////
     }
 }
 

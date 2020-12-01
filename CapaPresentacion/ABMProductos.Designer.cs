@@ -30,20 +30,18 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.botonAgregar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.botonBuscar = new System.Windows.Forms.Button();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.comboBoxTipo = new System.Windows.Forms.ComboBox();
-            this.comboBoxProveedor = new System.Windows.Forms.ComboBox();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelBusquedaProveedor = new System.Windows.Forms.Label();
             this.labelBusquedaTipo = new System.Windows.Forms.Label();
             this.labelBusquedaNombre = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.botonLlenarTabla = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.BtnEditar = new System.Windows.Forms.Button();
             this.panelNuevoProducto = new System.Windows.Forms.Panel();
             this.comboBoxUMedida = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -63,11 +61,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnEditar = new System.Windows.Forms.Button();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnFacturas = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelNuevoProducto.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -109,19 +112,6 @@
             this.botonAgregar.UseVisualStyleBackColor = true;
             this.botonAgregar.Click += new System.EventHandler(this.botonAgregar_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 48);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "PRODUCTOS";
-            // 
             // botonBuscar
             // 
             this.botonBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
@@ -130,7 +120,7 @@
             this.botonBuscar.Location = new System.Drawing.Point(545, 25);
             this.botonBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonBuscar.Name = "botonBuscar";
-            this.botonBuscar.Size = new System.Drawing.Size(173, 43);
+            this.botonBuscar.Size = new System.Drawing.Size(173, 47);
             this.botonBuscar.TabIndex = 3;
             this.botonBuscar.Text = "Buscar";
             this.botonBuscar.UseVisualStyleBackColor = true;
@@ -141,11 +131,11 @@
             this.textBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxNombre.BackColor = System.Drawing.Color.White;
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(22, 42);
+            this.textBoxNombre.Location = new System.Drawing.Point(189, 44);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Multiline = true;
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(153, 26);
+            this.textBoxNombre.Size = new System.Drawing.Size(153, 30);
             this.textBoxNombre.TabIndex = 4;
             this.textBoxNombre.Visible = false;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.Busqueda);
@@ -156,32 +146,13 @@
             this.comboBoxTipo.BackColor = System.Drawing.Color.White;
             this.comboBoxTipo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTipo.FormattingEnabled = true;
-            this.comboBoxTipo.Location = new System.Drawing.Point(193, 41);
+            this.comboBoxTipo.Location = new System.Drawing.Point(360, 43);
             this.comboBoxTipo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(153, 25);
             this.comboBoxTipo.TabIndex = 5;
             this.comboBoxTipo.Visible = false;
             this.comboBoxTipo.TextChanged += new System.EventHandler(this.Busqueda);
-            // 
-            // comboBoxProveedor
-            // 
-            this.comboBoxProveedor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.comboBoxProveedor.BackColor = System.Drawing.Color.White;
-            this.comboBoxProveedor.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxProveedor.FormattingEnabled = true;
-            this.comboBoxProveedor.Items.AddRange(new object[] {
-            "Pampers",
-            "Raid",
-            "Nike",
-            "Quilmes"});
-            this.comboBoxProveedor.Location = new System.Drawing.Point(367, 40);
-            this.comboBoxProveedor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxProveedor.Name = "comboBoxProveedor";
-            this.comboBoxProveedor.Size = new System.Drawing.Size(153, 25);
-            this.comboBoxProveedor.TabIndex = 6;
-            this.comboBoxProveedor.Visible = false;
-            this.comboBoxProveedor.SelectedIndexChanged += new System.EventHandler(this.Busqueda);
             // 
             // botonEliminar
             // 
@@ -220,36 +191,23 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
-            this.panel1.Controls.Add(this.labelBusquedaProveedor);
             this.panel1.Controls.Add(this.labelBusquedaTipo);
             this.panel1.Controls.Add(this.labelBusquedaNombre);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.botonLlenarTabla);
-            this.panel1.Controls.Add(this.comboBoxProveedor);
             this.panel1.Controls.Add(this.botonBuscar);
             this.panel1.Controls.Add(this.textBoxNombre);
             this.panel1.Controls.Add(this.comboBoxTipo);
-            this.panel1.Location = new System.Drawing.Point(14, 64);
+            this.panel1.Location = new System.Drawing.Point(14, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 103);
+            this.panel1.Size = new System.Drawing.Size(920, 107);
             this.panel1.TabIndex = 9;
-            // 
-            // labelBusquedaProveedor
-            // 
-            this.labelBusquedaProveedor.AutoSize = true;
-            this.labelBusquedaProveedor.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelBusquedaProveedor.Location = new System.Drawing.Point(363, 16);
-            this.labelBusquedaProveedor.Name = "labelBusquedaProveedor";
-            this.labelBusquedaProveedor.Size = new System.Drawing.Size(86, 20);
-            this.labelBusquedaProveedor.TabIndex = 11;
-            this.labelBusquedaProveedor.Text = "Proveedor";
-            this.labelBusquedaProveedor.Visible = false;
             // 
             // labelBusquedaTipo
             // 
             this.labelBusquedaTipo.AutoSize = true;
             this.labelBusquedaTipo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelBusquedaTipo.Location = new System.Drawing.Point(189, 17);
+            this.labelBusquedaTipo.Location = new System.Drawing.Point(356, 19);
             this.labelBusquedaTipo.Name = "labelBusquedaTipo";
             this.labelBusquedaTipo.Size = new System.Drawing.Size(42, 20);
             this.labelBusquedaTipo.TabIndex = 10;
@@ -260,7 +218,7 @@
             // 
             this.labelBusquedaNombre.AutoSize = true;
             this.labelBusquedaNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelBusquedaNombre.Location = new System.Drawing.Point(18, 18);
+            this.labelBusquedaNombre.Location = new System.Drawing.Point(185, 20);
             this.labelBusquedaNombre.Name = "labelBusquedaNombre";
             this.labelBusquedaNombre.Size = new System.Drawing.Size(70, 20);
             this.labelBusquedaNombre.TabIndex = 9;
@@ -271,7 +229,7 @@
             // 
             this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel7.BackColor = System.Drawing.Color.Black;
-            this.panel7.Location = new System.Drawing.Point(22, 65);
+            this.panel7.Location = new System.Drawing.Point(189, 71);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(153, 3);
             this.panel7.TabIndex = 8;
@@ -285,7 +243,7 @@
             this.botonLlenarTabla.Location = new System.Drawing.Point(735, 25);
             this.botonLlenarTabla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonLlenarTabla.Name = "botonLlenarTabla";
-            this.botonLlenarTabla.Size = new System.Drawing.Size(173, 43);
+            this.botonLlenarTabla.Size = new System.Drawing.Size(173, 47);
             this.botonLlenarTabla.TabIndex = 7;
             this.botonLlenarTabla.Text = "Todos los Productos";
             this.botonLlenarTabla.UseVisualStyleBackColor = true;
@@ -302,6 +260,22 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(761, 50);
             this.panel2.TabIndex = 10;
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditar.ForeColor = System.Drawing.Color.Black;
+            this.BtnEditar.Location = new System.Drawing.Point(604, 4);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(154, 43);
+            this.BtnEditar.TabIndex = 9;
+            this.BtnEditar.Text = "Editar Producto";
+            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // panelNuevoProducto
             // 
@@ -536,21 +510,81 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Descripción";
             // 
-            // BtnEditar
+            // panelMenu
             // 
-            this.BtnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelMenu.BackColor = System.Drawing.Color.Black;
+            this.panelMenu.Controls.Add(this.btnProductos);
+            this.panelMenu.Controls.Add(this.btnFacturas);
+            this.panelMenu.Controls.Add(this.btnStock);
+            this.panelMenu.Controls.Add(this.label1);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(946, 65);
+            this.panelMenu.TabIndex = 12;
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Location = new System.Drawing.Point(648, 0);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(298, 65);
+            this.btnProductos.TabIndex = 10;
+            this.btnProductos.Text = "Lista de Productos";
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
+            // btnFacturas
+            // 
+            this.btnFacturas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFacturas.FlatAppearance.BorderSize = 0;
+            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturas.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
+            this.btnFacturas.ForeColor = System.Drawing.Color.White;
+            this.btnFacturas.Location = new System.Drawing.Point(428, -1);
+            this.btnFacturas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFacturas.Name = "btnFacturas";
+            this.btnFacturas.Size = new System.Drawing.Size(200, 65);
+            this.btnFacturas.TabIndex = 9;
+            this.btnFacturas.Text = "Facturas";
+            this.btnFacturas.UseVisualStyleBackColor = true;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
+            // 
+            // btnStock
+            // 
+            this.btnStock.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnStock.FlatAppearance.BorderSize = 0;
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
+            this.btnStock.ForeColor = System.Drawing.Color.White;
+            this.btnStock.Location = new System.Drawing.Point(222, 0);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(200, 65);
+            this.btnStock.TabIndex = 8;
+            this.btnStock.Text = "Stock";
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEditar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEditar.ForeColor = System.Drawing.Color.Black;
-            this.BtnEditar.Location = new System.Drawing.Point(604, 4);
-            this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(154, 43);
-            this.BtnEditar.TabIndex = 9;
-            this.BtnEditar.Text = "Editar Producto";
-            this.BtnEditar.UseVisualStyleBackColor = true;
-            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 20F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 34);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "PRODUCTOS";
             // 
             // ABMProductos
             // 
@@ -558,9 +592,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelNuevoProducto);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
@@ -575,6 +609,8 @@
             this.panel2.ResumeLayout(false);
             this.panelNuevoProducto.ResumeLayout(false);
             this.panelNuevoProducto.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -584,11 +620,9 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button botonAgregar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botonBuscar;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.ComboBox comboBoxTipo;
-        private System.Windows.Forms.ComboBox comboBoxProveedor;
         private System.Windows.Forms.Button botonEliminar;
         private System.Windows.Forms.Button botonGuardar;
         private System.Windows.Forms.Panel panel1;
@@ -614,10 +648,14 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button botonLlenarTabla;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label labelBusquedaProveedor;
         private System.Windows.Forms.Label labelBusquedaTipo;
         private System.Windows.Forms.Label labelBusquedaNombre;
         private System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnFacturas;
+        private System.Windows.Forms.Button btnStock;
+        private System.Windows.Forms.Label label1;
     }
 }
 

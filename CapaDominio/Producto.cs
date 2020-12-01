@@ -67,7 +67,7 @@ namespace CapaDominio
         }
 
 
-        public DataSet MostrarProductoFiltro(string nombre, string tipo, string proveedor)
+        public DataSet MostrarProductoFiltro(string nombre, string tipo)
         {
             DataSet DDSS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();

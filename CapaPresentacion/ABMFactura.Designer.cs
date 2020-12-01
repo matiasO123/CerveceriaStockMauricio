@@ -33,6 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productoPrecioFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
@@ -61,27 +67,27 @@
             this.labelPrecioTotal = new System.Windows.Forms.Label();
             this.labelPrecioFinal = new System.Windows.Forms.Label();
             this.labelPrecioFinalEntero = new System.Windows.Forms.Label();
-            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoPrecioFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnFacturas = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panelAgregarProd.SuspendLayout();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 35F);
-            this.label1.Location = new System.Drawing.Point(24, 27);
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 20F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(23, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 59);
+            this.label1.Size = new System.Drawing.Size(131, 34);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Factura";
+            this.label1.Text = "FACTURA";
             // 
             // label2
             // 
@@ -97,7 +103,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label3.Location = new System.Drawing.Point(10, 98);
+            this.label3.Location = new System.Drawing.Point(10, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 2;
@@ -107,7 +113,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label4.Location = new System.Drawing.Point(10, 140);
+            this.label4.Location = new System.Drawing.Point(10, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 20);
             this.label4.TabIndex = 3;
@@ -131,7 +137,7 @@
             this.productoPrecio,
             this.productoPrecioFin});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(361, 75);
+            this.dataGridView1.Location = new System.Drawing.Point(361, 86);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -141,11 +147,42 @@
             this.dataGridView1.Size = new System.Drawing.Size(573, 265);
             this.dataGridView1.TabIndex = 4;
             // 
+            // ProductoId
+            // 
+            this.ProductoId.HeaderText = "productoId";
+            this.ProductoId.Name = "ProductoId";
+            this.ProductoId.Visible = false;
+            // 
+            // productoNombre
+            // 
+            this.productoNombre.HeaderText = "Nombre Producto";
+            this.productoNombre.Name = "productoNombre";
+            // 
+            // UnidadMedida
+            // 
+            this.UnidadMedida.HeaderText = "Cantidad x bulto";
+            this.UnidadMedida.Name = "UnidadMedida";
+            // 
+            // productoCantidad
+            // 
+            this.productoCantidad.HeaderText = "Cant. bultos";
+            this.productoCantidad.Name = "productoCantidad";
+            // 
+            // productoPrecio
+            // 
+            this.productoPrecio.HeaderText = "Precio X Bulto";
+            this.productoPrecio.Name = "productoPrecio";
+            // 
+            // productoPrecioFin
+            // 
+            this.productoPrecioFin.HeaderText = "Precio Total";
+            this.productoPrecioFin.Name = "productoPrecioFin";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label7.Location = new System.Drawing.Point(10, 180);
+            this.label7.Location = new System.Drawing.Point(10, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 20);
             this.label7.TabIndex = 7;
@@ -155,7 +192,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label5.Location = new System.Drawing.Point(10, 277);
+            this.label5.Location = new System.Drawing.Point(10, 288);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 5;
@@ -166,7 +203,7 @@
             this.textBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxNombre.BackColor = System.Drawing.Color.White;
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(91, 92);
+            this.textBoxNombre.Location = new System.Drawing.Point(91, 103);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(264, 25);
@@ -175,7 +212,7 @@
             // facturaFecha
             // 
             this.facturaFecha.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
-            this.facturaFecha.Location = new System.Drawing.Point(91, 137);
+            this.facturaFecha.Location = new System.Drawing.Point(91, 148);
             this.facturaFecha.Name = "facturaFecha";
             this.facturaFecha.Size = new System.Drawing.Size(264, 25);
             this.facturaFecha.TabIndex = 10;
@@ -185,7 +222,7 @@
             this.labelPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecio.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelPrecio.Location = new System.Drawing.Point(91, 277);
+            this.labelPrecio.Location = new System.Drawing.Point(91, 288);
             this.labelPrecio.Name = "labelPrecio";
             this.labelPrecio.Size = new System.Drawing.Size(63, 22);
             this.labelPrecio.TabIndex = 14;
@@ -193,7 +230,7 @@
             // agregarProd
             // 
             this.agregarProd.Image = global::CapaPresentacion.Properties.Resources.round_add_circle_outline_black_18dp;
-            this.agregarProd.Location = new System.Drawing.Point(319, 175);
+            this.agregarProd.Location = new System.Drawing.Point(319, 186);
             this.agregarProd.Name = "agregarProd";
             this.agregarProd.Size = new System.Drawing.Size(36, 36);
             this.agregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -229,7 +266,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei Light", 30F);
-            this.label10.Location = new System.Drawing.Point(856, 420);
+            this.label10.Location = new System.Drawing.Point(856, 431);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 50);
             this.label10.TabIndex = 19;
@@ -239,7 +276,7 @@
             this.textoProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textoProducto.BackColor = System.Drawing.Color.White;
             this.textoProducto.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoProducto.Location = new System.Drawing.Point(91, 180);
+            this.textoProducto.Location = new System.Drawing.Point(91, 191);
             this.textoProducto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoProducto.Name = "textoProducto";
             this.textoProducto.Size = new System.Drawing.Size(221, 25);
@@ -323,7 +360,7 @@
             this.panelAgregarProd.Controls.Add(this.label9);
             this.panelAgregarProd.Controls.Add(this.textBox1);
             this.panelAgregarProd.Controls.Add(this.label2);
-            this.panelAgregarProd.Location = new System.Drawing.Point(145, 27);
+            this.panelAgregarProd.Location = new System.Drawing.Point(145, 38);
             this.panelAgregarProd.Name = "panelAgregarProd";
             this.panelAgregarProd.Size = new System.Drawing.Size(722, 417);
             this.panelAgregarProd.TabIndex = 21;
@@ -336,7 +373,7 @@
             this.textoUnidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textoUnidad.Enabled = false;
             this.textoUnidad.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoUnidad.Location = new System.Drawing.Point(91, 227);
+            this.textoUnidad.Location = new System.Drawing.Point(91, 238);
             this.textoUnidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoUnidad.Name = "textoUnidad";
             this.textoUnidad.Size = new System.Drawing.Size(63, 25);
@@ -346,7 +383,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label8.Location = new System.Drawing.Point(10, 233);
+            this.label8.Location = new System.Drawing.Point(10, 244);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 20);
             this.label8.TabIndex = 25;
@@ -357,7 +394,7 @@
             this.textBoxCantidad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxCantidad.BackColor = System.Drawing.Color.White;
             this.textBoxCantidad.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCantidad.Location = new System.Drawing.Point(259, 227);
+            this.textBoxCantidad.Location = new System.Drawing.Point(259, 238);
             this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(96, 25);
@@ -368,7 +405,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label6.Location = new System.Drawing.Point(184, 230);
+            this.label6.Location = new System.Drawing.Point(184, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 20);
             this.label6.TabIndex = 23;
@@ -377,7 +414,7 @@
             // buttonAgregarProducto
             // 
             this.buttonAgregarProducto.Enabled = false;
-            this.buttonAgregarProducto.Location = new System.Drawing.Point(14, 316);
+            this.buttonAgregarProducto.Location = new System.Drawing.Point(14, 327);
             this.buttonAgregarProducto.Name = "buttonAgregarProducto";
             this.buttonAgregarProducto.Size = new System.Drawing.Size(341, 34);
             this.buttonAgregarProducto.TabIndex = 27;
@@ -388,7 +425,7 @@
             // buttonCrearFactura
             // 
             this.buttonCrearFactura.Enabled = false;
-            this.buttonCrearFactura.Location = new System.Drawing.Point(14, 420);
+            this.buttonCrearFactura.Location = new System.Drawing.Point(14, 431);
             this.buttonCrearFactura.Name = "buttonCrearFactura";
             this.buttonCrearFactura.Size = new System.Drawing.Size(341, 34);
             this.buttonCrearFactura.TabIndex = 28;
@@ -398,7 +435,7 @@
             // 
             // buttonCerrarFactura
             // 
-            this.buttonCerrarFactura.Location = new System.Drawing.Point(439, 423);
+            this.buttonCerrarFactura.Location = new System.Drawing.Point(439, 434);
             this.buttonCerrarFactura.Name = "buttonCerrarFactura";
             this.buttonCerrarFactura.Size = new System.Drawing.Size(98, 34);
             this.buttonCerrarFactura.TabIndex = 29;
@@ -409,7 +446,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label11.Location = new System.Drawing.Point(722, 361);
+            this.label11.Location = new System.Drawing.Point(722, 372);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 20);
             this.label11.TabIndex = 30;
@@ -420,7 +457,7 @@
             this.textoDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textoDescuento.BackColor = System.Drawing.Color.White;
             this.textoDescuento.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoDescuento.Location = new System.Drawing.Point(815, 358);
+            this.textoDescuento.Location = new System.Drawing.Point(815, 369);
             this.textoDescuento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoDescuento.Name = "textoDescuento";
             this.textoDescuento.Size = new System.Drawing.Size(119, 25);
@@ -432,7 +469,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label12.Location = new System.Drawing.Point(163, 275);
+            this.label12.Location = new System.Drawing.Point(163, 286);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 20);
             this.label12.TabIndex = 32;
@@ -443,7 +480,7 @@
             this.labelPrecioTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioTotal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelPrecioTotal.Location = new System.Drawing.Point(259, 275);
+            this.labelPrecioTotal.Location = new System.Drawing.Point(259, 286);
             this.labelPrecioTotal.Name = "labelPrecioTotal";
             this.labelPrecioTotal.Size = new System.Drawing.Size(96, 22);
             this.labelPrecioTotal.TabIndex = 33;
@@ -452,7 +489,7 @@
             // 
             this.labelPrecioFinal.AutoSize = true;
             this.labelPrecioFinal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinal.Location = new System.Drawing.Point(719, 405);
+            this.labelPrecioFinal.Location = new System.Drawing.Point(719, 416);
             this.labelPrecioFinal.Name = "labelPrecioFinal";
             this.labelPrecioFinal.Size = new System.Drawing.Size(90, 43);
             this.labelPrecioFinal.TabIndex = 34;
@@ -463,41 +500,71 @@
             this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(815, 405);
+            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(815, 416);
             this.labelPrecioFinalEntero.Name = "labelPrecioFinalEntero";
             this.labelPrecioFinalEntero.Size = new System.Drawing.Size(119, 37);
             this.labelPrecioFinalEntero.TabIndex = 35;
             // 
-            // ProductoId
+            // panelMenu
             // 
-            this.ProductoId.HeaderText = "productoId";
-            this.ProductoId.Name = "ProductoId";
-            this.ProductoId.Visible = false;
+            this.panelMenu.BackColor = System.Drawing.Color.Black;
+            this.panelMenu.Controls.Add(this.btnProductos);
+            this.panelMenu.Controls.Add(this.btnFacturas);
+            this.panelMenu.Controls.Add(this.btnStock);
+            this.panelMenu.Controls.Add(this.label1);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(946, 65);
+            this.panelMenu.TabIndex = 36;
             // 
-            // productoNombre
+            // btnProductos
             // 
-            this.productoNombre.HeaderText = "Nombre Producto";
-            this.productoNombre.Name = "productoNombre";
+            this.btnProductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
+            this.btnProductos.ForeColor = System.Drawing.Color.White;
+            this.btnProductos.Location = new System.Drawing.Point(648, 0);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(298, 65);
+            this.btnProductos.TabIndex = 10;
+            this.btnProductos.Text = "Lista de Productos";
+            this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
-            // UnidadMedida
+            // btnFacturas
             // 
-            this.UnidadMedida.HeaderText = "Cantidad x bulto";
-            this.UnidadMedida.Name = "UnidadMedida";
+            this.btnFacturas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFacturas.FlatAppearance.BorderSize = 0;
+            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturas.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
+            this.btnFacturas.ForeColor = System.Drawing.Color.White;
+            this.btnFacturas.Location = new System.Drawing.Point(428, -1);
+            this.btnFacturas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFacturas.Name = "btnFacturas";
+            this.btnFacturas.Size = new System.Drawing.Size(200, 65);
+            this.btnFacturas.TabIndex = 9;
+            this.btnFacturas.Text = "Facturas";
+            this.btnFacturas.UseVisualStyleBackColor = true;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
             // 
-            // productoCantidad
+            // btnStock
             // 
-            this.productoCantidad.HeaderText = "Cant. bultos";
-            this.productoCantidad.Name = "productoCantidad";
-            // 
-            // productoPrecio
-            // 
-            this.productoPrecio.HeaderText = "Precio X Bulto";
-            this.productoPrecio.Name = "productoPrecio";
-            // 
-            // productoPrecioFin
-            // 
-            this.productoPrecioFin.HeaderText = "Precio Total";
-            this.productoPrecioFin.Name = "productoPrecioFin";
+            this.btnStock.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnStock.FlatAppearance.BorderSize = 0;
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
+            this.btnStock.ForeColor = System.Drawing.Color.White;
+            this.btnStock.Location = new System.Drawing.Point(222, 0);
+            this.btnStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(200, 65);
+            this.btnStock.TabIndex = 8;
+            this.btnStock.Text = "Stock";
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
             // ABMFactura
             // 
@@ -505,6 +572,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
+            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.labelPrecioFinalEntero);
             this.Controls.Add(this.labelPrecioFinal);
             this.Controls.Add(this.labelPrecioTotal);
@@ -525,7 +593,6 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.textoUnidad);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxCantidad);
@@ -540,6 +607,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panelAgregarProd.ResumeLayout(false);
             this.panelAgregarProd.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -586,5 +655,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn productoCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoPrecio;
         private System.Windows.Forms.DataGridViewTextBoxColumn productoPrecioFin;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Button btnFacturas;
+        private System.Windows.Forms.Button btnStock;
     }
 }

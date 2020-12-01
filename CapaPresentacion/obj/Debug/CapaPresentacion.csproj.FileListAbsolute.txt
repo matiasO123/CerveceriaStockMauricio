@@ -57,3 +57,4 @@ C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMaur
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
