@@ -142,6 +142,12 @@ namespace CapaPresentacion
 
                     DataGridLlenar();
                     panelNuevoProducto.Visible = false;
+                    textBoxNom.Text = "";
+                    comboBoxNuevo.Text = "";
+                    textBoxDescripcion.Text = "";
+                    comboBoxUMedida.Text = "";
+                    textBoxCantidad.Text = "";
+                    textBoxPcompra.Text = "";
                 }
                 else
                 {

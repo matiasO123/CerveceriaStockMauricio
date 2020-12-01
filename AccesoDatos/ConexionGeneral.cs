@@ -19,8 +19,8 @@ namespace AccesoDatos
         {
             string carpeta = "AdministracionGeneral";
             string archivo = "database.sqlite3";
-            
-            if (!File.Exists("" + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)+"//"+carpeta+"//" + "//" + archivo + ""))
+            string conexionaBBDD = "DataSource = " + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\" + carpeta + "\\" + "\\" + archivo + "";
+            if (!File.Exists(conexionaBBDD))
             {
                 //Voy buscando la ruta y vinculando el archivo
                 string localAppData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
@@ -42,13 +42,11 @@ namespace AccesoDatos
                 }
 
 
-                destFilePath = destFilePath.ToString();
-                cadenaConexion = "DataSource =" + destFilePath + "";
+                /*destFilePath = destFilePath.ToString();
+                cadenaConexion = "DataSource =" + destFilePath + "";*/
             }
-            else
-            {
-                cadenaConexion = "DataSource =" + Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\" + carpeta + "\\" + "\\" + archivo + "";
-            }
+            cadenaConexion = conexionaBBDD;
+            
             
 
             
