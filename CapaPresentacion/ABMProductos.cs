@@ -21,7 +21,7 @@ namespace CapaPresentacion
         public ABMProductos()
         {
             InitializeComponent();
-            btnProductos.Enabled = false;
+            //btnProductos.Enabled = false;
         }
 
         private void ABMInicial_Load(object sender, EventArgs e)

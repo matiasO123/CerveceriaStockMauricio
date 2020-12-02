@@ -20,7 +20,7 @@ namespace CapaPresentacion
             CG.DBCreator();
 
             //Application.Run(new ABMFactura());
-            Application.Run(new ABMProductos());
+            Application.Run(new Principal());
         }
     }
 }

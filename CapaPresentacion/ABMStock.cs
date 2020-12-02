@@ -15,7 +15,7 @@ namespace CapaPresentacion
         public ABMStock()
         {
             InitializeComponent();
-            btnStock.Enabled = false;
+            //btnStock.Enabled = false;
         }
 
         //MENU/////////////////////////////
@@ -44,6 +44,11 @@ namespace CapaPresentacion
             prod.ShowDialog();
             this.Close();
             
+        }
+
+        private void botonAgregar_Click(object sender, EventArgs e)
+        {
+
         }
         //MENU/////////////////////////////
     }

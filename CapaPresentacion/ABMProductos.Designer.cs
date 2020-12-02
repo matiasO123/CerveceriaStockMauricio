@@ -61,16 +61,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnFacturas = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelNuevoProducto.SuspendLayout();
-            this.panelMenu.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -510,81 +507,23 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Descripción";
             // 
-            // panelMenu
+            // panel6
             // 
-            this.panelMenu.BackColor = System.Drawing.Color.Black;
-            this.panelMenu.Controls.Add(this.btnProductos);
-            this.panelMenu.Controls.Add(this.btnFacturas);
-            this.panelMenu.Controls.Add(this.btnStock);
-            this.panelMenu.Controls.Add(this.label1);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(946, 65);
-            this.panelMenu.TabIndex = 12;
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
-            this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.Location = new System.Drawing.Point(648, 0);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(298, 65);
-            this.btnProductos.TabIndex = 10;
-            this.btnProductos.Text = "Lista de Productos";
-            this.btnProductos.UseVisualStyleBackColor = true;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
-            // 
-            // btnFacturas
-            // 
-            this.btnFacturas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFacturas.FlatAppearance.BorderSize = 0;
-            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturas.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
-            this.btnFacturas.ForeColor = System.Drawing.Color.White;
-            this.btnFacturas.Location = new System.Drawing.Point(428, -1);
-            this.btnFacturas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnFacturas.Name = "btnFacturas";
-            this.btnFacturas.Size = new System.Drawing.Size(200, 65);
-            this.btnFacturas.TabIndex = 9;
-            this.btnFacturas.Text = "Facturas";
-            this.btnFacturas.UseVisualStyleBackColor = true;
-            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
-            // 
-            // btnStock
-            // 
-            this.btnStock.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnStock.FlatAppearance.BorderSize = 0;
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
-            this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.Location = new System.Drawing.Point(222, 0);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(200, 65);
-            this.btnStock.TabIndex = 8;
-            this.btnStock.Text = "Stock";
-            this.btnStock.UseVisualStyleBackColor = true;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Location = new System.Drawing.Point(4, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(386, 71);
+            this.panel6.TabIndex = 39;
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 20F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 17);
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 34F);
+            this.label1.Location = new System.Drawing.Point(8, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 34);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "PRODUCTOS";
+            this.label1.Size = new System.Drawing.Size(344, 58);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Lista de Precios";
             // 
             // ABMProductos
             // 
@@ -592,12 +531,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
-            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panelNuevoProducto);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ABMProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -609,8 +549,8 @@
             this.panel2.ResumeLayout(false);
             this.panelNuevoProducto.ResumeLayout(false);
             this.panelNuevoProducto.PerformLayout();
-            this.panelMenu.ResumeLayout(false);
-            this.panelMenu.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -651,10 +591,7 @@
         private System.Windows.Forms.Label labelBusquedaTipo;
         private System.Windows.Forms.Label labelBusquedaNombre;
         private System.Windows.Forms.Button BtnEditar;
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnFacturas;
-        private System.Windows.Forms.Button btnStock;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -16,7 +16,7 @@ namespace CapaPresentacion
         public ABMFactura()
         {
             InitializeComponent();
-            btnFacturas.Enabled = false;
+            //btnFacturas.Enabled = false;
 
         }
         private int id;
