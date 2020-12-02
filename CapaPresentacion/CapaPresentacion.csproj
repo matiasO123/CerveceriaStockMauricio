@@ -66,29 +66,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ABMFacturaLista.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ABMFacturaLista.Designer.cs">
-      <DependentUpon>ABMFacturaLista.cs</DependentUpon>
-    </Compile>
     <Compile Include="ABMProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ABMProductos.Designer.cs">
       <DependentUpon>ABMProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ABMFactura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ABMFactura.Designer.cs">
-      <DependentUpon>ABMFactura.cs</DependentUpon>
-    </Compile>
     <Compile Include="ABMStock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ABMStock.Designer.cs">
       <DependentUpon>ABMStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaCrear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaCrear.Designer.cs">
+      <DependentUpon>FacturaCrear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaVer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacturaVer.Designer.cs">
+      <DependentUpon>FacturaVer.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -104,17 +104,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ABMFacturaLista.resx">
-      <DependentUpon>ABMFacturaLista.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ABMProductos.resx">
       <DependentUpon>ABMProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ABMFactura.resx">
-      <DependentUpon>ABMFactura.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ABMStock.resx">
       <DependentUpon>ABMStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaCrear.resx">
+      <DependentUpon>FacturaCrear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacturaVer.resx">
+      <DependentUpon>FacturaVer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
