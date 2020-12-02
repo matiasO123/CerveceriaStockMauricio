@@ -58,4 +58,39 @@ C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMaur
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+<<<<<<< HEAD
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
+=======
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\x86\sqlite3.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\x64\sqlite3.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\AccesoDatos.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaAccesoDatos.dll
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\AccesoDatos.pdb
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.pdb
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaDominio.dll.config
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.xml
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.xml
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csprojAssemblyReference.cache
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMProductos.resources
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMFactura.resources
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMStock.resources
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+>>>>>>> ce7be4215bf002f0a0d727bf9139db462772dc3c
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMFacturaLista.resources
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.FacturaLista.resources
