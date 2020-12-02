@@ -1,7 +1,7 @@
 ﻿
 namespace CapaPresentacion
 {
-    partial class ABMFacturaLista
+    partial class FacturaVer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,6 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelMenu = new System.Windows.Forms.Panel();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnFacturas = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelPrecioFinalEntero = new System.Windows.Forms.Label();
             this.labelPrecioFinal = new System.Windows.Forms.Label();
             this.textoDescuento = new System.Windows.Forms.TextBox();
@@ -51,78 +46,8 @@ namespace CapaPresentacion
             this.productoPrecioFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panelMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panelMenu
-            // 
-            this.panelMenu.BackColor = System.Drawing.Color.Black;
-            this.panelMenu.Controls.Add(this.btnProductos);
-            this.panelMenu.Controls.Add(this.btnFacturas);
-            this.panelMenu.Controls.Add(this.btnStock);
-            this.panelMenu.Controls.Add(this.label1);
-            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(946, 65);
-            this.panelMenu.TabIndex = 62;
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
-            this.btnProductos.ForeColor = System.Drawing.Color.White;
-            this.btnProductos.Location = new System.Drawing.Point(648, 0);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(298, 65);
-            this.btnProductos.TabIndex = 10;
-            this.btnProductos.Text = "Lista de Productos";
-            this.btnProductos.UseVisualStyleBackColor = true;
-            // 
-            // btnFacturas
-            // 
-            this.btnFacturas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnFacturas.FlatAppearance.BorderSize = 0;
-            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturas.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
-            this.btnFacturas.ForeColor = System.Drawing.Color.White;
-            this.btnFacturas.Location = new System.Drawing.Point(428, -1);
-            this.btnFacturas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnFacturas.Name = "btnFacturas";
-            this.btnFacturas.Size = new System.Drawing.Size(200, 65);
-            this.btnFacturas.TabIndex = 9;
-            this.btnFacturas.Text = "Facturas";
-            this.btnFacturas.UseVisualStyleBackColor = true;
-            // 
-            // btnStock
-            // 
-            this.btnStock.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnStock.FlatAppearance.BorderSize = 0;
-            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStock.Font = new System.Drawing.Font("Microsoft JhengHei Light", 24F);
-            this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.Location = new System.Drawing.Point(222, 0);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(200, 65);
-            this.btnStock.TabIndex = 8;
-            this.btnStock.Text = "Stock";
-            this.btnStock.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 20F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "FACTURA";
             // 
             // labelPrecioFinalEntero
             // 
@@ -282,12 +207,11 @@ namespace CapaPresentacion
             this.label3.TabIndex = 37;
             this.label3.Text = "Cliente";
             // 
-            // ABMFacturaLista
+            // FacturaVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 475);
-            this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.labelPrecioFinalEntero);
             this.Controls.Add(this.labelPrecioFinal);
             this.Controls.Add(this.textoDescuento);
@@ -299,10 +223,9 @@ namespace CapaPresentacion
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Name = "ABMFacturaLista";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FacturaVer";
             this.Text = "ABMFacturaLista";
-            this.panelMenu.ResumeLayout(false);
-            this.panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -310,12 +233,6 @@ namespace CapaPresentacion
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelMenu;
-        private System.Windows.Forms.Button btnProductos;
-        private System.Windows.Forms.Button btnFacturas;
-        private System.Windows.Forms.Button btnStock;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelPrecioFinalEntero;
         private System.Windows.Forms.Label labelPrecioFinal;
         private System.Windows.Forms.TextBox textoDescuento;

@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class ABMFacturaLista : Form
+    public partial class FacturaVer : Form
     {
-        public ABMFacturaLista()
+        public FacturaVer()
         {
             InitializeComponent();
         }
+
+       
     }
 }

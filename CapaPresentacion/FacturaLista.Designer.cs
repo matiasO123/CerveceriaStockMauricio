@@ -30,34 +30,32 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.Nro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.botonAgregar = new System.Windows.Forms.Button();
+            this.botonEliminar = new System.Windows.Forms.Button();
+            this.botonGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 37);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "FACTURAS";
             // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,45 +71,16 @@ namespace CapaPresentacion
             this.Fecha,
             this.Descuento,
             this.PrecioFinal});
-            this.dataGridView1.Location = new System.Drawing.Point(29, 85);
+            this.dataGridView1.GridColor = System.Drawing.Color.White;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 108);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.DividerHeight = 3;
             this.dataGridView1.RowTemplate.Height = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(747, 300);
+            this.dataGridView1.Size = new System.Drawing.Size(920, 301);
             this.dataGridView1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(644, 410);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 28);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Eliminar Factura";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(342, 410);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 28);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Ver Factura";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(29, 410);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 28);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Crear Factura";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // Nro
             // 
@@ -143,36 +112,113 @@ namespace CapaPresentacion
             this.PrecioFinal.Name = "PrecioFinal";
             this.PrecioFinal.ReadOnly = true;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.label1);
+            this.panel6.Location = new System.Drawing.Point(4, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(386, 71);
+            this.panel6.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 34F);
+            this.label1.Location = new System.Drawing.Point(8, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(368, 58);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Lista de Facturas";
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.botonAgregar);
+            this.panel2.Controls.Add(this.botonEliminar);
+            this.panel2.Controls.Add(this.botonGuardar);
+            this.panel2.Location = new System.Drawing.Point(88, 413);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(761, 50);
+            this.panel2.TabIndex = 55;
+            // 
+            // botonAgregar
+            // 
+            this.botonAgregar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.botonAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonAgregar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonAgregar.ForeColor = System.Drawing.Color.Black;
+            this.botonAgregar.Location = new System.Drawing.Point(3, 4);
+            this.botonAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.botonAgregar.Name = "botonAgregar";
+            this.botonAgregar.Size = new System.Drawing.Size(154, 43);
+            this.botonAgregar.TabIndex = 1;
+            this.botonAgregar.Text = "Crear Factura";
+            this.botonAgregar.UseVisualStyleBackColor = true;
+            // 
+            // botonEliminar
+            // 
+            this.botonEliminar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.botonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonEliminar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonEliminar.ForeColor = System.Drawing.Color.Black;
+            this.botonEliminar.Location = new System.Drawing.Point(309, 4);
+            this.botonEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.botonEliminar.Name = "botonEliminar";
+            this.botonEliminar.Size = new System.Drawing.Size(154, 43);
+            this.botonEliminar.TabIndex = 7;
+            this.botonEliminar.Text = "Ver Factura";
+            this.botonEliminar.UseVisualStyleBackColor = true;
+            // 
+            // botonGuardar
+            // 
+            this.botonGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonGuardar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonGuardar.ForeColor = System.Drawing.Color.Black;
+            this.botonGuardar.Location = new System.Drawing.Point(604, 4);
+            this.botonGuardar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.botonGuardar.Name = "botonGuardar";
+            this.botonGuardar.Size = new System.Drawing.Size(154, 43);
+            this.botonGuardar.TabIndex = 8;
+            this.botonGuardar.Text = "Eliminar Factura";
+            this.botonGuardar.UseVisualStyleBackColor = true;
+            // 
             // FacturaLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(946, 475);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FacturaLista";
             this.Text = "FacturaLista";
             this.Load += new System.EventHandler(this.FacturaLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn PrecioFinal;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button botonAgregar;
+        private System.Windows.Forms.Button botonEliminar;
+        private System.Windows.Forms.Button botonGuardar;
     }
 }

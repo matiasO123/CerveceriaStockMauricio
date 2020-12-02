@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class ABMFactura
+    partial class FacturaCrear
     {
         /// <summary>
         /// Required designer variable.

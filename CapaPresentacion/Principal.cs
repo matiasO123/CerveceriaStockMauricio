@@ -46,7 +46,12 @@ namespace CapaPresentacion
 
         private void btnFacturas_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new ABMFactura());
+            AbrirFormHija(new FacturaCrear());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new FacturaLista());
         }
     }
 }

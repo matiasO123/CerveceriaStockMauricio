@@ -11,12 +11,12 @@ using CapaDominio;
 
 namespace CapaPresentacion
 {
-    public partial class ABMFactura : Form
+    public partial class FacturaCrear : Form
     {
-        public ABMFactura()
+        public FacturaCrear()
         {
             InitializeComponent();
-            //btnFacturas.Enabled = false;
+            
 
         }
         private int id;
@@ -178,35 +178,7 @@ namespace CapaPresentacion
             
         }
 
-        //MENU/////////////////////////////
-        private void btnStock_Click(object sender, EventArgs e)
-        {
-            ABMStock stock = new ABMStock();
-            this.Hide();
-            stock.ShowDialog();
-            this.Close();
-           
-        }
-
-        private void btnFacturas_Click(object sender, EventArgs e)
-        {
-            ABMFactura fac = new ABMFactura();
-            this.Hide();
-            fac.ShowDialog();
-            this.Close();
-            
-        }
-
-        private void btnProductos_Click(object sender, EventArgs e)
-        {
-
-            ABMProductos prod = new ABMProductos();
-            this.Hide();
-            prod.ShowDialog();
-            this.Close();
-            
-        }
-        //MENU/////////////////////////////
+        
 
     }
 }

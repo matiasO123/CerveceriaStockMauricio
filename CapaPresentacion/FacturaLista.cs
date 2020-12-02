@@ -23,5 +23,7 @@ namespace CapaPresentacion
             Factura fact = new Factura();
             dataGridView1.DataSource = fact.FacturaMostrar().Tables[0];
         }
+
+       
     }
 }
