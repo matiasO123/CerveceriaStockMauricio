@@ -46,6 +46,7 @@ namespace CapaPresentacion
 
         private void btnFacturas_Click(object sender, EventArgs e)
         {
+            panelContenedor.Visible = true;
             AbrirFormHija(new FacturaCrear());
         }
 
@@ -53,5 +54,17 @@ namespace CapaPresentacion
         {
             AbrirFormHija(new FacturaLista());
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
+
+            panelContenedor.BringToFront();
+            panelMenu.BringToFront();
+
+
+        }
+
+        
     }
 }

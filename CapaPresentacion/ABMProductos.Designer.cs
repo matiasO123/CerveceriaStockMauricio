@@ -188,6 +188,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.labelBusquedaTipo);
             this.panel1.Controls.Add(this.labelBusquedaNombre);
             this.panel1.Controls.Add(this.panel7);
@@ -250,6 +251,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.BtnEditar);
             this.panel2.Controls.Add(this.botonAgregar);
             this.panel2.Controls.Add(this.botonEliminar);
@@ -509,6 +511,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.label1);
             this.panel6.Location = new System.Drawing.Point(4, 0);
             this.panel6.Name = "panel6";
@@ -530,12 +533,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources.fondoPrincipal;
             this.ClientSize = new System.Drawing.Size(946, 475);
+            this.Controls.Add(this.panelNuevoProducto);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panelNuevoProducto);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

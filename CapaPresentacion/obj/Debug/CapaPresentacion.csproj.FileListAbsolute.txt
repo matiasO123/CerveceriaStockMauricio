@@ -18,9 +18,7 @@ C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\System.Data.SQLite.xml
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\bin\Debug\CapaAccesoDatos.pdb
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMFacturaLista.resources
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMProductos.resources
-C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMFactura.resources
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.ABMStock.resources
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.Principal.resources
 C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.FacturaLista.resources
@@ -64,3 +62,5 @@ C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\Cervecerìa la post
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\Cervecerìa la posta2\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\Cervecerìa la posta2\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\Usuario\Desktop\Mati\ROPERO\Adm. BBDD\Nueva carpeta\Cervecerìa la posta2\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.FacturaCrear.resources
+C:\Users\solch\Desktop\CRUXMS\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.FacturaVer.resources

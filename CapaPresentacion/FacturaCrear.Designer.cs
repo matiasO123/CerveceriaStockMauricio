@@ -478,6 +478,7 @@
             // labelPrecioFinalEntero
             // 
             this.labelPrecioFinalEntero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPrecioFinalEntero.BackColor = System.Drawing.Color.White;
             this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
@@ -502,7 +503,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.textBoxNombre);
             this.panel1.Controls.Add(this.agregarProd);
             this.panel1.Controls.Add(this.label3);
@@ -528,7 +529,7 @@
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.buttonCerrarFactura);
             this.panel2.Controls.Add(this.labelPrecioFinal);
             this.panel2.Controls.Add(this.labelPrecioFinalEntero);
@@ -542,6 +543,7 @@
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.dataGridView1);
@@ -562,24 +564,26 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Location = new System.Drawing.Point(4, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(232, 79);
             this.panel4.TabIndex = 38;
             // 
-            // ABMFactura
+            // FacturaCrear
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources.fondoPrincipal;
             this.ClientSize = new System.Drawing.Size(946, 475);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelAgregarProd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ABMFactura";
+            this.Name = "FacturaCrear";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cerveceria Mauricio";
             this.Load += new System.EventHandler(this.Factura_Load);

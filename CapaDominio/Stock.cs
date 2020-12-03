@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Windows.Forms;
 using CapaAccesoDatos;
 
 namespace CapaDominio
@@ -27,43 +28,108 @@ namespace CapaDominio
             return DDSS;
         }
 
-        public DataSet MostrarListaPrecios()
+        public DataSet MostrarStock()
         {
             DataSet DS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();
-            DS = CG.Consultor("SELECT * FROM ListaPrecios");
+            DS = CG.Consultor("SELECT * FROM Bolson");
             return DS;
+
+        }
+
+        public DataSet MostrarUnBolson(int bolsonId)
+        {
+            DataSet ds = new DataSet();
+            ConexionGeneral cg = new ConexionGeneral();
+            ds = cg.Consultor("SELECT * from Bolson WHERE bolsonId = " + bolsonId + "");
+            return ds;
+
         }
 
         //NUEVO PRODUCTO
-        public bool AgregarListaPrecios(string nombre, string unidad, string tipo, float precioVenta)
+        public bool AgregarBolson(string nombre, string unidad, string tipo, long cantidad, float precioCompra)
         {
 
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("INSERT INTO ListaPrecios (listaNombre, listaUnidad, listaTipo, listaPrecioVenta) VALUES ('" + nombre + "', '" + unidad + "', '" + tipo + "', '" + precioVenta + "')");
+            return CG.Ejecutor("INSERT INTO Bolson (bolsonNombre, bolsonUnidad, bolsonTipo, bolsonCantidad, bolsonPrecioCompra) VALUES ('" + nombre + "', '" + unidad + "', '" + tipo + "', " + cantidad + ", '" + precioCompra + "')");
             //return consulta;
         }
 
 
         //ELIMINAR PRODUCTO
-        public bool EliminarListaPrecios(int listaId)
+        public bool EliminarBolson(int bolsonId)
         {
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("DELETE from ListaPrecios where listaId = " + listaId);
+            return CG.Ejecutor("DELETE from Bolson where bolsonId = " + bolsonId + "");
 
 
         }
 
         //MODIFICAR PRODUCTO
-        public bool ModificarListaProducto(int listaId, string nombre, string unidad, string tipo, float precioVenta)
+        public bool ModificarBolson(int bolsonId, string nombre, string unidad, string tipo, long cantidad, float precioCompra)
         {
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("UPDATE ListaPrecios SET  listaNombre = '" + nombre + "', listaUnidad = '" + unidad + "', listaTipo = '" + tipo + "', listaPrecioVenta = " + precioVenta + " where listaId = " + listaId);
+            return CG.Ejecutor("UPDATE Bolson SET  bolsonNombre = '" + nombre + "', bolsonUnidad = '" + unidad + "', bolsonTipo = '" + tipo + "', bolsonCantidad = " + cantidad + ", bolsonPrecioCompra = " + precioCompra + " where bolsonId = " + bolsonId + "");
 
 
+        }
+
+
+        public bool BolsonValidar(string nombre, string tipo, string unidad, string cantidad, string precioCompra)
+        {
+            bool exito = false;
+            //VALIDACIONES DE CAMPOS VACÍOS          
+            if (nombre == "")
+            {
+                MessageBox.Show("Cargá el nombre del producto");
+            }
+            else if (tipo == "")
+            {
+                MessageBox.Show("Cargá el tipo del producto");
+            }
+            else if (unidad == "")
+            {
+                MessageBox.Show("Cargá la unidad de medida del producto");
+            }
+            else if (cantidad == "")
+            {
+                MessageBox.Show("Cargá la cantidad del producto");
+            }
+            else if (precioCompra == "")
+            {
+                MessageBox.Show("Cargá el precio de compra del producto");
+            }
+            //VALIDACIONES DE FORMATOS CORRECTOS
+            else if (int.TryParse(precioCompra, out int precioCompraEntero) == false)
+            {
+                MessageBox.Show("El precio de compra del producto debe ser un número entero");
+            }
+            else if (precioCompraEntero < 0)
+            {
+                MessageBox.Show("El precio de compra no puede ser negativo");
+            }
+
+            else if (Int64.TryParse(cantidad, out Int64 CantidadEntero) == false)
+            {
+                MessageBox.Show("La cantidad del producto debe ser un número entero");
+
+            }
+            else if (CantidadEntero > 50000000)
+            {
+                MessageBox.Show("La cantidad no puede superar los 15.000.000");
+            }
+            else if (CantidadEntero < 0)
+            {
+                MessageBox.Show("La cantidad no puede ser negativa");
+            }
+            else
+            {
+                return true;
+            }
+            return exito;
         }
 
 

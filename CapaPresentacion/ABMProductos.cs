@@ -42,8 +42,8 @@ namespace CapaPresentacion
 
             panelNuevoProducto.Visible = false;
             DataSet DS = new DataSet();
-            Producto stock = new Producto();
-            DS = stock.MostrarProductoTipo();
+            Producto producto = new Producto();
+            DS = producto.MostrarProductoTipo();
             //Agrega el tipo de producto
             foreach (DataRow row in DS.Tables[0].Rows)
             {
@@ -64,8 +64,8 @@ namespace CapaPresentacion
             //Configurando DataGrid
             DataSet DS = new DataSet();
 
-            Producto stock = new Producto();
-            DS = stock.MostrarProducto();
+            Producto producto = new Producto();
+            DS = producto.MostrarProducto();
             dataGridView1.DataSource = DS.Tables[0];
             dataGridView1.Columns["productoId"].Visible = false;
 
@@ -82,8 +82,8 @@ namespace CapaPresentacion
         private void botonBuscar_Click(object sender, EventArgs e)
                 {
                     DataSet DS = new DataSet();
-                    Producto stock = new Producto();
-                    //DS = stock.MostrarProductoFiltro(textBoxNombre.Text, comboBoxTipo.Text, comboBoxProveedor.Text);
+                    Producto producto = new Producto();
+                    DS = producto.MostrarProductoFiltro(textBoxNombre.Text, comboBoxTipo.Text);
                     textBoxNombre.Visible = true;
                     //comboBoxProveedor.Visible = true;
                     comboBoxTipo.Visible = true;
@@ -93,6 +93,7 @@ namespace CapaPresentacion
 
                 }
 
+        //ABRE PANEL DE AGREGAR PRODUCTO
         private void botonAgregar_Click(object sender, EventArgs e)
         {
             panelNuevoProducto.Visible = true;
