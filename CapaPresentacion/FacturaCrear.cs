@@ -143,7 +143,7 @@ namespace CapaPresentacion
 
                 foreach (DataGridViewRow fila in dataGridView1.Rows)
                 {
-                    if (fact.ProductoValidar(fila.Cells[1].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString(), i))
+                    if (fact.ProductoValidar(fila.Cells[0].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString(), i))
                     {
                         i++;
                     }
@@ -158,7 +158,7 @@ namespace CapaPresentacion
                     idFactura = fact.FacturaProductoUltimoID();
                     foreach (DataGridViewRow fila in dataGridView1.Rows)
                     {
-                        fact.ProductoAgregar(idFactura, fila.Cells[1].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString());
+                        fact.ProductoAgregar(idFactura, fila.Cells[0].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString());
                         
                         
                     }
