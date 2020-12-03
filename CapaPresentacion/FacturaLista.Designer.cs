@@ -29,7 +29,7 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,12 +50,6 @@ namespace CapaPresentacion
             this.facturaFecha = new System.Windows.Forms.DateTimePicker();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.ProductoId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UnidadMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoPrecio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productoPrecioFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -74,14 +68,14 @@ namespace CapaPresentacion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(14, 108);
@@ -192,6 +186,7 @@ namespace CapaPresentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(946, 475);
             this.panel1.TabIndex = 56;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -255,10 +250,12 @@ namespace CapaPresentacion
             // 
             this.textoDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textoDescuento.BackColor = System.Drawing.Color.White;
+            this.textoDescuento.Enabled = false;
             this.textoDescuento.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textoDescuento.Location = new System.Drawing.Point(818, 362);
             this.textoDescuento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoDescuento.Name = "textoDescuento";
+            this.textoDescuento.ReadOnly = true;
             this.textoDescuento.Size = new System.Drawing.Size(119, 25);
             this.textoDescuento.TabIndex = 70;
             this.textoDescuento.Text = "0";
@@ -298,6 +295,7 @@ namespace CapaPresentacion
             // 
             this.facturaFecha.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.facturaFecha.Enabled = false;
             this.facturaFecha.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
             this.facturaFecha.Location = new System.Drawing.Point(22, 194);
             this.facturaFecha.Name = "facturaFecha";
@@ -309,71 +307,37 @@ namespace CapaPresentacion
             this.textBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxNombre.BackColor = System.Drawing.Color.White;
+            this.textBoxNombre.Enabled = false;
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(22, 126);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.ReadOnly = true;
             this.textBoxNombre.Size = new System.Drawing.Size(280, 25);
             this.textBoxNombre.TabIndex = 65;
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProductoId,
-            this.productoNombre,
-            this.UnidadMedida,
-            this.productoCantidad,
-            this.productoPrecio,
-            this.productoPrecioFin});
             this.dataGridView2.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.dataGridView2.Location = new System.Drawing.Point(346, 90);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(597, 264);
             this.dataGridView2.TabIndex = 64;
-            // 
-            // ProductoId
-            // 
-            this.ProductoId.HeaderText = "productoId";
-            this.ProductoId.Name = "ProductoId";
-            this.ProductoId.Visible = false;
-            // 
-            // productoNombre
-            // 
-            this.productoNombre.HeaderText = "Nombre Producto";
-            this.productoNombre.Name = "productoNombre";
-            // 
-            // UnidadMedida
-            // 
-            this.UnidadMedida.HeaderText = "Cantidad x bulto";
-            this.UnidadMedida.Name = "UnidadMedida";
-            // 
-            // productoCantidad
-            // 
-            this.productoCantidad.HeaderText = "Cant. bultos";
-            this.productoCantidad.Name = "productoCantidad";
-            // 
-            // productoPrecio
-            // 
-            this.productoPrecio.HeaderText = "Precio X Bulto";
-            this.productoPrecio.Name = "productoPrecio";
-            // 
-            // productoPrecioFin
-            // 
-            this.productoPrecioFin.HeaderText = "Precio Total";
-            this.productoPrecioFin.Name = "productoPrecioFin";
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label4
             // 
@@ -401,10 +365,10 @@ namespace CapaPresentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FacturaLista";
             this.Text = "FacturaLista";

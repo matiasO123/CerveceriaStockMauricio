@@ -17,6 +17,17 @@ namespace CapaDominio
             
             return CG.Consultor("SELECT * FROM Factura");
         }
+
+
+        public DataSet FacturaProductosMostrar(int nroFactura)
+        {
+            DataSet DDSS = new DataSet();
+            ConexionGeneral CG = new ConexionGeneral();
+            return CG.Consultor("SELECT P.productoNombre, P.productoUnidadMedida, FP.productoCantidad, FP.productoPrecioUnitario FROM Factura F INNER JOIN FacturaProducto FP ON FP.facturaID = F.facturaID INNER JOIN Producto P ON P.productoId = FP.productoID WHERE F.facturaID = " + nroFactura + "");
+            //"SELECT P.productoNombre, P.productoCantidad, FP.productoCantidad, FP.productoPrecioUnitario FROM Factura F INNER JOIN FacturaProducto FP ON FP.facturaID = F.facturaID INNER JOIN Producto P ON P.productoId = FP.productoID WHERE F.facturaID = " + nroFactura + ""
+
+            
+        }
         
         
         
