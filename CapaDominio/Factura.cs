@@ -173,5 +173,25 @@ namespace CapaDominio
             }
             return exito;
         }
+
+
+
+        //Eliminar factura 
+        public bool FacturaEliminar(int idFactura)
+        {
+            ConexionGeneral CG = new ConexionGeneral();
+            bool exito = false;
+            if (CG.Ejecutor("DELETE FROM FacturaProducto WHERE facturaID = " + idFactura + ""))
+            {
+                if (CG.Ejecutor("DELETE FROM Factura WHERE facturaID = " + idFactura + ""))
+                {
+                    exito = true;
+                }
+            }
+
+            return exito;
+            
+
+        }
     }
 }

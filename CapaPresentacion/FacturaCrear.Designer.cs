@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -120,6 +121,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductoId,
@@ -129,14 +138,14 @@
             this.productoPrecio,
             this.productoPrecioFin});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(380, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(322, 29);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(558, 265);
+            this.dataGridView1.Size = new System.Drawing.Size(616, 265);
             this.dataGridView1.TabIndex = 4;
             // 
             // ProductoId
@@ -197,7 +206,7 @@
             this.textBoxNombre.Location = new System.Drawing.Point(88, 27);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(264, 25);
+            this.textBoxNombre.Size = new System.Drawing.Size(225, 25);
             this.textBoxNombre.TabIndex = 8;
             // 
             // facturaFecha
@@ -205,7 +214,7 @@
             this.facturaFecha.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
             this.facturaFecha.Location = new System.Drawing.Point(88, 72);
             this.facturaFecha.Name = "facturaFecha";
-            this.facturaFecha.Size = new System.Drawing.Size(264, 25);
+            this.facturaFecha.Size = new System.Drawing.Size(225, 25);
             this.facturaFecha.TabIndex = 10;
             // 
             // labelPrecio
@@ -215,7 +224,7 @@
             this.labelPrecio.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
             this.labelPrecio.Location = new System.Drawing.Point(88, 212);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(63, 22);
+            this.labelPrecio.Size = new System.Drawing.Size(52, 22);
             this.labelPrecio.TabIndex = 14;
             // 
             // label9
@@ -258,7 +267,7 @@
             this.textoProducto.Location = new System.Drawing.Point(88, 115);
             this.textoProducto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoProducto.Name = "textoProducto";
-            this.textoProducto.Size = new System.Drawing.Size(221, 25);
+            this.textoProducto.Size = new System.Drawing.Size(164, 25);
             this.textoProducto.TabIndex = 20;
             // 
             // label17
@@ -354,7 +363,7 @@
             this.textoUnidad.Location = new System.Drawing.Point(88, 162);
             this.textoUnidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoUnidad.Name = "textoUnidad";
-            this.textoUnidad.Size = new System.Drawing.Size(63, 25);
+            this.textoUnidad.Size = new System.Drawing.Size(52, 25);
             this.textoUnidad.TabIndex = 26;
             // 
             // label8
@@ -371,10 +380,10 @@
             // 
             this.textBoxCantidad.BackColor = System.Drawing.Color.White;
             this.textBoxCantidad.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCantidad.Location = new System.Drawing.Point(256, 162);
+            this.textBoxCantidad.Location = new System.Drawing.Point(242, 163);
             this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxCantidad.Name = "textBoxCantidad";
-            this.textBoxCantidad.Size = new System.Drawing.Size(96, 25);
+            this.textBoxCantidad.Size = new System.Drawing.Size(71, 25);
             this.textBoxCantidad.TabIndex = 24;
             this.textBoxCantidad.TextChanged += new System.EventHandler(this.textBoxCantidad_TextChanged);
             // 
@@ -382,7 +391,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label6.Location = new System.Drawing.Point(174, 167);
+            this.label6.Location = new System.Drawing.Point(151, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 20);
             this.label6.TabIndex = 23;
@@ -392,9 +401,9 @@
             // 
             this.buttonAgregarProducto.Enabled = false;
             this.buttonAgregarProducto.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.buttonAgregarProducto.Location = new System.Drawing.Point(11, 251);
+            this.buttonAgregarProducto.Location = new System.Drawing.Point(9, 290);
             this.buttonAgregarProducto.Name = "buttonAgregarProducto";
-            this.buttonAgregarProducto.Size = new System.Drawing.Size(341, 34);
+            this.buttonAgregarProducto.Size = new System.Drawing.Size(304, 34);
             this.buttonAgregarProducto.TabIndex = 27;
             this.buttonAgregarProducto.Text = "Agregar producto";
             this.buttonAgregarProducto.UseVisualStyleBackColor = true;
@@ -404,9 +413,9 @@
             // 
             this.buttonCrearFactura.Enabled = false;
             this.buttonCrearFactura.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.buttonCrearFactura.Location = new System.Drawing.Point(11, 331);
+            this.buttonCrearFactura.Location = new System.Drawing.Point(11, 347);
             this.buttonCrearFactura.Name = "buttonCrearFactura";
-            this.buttonCrearFactura.Size = new System.Drawing.Size(341, 34);
+            this.buttonCrearFactura.Size = new System.Drawing.Size(302, 34);
             this.buttonCrearFactura.TabIndex = 28;
             this.buttonCrearFactura.Text = "Crear Factura";
             this.buttonCrearFactura.UseVisualStyleBackColor = true;
@@ -415,19 +424,20 @@
             // buttonCerrarFactura
             // 
             this.buttonCerrarFactura.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.buttonCerrarFactura.Location = new System.Drawing.Point(3, 58);
+            this.buttonCerrarFactura.Location = new System.Drawing.Point(3, 75);
             this.buttonCerrarFactura.Name = "buttonCerrarFactura";
             this.buttonCerrarFactura.Size = new System.Drawing.Size(124, 34);
             this.buttonCerrarFactura.TabIndex = 29;
             this.buttonCerrarFactura.Text = "Cerrar Factura";
             this.buttonCerrarFactura.UseVisualStyleBackColor = true;
+            this.buttonCerrarFactura.Visible = false;
             // 
             // label11
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label11.Location = new System.Drawing.Point(340, 13);
+            this.label11.Location = new System.Drawing.Point(394, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 20);
             this.label11.TabIndex = 30;
@@ -438,7 +448,7 @@
             this.textoDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textoDescuento.BackColor = System.Drawing.Color.White;
             this.textoDescuento.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoDescuento.Location = new System.Drawing.Point(429, 13);
+            this.textoDescuento.Location = new System.Drawing.Point(483, 13);
             this.textoDescuento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoDescuento.Name = "textoDescuento";
             this.textoDescuento.Size = new System.Drawing.Size(119, 25);
@@ -450,7 +460,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label12.Location = new System.Drawing.Point(160, 210);
+            this.label12.Location = new System.Drawing.Point(151, 210);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 20);
             this.label12.TabIndex = 32;
@@ -461,9 +471,9 @@
             this.labelPrecioTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioTotal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelPrecioTotal.Location = new System.Drawing.Point(256, 210);
+            this.labelPrecioTotal.Location = new System.Drawing.Point(242, 208);
             this.labelPrecioTotal.Name = "labelPrecioTotal";
-            this.labelPrecioTotal.Size = new System.Drawing.Size(96, 22);
+            this.labelPrecioTotal.Size = new System.Drawing.Size(71, 22);
             this.labelPrecioTotal.TabIndex = 33;
             // 
             // labelPrecioFinal
@@ -471,7 +481,7 @@
             this.labelPrecioFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrecioFinal.AutoSize = true;
             this.labelPrecioFinal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinal.Location = new System.Drawing.Point(333, 55);
+            this.labelPrecioFinal.Location = new System.Drawing.Point(387, 55);
             this.labelPrecioFinal.Name = "labelPrecioFinal";
             this.labelPrecioFinal.Size = new System.Drawing.Size(90, 43);
             this.labelPrecioFinal.TabIndex = 34;
@@ -484,7 +494,7 @@
             this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(429, 54);
+            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(483, 54);
             this.labelPrecioFinalEntero.Name = "labelPrecioFinalEntero";
             this.labelPrecioFinalEntero.Size = new System.Drawing.Size(119, 37);
             this.labelPrecioFinalEntero.TabIndex = 35;
@@ -495,7 +505,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.agregarProd.Image = global::CapaPresentacion.Properties.Resources.round_add_circle_outline_black_18dp;
-            this.agregarProd.Location = new System.Drawing.Point(316, 110);
+            this.agregarProd.Location = new System.Drawing.Point(277, 104);
             this.agregarProd.Name = "agregarProd";
             this.agregarProd.Size = new System.Drawing.Size(36, 36);
             this.agregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -527,7 +537,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(3, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 383);
+            this.panel1.Size = new System.Drawing.Size(317, 383);
             this.panel1.TabIndex = 36;
             // 
             // panel2
@@ -539,9 +549,9 @@
             this.panel2.Controls.Add(this.labelPrecioFinalEntero);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.textoDescuento);
-            this.panel2.Location = new System.Drawing.Point(380, 301);
+            this.panel2.Location = new System.Drawing.Point(326, 301);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(551, 110);
+            this.panel2.Size = new System.Drawing.Size(605, 110);
             this.panel2.TabIndex = 37;
             // 
             // panel3
@@ -555,6 +565,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(938, 417);
             this.panel3.TabIndex = 34;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label1
             // 

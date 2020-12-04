@@ -20,9 +20,20 @@ namespace CapaPresentacion
 
         private void FacturaLista_Load(object sender, EventArgs e)
         {
+            LlenarGrid();
+        }
+
+        private void LlenarGrid()
+        {
             Factura fact = new Factura();
             dataGridView1.DataSource = fact.FacturaMostrar().Tables[0];
             panel1.Visible = false;
+            dataGridView1.Columns[0].HeaderText = "Nro";
+            dataGridView1.Columns[1].HeaderCell.Value = "Cliente";
+            dataGridView1.Columns[2].HeaderCell.Value = "Fecha";
+            dataGridView1.Columns[3].HeaderCell.Value = "Descuento";
+            dataGridView1.Columns[4].HeaderCell.Value = "Precio final";
+
         }
 
 
@@ -44,12 +55,13 @@ namespace CapaPresentacion
                 Factura fact = new Factura();
                 
                 dataGridView2.DataSource = fact.FacturaProductosMostrar(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString())).Tables[0];
-                dataGridView2.Columns[0].HeaderCell.Value = "Nombre producto";
+                dataGridView2.Columns[0].HeaderText = "Producto";
+                
                 dataGridView2.Columns[1].HeaderCell.Value = "Cantidad x bulto";
                 dataGridView2.Columns[2].HeaderCell.Value = "Cantidad de bultos";
                 dataGridView2.Columns[3].HeaderCell.Value = "Precio x bulto";
                 dataGridView2.Columns.Add("Precio Total", "Precio Total");
-                //dataGridView2.Columns[4].HeaderCell.Value = "Precio total";
+                
                 foreach (DataGridViewRow row in dataGridView2.Rows)
                 {
 
@@ -66,14 +78,25 @@ namespace CapaPresentacion
             panel1.Visible = false;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        
+
+        private void botonEliminar_Click(object sender, EventArgs e)
         {
+            Int32 selectedRowCount =
+        dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
+                if (MessageBox.Show("Estás seguro de eliminar esta factura?", "Tender Amount",
+            MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Factura fact = new Factura();
+                fact.FacturaEliminar(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()));
+                    LlenarGrid();
+                }
+                
+                
 
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            }
         }
     }
 }
