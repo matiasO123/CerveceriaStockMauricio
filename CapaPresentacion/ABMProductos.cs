@@ -68,10 +68,17 @@ namespace CapaPresentacion
             DS = producto.MostrarProducto();
             dataGridView1.DataSource = DS.Tables[0];
             dataGridView1.Columns["productoId"].Visible = false;
+            dataGridView1.Columns["productoCantidad"].Visible = false;
+            dataGridView1.Columns[1].HeaderCell.Value = "Nombre";
+            dataGridView1.Columns[2].HeaderCell.Value = "Unidad de medida";
+            dataGridView1.Columns[3].HeaderCell.Value = "Tipo";
+            dataGridView1.Columns[4].HeaderCell.Value = "Descripción";
+            dataGridView1.Columns[6].HeaderCell.Value = "P. Venta";
+            //dataGridView1.Columns.Add("Precio Total", "Precio Total");
 
 
 
-            
+
         }
 
         
