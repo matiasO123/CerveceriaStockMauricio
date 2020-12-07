@@ -29,6 +29,7 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturaVer));
             this.labelPrecioFinalEntero = new System.Windows.Forms.Label();
             this.labelPrecioFinal = new System.Windows.Forms.Label();
             this.textoDescuento = new System.Windows.Forms.TextBox();
@@ -46,6 +47,8 @@ namespace CapaPresentacion
             this.productoPrecioFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +102,7 @@ namespace CapaPresentacion
             this.buttonCerrarFactura.TabIndex = 55;
             this.buttonCerrarFactura.Text = "Cerrar Factura";
             this.buttonCerrarFactura.UseVisualStyleBackColor = true;
+            this.buttonCerrarFactura.Click += new System.EventHandler(this.buttonCerrarFactura_Click);
             // 
             // label10
             // 
@@ -207,6 +211,21 @@ namespace CapaPresentacion
             this.label3.TabIndex = 37;
             this.label3.Text = "Cliente";
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // FacturaVer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,5 +269,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn productoPrecioFin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

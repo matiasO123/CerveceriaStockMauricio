@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -104,15 +105,16 @@ namespace CapaPresentacion
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
            //Acá va el margen
-            e.Graphics.DrawImage(objBitmap, 0, 0);
+            //e.Graphics.DrawImage(objBitmap, 0, 0);
 
         }
-
+        /*
         private void button1_Click(object sender, EventArgs e)
         {
            
             buttonCerrarFactura.Visible = false;
             buttonImprimir.Visible = false;
+
             CaptureScreen();
             printDocument1.Print();
             buttonCerrarFactura.Visible = true;
@@ -144,11 +146,79 @@ namespace CapaPresentacion
 
 
 
+        }*/
+        int alto;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            buttonCerrarFactura.Visible = false;
+            buttonImprimir.Visible = false;
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage);
+
+
+
+            
+            //Creo un gráfico
+            Graphics myGraphics = this.CreateGraphics();
+
+            //Calculo posiciones y tamaños absolutos
+            Point startPoint = panel1.PointToScreen(new Point());
+            Point endPoint = puntoFinal.PointToScreen(new Point());
+            int ancho = endPoint.X - startPoint.X;
+            alto = endPoint.Y - startPoint.Y;
+            Size s = new Size(ancho, alto);
+            //Creo una imagen usando los parámetros de posició y tamaño absoluto
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            //Al gráfico le cargo el molde de la imagen
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+
+            memoryGraphics.CopyFromScreen(startPoint.X, startPoint.Y, 0, 0, s);
+            objBitmap = new Bitmap(memoryImage, new Size(750, alto));
+
+
+
+
+            PrintDialog printdlg = new PrintDialog();
+            PrintPreviewDialog printPrvDlg = new PrintPreviewDialog();
+
+            // preview the assigned document or you can create a different previewButton for it
+            printPrvDlg.Document = pd;
+            
+            
+            printdlg.Document = pd;
+            printPrvDlg.ShowDialog();
+            if (printdlg.ShowDialog() == DialogResult.OK)
+            {
+                pd.Print();
+            }
+            buttonCerrarFactura.Visible = true;
+            buttonImprimir.Visible = true;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
+        private void pd_PrintPage(object sender, PrintPageEventArgs e)
+
+        {
+            
+            Rectangle logo = new Rectangle(0, 0, 750, alto);
+            e.Graphics.DrawImage(objBitmap, 0,0);
+
+            /*Single yPos = 0;
+            Single leftMargin = e.MarginBounds.Left;
+            Single topMargin = e.MarginBounds.Top;*/
+            //Image img = Image.FromFile("logo.bmp");
+            
+            /*using (Font printFont = new Font("Arial", 20.0f))
+            {
+                e.Graphics.DrawImage(objBitmap, logo);
+                e.Graphics.DrawString("Header", printFont, Brushes.Black, leftMargin, yPos, new StringFormat());
+            }
+            using (SolidBrush blueBrush = new SolidBrush(Color.Black))
+            {
+                Rectangle rect = new Rectangle(100, 100, 500, 120);
+                e.Graphics.FillRectangle(blueBrush, rect);
+            }*/
+            
         }
     }
 }
