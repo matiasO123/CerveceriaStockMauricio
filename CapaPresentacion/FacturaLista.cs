@@ -42,7 +42,7 @@ namespace CapaPresentacion
         {
             panel1.Visible = true;
             panel1.BringToFront();
-            
+
             Int32 selectedRowCount =
         dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
             if (selectedRowCount > 0)
@@ -53,21 +53,21 @@ namespace CapaPresentacion
                 labelPrecioFinalEntero.Text = dataGridView1.SelectedRows[0].Cells["facturaTotal"].Value.ToString();
                 DataSet DDSS = new DataSet();
                 Factura fact = new Factura();
-                
+
                 dataGridView2.DataSource = fact.FacturaProductosMostrar(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString())).Tables[0];
                 dataGridView2.Columns[0].HeaderText = "Producto";
-                
+
                 dataGridView2.Columns[1].HeaderCell.Value = "Cantidad x bulto";
                 dataGridView2.Columns[2].HeaderCell.Value = "Cantidad de bultos";
                 dataGridView2.Columns[3].HeaderCell.Value = "Precio x bulto";
                 dataGridView2.Columns.Add("Precio Total", "Precio Total");
-                
+
                 foreach (DataGridViewRow row in dataGridView2.Rows)
                 {
 
                     row.Cells["Precio Total"].Value = (int.Parse(row.Cells["productoCantidad"].Value.ToString())) * (int.Parse(row.Cells["productoPrecioUnitario"].Value.ToString()));
 
-                    
+
                 }
 
             }
@@ -78,7 +78,7 @@ namespace CapaPresentacion
             panel1.Visible = false;
         }
 
-        
+
 
         private void botonEliminar_Click(object sender, EventArgs e)
         {
@@ -90,13 +90,65 @@ namespace CapaPresentacion
             MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Factura fact = new Factura();
-                fact.FacturaEliminar(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()));
+                    fact.FacturaEliminar(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()));
                     LlenarGrid();
                 }
-                
-                
+
+
 
             }
+        }
+        Bitmap bitmap;
+        Bitmap memoryImage;
+        Bitmap objBitmap;
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+           //Acá va el margen
+            e.Graphics.DrawImage(objBitmap, 0, 0);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            buttonCerrarFactura.Visible = false;
+            buttonImprimir.Visible = false;
+            CaptureScreen();
+            printDocument1.Print();
+            buttonCerrarFactura.Visible = true;
+            buttonImprimir.Visible = true;
+
+        }
+
+        private void CaptureScreen()
+        {
+            //Creo un gráfico
+            Graphics myGraphics = this.CreateGraphics();
+
+            //Calculo posiciones y tamaños absolutos
+            Point startPoint = panel1.PointToScreen(new Point());
+            Point endPoint = puntoFinal.PointToScreen(new Point());
+            int ancho = endPoint.X - startPoint.X;
+            int alto = endPoint.Y - startPoint.Y;
+            Size s = new Size(ancho, alto);
+            //Creo una imagen usando los parámetros de posició y tamaño absoluto
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            //Al gráfico le cargo el molde de la imagen
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            
+            memoryGraphics.CopyFromScreen(startPoint.X, startPoint.Y, 0, 0, s);
+            objBitmap = new Bitmap(memoryImage, new Size(750, alto));
+            
+
+
+
+
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

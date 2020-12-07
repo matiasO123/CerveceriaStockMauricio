@@ -21,6 +21,7 @@ namespace CapaPresentacion
 
             //Application.Run(new ABMFactura());
             Application.Run(new Principal());
+            
         }
     }
 }

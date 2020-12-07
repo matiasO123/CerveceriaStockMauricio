@@ -30,11 +30,11 @@
         {
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnFacturas = new System.Windows.Forms.Button();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnFacturas = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.panelInicio = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
@@ -70,56 +70,25 @@
             this.panelMenu.Size = new System.Drawing.Size(236, 472);
             this.panelMenu.TabIndex = 57;
             // 
-            // panel1
+            // button1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackgroundImage = global::CapaPresentacion.Properties.Resources.Principal;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 135);
-            this.panel1.TabIndex = 11;
-            // 
-            // btnFacturas
-            // 
-            this.btnFacturas.BackColor = System.Drawing.Color.Transparent;
-            this.btnFacturas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnFacturas.FlatAppearance.BorderSize = 2;
-            this.btnFacturas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.btnFacturas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnFacturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturas.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
-            this.btnFacturas.ForeColor = System.Drawing.Color.Black;
-            this.btnFacturas.Location = new System.Drawing.Point(0, 176);
-            this.btnFacturas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnFacturas.Name = "btnFacturas";
-            this.btnFacturas.Size = new System.Drawing.Size(236, 50);
-            this.btnFacturas.TabIndex = 9;
-            this.btnFacturas.Text = "FACTURAS";
-            this.btnFacturas.UseVisualStyleBackColor = false;
-            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.BackColor = System.Drawing.Color.Transparent;
-            this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnProductos.FlatAppearance.BorderSize = 2;
-            this.btnProductos.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
-            this.btnProductos.ForeColor = System.Drawing.Color.Black;
-            this.btnProductos.Location = new System.Drawing.Point(0, 383);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(236, 50);
-            this.btnProductos.TabIndex = 10;
-            this.btnProductos.Text = "LISTA DE PRODUCTOS";
-            this.btnProductos.UseVisualStyleBackColor = false;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(0, 246);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(236, 50);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "LISTA DE FACTURAS";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnStock
             // 
@@ -141,25 +110,56 @@
             this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
             // 
-            // button1
+            // btnProductos
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 246);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 50);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "LISTA DE FACTURAS";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnProductos.BackColor = System.Drawing.Color.Transparent;
+            this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnProductos.FlatAppearance.BorderSize = 2;
+            this.btnProductos.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.btnProductos.ForeColor = System.Drawing.Color.Black;
+            this.btnProductos.Location = new System.Drawing.Point(0, 383);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(236, 50);
+            this.btnProductos.TabIndex = 10;
+            this.btnProductos.Text = "LISTA DE PRODUCTOS";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
+            // btnFacturas
+            // 
+            this.btnFacturas.BackColor = System.Drawing.Color.Transparent;
+            this.btnFacturas.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnFacturas.FlatAppearance.BorderSize = 2;
+            this.btnFacturas.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnFacturas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnFacturas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturas.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.btnFacturas.ForeColor = System.Drawing.Color.Black;
+            this.btnFacturas.Location = new System.Drawing.Point(0, 176);
+            this.btnFacturas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnFacturas.Name = "btnFacturas";
+            this.btnFacturas.Size = new System.Drawing.Size(236, 50);
+            this.btnFacturas.TabIndex = 9;
+            this.btnFacturas.Text = "FACTURAS";
+            this.btnFacturas.UseVisualStyleBackColor = false;
+            this.btnFacturas.Click += new System.EventHandler(this.btnFacturas_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackgroundImage = global::CapaPresentacion.Properties.Resources.Principal;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(236, 135);
+            this.panel1.TabIndex = 11;
             // 
             // btnEntrar
             // 
@@ -204,9 +204,9 @@
             this.BackgroundImage = global::CapaPresentacion.Properties.Resources.fondoPrincipal1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1226, 476);
-            this.Controls.Add(this.panelInicio);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelInicio);
             this.DoubleBuffered = true;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
