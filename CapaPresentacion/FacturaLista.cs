@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -51,7 +52,12 @@ namespace CapaPresentacion
                 textBoxNombre.Text = dataGridView1.SelectedRows[0].Cells["facturaNombre"].Value.ToString();
                 textoDescuento.Text = dataGridView1.SelectedRows[0].Cells["facturaDescuento"].Value.ToString();
                 facturaFecha.Text = dataGridView1.SelectedRows[0].Cells["facturaFecha"].Value.ToString();
-                labelPrecioFinalEntero.Text = dataGridView1.SelectedRows[0].Cells["facturaTotal"].Value.ToString();
+                int value = int.Parse(dataGridView1.SelectedRows[0].Cells["facturaTotal"].Value.ToString());
+                NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
+                // Displays the same value with a blank as the separator.
+                nfi.CurrencyGroupSeparator = ".";
+                labelPrecioFinalEntero.Text = value.ToString("C0", nfi);
+                
                 DataSet DDSS = new DataSet();
                 Factura fact = new Factura();
 

@@ -437,7 +437,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label11.Location = new System.Drawing.Point(394, 13);
+            this.label11.Location = new System.Drawing.Point(356, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 20);
             this.label11.TabIndex = 30;
@@ -480,8 +480,9 @@
             // 
             this.labelPrecioFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrecioFinal.AutoSize = true;
+            this.labelPrecioFinal.BackColor = System.Drawing.Color.Transparent;
             this.labelPrecioFinal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinal.Location = new System.Drawing.Point(387, 55);
+            this.labelPrecioFinal.Location = new System.Drawing.Point(352, 52);
             this.labelPrecioFinal.Name = "labelPrecioFinal";
             this.labelPrecioFinal.Size = new System.Drawing.Size(90, 43);
             this.labelPrecioFinal.TabIndex = 34;
@@ -490,13 +491,14 @@
             // labelPrecioFinalEntero
             // 
             this.labelPrecioFinalEntero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPrecioFinalEntero.AutoSize = true;
             this.labelPrecioFinalEntero.BackColor = System.Drawing.Color.White;
             this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(483, 54);
+            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(441, 54);
             this.labelPrecioFinalEntero.Name = "labelPrecioFinalEntero";
-            this.labelPrecioFinalEntero.Size = new System.Drawing.Size(119, 37);
+            this.labelPrecioFinalEntero.Size = new System.Drawing.Size(2, 45);
             this.labelPrecioFinalEntero.TabIndex = 35;
             // 
             // agregarProd
@@ -544,9 +546,9 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.labelPrecioFinalEntero);
             this.panel2.Controls.Add(this.buttonCerrarFactura);
             this.panel2.Controls.Add(this.labelPrecioFinal);
-            this.panel2.Controls.Add(this.labelPrecioFinalEntero);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.textoDescuento);
             this.panel2.Location = new System.Drawing.Point(326, 301);
@@ -565,7 +567,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(938, 417);
             this.panel3.TabIndex = 34;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label1
             // 
