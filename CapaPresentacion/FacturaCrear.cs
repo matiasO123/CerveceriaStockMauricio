@@ -51,6 +51,7 @@ namespace CapaPresentacion
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             panelAgregarProd.Visible = false;
+            textBox2.Text = "";
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -66,6 +67,8 @@ namespace CapaPresentacion
             panelAgregarProd.Visible = false;
             buttonAgregarProducto.Enabled = true;
             buttonCrearFactura.Enabled = true;
+
+            textBox2.Text = "";
         }
 
         private void textBoxCantidad_TextChanged(object sender, EventArgs e)
@@ -163,21 +166,37 @@ namespace CapaPresentacion
                         
                     }
                     MessageBox.Show("Factura creada");
+                    //Vaciar campos
+                    textBoxNombre.Text = "";
+                    textoDescuento.Text = "";
+                    labelPrecioFinalEntero.Text = "";
+                    //dataGridView1.DataSource = null;
+                    dataGridView1.Rows.Clear();
+                    dataGridView1.Refresh();
+                    buttonCrearFactura.Enabled = false;
+
                 }
-                        
-                            
-                            
-
-                       
-                
-                
-
                 
             }
 
             
         }
 
-        
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            DataSet DS = new DataSet();
+            Producto sto = new Producto();
+            string nombre = textBox2.Text;
+            
+            
+
+
+            DS = sto.MostrarProductoFiltro(nombre, "");
+            //dataGridView1.DataSource = null;
+            if (DS != null)
+            {
+                dataGridView2.DataSource = DS.Tables[0];
+            }
+        }
     }
 }

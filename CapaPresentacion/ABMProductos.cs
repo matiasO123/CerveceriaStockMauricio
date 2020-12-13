@@ -199,7 +199,10 @@ namespace CapaPresentacion
 
         private void botonLlenarTabla_Click(object sender, EventArgs e)
         {
+            textBoxNombre.Text = "";
+            comboBoxTipo.Text = "";
             DataGridLlenar();
+
         }
 
         //VACIA LOS CAMPOS

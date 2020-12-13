@@ -72,6 +72,15 @@ namespace CapaPresentacion
             BtnAgregar.Visible = true;
             BtnGuardar.Visible = false;
             DataSet DS = new DataSet();
+            textBoxNom.Text = "";
+            comboBoxNuevo.SelectedIndex = -1;
+            textBoxUnidad.Text = "";
+            textBoxCantidad.Text = "";
+            textBoxPcompra.Text = "";
+
+
+
+
 
             Stock stock = new Stock();
             DS = stock.MostrarProductoTipo();
