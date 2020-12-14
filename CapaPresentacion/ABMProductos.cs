@@ -376,7 +376,7 @@ namespace CapaPresentacion
 
         ///////////////IMPRIMIRRRRRRRR\\\\\\\\\\\\\
 
-        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        /*private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(bmp, 0, 0);
         }
@@ -390,7 +390,7 @@ namespace CapaPresentacion
             Graphics mg = Graphics.FromImage(bmp);
             mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
             printPreviewDialog1.ShowDialog();
-        }
+        }*/
     }
 }
 
