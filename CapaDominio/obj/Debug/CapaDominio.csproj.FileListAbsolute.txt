@@ -108,3 +108,25 @@ D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\Cerveceria
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\Cerveceria al posta 3\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.csproj.CopyComplete
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\Cerveceria al posta 3\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.dll
 D:\Laura\Desktop\MATY\DISEÑO\assets\config.data\Datasaver\Thumbnails\Cerveceria al posta 3\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.pdb
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\x86\sqlite3.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\x64\sqlite3.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\CapaDominio.dll.config
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\CapaDominio.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\CapaDominio.pdb
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\AccesoDatos.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\CapaAccesoDatos.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\System.Data.SQLite.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\AccesoDatos.pdb
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\CapaAccesoDatos.pdb
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\bin\Debug\System.Data.SQLite.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.csprojAssemblyReference.cache
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.pdb

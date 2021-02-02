@@ -226,5 +226,35 @@ namespace CapaPresentacion
             }*/
             
         }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarConfirmar ec = new EliminarConfirmar();
+            ec.ShowDialog();
+            if (ec.Eliminar)
+            {
+                Factura fact = new Factura();
+                fact.FacturaEliminar(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()));
+            }
+            ec.Dispose();
+            ec.Close();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonEditar_Click(object sender, EventArgs e)
+        {
+            FacturaCrear fc = new FacturaCrear(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()));
+            fc.ShowDialog();
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

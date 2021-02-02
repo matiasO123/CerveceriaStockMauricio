@@ -84,6 +84,12 @@
     <Compile Include="ABMStock.Designer.cs">
       <DependentUpon>ABMStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarConfirmar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarConfirmar.Designer.cs">
+      <DependentUpon>EliminarConfirmar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FacturaCrear.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ABMStock.resx">
       <DependentUpon>ABMStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarConfirmar.resx">
+      <DependentUpon>EliminarConfirmar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FacturaCrear.resx">
       <DependentUpon>FacturaCrear.cs</DependentUpon>

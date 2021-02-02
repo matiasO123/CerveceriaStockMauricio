@@ -19,6 +19,36 @@ namespace CapaPresentacion
             
 
         }
+
+
+        //constructor para cargar la factura para editarla
+        public FacturaCrear(int id)
+        {
+            InitializeComponent();
+            idFactura = id;
+            Factura fact = new Factura();
+            fact.FacturaEditarMostrarFactura(id);
+            dataGridViewEditar.Visible = true;
+            dataGridViewEditar.DataSource = fact.FacturaEditarMostrarProductos(id).Tables[0];
+            dataGridViewEditar.Columns.Add("Precio Total", "Precio Total");
+            foreach (DataGridViewRow row in dataGridViewEditar.Rows)
+            {
+                row.Cells["Precio Total"].Value = int.Parse(row.Cells["Precio x Bulto"].Value.ToString()) * int.Parse(row.Cells["Cant. Bultos"].Value.ToString());
+            }
+            
+            dataGridView1.Visible = false;
+
+
+
+            buttonCerrarFactura.Visible = true;
+            buttonCerrarFactura.Enabled = true;
+            buttonCrearFactura.Visible = false;
+            buttonGuardar.Visible = true;
+            buttonEliminarProducto.Visible = true;
+            buttonEliminarProducto.Enabled = true;
+
+
+        }
         private int id;
         private int idFactura;
 
@@ -39,6 +69,7 @@ namespace CapaPresentacion
         private void Factura_Load(object sender, EventArgs e)
         {
             DataGridLlenar();
+            
         }
 
         private void agregarProd_Click(object sender, EventArgs e)
@@ -197,6 +228,49 @@ namespace CapaPresentacion
             if (DS != null)
             {
                 dataGridView2.DataSource = DS.Tables[0];
+            }
+        }
+
+        private void buttonCerrarFactura_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void buttonEliminarProducto_Click(object sender, EventArgs e)
+        {
+            DialogResult oDlgRes;
+
+            oDlgRes = MessageBox.Show("¿Está seguro que querés eliminar el producto seleccionado?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (oDlgRes == DialogResult.Yes)
+            {
+
+                if (dataGridViewEditar.SelectedRows.Count == 0)
+                {
+
+                    MessageBox.Show("Seleccioná un producto");
+
+                }
+                else
+                {
+                    if (dataGridViewEditar.SelectedRows.Count > 0)
+                    {
+                        
+                        dataGridViewEditar.Rows.RemoveAt(dataGridViewEditar.SelectedRows[0].Index);
+                        dataGridViewEditar.Refresh();
+
+
+                    }
+
+                }
+
             }
         }
     }

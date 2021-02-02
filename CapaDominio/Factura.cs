@@ -24,7 +24,7 @@ namespace CapaDominio
             DataSet DDSS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();
             return CG.Consultor("SELECT P.productoNombre, P.productoUnidadMedida, FP.productoCantidad, FP.productoPrecioUnitario FROM Factura F INNER JOIN FacturaProducto FP ON FP.facturaID = F.facturaID INNER JOIN Producto P ON P.productoId = FP.productoID WHERE F.facturaID = " + nroFactura + "");
-            //"SELECT P.productoNombre, P.productoCantidad, FP.productoCantidad, FP.productoPrecioUnitario FROM Factura F INNER JOIN FacturaProducto FP ON FP.facturaID = F.facturaID INNER JOIN Producto P ON P.productoId = FP.productoID WHERE F.facturaID = " + nroFactura + ""
+            
 
             
         }
@@ -186,12 +186,43 @@ namespace CapaDominio
                 if (CG.Ejecutor("DELETE FROM Factura WHERE facturaID = " + idFactura + ""))
                 {
                     exito = true;
+                    MessageBox.Show("Factura eliminada");
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un error al eliminar la factura");
                 }
             }
 
             return exito;
             
 
+        }
+
+
+
+
+        public DataSet FacturaEditarMostrarProductos(int id)
+        {
+            DataSet DDSS = new DataSet();
+            ConexionGeneral CG = new ConexionGeneral();
+            DDSS = CG.Consultor("SELECT productoNombre AS 'Producto', P.productoUnidadMedida AS 'Cantidad x bulto', FP.productoCantidad AS 'Cant. Bultos', FP.productoPrecioUnitario AS 'Precio x Bulto'  FROM FacturaProducto FP INNER JOIN Producto P ON P.productoID = FP.productoID  WHERE facturaID = " + id +";");
+            return DDSS;
+        }
+
+        public DataSet FacturaEditarMostrarFactura(int id)
+        {
+            DataSet DDSS = new DataSet();
+            ConexionGeneral CG = new ConexionGeneral();
+            DDSS = CG.Consultor("SELECT * FROM Factura WHERE facturaID = " + id + ";");
+            return DDSS;
+        }
+
+        public void FacturaEditar(int id)
+        {
+            DataSet DDSS = new DataSet();
+            ConexionGeneral CG = new ConexionGeneral();
+            
         }
     }
 }

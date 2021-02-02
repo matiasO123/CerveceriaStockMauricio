@@ -41,6 +41,8 @@ namespace CapaPresentacion
             this.botonVerFactura = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonEliminar = new System.Windows.Forms.Button();
+            this.buttonEditar = new System.Windows.Forms.Button();
             this.puntoFinal = new System.Windows.Forms.PictureBox();
             this.buttonImprimir = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -179,6 +181,8 @@ namespace CapaPresentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.buttonEliminar);
+            this.panel1.Controls.Add(this.buttonEditar);
             this.panel1.Controls.Add(this.puntoFinal);
             this.panel1.Controls.Add(this.buttonImprimir);
             this.panel1.Controls.Add(this.label6);
@@ -201,6 +205,35 @@ namespace CapaPresentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(946, 475);
             this.panel1.TabIndex = 56;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // buttonEliminar
+            // 
+            this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEliminar.ForeColor = System.Drawing.Color.Black;
+            this.buttonEliminar.Location = new System.Drawing.Point(325, 435);
+            this.buttonEliminar.Name = "buttonEliminar";
+            this.buttonEliminar.Size = new System.Drawing.Size(98, 34);
+            this.buttonEliminar.TabIndex = 80;
+            this.buttonEliminar.Text = "Eliminar";
+            this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
+            // 
+            // buttonEditar
+            // 
+            this.buttonEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEditar.ForeColor = System.Drawing.Color.Black;
+            this.buttonEditar.Location = new System.Drawing.Point(221, 435);
+            this.buttonEditar.Name = "buttonEditar";
+            this.buttonEditar.Size = new System.Drawing.Size(98, 34);
+            this.buttonEditar.TabIndex = 79;
+            this.buttonEditar.Text = "Editar";
+            this.buttonEditar.UseVisualStyleBackColor = false;
+            this.buttonEditar.Click += new System.EventHandler(this.buttonEditar_Click);
             // 
             // puntoFinal
             // 
@@ -258,7 +291,7 @@ namespace CapaPresentacion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 68);
+            this.label2.Location = new System.Drawing.Point(22, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 26);
             this.label2.TabIndex = 73;
@@ -292,11 +325,11 @@ namespace CapaPresentacion
             this.textoDescuento.BackColor = System.Drawing.Color.White;
             this.textoDescuento.Enabled = false;
             this.textoDescuento.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoDescuento.Location = new System.Drawing.Point(486, 441);
+            this.textoDescuento.Location = new System.Drawing.Point(528, 441);
             this.textoDescuento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoDescuento.Name = "textoDescuento";
             this.textoDescuento.ReadOnly = true;
-            this.textoDescuento.Size = new System.Drawing.Size(119, 25);
+            this.textoDescuento.Size = new System.Drawing.Size(94, 25);
             this.textoDescuento.TabIndex = 70;
             this.textoDescuento.Text = "0";
             // 
@@ -305,7 +338,7 @@ namespace CapaPresentacion
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label11.Location = new System.Drawing.Point(392, 445);
+            this.label11.Location = new System.Drawing.Point(437, 443);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 20);
             this.label11.TabIndex = 69;
@@ -316,11 +349,11 @@ namespace CapaPresentacion
             this.buttonCerrarFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCerrarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCerrarFactura.ForeColor = System.Drawing.Color.Black;
-            this.buttonCerrarFactura.Location = new System.Drawing.Point(120, 435);
+            this.buttonCerrarFactura.Location = new System.Drawing.Point(117, 435);
             this.buttonCerrarFactura.Name = "buttonCerrarFactura";
             this.buttonCerrarFactura.Size = new System.Drawing.Size(98, 34);
             this.buttonCerrarFactura.TabIndex = 68;
-            this.buttonCerrarFactura.Text = "Cerrar Factura";
+            this.buttonCerrarFactura.Text = "Cerrar";
             this.buttonCerrarFactura.UseVisualStyleBackColor = true;
             this.buttonCerrarFactura.Click += new System.EventHandler(this.buttonCerrarFactura_Click);
             // 
@@ -386,6 +419,7 @@ namespace CapaPresentacion
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(929, 321);
             this.dataGridView2.TabIndex = 64;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label4
             // 
@@ -481,5 +515,7 @@ namespace CapaPresentacion
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Button buttonImprimir;
         private System.Windows.Forms.PictureBox puntoFinal;
+        private System.Windows.Forms.Button buttonEliminar;
+        private System.Windows.Forms.Button buttonEditar;
     }
 }

@@ -229,7 +229,7 @@ namespace CapaPresentacion
         {
             DialogResult oDlgRes;
 
-            oDlgRes = MessageBox.Show("¿Está seguro que desea eliminar el producto seleccionado ?","Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            oDlgRes = MessageBox.Show("¿Está seguro que querés eliminar el producto seleccionado? \n(Tené  en cuenta que la eliminación de los productos puede producir perdida de datos en las facturas ya realizadas)","Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             if (oDlgRes == DialogResult.Yes)
             {
@@ -334,44 +334,51 @@ namespace CapaPresentacion
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            panelNuevoProducto.Visible = true;
-            panelNuevoProducto.BringToFront();
-            BtnAgregar.Enabled = false;
-            botonGuardar.Enabled = true;
+            DialogResult oDlgRes;
 
-            Producto producto = new Producto();
-            //Toma el valor del id para traer el producto
-            int productoId = Int32.Parse(dataGridView1.SelectedRows[0].Cells["productoId"].Value.ToString());
-            DataSet ddss = producto.MostrarUnProducto(productoId);
-            DS = producto.MostrarProductoTipo();
-            comboBoxNuevo.Items.Clear();
-            //Agrega el tipo de producto
-            foreach (DataRow row in DS.Tables[0].Rows)
+            oDlgRes = MessageBox.Show("¿Estás seguro que querés editar el producto seleccionado? \n(Tené  en cuenta que la edición de los productos puede producir confusión de datos en las facturas ya realizadas)", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+            if (oDlgRes == DialogResult.Yes)
             {
-                comboBoxNuevo.Items.Add(row["tipoNombre"].ToString());
+
+                panelNuevoProducto.Visible = true;
+                panelNuevoProducto.BringToFront();
+                BtnAgregar.Enabled = false;
+                botonGuardar.Enabled = true;
+
+                Producto producto = new Producto();
+                //Toma el valor del id para traer el producto
+                int productoId = Int32.Parse(dataGridView1.SelectedRows[0].Cells["productoId"].Value.ToString());
+                DataSet ddss = producto.MostrarUnProducto(productoId);
+                DS = producto.MostrarProductoTipo();
+                comboBoxNuevo.Items.Clear();
+                //Agrega el tipo de producto
+                foreach (DataRow row in DS.Tables[0].Rows)
+                {
+                    comboBoxNuevo.Items.Add(row["tipoNombre"].ToString());
+                }
+                DS.Clear();
+
+                comboBoxUMedida.Items.Clear();
+                DS = producto.MostrarUnidadMedida();
+                foreach (DataRow row in DS.Tables[0].Rows)
+                {
+                    comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
+                }
+
+
+
+
+                textBoxNom.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoNombre"]);
+                comboBoxNuevo.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoTipo"]);
+                textBoxDescripcion.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoDesc"]);
+                comboBoxUMedida.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoUnidadMedida"]);
+                textBoxCantidad.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoCantidad"]);
+                textBoxPventa.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoPrecioVenta"]);
+
+
+                idProductoGlobal = Int32.Parse(Convert.ToString(ddss.Tables[0].Rows[0]["productoId"]));
             }
-            DS.Clear();
-
-            comboBoxUMedida.Items.Clear();
-            DS = producto.MostrarUnidadMedida();
-            foreach (DataRow row in DS.Tables[0].Rows)
-            {
-                comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
-            }
-
-      
-
-                    
-            textBoxNom.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoNombre"]);
-            comboBoxNuevo.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoTipo"]);
-            textBoxDescripcion.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoDesc"]);
-            comboBoxUMedida.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoUnidadMedida"]);
-            textBoxCantidad.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoCantidad"]);
-            textBoxPventa.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoPrecioVenta"]);
-            
-
-            idProductoGlobal = Int32.Parse(Convert.ToString(ddss.Tables[0].Rows[0]["productoId"]));
-            
         }
 
         ///////////////IMPRIMIRRRRRRRR\\\\\\\\\\\\\
