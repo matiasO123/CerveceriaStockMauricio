@@ -218,11 +218,30 @@ namespace CapaDominio
             return DDSS;
         }
 
-        public void FacturaEditar(int id)
+
+
+
+        //Se ejecuta al editar los productos de una factura. Elimina todos los productos de la factura para que se carguen los nuevos
+        public void EditarEliminarProductosFactura(int idFactura)
         {
+            ConexionGeneral CG = new ConexionGeneral();
+            CG.Ejecutor("DELETE * FROM FacturaProducto WHERE facturaID = " + idFactura + "");
+        }
+
+
+
+
+        //Edita los datos de una factura
+        public void FacturaEditar(int id, string nombre, string fecha, string descuento, string total )
+        {
+            int descuentoEntero = int.Parse(descuento);
+            int totalEntero = int.Parse(total);
             DataSet DDSS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();
-            
+            if(CG.Ejecutor("UPDATE Factura SET 'facturaNombre' = '" + nombre + "', 'facturaFecha' = '" + fecha + "', 'facturaDescuento' = " + descuentoEntero + ", 'facturaTotal' = " + totalEntero + "  "))
+            {
+                
+            }
         }
     }
 }

@@ -164,3 +164,4 @@ C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauric
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.EliminarConfirmar.resources
+C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaPresentacion\obj\Debug\CapaPresentacion.EliminarConfirmar.resources

@@ -247,8 +247,9 @@ namespace CapaPresentacion
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
-            FacturaCrear fc = new FacturaCrear(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()));
+            FacturaCrear fc = new FacturaCrear(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()), textBoxNombre.Text, textoDescuento.Text, facturaFecha.Text);
             fc.ShowDialog();
+            
 
         }
 

@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,13 +72,14 @@
             this.labelPrecioFinalEntero = new System.Windows.Forms.Label();
             this.agregarProd = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonEliminarProducto = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonGuardar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dataGridViewEditar = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridViewEditar = new System.Windows.Forms.DataGridView();
-            this.buttonGuardar = new System.Windows.Forms.Button();
-            this.buttonEliminarProducto = new System.Windows.Forms.Button();
+            this.buttonAgregarProductoEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panelAgregarProd.SuspendLayout();
@@ -85,8 +87,8 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditar)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -128,14 +130,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductoId,
@@ -144,6 +146,14 @@
             this.productoCantidad,
             this.productoPrecio,
             this.productoPrecioFin});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.dataGridView1.Location = new System.Drawing.Point(322, 29);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -441,7 +451,7 @@
             // buttonCerrarFactura
             // 
             this.buttonCerrarFactura.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.buttonCerrarFactura.Location = new System.Drawing.Point(3, 75);
+            this.buttonCerrarFactura.Location = new System.Drawing.Point(3, 74);
             this.buttonCerrarFactura.Name = "buttonCerrarFactura";
             this.buttonCerrarFactura.Size = new System.Drawing.Size(124, 34);
             this.buttonCerrarFactura.TabIndex = 29;
@@ -455,7 +465,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label11.Location = new System.Drawing.Point(356, 13);
+            this.label11.Location = new System.Drawing.Point(341, 13);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 20);
             this.label11.TabIndex = 30;
@@ -500,7 +510,7 @@
             this.labelPrecioFinal.AutoSize = true;
             this.labelPrecioFinal.BackColor = System.Drawing.Color.Transparent;
             this.labelPrecioFinal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinal.Location = new System.Drawing.Point(352, 52);
+            this.labelPrecioFinal.Location = new System.Drawing.Point(337, 52);
             this.labelPrecioFinal.Name = "labelPrecioFinal";
             this.labelPrecioFinal.Size = new System.Drawing.Size(90, 43);
             this.labelPrecioFinal.TabIndex = 34;
@@ -514,7 +524,7 @@
             this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(441, 54);
+            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(425, 54);
             this.labelPrecioFinalEntero.Name = "labelPrecioFinalEntero";
             this.labelPrecioFinalEntero.Size = new System.Drawing.Size(2, 45);
             this.labelPrecioFinalEntero.TabIndex = 35;
@@ -538,6 +548,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.buttonAgregarProductoEditar);
             this.panel1.Controls.Add(this.buttonEliminarProducto);
             this.panel1.Controls.Add(this.textBoxNombre);
             this.panel1.Controls.Add(this.agregarProd);
@@ -561,6 +572,19 @@
             this.panel1.Size = new System.Drawing.Size(317, 383);
             this.panel1.TabIndex = 36;
             // 
+            // buttonEliminarProducto
+            // 
+            this.buttonEliminarProducto.Enabled = false;
+            this.buttonEliminarProducto.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.buttonEliminarProducto.Location = new System.Drawing.Point(5, 311);
+            this.buttonEliminarProducto.Name = "buttonEliminarProducto";
+            this.buttonEliminarProducto.Size = new System.Drawing.Size(304, 34);
+            this.buttonEliminarProducto.TabIndex = 34;
+            this.buttonEliminarProducto.Text = "Eliminar producto";
+            this.buttonEliminarProducto.UseVisualStyleBackColor = true;
+            this.buttonEliminarProducto.Visible = false;
+            this.buttonEliminarProducto.Click += new System.EventHandler(this.buttonEliminarProducto_Click);
+            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -576,6 +600,18 @@
             this.panel2.Size = new System.Drawing.Size(605, 110);
             this.panel2.TabIndex = 37;
             // 
+            // buttonGuardar
+            // 
+            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.buttonGuardar.Location = new System.Drawing.Point(193, 75);
+            this.buttonGuardar.Name = "buttonGuardar";
+            this.buttonGuardar.Size = new System.Drawing.Size(124, 34);
+            this.buttonGuardar.TabIndex = 36;
+            this.buttonGuardar.Text = "Guardar";
+            this.buttonGuardar.UseVisualStyleBackColor = true;
+            this.buttonGuardar.Visible = false;
+            this.buttonGuardar.Click += new System.EventHandler(this.buttonGuardar_Click);
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -588,6 +624,39 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(938, 417);
             this.panel3.TabIndex = 34;
+            // 
+            // dataGridViewEditar
+            // 
+            this.dataGridViewEditar.AllowUserToAddRows = false;
+            this.dataGridViewEditar.AllowUserToDeleteRows = false;
+            this.dataGridViewEditar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewEditar.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEditar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEditar.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewEditar.Location = new System.Drawing.Point(322, 29);
+            this.dataGridViewEditar.MultiSelect = false;
+            this.dataGridViewEditar.Name = "dataGridViewEditar";
+            this.dataGridViewEditar.ReadOnly = true;
+            this.dataGridViewEditar.RowHeadersVisible = false;
+            this.dataGridViewEditar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewEditar.Size = new System.Drawing.Size(616, 266);
+            this.dataGridViewEditar.TabIndex = 38;
+            this.dataGridViewEditar.Visible = false;
             // 
             // label1
             // 
@@ -609,62 +678,18 @@
             this.panel4.Size = new System.Drawing.Size(232, 79);
             this.panel4.TabIndex = 38;
             // 
-            // dataGridViewEditar
+            // buttonAgregarProductoEditar
             // 
-            this.dataGridViewEditar.AllowUserToAddRows = false;
-            this.dataGridViewEditar.AllowUserToDeleteRows = false;
-            this.dataGridViewEditar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewEditar.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEditar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEditar.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewEditar.Location = new System.Drawing.Point(322, 29);
-            this.dataGridViewEditar.MultiSelect = false;
-            this.dataGridViewEditar.Name = "dataGridViewEditar";
-            this.dataGridViewEditar.ReadOnly = true;
-            this.dataGridViewEditar.RowHeadersVisible = false;
-            this.dataGridViewEditar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEditar.Size = new System.Drawing.Size(616, 266);
-            this.dataGridViewEditar.TabIndex = 38;
-            this.dataGridViewEditar.Visible = false;
-            // 
-            // buttonGuardar
-            // 
-            this.buttonGuardar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.buttonGuardar.Location = new System.Drawing.Point(232, 74);
-            this.buttonGuardar.Name = "buttonGuardar";
-            this.buttonGuardar.Size = new System.Drawing.Size(124, 34);
-            this.buttonGuardar.TabIndex = 36;
-            this.buttonGuardar.Text = "Guardar";
-            this.buttonGuardar.UseVisualStyleBackColor = true;
-            this.buttonGuardar.Visible = false;
-            // 
-            // buttonEliminarProducto
-            // 
-            this.buttonEliminarProducto.Enabled = false;
-            this.buttonEliminarProducto.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.buttonEliminarProducto.Location = new System.Drawing.Point(5, 311);
-            this.buttonEliminarProducto.Name = "buttonEliminarProducto";
-            this.buttonEliminarProducto.Size = new System.Drawing.Size(304, 34);
-            this.buttonEliminarProducto.TabIndex = 34;
-            this.buttonEliminarProducto.Text = "Eliminar producto";
-            this.buttonEliminarProducto.UseVisualStyleBackColor = true;
-            this.buttonEliminarProducto.Visible = false;
-            this.buttonEliminarProducto.Click += new System.EventHandler(this.buttonEliminarProducto_Click);
+            this.buttonAgregarProductoEditar.Enabled = false;
+            this.buttonAgregarProductoEditar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.buttonAgregarProductoEditar.Location = new System.Drawing.Point(5, 258);
+            this.buttonAgregarProductoEditar.Name = "buttonAgregarProductoEditar";
+            this.buttonAgregarProductoEditar.Size = new System.Drawing.Size(304, 34);
+            this.buttonAgregarProductoEditar.TabIndex = 35;
+            this.buttonAgregarProductoEditar.Text = "Agregar producto";
+            this.buttonAgregarProductoEditar.UseVisualStyleBackColor = true;
+            this.buttonAgregarProductoEditar.Visible = false;
+            this.buttonAgregarProductoEditar.Click += new System.EventHandler(this.buttonAgregarProductoEditar_Click);
             // 
             // FacturaCrear
             // 
@@ -691,9 +716,9 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditar)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -747,5 +772,6 @@
         private System.Windows.Forms.DataGridView dataGridViewEditar;
         private System.Windows.Forms.Button buttonGuardar;
         private System.Windows.Forms.Button buttonEliminarProducto;
+        private System.Windows.Forms.Button buttonAgregarProductoEditar;
     }
 }

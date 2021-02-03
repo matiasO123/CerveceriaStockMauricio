@@ -22,35 +22,49 @@ namespace CapaPresentacion
 
 
         //constructor para cargar la factura para editarla
-        public FacturaCrear(int id)
+        public FacturaCrear(int id, string nombre, string descuento, string fecha)
         {
             InitializeComponent();
+
+            //DATA GRID
             idFactura = id;
             Factura fact = new Factura();
             fact.FacturaEditarMostrarFactura(id);
             dataGridViewEditar.Visible = true;
-            dataGridViewEditar.DataSource = fact.FacturaEditarMostrarProductos(id).Tables[0];
+
+            //recorrer el dataset e ir agregando en la tabla
+            DataSet ddss = new DataSet();
+            ddss = fact.FacturaEditarMostrarProductos(id);
+
+            foreach (DataRow rowi in ddss.Tables[0].Rows) { }
+
+            //dataGridViewEditar.DataSource = fact.FacturaEditarMostrarProductos(id).Tables[0];
             dataGridViewEditar.Columns.Add("Precio Total", "Precio Total");
-            foreach (DataGridViewRow row in dataGridViewEditar.Rows)
-            {
-                row.Cells["Precio Total"].Value = int.Parse(row.Cells["Precio x Bulto"].Value.ToString()) * int.Parse(row.Cells["Cant. Bultos"].Value.ToString());
-            }
-            
             dataGridView1.Visible = false;
 
+            
+            
+            //DETALLE DE FACTURA
+            textBoxNombre.Text = nombre;
+            facturaFecha.Text = fecha;
+            textoDescuento.Text = descuento;
 
 
+
+            //BOTONES
             buttonCerrarFactura.Visible = true;
             buttonCerrarFactura.Enabled = true;
             buttonCrearFactura.Visible = false;
             buttonGuardar.Visible = true;
             buttonEliminarProducto.Visible = true;
             buttonEliminarProducto.Enabled = true;
+            buttonAgregarProducto.Visible = false;
+            buttonAgregarProductoEditar.Visible = true;
 
 
         }
         private int id;
-        private int idFactura;
+        private int idFactura = 0;
 
         private void DataGridLlenar()
         {
@@ -69,6 +83,21 @@ namespace CapaPresentacion
         private void Factura_Load(object sender, EventArgs e)
         {
             DataGridLlenar();
+
+            if(idFactura != 0)
+            {
+                int contador = 0;
+                foreach (DataGridViewRow rowi in dataGridViewEditar.Rows)
+                {
+                    int cuenta = int.Parse(rowi.Cells["Precio x Bulto"].Value.ToString()) * int.Parse(rowi.Cells["Cant. Bultos"].Value.ToString());
+                    rowi.Cells["Precio Total"].Value = cuenta;
+                    contador = contador + cuenta;
+
+
+                }
+
+                labelPrecioFinalEntero.Text = contador.ToString();
+            }
             
         }
 
@@ -98,6 +127,7 @@ namespace CapaPresentacion
             textBoxCantidad.Text = "1";
             panelAgregarProd.Visible = false;
             buttonAgregarProducto.Enabled = true;
+            buttonAgregarProductoEditar.Enabled = true;
             buttonCrearFactura.Enabled = true;
 
             textBox2.Text = "";
@@ -136,10 +166,13 @@ namespace CapaPresentacion
             textBoxCantidad.Text = "";
             labelPrecioTotal.Text = "";
             buttonAgregarProducto.Enabled = false;
+            buttonAgregarProductoEditar.Enabled = false;
+
+
 
             actualizarPrecioFinal();
 
-            
+
         }
 
         public void actualizarPrecioFinal()
@@ -265,13 +298,78 @@ namespace CapaPresentacion
                         
                         dataGridViewEditar.Rows.RemoveAt(dataGridViewEditar.SelectedRows[0].Index);
                         dataGridViewEditar.Refresh();
-
+                        actualizarPrecioFinal();
 
                     }
 
                 }
 
             }
+        }
+
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            string nombre = textBoxNombre.Text;
+            string fecha = facturaFecha.Text;
+            string descuento = textoDescuento.Text;
+            string total = labelPrecioFinalEntero.Text;
+            bool validado = true;
+            Factura fact = new Factura();
+            if (fact.FacturaValidar(nombre, fecha, descuento, total))
+            {
+                int i = 1;
+
+                foreach (DataGridViewRow fila in dataGridViewEditar.Rows)
+                {
+                    if (fact.ProductoValidar(fila.Cells[0].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString(), i))
+                    {
+                        i++;
+                    }
+                    else
+                    {
+                        validado = false;
+                    }
+                }
+                if (validado)
+                {
+                    fact.FacturaEditar(idFactura, nombre, fecha, descuento, total);
+                    idFactura = fact.FacturaProductoUltimoID();
+                    fact.EditarEliminarProductosFactura(idFactura);
+                    foreach (DataGridViewRow fila in dataGridViewEditar.Rows)
+                    {
+                        fact.ProductoAgregar(idFactura, fila.Cells[0].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString());
+                        MessageBox.Show("Factura Editada");
+                        this.Dispose();
+                        this.Close();
+
+                    }
+                    
+                    
+
+                }
+                else
+                {
+                    MessageBox.Show("Hubo en error en la carga de datos");
+                }
+
+            }
+        }
+
+        private void buttonAgregarProductoEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = new DataGridViewRow();
+            this.dataGridViewEditar.Rows.Add(id, textoProducto.Text, textoUnidad.Text, textBoxCantidad.Text, labelPrecio.Text, labelPrecioTotal.Text);
+
+
+
+            textoProducto.Text = "";
+            labelPrecio.Text = "";
+            textoUnidad.Text = "";
+            textBoxCantidad.Text = "";
+            labelPrecioTotal.Text = "";
+            buttonAgregarProducto.Enabled = false;
+
+            actualizarPrecioFinal();
         }
     }
 }
