@@ -75,6 +75,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EliminarConfirmar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EliminarConfirmar";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -62,11 +62,13 @@ namespace CapaPresentacion
                 Factura fact = new Factura();
 
                 dataGridView2.DataSource = fact.FacturaProductosMostrar(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString())).Tables[0];
-                dataGridView2.Columns[0].HeaderText = "Producto";
+                dataGridView2.Columns[0].HeaderText = "ID";
+                dataGridView2.Columns[0].Visible = false;
+                dataGridView2.Columns[1].HeaderText = "Producto";
 
-                dataGridView2.Columns[1].HeaderCell.Value = "Cantidad x bulto";
-                dataGridView2.Columns[2].HeaderCell.Value = "Cantidad de bultos";
-                dataGridView2.Columns[3].HeaderCell.Value = "Precio x bulto";
+                dataGridView2.Columns[2].HeaderCell.Value = "Cantidad x bulto";
+                dataGridView2.Columns[3].HeaderCell.Value = "Cantidad de bultos";
+                dataGridView2.Columns[4].HeaderCell.Value = "Precio x bulto";
                 dataGridView2.Columns.Add("Precio Total", "Precio Total");
 
                 foreach (DataGridViewRow row in dataGridView2.Rows)
@@ -83,6 +85,7 @@ namespace CapaPresentacion
         private void buttonCerrarFactura_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
+            dataGridView2.Columns.Clear();
         }
 
 

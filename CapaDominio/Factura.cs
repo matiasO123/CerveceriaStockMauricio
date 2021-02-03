@@ -11,6 +11,9 @@ namespace CapaDominio
 {
      public class Factura
     {
+        
+        // //////////////////////////////////////////////////////
+        // VER FACTURA
         public DataSet FacturaMostrar()
         {
             ConexionGeneral CG = new ConexionGeneral();
@@ -23,11 +26,12 @@ namespace CapaDominio
         {
             DataSet DDSS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();
-            return CG.Consultor("SELECT P.productoNombre, P.productoUnidadMedida, FP.productoCantidad, FP.productoPrecioUnitario FROM Factura F INNER JOIN FacturaProducto FP ON FP.facturaID = F.facturaID INNER JOIN Producto P ON P.productoId = FP.productoID WHERE F.facturaID = " + nroFactura + "");
+            return CG.Consultor("SELECT FP.productoID AS 'ID', P.productoNombre, P.productoUnidadMedida, FP.productoCantidad, FP.productoPrecioUnitario FROM Factura F INNER JOIN FacturaProducto FP ON FP.facturaID = F.facturaID INNER JOIN Producto P ON P.productoId = FP.productoID WHERE F.facturaID = " + nroFactura + "");
             
 
             
         }
+
         
         
         
@@ -36,7 +40,8 @@ namespace CapaDominio
         
         
         
-        
+       // /////////////////////////////////////////////////////////////
+       // FACTURA CREAR
         
         
         
@@ -61,41 +66,6 @@ namespace CapaDominio
         }
 
 
-
-
-        public bool FacturaValidar(string nombre, string fecha, string descuento, string facturaTotal)
-        {
-            bool exito = false;
-            //VALIDACIONES DE CAMPOS VACÍOS          
-            if (nombre == "")
-            {
-                MessageBox.Show("Cargá el nombre del cliente");
-            }
-            else if (fecha == "")
-            {
-                MessageBox.Show("Cargá la fecha de la factura");
-            }
-            else if(int.TryParse(descuento, out int descuentoEntero) == false)
-            {
-                MessageBox.Show("El descuento debe ser expresado en numeros enteros");
-            }
-            else if (descuentoEntero < 0)
-            {
-                MessageBox.Show("El descuento debe ser mayor a 0 (cero)");
-            }
-
-
-
-
-            else
-            {
-                return true;
-            }
-            return exito;
-        }
-
-
-
         public int FacturaProductoUltimoID()
         {
             ConexionGeneral CG = new ConexionGeneral();
@@ -104,10 +74,10 @@ namespace CapaDominio
         }
 
 
+        // //////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
+        //VALIDADORES
 
         //Validar producto a agregar a la factura
         public void ProductoAgregar(int facturaID, string productoID, string productoCantidad, string precioUnitario)
@@ -123,12 +93,6 @@ namespace CapaDominio
                 //MessageBox.Show("Factura Creada");
             }
         }
-
-
-
-
-
-
 
         //Agregar producto a la factura
         public bool ProductoValidar(string productoID, string productoCantidad, string precioUnitario, int fila)
@@ -174,7 +138,42 @@ namespace CapaDominio
             return exito;
         }
 
+        //Valida datos de la factura propiamente
+        public bool FacturaValidar(string nombre, string fecha, string descuento, string facturaTotal)
+        {
+            bool exito = false;
+            //VALIDACIONES DE CAMPOS VACÍOS          
+            if (nombre == "")
+            {
+                MessageBox.Show("Cargá el nombre del cliente");
+            }
+            else if (fecha == "")
+            {
+                MessageBox.Show("Cargá la fecha de la factura");
+            }
+            else if (int.TryParse(descuento, out int descuentoEntero) == false)
+            {
+                MessageBox.Show("El descuento debe ser expresado en numeros enteros");
+            }
+            else if (descuentoEntero < 0)
+            {
+                MessageBox.Show("El descuento debe ser mayor a 0 (cero)");
+            }
 
+
+
+
+            else
+            {
+                return true;
+            }
+            return exito;
+        }
+
+
+        /// ///////////////////////////////////////////////////////////////////////////////
+
+        //ELIMINAR FACTURA
 
         //Eliminar factura 
         public bool FacturaEliminar(int idFactura)
@@ -200,16 +199,23 @@ namespace CapaDominio
         }
 
 
+        // //////////////////////////////////////////////////////////////////////////////////
 
 
+
+
+        //TODO PARA EDICIÓN DE FACTURA
+
+        //Muestra los productos de la factura
         public DataSet FacturaEditarMostrarProductos(int id)
         {
             DataSet DDSS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();
-            DDSS = CG.Consultor("SELECT productoNombre AS 'Producto', P.productoUnidadMedida AS 'Cantidad x bulto', FP.productoCantidad AS 'Cant. Bultos', FP.productoPrecioUnitario AS 'Precio x Bulto'  FROM FacturaProducto FP INNER JOIN Producto P ON P.productoID = FP.productoID  WHERE facturaID = " + id +";");
+            DDSS = CG.Consultor("SELECT FP.productoID AS 'ID', productoNombre AS 'Producto', P.productoUnidadMedida AS 'Cantidad x bulto', FP.productoCantidad AS 'Cant. Bultos', FP.productoPrecioUnitario AS 'Precio x Bulto'  FROM FacturaProducto FP INNER JOIN Producto P ON P.productoID = FP.productoID  WHERE facturaID = " + id +";");
             return DDSS;
         }
 
+        //Muestra los datos de la factura
         public DataSet FacturaEditarMostrarFactura(int id)
         {
             DataSet DDSS = new DataSet();
@@ -218,18 +224,12 @@ namespace CapaDominio
             return DDSS;
         }
 
-
-
-
         //Se ejecuta al editar los productos de una factura. Elimina todos los productos de la factura para que se carguen los nuevos
         public void EditarEliminarProductosFactura(int idFactura)
         {
             ConexionGeneral CG = new ConexionGeneral();
-            CG.Ejecutor("DELETE * FROM FacturaProducto WHERE facturaID = " + idFactura + "");
+            CG.Ejecutor("DELETE FROM FacturaProducto WHERE facturaID = " + idFactura + "");
         }
-
-
-
 
         //Edita los datos de una factura
         public void FacturaEditar(int id, string nombre, string fecha, string descuento, string total )
@@ -238,7 +238,7 @@ namespace CapaDominio
             int totalEntero = int.Parse(total);
             DataSet DDSS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();
-            if(CG.Ejecutor("UPDATE Factura SET 'facturaNombre' = '" + nombre + "', 'facturaFecha' = '" + fecha + "', 'facturaDescuento' = " + descuentoEntero + ", 'facturaTotal' = " + totalEntero + "  "))
+            if(CG.Ejecutor("UPDATE Factura SET 'facturaNombre' = '" + nombre + "', 'facturaFecha' = '" + fecha + "', 'facturaDescuento' = " + descuentoEntero + ", 'facturaTotal' = " + totalEntero + "  WHERE facturaID = "+ id + "" ))
             {
                 
             }

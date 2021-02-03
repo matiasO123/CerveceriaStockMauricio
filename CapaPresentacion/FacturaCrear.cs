@@ -13,6 +13,9 @@ namespace CapaPresentacion
 {
     public partial class FacturaCrear : Form
     {
+        // ////////////////////////////////////////////////////////////////////
+        // INICIADORES
+        
         public FacturaCrear()
         {
             InitializeComponent();
@@ -30,17 +33,20 @@ namespace CapaPresentacion
             idFactura = id;
             Factura fact = new Factura();
             fact.FacturaEditarMostrarFactura(id);
-            dataGridViewEditar.Visible = true;
+            dataGridView1.Visible = true;
 
             //recorrer el dataset e ir agregando en la tabla
             DataSet ddss = new DataSet();
             ddss = fact.FacturaEditarMostrarProductos(id);
 
-            foreach (DataRow rowi in ddss.Tables[0].Rows) { }
+            foreach (DataRow rowi in ddss.Tables[0].Rows)
+            {
+                dataGridView1.Rows.Add(rowi[0].ToString(), rowi[1].ToString(), rowi[2].ToString(), rowi[3].ToString(), rowi[4].ToString());
+            }
 
             //dataGridViewEditar.DataSource = fact.FacturaEditarMostrarProductos(id).Tables[0];
-            dataGridViewEditar.Columns.Add("Precio Total", "Precio Total");
-            dataGridView1.Visible = false;
+            //dataGridView1.Columns.Add("Precio Total", "Precio Total");
+            //dataGridView1.Visible = false;
 
             
             
@@ -58,14 +64,46 @@ namespace CapaPresentacion
             buttonGuardar.Visible = true;
             buttonEliminarProducto.Visible = true;
             buttonEliminarProducto.Enabled = true;
-            buttonAgregarProducto.Visible = false;
-            buttonAgregarProductoEditar.Visible = true;
+            buttonAgregarProducto.Visible = true;
+           
 
 
         }
+
+
         private int id;
         private int idFactura = 0;
 
+        private void Factura_Load(object sender, EventArgs e)
+        {
+            DataGridLlenar();
+
+
+            //Si es una factura que se está editando
+            if (idFactura != 0)
+            {
+                int contador = 0;
+                foreach (DataGridViewRow rowi in dataGridView1.Rows)
+                {
+                    int cuenta = int.Parse(rowi.Cells[3].Value.ToString()) * int.Parse(rowi.Cells[4].Value.ToString());
+                    rowi.Cells["productoPrecioFin"].Value = cuenta;
+                    contador = contador + cuenta;
+
+
+                }
+
+                labelPrecioFinalEntero.Text = contador.ToString();
+            }
+
+        }
+
+
+
+
+        // //////////////////////////////////////////////////////////////////
+        //Ventanita de productos
+
+        //Carga los datos en la ventanita de productos
         private void DataGridLlenar()
         {
             //Configurando DataGrid
@@ -80,41 +118,34 @@ namespace CapaPresentacion
 
         }
 
-        private void Factura_Load(object sender, EventArgs e)
-        {
-            DataGridLlenar();
 
-            if(idFactura != 0)
-            {
-                int contador = 0;
-                foreach (DataGridViewRow rowi in dataGridViewEditar.Rows)
-                {
-                    int cuenta = int.Parse(rowi.Cells["Precio x Bulto"].Value.ToString()) * int.Parse(rowi.Cells["Cant. Bultos"].Value.ToString());
-                    rowi.Cells["Precio Total"].Value = cuenta;
-                    contador = contador + cuenta;
-
-
-                }
-
-                labelPrecioFinalEntero.Text = contador.ToString();
-            }
-            
-        }
-
-        private void agregarProd_Click(object sender, EventArgs e)
-        {
-            panelAgregarProd.Visible = true;
-            panelAgregarProd.BringToFront();
-            DataGridLlenar();
-            
-        }
-
+        //Cerrar el panel de de productos
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
             panelAgregarProd.Visible = false;
             textBox2.Text = "";
         }
 
+
+        //filtra por nombre los productos para encontrarlos más fácil
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            DataSet DS = new DataSet();
+            Producto sto = new Producto();
+            string nombre = textBox2.Text;
+
+
+
+
+            DS = sto.MostrarProductoFiltro(nombre, "");
+            //dataGridView1.DataSource = null;
+            if (DS != null)
+            {
+                dataGridView2.DataSource = DS.Tables[0];
+            }
+        }
+
+        //Trae el producto seleccionado de la ventanita de productos al datagrid
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
             if (dataGridView2.SelectedCells.Count > 0)
@@ -127,32 +158,26 @@ namespace CapaPresentacion
             textBoxCantidad.Text = "1";
             panelAgregarProd.Visible = false;
             buttonAgregarProducto.Enabled = true;
-            buttonAgregarProductoEditar.Enabled = true;
+
             buttonCrearFactura.Enabled = true;
 
             textBox2.Text = "";
         }
 
-        private void textBoxCantidad_TextChanged(object sender, EventArgs e)
-        {
-            if ((int.TryParse(textBoxCantidad.Text, out int cantidad)) && (int.TryParse(labelPrecio.Text, out int precioU)))
-            {
-                labelPrecioTotal.Text = (precioU * cantidad).ToString();
-            }
-            else if ((textBoxCantidad.Text == "") && (int.TryParse(labelPrecio.Text, out precioU)))
-            {
-                labelPrecioTotal.Text = "0";
-            }
-            else if ((int.TryParse(textBoxCantidad.Text, out  cantidad)) && (labelPrecio.Text == ""))
-            {
-                labelPrecioTotal.Text = "0";
-            }
-            else
-            {
-                labelPrecioTotal.Text = "0";
-            }
-        }
 
+
+
+        // //////////////////////////////////////////////////////////////////
+        // BOTONES
+
+        private void agregarProd_Click(object sender, EventArgs e)
+        {
+            panelAgregarProd.Visible = true;
+            panelAgregarProd.BringToFront();
+            DataGridLlenar();
+            
+        }
+      
         private void buttonAgregarProducto_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = new DataGridViewRow();
@@ -166,7 +191,7 @@ namespace CapaPresentacion
             textBoxCantidad.Text = "";
             labelPrecioTotal.Text = "";
             buttonAgregarProducto.Enabled = false;
-            buttonAgregarProductoEditar.Enabled = false;
+            
 
 
 
@@ -174,29 +199,7 @@ namespace CapaPresentacion
 
 
         }
-
-        public void actualizarPrecioFinal()
-        {
-            int contador = 0;
-            foreach (DataGridViewRow fila in dataGridView1.Rows)
-            {
-                contador = contador + Int32.Parse(fila.Cells[5].Value.ToString());
-                
-                
-            }
-            if (Int32.TryParse(textoDescuento.Text, out int descuento))
-            {
-                contador = contador - descuento;
-            }
-
-            labelPrecioFinalEntero.Text = contador.ToString();
-        }
-
-        private void actualizarPrecioFinal(object sender, EventArgs e)
-        {
-            actualizarPrecioFinal();
-        }
-
+               
         private void buttonCrearFactura_Click(object sender, EventArgs e)
         {
             string nombre = textBoxNombre.Text;
@@ -246,36 +249,7 @@ namespace CapaPresentacion
 
             
         }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            DataSet DS = new DataSet();
-            Producto sto = new Producto();
-            string nombre = textBox2.Text;
-            
-            
-
-
-            DS = sto.MostrarProductoFiltro(nombre, "");
-            //dataGridView1.DataSource = null;
-            if (DS != null)
-            {
-                dataGridView2.DataSource = DS.Tables[0];
-            }
-        }
-
-        private void buttonCerrarFactura_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-            this.Close();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-            
-        }
-
+       
         private void buttonEliminarProducto_Click(object sender, EventArgs e)
         {
             DialogResult oDlgRes;
@@ -285,7 +259,7 @@ namespace CapaPresentacion
             if (oDlgRes == DialogResult.Yes)
             {
 
-                if (dataGridViewEditar.SelectedRows.Count == 0)
+                if (dataGridView1.SelectedRows.Count == 0)
                 {
 
                     MessageBox.Show("Seleccioná un producto");
@@ -293,11 +267,11 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    if (dataGridViewEditar.SelectedRows.Count > 0)
+                    if (dataGridView1.SelectedRows.Count > 0)
                     {
                         
-                        dataGridViewEditar.Rows.RemoveAt(dataGridViewEditar.SelectedRows[0].Index);
-                        dataGridViewEditar.Refresh();
+                        dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
+                        dataGridView1.Refresh();
                         actualizarPrecioFinal();
 
                     }
@@ -307,6 +281,9 @@ namespace CapaPresentacion
             }
         }
 
+        
+        // EXCLUSIVO EDICIÓN
+        //Para salvar los cambios tras una edición
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
             string nombre = textBoxNombre.Text;
@@ -319,7 +296,7 @@ namespace CapaPresentacion
             {
                 int i = 1;
 
-                foreach (DataGridViewRow fila in dataGridViewEditar.Rows)
+                foreach (DataGridViewRow fila in dataGridView1.Rows)
                 {
                     if (fact.ProductoValidar(fila.Cells[0].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString(), i))
                     {
@@ -335,7 +312,7 @@ namespace CapaPresentacion
                     fact.FacturaEditar(idFactura, nombre, fecha, descuento, total);
                     idFactura = fact.FacturaProductoUltimoID();
                     fact.EditarEliminarProductosFactura(idFactura);
-                    foreach (DataGridViewRow fila in dataGridViewEditar.Rows)
+                    foreach (DataGridViewRow fila in dataGridView1.Rows)
                     {
                         fact.ProductoAgregar(idFactura, fila.Cells[0].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString());
                         MessageBox.Show("Factura Editada");
@@ -355,10 +332,18 @@ namespace CapaPresentacion
             }
         }
 
+        //Cerrar factura en modo 'Edición'
+        private void buttonCerrarFactura_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            this.Close();
+        }
+
+        //Creo que no sirve...
         private void buttonAgregarProductoEditar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow row = new DataGridViewRow();
-            this.dataGridViewEditar.Rows.Add(id, textoProducto.Text, textoUnidad.Text, textBoxCantidad.Text, labelPrecio.Text, labelPrecioTotal.Text);
+            /*DataGridViewRow row = new DataGridViewRow();
+            this.dataGridView1.Rows.Add(id, textoProducto.Text, textoUnidad.Text, textBoxCantidad.Text, labelPrecio.Text, labelPrecioTotal.Text);
 
 
 
@@ -369,7 +354,70 @@ namespace CapaPresentacion
             labelPrecioTotal.Text = "";
             buttonAgregarProducto.Enabled = false;
 
+            actualizarPrecioFinal();*/
+        }
+
+
+
+
+
+
+
+        // ////////////////////////////////////////////////////////////////////////////////
+
+        // MANEJADORES DE EVENTOS
+
+        public void actualizarPrecioFinal()
+        {
+            int contador = 0;
+            foreach (DataGridViewRow fila in dataGridView1.Rows)
+            {
+                if(idFactura != 0)
+                {
+
+                    //contador = contador + Int32.Parse(fila.Cells["productoPrecioFin"].Value.ToString());
+
+                    
+                }
+                else
+                {
+                    contador = contador + Int32.Parse(fila.Cells[5].Value.ToString());
+                }
+                
+
+            }
+            if (Int32.TryParse(textoDescuento.Text, out int descuento))
+            {
+                contador = contador - descuento;
+            }
+
+            labelPrecioFinalEntero.Text = contador.ToString();
+        }
+
+        private void actualizarPrecioFinal(object sender, EventArgs e)
+        {
             actualizarPrecioFinal();
+        }
+
+        //Si cambio la cantidad comprada, cambia el valor final
+        private void textBoxCantidad_TextChanged(object sender, EventArgs e)
+        {
+            if ((int.TryParse(textBoxCantidad.Text, out int cantidad)) && (int.TryParse(labelPrecio.Text, out int precioU)))
+            {
+                labelPrecioTotal.Text = (precioU * cantidad).ToString();
+            }
+            else if ((textBoxCantidad.Text == "") && (int.TryParse(labelPrecio.Text, out precioU)))
+            {
+                labelPrecioTotal.Text = "0";
+            }
+            else if ((int.TryParse(textBoxCantidad.Text, out cantidad)) && (labelPrecio.Text == ""))
+            {
+                labelPrecioTotal.Text = "0";
+            }
+            else
+            {
+                labelPrecioTotal.Text = "0";
+            }
         }
     }
 }
