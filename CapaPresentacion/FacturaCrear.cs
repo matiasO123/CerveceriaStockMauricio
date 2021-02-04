@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using CapaDominio;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaDominio;
 
 namespace CapaPresentacion
 {
     public partial class FacturaCrear : Form
     {
-        // ////////////////////////////////////////////////////////////////////
-        // INICIADORES
-        
+        // //// INICIADORES//////////////////////////////////////////////////////////////////
+
+
         public FacturaCrear()
         {
             InitializeComponent();
@@ -32,10 +26,10 @@ namespace CapaPresentacion
             //DATA GRID
             idFactura = id;
             Factura fact = new Factura();
-            fact.FacturaEditarMostrarFactura(id);
+            
             dataGridView1.Visible = true;
 
-            //recorrer el dataset e ir agregando en la tabla
+            //Cargando los productos
             DataSet ddss = new DataSet();
             ddss = fact.FacturaEditarMostrarProductos(id);
 
@@ -44,12 +38,12 @@ namespace CapaPresentacion
                 dataGridView1.Rows.Add(rowi[0].ToString(), rowi[1].ToString(), rowi[2].ToString(), rowi[3].ToString(), rowi[4].ToString());
             }
 
-            //dataGridViewEditar.DataSource = fact.FacturaEditarMostrarProductos(id).Tables[0];
-            //dataGridView1.Columns.Add("Precio Total", "Precio Total");
-            //dataGridView1.Visible = false;
+            //Cargando los datos de la factura
+            fact.FacturaEditarMostrarFactura(id);
+            
 
-            
-            
+
+
             //DETALLE DE FACTURA
             textBoxNombre.Text = nombre;
             facturaFecha.Text = fecha;
@@ -100,8 +94,8 @@ namespace CapaPresentacion
 
 
 
-        // //////////////////////////////////////////////////////////////////
-        //Ventanita de productos
+        // ///Ventanita de productos/////////////////////////////////////////////////////////////////
+
 
         //Carga los datos en la ventanita de productos
         private void DataGridLlenar()
@@ -167,8 +161,9 @@ namespace CapaPresentacion
 
 
 
-        // //////////////////////////////////////////////////////////////////
-        // BOTONES
+        //// BOTONES //////////////////////////////////////////////////////////////////
+
+
 
         private void agregarProd_Click(object sender, EventArgs e)
         {
@@ -283,6 +278,8 @@ namespace CapaPresentacion
 
         
         // EXCLUSIVO EDICIÓN
+
+
         //Para salvar los cambios tras una edición
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
@@ -310,18 +307,19 @@ namespace CapaPresentacion
                 if (validado)
                 {
                     fact.FacturaEditar(idFactura, nombre, fecha, descuento, total);
-                    idFactura = fact.FacturaProductoUltimoID();
+                    //idFactura = fact.FacturaProductoUltimoID();
                     fact.EditarEliminarProductosFactura(idFactura);
                     foreach (DataGridViewRow fila in dataGridView1.Rows)
                     {
                         fact.ProductoAgregar(idFactura, fila.Cells[0].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString());
-                        MessageBox.Show("Factura Editada");
-                        this.Dispose();
-                        this.Close();
+                        
 
                     }
-                    
-                    
+                    MessageBox.Show("Factura Editada");
+                    this.Dispose();
+                    this.Close();
+
+
 
                 }
                 else
@@ -363,28 +361,20 @@ namespace CapaPresentacion
 
 
 
-        // ////////////////////////////////////////////////////////////////////////////////
+        // ///// MANEJADORES DE EVENTOS/////////////////////////////////////////////////////////////////////////////
 
-        // MANEJADORES DE EVENTOS
+
 
         public void actualizarPrecioFinal()
         {
             int contador = 0;
             foreach (DataGridViewRow fila in dataGridView1.Rows)
             {
-                if(idFactura != 0)
+                if(fila.Cells["productoPrecioFin"].Value != null)
                 {
-
-                    //contador = contador + Int32.Parse(fila.Cells["productoPrecioFin"].Value.ToString());
-
-                    
+                    contador = contador + Int32.Parse(fila.Cells["productoPrecioFin"].Value.ToString());  
                 }
-                else
-                {
-                    contador = contador + Int32.Parse(fila.Cells[5].Value.ToString());
-                }
-                
-
+                 
             }
             if (Int32.TryParse(textoDescuento.Text, out int descuento))
             {
@@ -394,6 +384,8 @@ namespace CapaPresentacion
             labelPrecioFinalEntero.Text = contador.ToString();
         }
 
+
+        //Cambio en el descuento
         private void actualizarPrecioFinal(object sender, EventArgs e)
         {
             actualizarPrecioFinal();

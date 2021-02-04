@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using CapaDominio;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaDominio;
 
 namespace CapaPresentacion
 {
     public partial class FacturaLista : Form
     {
+        
+        
+        // INICIADORES /////////////////////////////////////////////////////////////
         public FacturaLista()
         {
             InitializeComponent();
@@ -27,6 +25,7 @@ namespace CapaPresentacion
 
         private void LlenarGrid()
         {
+            dataGridView1.DataSource = null;
             Factura fact = new Factura();
             dataGridView1.DataSource = fact.FacturaMostrar().Tables[0];
             panel1.Visible = false;
@@ -39,11 +38,18 @@ namespace CapaPresentacion
         }
 
 
+
+
+
+
+
+
         //ABRE PANEL CON LOS DETALLES DE LA FACTURA
         private void botonVerFactura_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
             panel1.BringToFront();
+            
 
             Int32 selectedRowCount =
         dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Selected);
@@ -161,6 +167,8 @@ namespace CapaPresentacion
         {
             buttonCerrarFactura.Visible = false;
             buttonImprimir.Visible = false;
+            buttonEditar.Visible = false;
+            buttonEliminar.Visible = false;
             PrintDocument pd = new PrintDocument();
             pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage);
 
@@ -202,6 +210,8 @@ namespace CapaPresentacion
             }
             buttonCerrarFactura.Visible = true;
             buttonImprimir.Visible = true;
+            buttonEditar.Visible = true;
+            buttonEliminar.Visible = true;
         }
 
 
@@ -241,24 +251,28 @@ namespace CapaPresentacion
             }
             ec.Dispose();
             ec.Close();
+
+            this.Controls.Clear();
+            this.InitializeComponent();
+            LlenarGrid();
+            panel1.Visible = false;
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void buttonEditar_Click(object sender, EventArgs e)
         {
             FacturaCrear fc = new FacturaCrear(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()), textBoxNombre.Text, textoDescuento.Text, facturaFecha.Text);
             fc.ShowDialog();
-            
+
+            this.Controls.Clear();
+            this.InitializeComponent();
+            LlenarGrid();
+            panel1.Visible = false;
+
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }

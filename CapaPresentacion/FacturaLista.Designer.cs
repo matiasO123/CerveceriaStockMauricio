@@ -205,7 +205,7 @@ namespace CapaPresentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(946, 475);
             this.panel1.TabIndex = 56;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            
             // 
             // buttonEliminar
             // 
@@ -419,7 +419,7 @@ namespace CapaPresentacion
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(929, 321);
             this.dataGridView2.TabIndex = 64;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            
             // 
             // label4
             // 

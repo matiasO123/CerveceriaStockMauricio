@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using AccesoDatos;
+using System;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using AccesoDatos;
 
 namespace CapaDominio
 {
-     public class Factura
+    public class Factura
     {
         
         // //////////////////////////////////////////////////////
