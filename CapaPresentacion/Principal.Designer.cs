@@ -211,6 +211,7 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.Principal_Load);
             this.panelMenu.ResumeLayout(false);
             this.panelInicio.ResumeLayout(false);
             this.ResumeLayout(false);

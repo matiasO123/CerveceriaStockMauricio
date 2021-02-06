@@ -13,13 +13,16 @@ namespace CapaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ConexionGeneral CG = new ConexionGeneral();
-            CG.DBCreator();
 
-            //Application.Run(new ABMFactura());
             Application.Run(new Principal());
-            //Application.Run(new FacturaVer());
             
+            
+            
+
+
+
+
+
         }
     }
 }

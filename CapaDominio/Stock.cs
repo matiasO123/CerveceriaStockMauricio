@@ -1,4 +1,4 @@
-﻿using CapaAccesoDatos;
+﻿using AccesoDatos;
 using System;
 using System.Data;
 using System.Windows.Forms;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using AccesoDatos;
 
 namespace CapaPresentacion
 {
@@ -8,7 +9,12 @@ namespace CapaPresentacion
         public Principal()
         {
             InitializeComponent();
+            
+
         }
+
+
+        
 
         //abrir distintos formularios dentro del contenedor principal
         private void AbrirFormHija(object formHija)
@@ -58,6 +64,10 @@ namespace CapaPresentacion
 
         }
 
-        
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            ConexionGeneral CG = new ConexionGeneral();
+            CG.DBCreator();
+        }
     }
 }

@@ -20,3 +20,4 @@ C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaDominio\obj\Release\CapaDominio.csproj.CopyComplete
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaDominio\obj\Release\CapaDominio.dll
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaDominio\obj\Release\CapaDominio.pdb
+C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaDominio\bin\Release\AccesoDatos.dll.config

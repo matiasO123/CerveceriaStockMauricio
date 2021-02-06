@@ -130,3 +130,4 @@ C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauric
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.csproj.CopyComplete
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.dll
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\CapaDominio\obj\Debug\CapaDominio.pdb
+C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\CapaDominio\bin\Debug\AccesoDatos.dll.config

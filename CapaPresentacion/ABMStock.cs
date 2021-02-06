@@ -38,14 +38,19 @@ namespace CapaPresentacion
             DataSet DS = new DataSet();
 
             Stock stock = new Stock();
+            DS = null;
             DS = stock.MostrarStock();
-            dataGridView2.DataSource = DS.Tables[0];
-            dataGridView2.Columns["bolsonId"].Visible = false;
-            dataGridView2.Columns[1].HeaderCell.Value = "Nombre";
-            dataGridView2.Columns[2].HeaderCell.Value = "Unidad de medida";
-            dataGridView2.Columns[3].HeaderCell.Value = "Tipo";
-            dataGridView2.Columns[4].HeaderCell.Value = "Cantidad";
-            dataGridView2.Columns[5].HeaderCell.Value = "P. Compra";
+            if (DS != null)
+            {
+                dataGridView2.DataSource = DS.Tables[0];
+                dataGridView2.Columns["bolsonId"].Visible = false;
+                dataGridView2.Columns[1].HeaderCell.Value = "Nombre";
+                dataGridView2.Columns[2].HeaderCell.Value = "Unidad de medida";
+                dataGridView2.Columns[3].HeaderCell.Value = "Tipo";
+                dataGridView2.Columns[4].HeaderCell.Value = "Cantidad";
+                dataGridView2.Columns[5].HeaderCell.Value = "P. Compra";
+            }
+            
 
         }
 
