@@ -37,6 +37,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.panelInicio = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelInicio.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,7 @@
             this.panelMenu.BackColor = System.Drawing.Color.Black;
             this.panelMenu.BackgroundImage = global::CapaPresentacion.Properties.Resources.fondo2;
             this.panelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.btnStock);
             this.panelMenu.Controls.Add(this.btnProductos);
@@ -81,7 +83,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 246);
+            this.button1.Location = new System.Drawing.Point(0, 213);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(236, 50);
@@ -101,7 +103,7 @@
             this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStock.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.btnStock.ForeColor = System.Drawing.Color.Black;
-            this.btnStock.Location = new System.Drawing.Point(0, 314);
+            this.btnStock.Location = new System.Drawing.Point(0, 281);
             this.btnStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(236, 50);
@@ -121,7 +123,7 @@
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductos.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.btnProductos.ForeColor = System.Drawing.Color.Black;
-            this.btnProductos.Location = new System.Drawing.Point(0, 383);
+            this.btnProductos.Location = new System.Drawing.Point(0, 350);
             this.btnProductos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(236, 50);
@@ -141,7 +143,7 @@
             this.btnFacturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFacturas.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.btnFacturas.ForeColor = System.Drawing.Color.Black;
-            this.btnFacturas.Location = new System.Drawing.Point(0, 176);
+            this.btnFacturas.Location = new System.Drawing.Point(0, 143);
             this.btnFacturas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFacturas.Name = "btnFacturas";
             this.btnFacturas.Size = new System.Drawing.Size(236, 50);
@@ -196,6 +198,25 @@
             this.panelInicio.Size = new System.Drawing.Size(1225, 475);
             this.panelInicio.TabIndex = 10;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(0, 410);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(236, 50);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "FINALES";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -228,5 +249,6 @@
         private System.Windows.Forms.Button btnFacturas;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelInicio;
+        private System.Windows.Forms.Button button2;
     }
 }
