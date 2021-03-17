@@ -144,6 +144,12 @@
     <Compile Include="FacturaVer.Designer.cs">
       <DependentUpon>FacturaVer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finales.Designer.cs">
+      <DependentUpon>Finales.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FacturaVer.resx">
       <DependentUpon>FacturaVer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finales.resx">
+      <DependentUpon>Finales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

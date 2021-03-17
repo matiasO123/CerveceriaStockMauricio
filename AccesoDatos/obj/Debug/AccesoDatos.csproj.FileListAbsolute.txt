@@ -57,3 +57,12 @@ C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\AccesoDatos\bin\Debug\System.Data.SQLite.Linq.dll
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\AccesoDatos\bin\Debug\EntityFramework.xml
 C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\AccesoDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\AccesoDatos.dll.config
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\System.Data.SQLite.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\System.Data.SQLite.xml
