@@ -80,17 +80,17 @@ namespace CapaPresentacion
                     //Si es de ese anio, los suma
                     if (anio == anioFactura)
                     {
-                        anioFinal =+ parcial;
+                        anioFinal = anioFinal + parcial;
                         
                         //Si es de ese mes, los suma. El del año ingresado, porque si no, no hubiese pasado el primer 'if'. IDEM con el día.
                         if((mes == mesFactura) /*&& (anio == anioFactura)*/)
                         {
-                            mesFinal = +parcial;
+                            mesFinal = mesFinal + parcial;
 
                             //Si es de ese día los suma
                             if ((dia == diaFactura) /*&& (anio == anioFactura) && (mes == mesFactura)*/)
                             {
-                                diaFinal = +parcial;
+                                diaFinal = diaFinal + parcial;
                             }
                         }
 
@@ -98,7 +98,7 @@ namespace CapaPresentacion
                         //Si es de la misma semana
                         if ((myCal.GetWeekOfYear(dateTimePicker1.Value, CalendarWeekRule.FirstDay, myCI.DateTimeFormat.FirstDayOfWeek = 0) == myCal.GetWeekOfYear(DateTime.Parse(row["facturaFecha"].ToString()), CalendarWeekRule.FirstDay, myCI.DateTimeFormat.FirstDayOfWeek = 0)) && (anio == anioFactura))
                         {
-                            semanaFinal = +parcial;
+                            semanaFinal = semanaFinal + parcial;
                         }
 
 

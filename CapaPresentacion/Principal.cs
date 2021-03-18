@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using AccesoDatos;
 
@@ -19,6 +20,24 @@ namespace CapaPresentacion
         //abrir distintos formularios dentro del contenedor principal
         private void AbrirFormHija(object formHija)
         {
+            List<Form> openForms = new List<Form>();
+
+            foreach (Form f in Application.OpenForms)
+                openForms.Add(f);
+
+            foreach (Form f in openForms)
+            {
+                if (f != this)
+                {
+                    f.Dispose();
+                    f.Close();
+                }
+
+            }
+
+
+
+
             if (this.panelContenedor.Controls.Count > 0)
             {
                 this.panelContenedor.Controls.RemoveAt(0);
@@ -68,6 +87,12 @@ namespace CapaPresentacion
         {
             ConexionGeneral CG = new ConexionGeneral();
             CG.DBCreator();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panelContenedor.Visible = true;
+            AbrirFormHija(new Finales());
         }
     }
 }

@@ -116,7 +116,6 @@ namespace CapaPresentacion
             // facturaFecha
             // 
             this.facturaFecha.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
-            this.facturaFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.facturaFecha.Location = new System.Drawing.Point(91, 145);
             this.facturaFecha.Name = "facturaFecha";
             this.facturaFecha.Size = new System.Drawing.Size(264, 25);
