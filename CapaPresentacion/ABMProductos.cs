@@ -431,15 +431,18 @@ namespace CapaPresentacion
             {
                 if(porcentaje != 0)
                 {
-                    
+                   
+                    Decimal porcentajeDecimal = (Decimal.Parse(textBoxAumentoPorcentaje.Text)/100) + 1;
                     foreach (DataGridViewRow row in dataGridView1.SelectedRows)
                     {
                         //Calculo el precio
-                        int nuevoPrecio = (int.Parse(row.Cells["productoPrecioVenta"].Value.ToString()) + int.Parse(row.Cells["productoPrecioVenta"].Value.ToString()) * (porcentaje/100));
+                        int nuevoPrecio = Decimal.ToInt32(int.Parse(row.Cells["productoPrecioVenta"].Value.ToString()) * porcentajeDecimal);
+
+                        //int.Parse(row.Cells["productoPrecioVenta"].Value.ToString()) * (porcentaje / 100);
                         
                         //Modifico la base de datos
                         Producto prod = new Producto();
-                        prod.ModificarProductoSoloPrecio(int.Parse(row.Cells["productoId"].Value.ToString()), nuevoPrecio));
+                        prod.ModificarProductoSoloPrecio(int.Parse(row.Cells["productoId"].Value.ToString()), nuevoPrecio);
                     }
                     MessageBox.Show("Precios de productos modificados!");
                     PanelAumentoMultipleMarco.Visible = false;

@@ -69,14 +69,14 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panelAumentoMultiple = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxTituloAumentoMultiple = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.labelAumento = new System.Windows.Forms.Label();
             this.textBoxAumentoPorcentaje = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonCancelarAumentoMultiple = new System.Windows.Forms.Button();
             this.buttonAceptarAumentoMultiple = new System.Windows.Forms.Button();
+            this.buttonCancelarAumentoMultiple = new System.Windows.Forms.Button();
             this.PanelAumentoMultipleMarco = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -579,6 +579,17 @@
             this.panelAumentoMultiple.Size = new System.Drawing.Size(403, 162);
             this.panelAumentoMultiple.TabIndex = 40;
             // 
+            // textBoxTituloAumentoMultiple
+            // 
+            this.textBoxTituloAumentoMultiple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxTituloAumentoMultiple.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTituloAumentoMultiple.Location = new System.Drawing.Point(0, 0);
+            this.textBoxTituloAumentoMultiple.Name = "textBoxTituloAumentoMultiple";
+            this.textBoxTituloAumentoMultiple.Size = new System.Drawing.Size(403, 35);
+            this.textBoxTituloAumentoMultiple.TabIndex = 1;
+            this.textBoxTituloAumentoMultiple.Text = "Aumento Múltiple";
+            this.textBoxTituloAumentoMultiple.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
@@ -595,17 +606,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(403, 162);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // textBoxTituloAumentoMultiple
-            // 
-            this.textBoxTituloAumentoMultiple.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxTituloAumentoMultiple.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTituloAumentoMultiple.Location = new System.Drawing.Point(0, 0);
-            this.textBoxTituloAumentoMultiple.Name = "textBoxTituloAumentoMultiple";
-            this.textBoxTituloAumentoMultiple.Size = new System.Drawing.Size(403, 35);
-            this.textBoxTituloAumentoMultiple.TabIndex = 1;
-            this.textBoxTituloAumentoMultiple.Text = "Aumento Múltiple";
-            this.textBoxTituloAumentoMultiple.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tableLayoutPanel2
             // 
@@ -658,18 +658,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(397, 44);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // buttonCancelarAumentoMultiple
-            // 
-            this.buttonCancelarAumentoMultiple.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCancelarAumentoMultiple.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancelarAumentoMultiple.Location = new System.Drawing.Point(46, 7);
-            this.buttonCancelarAumentoMultiple.Name = "buttonCancelarAumentoMultiple";
-            this.buttonCancelarAumentoMultiple.Size = new System.Drawing.Size(105, 29);
-            this.buttonCancelarAumentoMultiple.TabIndex = 0;
-            this.buttonCancelarAumentoMultiple.Text = "Cancelar";
-            this.buttonCancelarAumentoMultiple.UseVisualStyleBackColor = true;
-            this.buttonCancelarAumentoMultiple.Click += new System.EventHandler(this.buttonCancelarAumentoMultiple_Click);
-            // 
             // buttonAceptarAumentoMultiple
             // 
             this.buttonAceptarAumentoMultiple.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -681,6 +669,18 @@
             this.buttonAceptarAumentoMultiple.Text = "Aumentar";
             this.buttonAceptarAumentoMultiple.UseVisualStyleBackColor = true;
             this.buttonAceptarAumentoMultiple.Click += new System.EventHandler(this.buttonAceptarAumentoMultiple_Click);
+            // 
+            // buttonCancelarAumentoMultiple
+            // 
+            this.buttonCancelarAumentoMultiple.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCancelarAumentoMultiple.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelarAumentoMultiple.Location = new System.Drawing.Point(46, 7);
+            this.buttonCancelarAumentoMultiple.Name = "buttonCancelarAumentoMultiple";
+            this.buttonCancelarAumentoMultiple.Size = new System.Drawing.Size(105, 29);
+            this.buttonCancelarAumentoMultiple.TabIndex = 0;
+            this.buttonCancelarAumentoMultiple.Text = "Cancelar";
+            this.buttonCancelarAumentoMultiple.UseVisualStyleBackColor = true;
+            this.buttonCancelarAumentoMultiple.Click += new System.EventHandler(this.buttonCancelarAumentoMultiple_Click);
             // 
             // PanelAumentoMultipleMarco
             // 
