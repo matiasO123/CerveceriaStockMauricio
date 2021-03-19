@@ -199,5 +199,15 @@ namespace CapaDominio
         }
 
 
+        //MODIFICAR PRODUCTO (SOLO PRECIO). ES PARA LOS AUMENTOS MÙLTIPLES
+        public bool ModificarProductoSoloPrecio(int productoId, float precioVenta)
+        {
+            ConexionGeneral CG = new ConexionGeneral();
+
+            return CG.Ejecutor("UPDATE Producto SET productoPrecioVenta = " + precioVenta + " where productoId = " + productoId + " ");
+
+
+
+        }
     }
 }

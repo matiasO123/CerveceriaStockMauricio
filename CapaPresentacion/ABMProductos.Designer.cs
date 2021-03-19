@@ -68,11 +68,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.panelAumentoMultiple = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxTituloAumentoMultiple = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelAumento = new System.Windows.Forms.Label();
+            this.textBoxAumentoPorcentaje = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonCancelarAumentoMultiple = new System.Windows.Forms.Button();
+            this.buttonAceptarAumentoMultiple = new System.Windows.Forms.Button();
+            this.PanelAumentoMultipleMarco = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelNuevoProducto.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panelAumentoMultiple.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.PanelAumentoMultipleMarco.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -96,7 +111,6 @@
             this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.Location = new System.Drawing.Point(14, 141);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -133,7 +147,7 @@
             this.botonBuscar.Location = new System.Drawing.Point(545, 25);
             this.botonBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonBuscar.Name = "botonBuscar";
-            this.botonBuscar.Size = new System.Drawing.Size(173, 48);
+            this.botonBuscar.Size = new System.Drawing.Size(173, 50);
             this.botonBuscar.TabIndex = 3;
             this.botonBuscar.Text = "Buscar";
             this.botonBuscar.UseVisualStyleBackColor = true;
@@ -148,7 +162,7 @@
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Multiline = true;
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(153, 24);
+            this.textBoxNombre.Size = new System.Drawing.Size(153, 143);
             this.textBoxNombre.TabIndex = 4;
             this.textBoxNombre.Visible = false;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.Busqueda);
@@ -214,7 +228,7 @@
             this.panel1.Controls.Add(this.comboBoxTipo);
             this.panel1.Location = new System.Drawing.Point(14, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 374);
+            this.panel1.Size = new System.Drawing.Size(920, 493);
             this.panel1.TabIndex = 9;
             // 
             // labelBusquedaTipo
@@ -245,7 +259,7 @@
             this.panel7.BackColor = System.Drawing.Color.Black;
             this.panel7.Location = new System.Drawing.Point(189, 71);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(153, 270);
+            this.panel7.Size = new System.Drawing.Size(153, 389);
             this.panel7.TabIndex = 8;
             this.panel7.Visible = false;
             // 
@@ -257,7 +271,7 @@
             this.botonLlenarTabla.Location = new System.Drawing.Point(735, 25);
             this.botonLlenarTabla.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonLlenarTabla.Name = "botonLlenarTabla";
-            this.botonLlenarTabla.Size = new System.Drawing.Size(173, 48);
+            this.botonLlenarTabla.Size = new System.Drawing.Size(173, 50);
             this.botonLlenarTabla.TabIndex = 7;
             this.botonLlenarTabla.Text = "Todos los Productos";
             this.botonLlenarTabla.UseVisualStyleBackColor = true;
@@ -315,7 +329,7 @@
             this.panelNuevoProducto.Controls.Add(this.label4);
             this.panelNuevoProducto.Controls.Add(this.label3);
             this.panelNuevoProducto.Controls.Add(this.label2);
-            this.panelNuevoProducto.Location = new System.Drawing.Point(127, 12);
+            this.panelNuevoProducto.Location = new System.Drawing.Point(127, 46);
             this.panelNuevoProducto.Name = "panelNuevoProducto";
             this.panelNuevoProducto.Size = new System.Drawing.Size(722, 417);
             this.panelNuevoProducto.TabIndex = 11;
@@ -529,7 +543,7 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
             this.panel6.Controls.Add(this.label1);
-            this.panel6.Location = new System.Drawing.Point(4, 0);
+            this.panel6.Location = new System.Drawing.Point(3, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(386, 71);
             this.panel6.TabIndex = 39;
@@ -554,17 +568,145 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // panelAumentoMultiple
+            // 
+            this.panelAumentoMultiple.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelAumentoMultiple.BackColor = System.Drawing.Color.White;
+            this.panelAumentoMultiple.Controls.Add(this.textBoxTituloAumentoMultiple);
+            this.panelAumentoMultiple.Controls.Add(this.tableLayoutPanel1);
+            this.panelAumentoMultiple.Location = new System.Drawing.Point(263, 155);
+            this.panelAumentoMultiple.Name = "panelAumentoMultiple";
+            this.panelAumentoMultiple.Size = new System.Drawing.Size(403, 162);
+            this.panelAumentoMultiple.TabIndex = 40;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.80952F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.19048F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(403, 162);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // textBoxTituloAumentoMultiple
+            // 
+            this.textBoxTituloAumentoMultiple.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxTituloAumentoMultiple.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTituloAumentoMultiple.Location = new System.Drawing.Point(0, 0);
+            this.textBoxTituloAumentoMultiple.Name = "textBoxTituloAumentoMultiple";
+            this.textBoxTituloAumentoMultiple.Size = new System.Drawing.Size(403, 35);
+            this.textBoxTituloAumentoMultiple.TabIndex = 1;
+            this.textBoxTituloAumentoMultiple.Text = "Aumento Múltiple";
+            this.textBoxTituloAumentoMultiple.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.labelAumento, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxAumentoPorcentaje, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 43);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(397, 66);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // labelAumento
+            // 
+            this.labelAumento.AutoSize = true;
+            this.labelAumento.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelAumento.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAumento.Location = new System.Drawing.Point(3, 0);
+            this.labelAumento.Name = "labelAumento";
+            this.labelAumento.Size = new System.Drawing.Size(192, 66);
+            this.labelAumento.TabIndex = 0;
+            this.labelAumento.Text = "Aumento (porcentaje)";
+            this.labelAumento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBoxAumentoPorcentaje
+            // 
+            this.textBoxAumentoPorcentaje.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxAumentoPorcentaje.Location = new System.Drawing.Point(247, 21);
+            this.textBoxAumentoPorcentaje.Name = "textBoxAumentoPorcentaje";
+            this.textBoxAumentoPorcentaje.Size = new System.Drawing.Size(100, 23);
+            this.textBoxAumentoPorcentaje.TabIndex = 1;
+            this.textBoxAumentoPorcentaje.Text = "0";
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 2;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.buttonAceptarAumentoMultiple, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonCancelarAumentoMultiple, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 115);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(397, 44);
+            this.tableLayoutPanel3.TabIndex = 1;
+            // 
+            // buttonCancelarAumentoMultiple
+            // 
+            this.buttonCancelarAumentoMultiple.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonCancelarAumentoMultiple.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancelarAumentoMultiple.Location = new System.Drawing.Point(46, 7);
+            this.buttonCancelarAumentoMultiple.Name = "buttonCancelarAumentoMultiple";
+            this.buttonCancelarAumentoMultiple.Size = new System.Drawing.Size(105, 29);
+            this.buttonCancelarAumentoMultiple.TabIndex = 0;
+            this.buttonCancelarAumentoMultiple.Text = "Cancelar";
+            this.buttonCancelarAumentoMultiple.UseVisualStyleBackColor = true;
+            this.buttonCancelarAumentoMultiple.Click += new System.EventHandler(this.buttonCancelarAumentoMultiple_Click);
+            // 
+            // buttonAceptarAumentoMultiple
+            // 
+            this.buttonAceptarAumentoMultiple.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonAceptarAumentoMultiple.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAceptarAumentoMultiple.Location = new System.Drawing.Point(245, 7);
+            this.buttonAceptarAumentoMultiple.Name = "buttonAceptarAumentoMultiple";
+            this.buttonAceptarAumentoMultiple.Size = new System.Drawing.Size(105, 29);
+            this.buttonAceptarAumentoMultiple.TabIndex = 1;
+            this.buttonAceptarAumentoMultiple.Text = "Aumentar";
+            this.buttonAceptarAumentoMultiple.UseVisualStyleBackColor = true;
+            this.buttonAceptarAumentoMultiple.Click += new System.EventHandler(this.buttonAceptarAumentoMultiple_Click);
+            // 
+            // PanelAumentoMultipleMarco
+            // 
+            this.PanelAumentoMultipleMarco.BackColor = System.Drawing.Color.Transparent;
+            this.PanelAumentoMultipleMarco.ColumnCount = 1;
+            this.PanelAumentoMultipleMarco.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelAumentoMultipleMarco.Controls.Add(this.panelAumentoMultiple, 0, 0);
+            this.PanelAumentoMultipleMarco.Location = new System.Drawing.Point(12, 1);
+            this.PanelAumentoMultipleMarco.Name = "PanelAumentoMultipleMarco";
+            this.PanelAumentoMultipleMarco.RowCount = 1;
+            this.PanelAumentoMultipleMarco.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.PanelAumentoMultipleMarco.Size = new System.Drawing.Size(930, 472);
+            this.PanelAumentoMultipleMarco.TabIndex = 2;
+            // 
             // ABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel6);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelNuevoProducto);
+            this.Controls.Add(this.PanelAumentoMultipleMarco);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -580,6 +722,13 @@
             this.panelNuevoProducto.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panelAumentoMultiple.ResumeLayout(false);
+            this.panelAumentoMultiple.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.PanelAumentoMultipleMarco.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -624,6 +773,16 @@
         private System.Windows.Forms.Label label1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Panel panelAumentoMultiple;
+        private System.Windows.Forms.TextBox textBoxTituloAumentoMultiple;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label labelAumento;
+        private System.Windows.Forms.TextBox textBoxAumentoPorcentaje;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button buttonAceptarAumentoMultiple;
+        private System.Windows.Forms.Button buttonCancelarAumentoMultiple;
+        private System.Windows.Forms.TableLayoutPanel PanelAumentoMultipleMarco;
     }
 }
 

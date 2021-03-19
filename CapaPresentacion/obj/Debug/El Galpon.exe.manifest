@@ -54,26 +54,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CapaDominio.dll" size="15872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CapaDominio.dll" size="16384">
       <assemblyIdentity name="CapaDominio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UCp2SoSL4ulH7Bv3nkyomBDp6b6i977oLFtnBrKVHoQ=</dsig:DigestValue>
+        <dsig:DigestValue>91cM+EhDkoaBc1b6Yc8F/WvgvNdHKLGpQVfe0sCVtDo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="22740896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="22744480">
       <assemblyIdentity name="El Galpon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IaBr3LV1s06jdLQGIQei/wmifNj36b5Axdqu2MYIrFI=</dsig:DigestValue>
+        <dsig:DigestValue>r0h6emCP5wexR0oQeZgKFghEGMBcVQ3ovM4sjQLkUU0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

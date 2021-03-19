@@ -49,9 +49,6 @@ namespace CapaPresentacion
 
         }
 
-
-
-
         private void DataGridLlenar()
         {
             //Configurando DataGrid
@@ -75,6 +72,10 @@ namespace CapaPresentacion
         }
 
         
+
+
+
+
 
 
 
@@ -217,6 +218,8 @@ namespace CapaPresentacion
 
 
 
+
+
        //ELIMINAR PRODUCTO CON MESSAGEBOX si-no-cancelar
         private void botonEliminar_Click(object sender, EventArgs e)
         {
@@ -235,7 +238,7 @@ namespace CapaPresentacion
                 }
                 else
                 {
-                    if (dataGridView1.SelectedRows.Count > 0)
+                    if ((dataGridView1.SelectedRows.Count > 0) && (dataGridView1.SelectedRows.Count < 2))
                     {
                         string Id;
                         int IdAux;
@@ -256,6 +259,10 @@ namespace CapaPresentacion
                         dataGridView1.DataSource = DS.Tables[0];
 
 
+                    }
+                    else
+                    {
+                        MessageBox.Show("Elegì de a un producto a la vez!");
                     }
                     
                 }
@@ -325,55 +332,136 @@ namespace CapaPresentacion
 
         }
 
+        //EDITAR - ABRE PANEL Y TRAE LOS DATOS ACTUALES
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            //Pregunto si està seguro de querer editar los elementos
             DialogResult oDlgRes;
 
             oDlgRes = MessageBox.Show("¿Estás seguro que querés editar el producto seleccionado? \n(Tené  en cuenta que la edición de los productos puede producir confusión de datos en las facturas ya realizadas)", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
             if (oDlgRes == DialogResult.Yes)
             {
-
-                panelNuevoProducto.Visible = true;
-                panelNuevoProducto.BringToFront();
-                BtnAgregar.Enabled = false;
-                botonGuardar.Enabled = true;
-
-                Producto producto = new Producto();
-                //Toma el valor del id para traer el producto
-                int productoId = Int32.Parse(dataGridView1.SelectedRows[0].Cells["productoId"].Value.ToString());
-                DataSet ddss = producto.MostrarUnProducto(productoId);
-                DS = producto.MostrarProductoTipo();
-                comboBoxNuevo.Items.Clear();
-                //Agrega el tipo de producto
-                foreach (DataRow row in DS.Tables[0].Rows)
+                //Si hay filas seleccionadas...
+                if(dataGridView1.SelectedRows.Count > 0 )
                 {
-                    comboBoxNuevo.Items.Add(row["tipoNombre"].ToString());
-                }
-                DS.Clear();
+                    
+                    //Si hay sòlo una fila seleccionada, hace lo de siempre
+                    if(dataGridView1.SelectedRows.Count < 2)
+                    {
+                        panelNuevoProducto.Visible = true;
+                        panelNuevoProducto.BringToFront();
+                        BtnAgregar.Enabled = false;
+                        botonGuardar.Enabled = true;
 
-                comboBoxUMedida.Items.Clear();
-                DS = producto.MostrarUnidadMedida();
-                foreach (DataRow row in DS.Tables[0].Rows)
+                        Producto producto = new Producto();
+                        //Toma el valor del id para traer el producto
+                        int productoId = Int32.Parse(dataGridView1.SelectedRows[0].Cells["productoId"].Value.ToString());
+                        DataSet ddss = producto.MostrarUnProducto(productoId);
+                        DS = producto.MostrarProductoTipo();
+                        comboBoxNuevo.Items.Clear();
+                        //Agrega el tipo de producto
+                        foreach (DataRow row in DS.Tables[0].Rows)
+                        {
+                            comboBoxNuevo.Items.Add(row["tipoNombre"].ToString());
+                        }
+                        DS.Clear();
+
+                        comboBoxUMedida.Items.Clear();
+                        DS = producto.MostrarUnidadMedida();
+                        foreach (DataRow row in DS.Tables[0].Rows)
+                        {
+                            comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
+                        }
+
+
+
+
+                        textBoxNom.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoNombre"]);
+                        comboBoxNuevo.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoTipo"]);
+                        textBoxDescripcion.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoDesc"]);
+                        comboBoxUMedida.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoUnidadMedida"]);
+                        textBoxCantidad.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoCantidad"]);
+                        textBoxPventa.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoPrecioVenta"]);
+
+
+                        idProductoGlobal = Int32.Parse(Convert.ToString(ddss.Tables[0].Rows[0]["productoId"]));
+                    }
+
+                    else
+                    {
+                        PanelAumentoMultipleMarco.Visible = true;
+                        PanelAumentoMultipleMarco.BringToFront();
+                    }
+                    
+                }
+                else
                 {
-                    comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
+                    MessageBox.Show("Seleccionà alguna fila!");
                 }
-
-
-
-
-                textBoxNom.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoNombre"]);
-                comboBoxNuevo.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoTipo"]);
-                textBoxDescripcion.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoDesc"]);
-                comboBoxUMedida.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoUnidadMedida"]);
-                textBoxCantidad.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoCantidad"]);
-                textBoxPventa.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoPrecioVenta"]);
-
-
-                idProductoGlobal = Int32.Parse(Convert.ToString(ddss.Tables[0].Rows[0]["productoId"]));
+                
+                
+                
+                
+                
+                
+                
+                
+               
             }
         }
 
+        
+        
+        
+        
+        
+
+        //PANEL DE AUMENTOS MÙLTIPLES
+        
+        private void buttonCancelarAumentoMultiple_Click(object sender, EventArgs e)
+        {
+            PanelAumentoMultipleMarco.Visible = false;
+
+        }
+
+        private void buttonAceptarAumentoMultiple_Click(object sender, EventArgs e)
+        {
+            if(int.TryParse(textBoxAumentoPorcentaje.Text, out int porcentaje))
+            {
+                if(porcentaje != 0)
+                {
+                    
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        //Calculo el precio
+                        int nuevoPrecio = (int.Parse(row.Cells["productoPrecioVenta"].Value.ToString()) + int.Parse(row.Cells["productoPrecioVenta"].Value.ToString()) * (porcentaje/100));
+                        
+                        //Modifico la base de datos
+                        Producto prod = new Producto();
+                        prod.ModificarProductoSoloPrecio(int.Parse(row.Cells["productoId"].Value.ToString()), nuevoPrecio));
+                    }
+                    MessageBox.Show("Precios de productos modificados!");
+                    PanelAumentoMultipleMarco.Visible = false;
+                    textBoxAumentoPorcentaje.Text = "0";
+                    DataGridLlenar();
+                }
+                else
+                {
+                    MessageBox.Show("El porcentaje de aumento no puede ser cero");
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("El porcentaje de aumento debe ser un número entero");
+            }
+            
+        }
+
+        
+        
+        
         ///////////////IMPRIMIRRRRRRRR\\\\\\\\\\\\\
 
         /*private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
