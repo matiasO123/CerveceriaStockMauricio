@@ -10,6 +10,7 @@ namespace CapaPresentacion
 
         int idProductoGlobal = -1;
         DataSet DS = new DataSet();
+        string filaSeleccionada = "0";
         
         public ABMProductos()
         {
@@ -51,6 +52,7 @@ namespace CapaPresentacion
 
         private void DataGridLlenar()
         {
+            GuardarFilaSeleccionada();
             //Configurando DataGrid
             DataSet DS = new DataSet();
 
@@ -65,13 +67,90 @@ namespace CapaPresentacion
             dataGridView1.Columns[4].HeaderCell.Value = "Descripción";
             dataGridView1.Columns[6].HeaderCell.Value = "P. Venta";
             //dataGridView1.Columns.Add("Precio Total", "Precio Total");
-
+            IrAFilaSeleccionada();
 
 
 
         }
 
-        
+        //Toma el valor de la fila seleccionada, antes de actualizar la tabla
+        private void GuardarFilaSeleccionada()
+        {
+            // si hay filas seleccionadas
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                //Si hay más de una fila seleccionada, toma la de menor número y trabaja con esa
+                if(dataGridView1.SelectedRows.Count > 1)
+                {
+                    int contador = 0;
+                    foreach(DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        if(contador == 0)
+                        {
+                            contador = int.Parse(row.Cells["productoId"].Value.ToString());
+
+                        }
+                        else
+                        {
+                            if(int.Parse(row.Cells["productoId"].Value.ToString()) < contador)
+                            {
+                                contador = int.Parse(row.Cells["productoId"].Value.ToString());
+                            }
+                        }
+                    }
+
+                    filaSeleccionada = contador.ToString();
+                    
+                }
+
+                //Sólo una fila seleccionada
+                else
+                {
+                    filaSeleccionada = dataGridView1.SelectedRows[0].Cells["productoId"].Value.ToString();
+                }
+            }
+        }
+
+        //Pone el foco de la tabla en la fila seleccionada(va después de actualizar la tabla)
+        private void IrAFilaSeleccionada()
+        {
+            int filaElegida = 0;
+            bool terminar = false;
+            int filaElegidaAux = 0;
+            if(filaSeleccionada != "0")
+            {
+                int filasTotales = dataGridView1.Rows.Count;
+                while((terminar == false) && (filasTotales >= filaElegidaAux))
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.Cells["productoId"].Value.ToString() == filaSeleccionada)
+                        {
+                            filaElegida = row.Index;
+                            terminar = true;
+                        }
+                    }
+                    if (filaElegida == 0)
+                    {
+                        filaSeleccionada = ((int.Parse(filaSeleccionada)) + 1).ToString();
+                        filaElegidaAux++;
+                    }
+
+                }
+                if(filaElegidaAux > filasTotales)
+                {
+                    dataGridView1.CurrentCell = dataGridView1.Rows[filasTotales-1].Cells[1];
+                }
+                else
+                {
+                    dataGridView1.CurrentCell = dataGridView1.Rows[filaElegida].Cells[1];
+                }
+
+                
+
+                
+            }
+        }
 
 
 
@@ -79,8 +158,9 @@ namespace CapaPresentacion
 
 
 
-        //BOTONES DEL ABM DE PRODUCTOS
-        private void botonBuscar_Click(object sender, EventArgs e)
+
+//BOTONES DEL ABM DE PRODUCTOS
+private void botonBuscar_Click(object sender, EventArgs e)
                 {
                     DataSet DS = new DataSet();
                     Producto producto = new Producto();
@@ -253,10 +333,11 @@ namespace CapaPresentacion
                         {
                             MessageBox.Show("El producto no se pudo eliminar");
                         }
-                        DataSet DS = new DataSet();
+                        /*DataSet DS = new DataSet();
                         p = new Producto();
                         DS = p.MostrarProducto();
-                        dataGridView1.DataSource = DS.Tables[0];
+                        dataGridView1.DataSource = DS.Tables[0];*/
+                        DataGridLlenar();
 
 
                     }

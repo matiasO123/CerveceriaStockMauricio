@@ -162,7 +162,7 @@
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Multiline = true;
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(153, 143);
+            this.textBoxNombre.Size = new System.Drawing.Size(153, 24);
             this.textBoxNombre.TabIndex = 4;
             this.textBoxNombre.Visible = false;
             this.textBoxNombre.TextChanged += new System.EventHandler(this.Busqueda);

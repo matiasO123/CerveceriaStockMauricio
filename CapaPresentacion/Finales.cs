@@ -113,5 +113,10 @@ namespace CapaPresentacion
             labelDiaPrecio.Text = diaFinal.ToString("N2");
             labelSemanaPrecio.Text = semanaFinal.ToString("N2");
         }
+
+        private void Finales_Load(object sender, EventArgs e)
+        {
+            dateTimePicker1.Value = DateTime.Today;
+        }
     }
 }

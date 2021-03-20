@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.labelBuscador = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelDia = new System.Windows.Forms.Label();
             this.labelSemana = new System.Windows.Forms.Label();
             this.labelMes = new System.Windows.Forms.Label();
@@ -39,9 +42,6 @@
             this.labelSemanaPrecio = new System.Windows.Forms.Label();
             this.labelMesPrecio = new System.Windows.Forms.Label();
             this.labelAnioPrecio = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,6 +66,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.BackColor = System.Drawing.Color.Snow;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(3, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(794, 36);
+            this.textBox1.TabIndex = 2;
+            this.textBox1.Text = "FINALES";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -84,7 +100,7 @@
             this.tableLayoutPanel2.Controls.Add(this.labelSemanaPrecio, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.labelMesPrecio, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.labelAnioPrecio, 1, 4);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 70);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 71);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.19512F));
@@ -92,7 +108,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.95122F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.95122F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.95122F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 377);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 376);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // labelBuscador
@@ -108,6 +124,24 @@
             this.labelBuscador.TabIndex = 0;
             this.labelBuscador.Text = "Buscador";
             this.labelBuscador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(401, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(390, 39);
+            this.panel1.TabIndex = 2;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(106, 10);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
+            this.dateTimePicker1.TabIndex = 9;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // labelDia
             // 
@@ -160,7 +194,7 @@
             this.labelAnio.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAnio.Location = new System.Drawing.Point(3, 291);
             this.labelAnio.Name = "labelAnio";
-            this.labelAnio.Size = new System.Drawing.Size(392, 86);
+            this.labelAnio.Size = new System.Drawing.Size(392, 85);
             this.labelAnio.TabIndex = 4;
             this.labelAnio.Text = "Año";
             this.labelAnio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -213,43 +247,9 @@
             this.labelAnioPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAnioPrecio.Location = new System.Drawing.Point(401, 291);
             this.labelAnioPrecio.Name = "labelAnioPrecio";
-            this.labelAnioPrecio.Size = new System.Drawing.Size(390, 86);
+            this.labelAnioPrecio.Size = new System.Drawing.Size(390, 85);
             this.labelAnioPrecio.TabIndex = 8;
             this.labelAnioPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 10);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(401, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(390, 39);
-            this.panel1.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.Snow;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(3, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(794, 36);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "FINALES";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Finales
             // 
@@ -260,6 +260,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Finales";
             this.Text = "Finales";
+            this.Load += new System.EventHandler(this.Finales_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
