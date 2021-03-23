@@ -28,7 +28,7 @@ namespace CapaPresentacion
             decimal anioFinal = 0;
             
             decimal diaFinalParcial = 0;
-            decimal diaFinalDescuento = 0;
+            
             decimal parcial = 0;
             
             
@@ -65,7 +65,7 @@ namespace CapaPresentacion
             {
                 parcial = 0;
                 diaFinalParcial = 0;
-                diaFinalDescuento = 0;
+                
 
                 //Convierto una sola vez, así no gasto ejecución convirtiendo varias veces
                 anioFactura = DateTime.Parse(row["facturaFecha"].ToString()).Year;
@@ -73,10 +73,9 @@ namespace CapaPresentacion
                 diaFactura = DateTime.Parse(row["facturaFecha"].ToString()).Day;
 
                 //Consigo los montos de la factura
-                if (decimal.TryParse(row["facturaTotal"].ToString(), out diaFinalParcial) &&
-                decimal.TryParse(row["facturaDescuento"].ToString(), out diaFinalDescuento))
+                if (decimal.TryParse(row["facturaTotal"].ToString(), out diaFinalParcial))
                 {
-                    parcial = diaFinalParcial - diaFinalDescuento;    
+                    parcial = diaFinalParcial;    
                     //Si es de ese anio, los suma
                     if (anio == anioFactura)
                     {
