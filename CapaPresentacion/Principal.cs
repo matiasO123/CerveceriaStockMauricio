@@ -93,5 +93,11 @@ namespace CapaPresentacion
             panelContenedor.Visible = true;
             AbrirFormHija(new Finales());
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Impresion imp = new Impresion(3);
+            imp.ShowDialog();
+        }
     }
 }

@@ -38,7 +38,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.panelInicio = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panelInicio.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -178,6 +180,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImage = global::CapaPresentacion.Properties.Resources.Principal;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 135);
@@ -218,6 +221,16 @@
             this.panelInicio.Size = new System.Drawing.Size(1225, 475);
             this.panelInicio.TabIndex = 10;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(71, 59);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 14;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +248,7 @@
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.panelMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.panelInicio.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -251,5 +265,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelInicio;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }
