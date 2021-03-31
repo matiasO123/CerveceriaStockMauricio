@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kkkrNMkWk5AIAIow7RM7gDTW4VhTEoQDcrwZontbnA4=</dsig:DigestValue>
+        <dsig:DigestValue>6Y/jvLccPsPDcLScfKCWuSsXCxQUAZI2lmEtRHsLtec=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="22791584">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="22792096">
       <assemblyIdentity name="El Galpon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jpJTGyZkIsFBfTOrRrlYxY8IHnVVpK+nTH9dqfwQ5CQ=</dsig:DigestValue>
+        <dsig:DigestValue>SMBfYfRhTQ/k9oKYVg7hp0CDaQ2L6cNhqjB7zqX5bXs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -734,6 +734,18 @@
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
         <dsig:DigestValue>LCzsz2MwgShNbJC+zeoX7Os6boQROB6E3V7bV/D1hRc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="OnBarcode.Barcode.WinForms.dll" size="368128">
+      <assemblyIdentity name="OnBarcode.Barcode.WinForms" version="8.4.0.40320" publicKeyToken="4DA8D7F865F70E30" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DiJfholRVzVzLSglLhD40PSC/RMfMSf6AYcWHoz6qq4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

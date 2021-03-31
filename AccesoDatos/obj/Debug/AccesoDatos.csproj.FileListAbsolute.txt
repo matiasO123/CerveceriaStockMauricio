@@ -65,3 +65,4 @@ C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauric
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\EntityFramework.xml
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Usuario\Desktop\Mati\ROPERO\assets\Thumbnails\csm\CerveceriaStockMauricio\AccesoDatos\bin\Debug\System.Data.SQLite.xml
+C:\Users\matia\Desktop\CRUXTOTAL\CerveceriaStockMauricio\CerveceriaStockMauricio\AccesoDatos\obj\Debug\AccesoDatos.csprojAssemblyReference.cache

@@ -165,6 +165,30 @@ namespace CapaPresentacion
         int alto;
         private void button1_Click(object sender, EventArgs e)
         {
+            if(dataGridView1.SelectedRows.Count > 0)
+            {
+                Impresion imp = new Impresion(int.Parse(dataGridView1.SelectedRows[0].Cells["facturaID"].Value.ToString()));
+                imp.ShowDialog();
+                
+                
+            }
+            else
+            {
+                MessageBox.Show("Seleccioná una factura para imprimir!");
+            }
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            /* CODIGO VIEJO DE IMPRESIÒN
+             * 
+             * 
             buttonCerrarFactura.Visible = false;
             buttonImprimir.Visible = false;
             buttonEditar.Visible = false;
@@ -212,6 +236,10 @@ namespace CapaPresentacion
             buttonImprimir.Visible = true;
             buttonEditar.Visible = true;
             buttonEliminar.Visible = true;
+
+
+            * FIN DE CODIGO VIEJO
+            */
         }
 
 
@@ -273,6 +301,9 @@ namespace CapaPresentacion
 
         }
 
-        
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

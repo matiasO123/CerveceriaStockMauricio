@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using AccesoDatos;
+
 
 namespace CapaPresentacion
 {
@@ -98,6 +100,18 @@ namespace CapaPresentacion
         {
             Impresion imp = new Impresion(3);
             imp.ShowDialog();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e, string _data, string _filename)
+        {
+           
+                
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }
