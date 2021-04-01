@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMProductos));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.botonAgregar = new System.Windows.Forms.Button();
@@ -78,6 +78,9 @@
             this.buttonAceptarAumentoMultiple = new System.Windows.Forms.Button();
             this.buttonCancelarAumentoMultiple = new System.Windows.Forms.Button();
             this.PanelAumentoMultipleMarco = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBoxCodigoBarras = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -99,14 +102,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.Location = new System.Drawing.Point(14, 141);
@@ -115,8 +118,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowEditingIcon = false;
@@ -310,6 +313,9 @@
             // 
             this.panelNuevoProducto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelNuevoProducto.BackColor = System.Drawing.Color.Black;
+            this.panelNuevoProducto.Controls.Add(this.panel9);
+            this.panelNuevoProducto.Controls.Add(this.textBoxCodigoBarras);
+            this.panelNuevoProducto.Controls.Add(this.label6);
             this.panelNuevoProducto.Controls.Add(this.comboBoxUMedida);
             this.panelNuevoProducto.Controls.Add(this.label10);
             this.panelNuevoProducto.Controls.Add(this.comboBoxNuevo);
@@ -344,7 +350,7 @@
             this.comboBoxUMedida.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.comboBoxUMedida.ForeColor = System.Drawing.Color.White;
             this.comboBoxUMedida.FormattingEnabled = true;
-            this.comboBoxUMedida.Location = new System.Drawing.Point(286, 191);
+            this.comboBoxUMedida.Location = new System.Drawing.Point(286, 154);
             this.comboBoxUMedida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxUMedida.Name = "comboBoxUMedida";
             this.comboBoxUMedida.Size = new System.Drawing.Size(395, 32);
@@ -355,7 +361,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(42, 199);
+            this.label10.Location = new System.Drawing.Point(42, 162);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(187, 24);
             this.label10.TabIndex = 54;
@@ -370,7 +376,7 @@
             this.comboBoxNuevo.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.comboBoxNuevo.ForeColor = System.Drawing.Color.White;
             this.comboBoxNuevo.FormattingEnabled = true;
-            this.comboBoxNuevo.Location = new System.Drawing.Point(286, 107);
+            this.comboBoxNuevo.Location = new System.Drawing.Point(286, 70);
             this.comboBoxNuevo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxNuevo.Name = "comboBoxNuevo";
             this.comboBoxNuevo.Size = new System.Drawing.Size(395, 32);
@@ -411,7 +417,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(286, 316);
+            this.panel5.Location = new System.Drawing.Point(286, 279);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(395, 3);
             this.panel5.TabIndex = 49;
@@ -419,7 +425,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(286, 272);
+            this.panel4.Location = new System.Drawing.Point(286, 235);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(395, 3);
             this.panel4.TabIndex = 47;
@@ -427,7 +433,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(286, 173);
+            this.panel3.Location = new System.Drawing.Point(286, 136);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(395, 3);
             this.panel3.TabIndex = 46;
@@ -435,7 +441,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(286, 81);
+            this.panel8.Location = new System.Drawing.Point(286, 44);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(395, 3);
             this.panel8.TabIndex = 44;
@@ -446,7 +452,7 @@
             this.textBoxPventa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPventa.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxPventa.ForeColor = System.Drawing.Color.White;
-            this.textBoxPventa.Location = new System.Drawing.Point(286, 296);
+            this.textBoxPventa.Location = new System.Drawing.Point(286, 259);
             this.textBoxPventa.Name = "textBoxPventa";
             this.textBoxPventa.Size = new System.Drawing.Size(395, 25);
             this.textBoxPventa.TabIndex = 7;
@@ -457,7 +463,7 @@
             this.textBoxCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxCantidad.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxCantidad.ForeColor = System.Drawing.Color.White;
-            this.textBoxCantidad.Location = new System.Drawing.Point(286, 252);
+            this.textBoxCantidad.Location = new System.Drawing.Point(286, 215);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(395, 25);
             this.textBoxCantidad.TabIndex = 6;
@@ -468,7 +474,7 @@
             this.textBoxDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxDescripcion.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxDescripcion.ForeColor = System.Drawing.Color.White;
-            this.textBoxDescripcion.Location = new System.Drawing.Point(286, 151);
+            this.textBoxDescripcion.Location = new System.Drawing.Point(286, 114);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(395, 25);
             this.textBoxDescripcion.TabIndex = 4;
@@ -479,7 +485,7 @@
             this.textBoxNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNom.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.textBoxNom.ForeColor = System.Drawing.Color.White;
-            this.textBoxNom.Location = new System.Drawing.Point(286, 59);
+            this.textBoxNom.Location = new System.Drawing.Point(286, 22);
             this.textBoxNom.Name = "textBoxNom";
             this.textBoxNom.Size = new System.Drawing.Size(395, 25);
             this.textBoxNom.TabIndex = 2;
@@ -489,7 +495,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(42, 299);
+            this.label7.Location = new System.Drawing.Point(42, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 24);
             this.label7.TabIndex = 40;
@@ -500,7 +506,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(42, 112);
+            this.label5.Location = new System.Drawing.Point(42, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 24);
             this.label5.TabIndex = 36;
@@ -511,7 +517,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(42, 254);
+            this.label4.Location = new System.Drawing.Point(42, 217);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 24);
             this.label4.TabIndex = 34;
@@ -522,7 +528,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(42, 62);
+            this.label3.Location = new System.Drawing.Point(42, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 24);
             this.label3.TabIndex = 32;
@@ -533,7 +539,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(42, 154);
+            this.label2.Location = new System.Drawing.Point(42, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 31;
@@ -695,6 +701,36 @@
             this.PanelAumentoMultipleMarco.Size = new System.Drawing.Size(930, 472);
             this.PanelAumentoMultipleMarco.TabIndex = 2;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(42, 313);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 24);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Cód. barras";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Location = new System.Drawing.Point(286, 334);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(395, 3);
+            this.panel9.TabIndex = 57;
+            // 
+            // textBoxCodigoBarras
+            // 
+            this.textBoxCodigoBarras.BackColor = System.Drawing.Color.Black;
+            this.textBoxCodigoBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCodigoBarras.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxCodigoBarras.ForeColor = System.Drawing.Color.White;
+            this.textBoxCodigoBarras.Location = new System.Drawing.Point(286, 314);
+            this.textBoxCodigoBarras.Name = "textBoxCodigoBarras";
+            this.textBoxCodigoBarras.Size = new System.Drawing.Size(395, 25);
+            this.textBoxCodigoBarras.TabIndex = 56;
+            // 
             // ABMProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -705,8 +741,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelNuevoProducto);
             this.Controls.Add(this.PanelAumentoMultipleMarco);
+            this.Controls.Add(this.panelNuevoProducto);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -783,6 +819,9 @@
         private System.Windows.Forms.Button buttonAceptarAumentoMultiple;
         private System.Windows.Forms.Button buttonCancelarAumentoMultiple;
         private System.Windows.Forms.TableLayoutPanel PanelAumentoMultipleMarco;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox textBoxCodigoBarras;
+        private System.Windows.Forms.Label label6;
     }
 }
 

@@ -57,6 +57,56 @@ namespace AccesoDatos
         }
         
 
+
+
+
+        //Crear columna de barcode
+        public void AgregarColumnaBarcode()
+        {
+            DataSet DS = new DataSet();
+            SQLiteConnection miConexion = new SQLiteConnection(cadenaConexion);
+           
+            string consulta = "SELECT * FROM Producto LIMIT 0";
+            try
+            {
+                miConexion.Open();
+                SQLiteDataAdapter sqlda = new SQLiteDataAdapter(consulta, cadenaConexion);
+
+                sqlda.Fill(DS);
+                string columna = "productoCodBarras";
+                if(DS.Tables.Count > 0)
+                {
+                    //Me fijo si existe la columna
+                    int contador = 0;
+                    foreach(DataColumn dt in DS.Tables[0].Columns)
+                    {
+                        if(dt.ColumnName == columna)
+                        {
+                            contador = 1;
+                        }
+                    }
+
+                    //Si la columna no existe, la creo
+                    if (contador == 0)
+                    {
+                        Ejecutor("ALTER TABLE Producto ADD " + columna + " TEXT");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ups... algo falló al realizar este proceso \n" + e);
+            }
+            finally
+            {
+                miConexion.Close();
+            }
+
+        }
+
+
+
+
         //Devuelve la cadena de conexión para la impresión de datos
         public SQLiteConnection GetcadenaConexion()
         {
@@ -69,6 +119,8 @@ namespace AccesoDatos
         public DataSet Consultor(string consulta)
         {
             DataSet DS = new DataSet();
+
+
             try
             {
                 miConexion.Open();

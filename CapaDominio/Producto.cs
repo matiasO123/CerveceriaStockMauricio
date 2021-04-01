@@ -67,6 +67,15 @@ namespace CapaDominio
         }
 
 
+        //Para traer un producto por el código de barras
+        public DataSet MostrarUnProducto(string codbar)
+        {
+            DataSet ds = new DataSet();
+            ConexionGeneral cg = new ConexionGeneral();
+            ds = cg.Consultor("SELECT * from Producto WHERE productoCodBarras = " + codbar + "");
+            return ds;
+        }
+
         public DataSet MostrarProductoFiltro(string nombre, string tipo)
         {
             DataSet DDSS = new DataSet();
@@ -76,12 +85,12 @@ namespace CapaDominio
             {
                 if (tipo != "")
                 {
-                    DDSS = CG.Consultor("SELECT * FROM Producto WHERE (productoNombre LIKE '%" + nombre + "%') AND (productoTipo = '" + tipo + "')");
+                    DDSS = CG.Consultor("SELECT * FROM Producto WHERE ((productoNombre LIKE '%" + nombre + "%') OR (productoCodBarras LIKE '%" + nombre + "%')) AND (productoTipo = '" + tipo + "')");
 
                 }
                 else
                 {
-                    DDSS = CG.Consultor("SELECT * FROM Producto WHERE productoNombre LIKE '%" + nombre + "%'");
+                    DDSS = CG.Consultor("SELECT * FROM Producto WHERE productoNombre LIKE '%" + nombre + "%' OR productoCodBarras LIKE '%" + nombre + "%'");
                 }
 
             }
@@ -167,12 +176,12 @@ namespace CapaDominio
         }
         
         //NUEVO PRODUCTO
-        public bool AgregarProducto(string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioVenta)
+        public bool AgregarProducto(string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioVenta, string codBarras)
         {
 
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("INSERT INTO Producto (productoNombre, productoUnidadMedida, productoTipo,  productoDesc, productoCantidad, productoPrecioVenta) VALUES ('" + nombre + "', '" + unidad + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioVenta + "')");
+            return CG.Ejecutor("INSERT INTO Producto (productoNombre, productoUnidadMedida, productoTipo,  productoDesc, productoCantidad, productoPrecioVenta, productoCodBarras) VALUES ('" + nombre + "', '" + unidad + "', '" + tipo + "', '" + descripcion + "', " + cantidad + ", '" + precioVenta + "', '" + codBarras + "')");
             //return consulta;
         }
 
@@ -188,11 +197,11 @@ namespace CapaDominio
         }
 
         //MODIFICAR PRODUCTO
-        public bool ModificarProducto(int productoId, string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioVenta)
+        public bool ModificarProducto(int productoId, string nombre, string unidad, string tipo, string descripcion, long cantidad, float precioVenta, string codBarras)
         {
             ConexionGeneral CG = new ConexionGeneral();
 
-            return CG.Ejecutor("UPDATE Producto SET productoNombre = '" + nombre + "', productoUnidadMedida = '" + unidad + "', productoTipo = '" + tipo + "',  productoDesc = '" + descripcion + "', productoCantidad = " + cantidad + ", productoPrecioVenta = " + precioVenta + " where productoId = " + productoId + " ");
+            return CG.Ejecutor("UPDATE Producto SET productoNombre = '" + nombre + "', productoUnidadMedida = '" + unidad + "', productoTipo = '" + tipo + "',  productoDesc = '" + descripcion + "', productoCantidad = " + cantidad + ", productoPrecioVenta = " + precioVenta + ", productoCodBarras = " + codBarras + " where productoId = " + productoId + " ");
 
 
 

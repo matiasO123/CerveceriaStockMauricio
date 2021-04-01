@@ -66,6 +66,7 @@ namespace CapaPresentacion
             dataGridView1.Columns[3].HeaderCell.Value = "Tipo";
             dataGridView1.Columns[4].HeaderCell.Value = "Descripción";
             dataGridView1.Columns[6].HeaderCell.Value = "P. Venta";
+            dataGridView1.Columns[7].HeaderCell.Value = "Còd. barras";
             //dataGridView1.Columns.Add("Precio Total", "Precio Total");
             IrAFilaSeleccionada();
 
@@ -159,8 +160,8 @@ namespace CapaPresentacion
 
 
 
-//BOTONES DEL ABM DE PRODUCTOS
-private void botonBuscar_Click(object sender, EventArgs e)
+        //BOTONES DEL ABM DE PRODUCTOS
+        private void botonBuscar_Click(object sender, EventArgs e)
                 {
                     DataSet DS = new DataSet();
                     Producto producto = new Producto();
@@ -208,7 +209,7 @@ private void botonBuscar_Click(object sender, EventArgs e)
         //AGREGA NUEVO PRODUCTO
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            string  nombre, tipo, descripcion, unidadMedida, cantidad, precioVenta;
+            string  nombre, tipo, descripcion, unidadMedida, cantidad, precioVenta, productoCodBarras;
 
 
             nombre = textBoxNom.Text;
@@ -217,6 +218,7 @@ private void botonBuscar_Click(object sender, EventArgs e)
             unidadMedida = comboBoxUMedida.Text;
             cantidad = textBoxCantidad.Text;
             precioVenta = textBoxPventa.Text;
+            productoCodBarras = textBoxCodigoBarras.Text;
 
             Producto producto = new Producto();
             if (producto.ProductoValidar(nombre, tipo, unidadMedida, cantidad, precioVenta))
@@ -225,7 +227,7 @@ private void botonBuscar_Click(object sender, EventArgs e)
                 int precioVentaEntero = int.Parse(precioVenta);
                
 
-                if (producto.AgregarProducto(nombre, unidadMedida, tipo, descripcion, cantidadEntero, precioVentaEntero) == true)
+                if (producto.AgregarProducto(nombre, unidadMedida, tipo, descripcion, cantidadEntero, precioVentaEntero, productoCodBarras) == true)
                 {
                     MessageBox.Show("Se creo el nuevo producto con éxito");
                     
@@ -362,6 +364,7 @@ private void botonBuscar_Click(object sender, EventArgs e)
                 string descripcion = textBoxDescripcion.Text;
                 string cantidad = textBoxCantidad.Text;
                 string precioVenta = textBoxPventa.Text;
+                string codBarras = textBoxCodigoBarras.Text;
                 string productoId;
                 int idAux, cantidadAux;
                 float precioVaux;
@@ -384,7 +387,7 @@ private void botonBuscar_Click(object sender, EventArgs e)
                     cantidadAux = int.Parse(cantidad);
 
                     precioVaux = float.Parse(precioVenta);
-                    if(p.ModificarProducto(idAux, nombre, unidad, tipo, descripcion, cantidadAux, precioVaux) == true)
+                    if(p.ModificarProducto(idAux, nombre, unidad, tipo, descripcion, cantidadAux, precioVaux, codBarras) == true)
                     {
                     MessageBox.Show("La modificacion se realizo con exito");
                     }
@@ -464,6 +467,7 @@ private void botonBuscar_Click(object sender, EventArgs e)
                         comboBoxUMedida.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoUnidadMedida"]);
                         textBoxCantidad.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoCantidad"]);
                         textBoxPventa.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoPrecioVenta"]);
+                        textBoxCodigoBarras.Text = Convert.ToString(ddss.Tables[0].Rows[0]["productoCodBarras"]);
 
 
                         idProductoGlobal = Int32.Parse(Convert.ToString(ddss.Tables[0].Rows[0]["productoId"]));

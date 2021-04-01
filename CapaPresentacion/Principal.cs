@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 using AccesoDatos;
-
+using System.IO;
+using System.Drawing.Imaging;
+using System.Drawing;
 
 namespace CapaPresentacion
 {
@@ -88,6 +89,7 @@ namespace CapaPresentacion
         {
             ConexionGeneral CG = new ConexionGeneral();
             CG.DBCreator();
+            CG.AgregarColumnaBarcode();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -102,16 +104,34 @@ namespace CapaPresentacion
             imp.ShowDialog();
         }
 
-        private void button3_Click_1(object sender, EventArgs e, string _data, string _filename)
-        {
-           
-                
 
-        }
-
+        
         private void button3_Click_1(object sender, EventArgs e)
         {
-            
+            /*string barcode = "* "+ "10" + " *";
+
+
+            Bitmap bm = new Bitmap(barcode.Length * 40, 150);
+            using (Graphics grap = Graphics.FromImage(bm))
+            {
+                Font oFont = new System.Drawing.Font("IDAutomationHC39M Free Version", 20);
+
+                PointF point = new PointF(2f, 2f);
+                SolidBrush black = new SolidBrush(Color.Black);
+                SolidBrush white = new SolidBrush(Color.White);
+                grap.FillRectangle(white, 0, 0, bm.Width, bm.Height);
+                grap.DrawString(barcode, oFont, black, point);
+            }
+
+
+            using(MemoryStream ms = new MemoryStream())
+            {
+                bm.Save(ms, ImageFormat.Png);
+                pictureBox1.Image = bm;
+                pictureBox1.Height = bm.Height;
+                pictureBox1.Width = int.Parse((bm.Width * 1).ToString());
+            }*/
+           
         }
     }
 }

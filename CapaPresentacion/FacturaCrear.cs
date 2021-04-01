@@ -71,6 +71,7 @@ namespace CapaPresentacion
         private void Factura_Load(object sender, EventArgs e)
         {
             DataGridLlenar();
+            textBox3.Focus();
 
 
             //Si es una factura que se está editando
@@ -154,7 +155,7 @@ namespace CapaPresentacion
             buttonAgregarProducto.Enabled = true;
 
             buttonCrearFactura.Enabled = true;
-
+            textBoxCantidad.Focus();
             textBox2.Text = "";
         }
 
@@ -191,10 +192,12 @@ namespace CapaPresentacion
 
 
             actualizarPrecioFinal();
+            textBox3.Focus();
+
 
 
         }
-               
+
         private void buttonCrearFactura_Click(object sender, EventArgs e)
         {
             string nombre = textBoxNombre.Text;
@@ -277,6 +280,11 @@ namespace CapaPresentacion
         }
 
         
+
+
+
+
+
         // EXCLUSIVO EDICIÓN
 
 
@@ -410,6 +418,48 @@ namespace CapaPresentacion
             {
                 labelPrecioTotal.Text = "0";
             }
+        }
+
+
+
+
+
+
+
+
+
+        //OTROS
+        //Cuando se carga el código de barras
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+            if(textBox3.Text != "")
+            {
+                DataSet ddtt = new DataSet();
+                Producto prod = new Producto();
+                ddtt = prod.MostrarUnProducto(textBox3.Text);
+                if ((ddtt.Tables.Count > 0) && (ddtt.Tables[0].Rows.Count > 0))
+                {
+                    textoProducto.Text = ddtt.Tables[0].Rows[0]["productoNombre"].ToString();
+                    textoUnidad.Text = ddtt.Tables[0].Rows[0]["productoUnidadMedida"].ToString();
+                    labelPrecio.Text = ddtt.Tables[0].Rows[0]["productoPrecioVenta"].ToString();
+                    id = int.Parse(ddtt.Tables[0].Rows[0]["productoId"].ToString());
+
+                    textBoxCantidad.Text = "1";
+                    panelAgregarProd.Visible = false;
+                    buttonAgregarProducto.Enabled = true;
+
+                    buttonCrearFactura.Enabled = true;
+
+                    textBoxCantidad.Focus();
+                    textBox2.Text = "";
+
+                }
+            }
+            
+
+
+
         }
     }
 }

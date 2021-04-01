@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AccesoDatos.dll" size="6656">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AccesoDatos.dll" size="7680">
       <assemblyIdentity name="AccesoDatos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>6Y/jvLccPsPDcLScfKCWuSsXCxQUAZI2lmEtRHsLtec=</dsig:DigestValue>
+        <dsig:DigestValue>B78dD6Q64E8LarIdj7x9LDvyaQov7RnsOVc5AQvgzm8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>hKSaITQ5fLPMPTjNEPR4EWe2WTmz7XQdMpZH5/nbm4Q=</dsig:DigestValue>
+        <dsig:DigestValue>irDHTv7tyFdhlFs0HKVlE9MG8SfCZxrtBrP4kfeT0Tg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="22792096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="22792608">
       <assemblyIdentity name="El Galpon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SMBfYfRhTQ/k9oKYVg7hp0CDaQ2L6cNhqjB7zqX5bXs=</dsig:DigestValue>
+        <dsig:DigestValue>nE/HiZWZldUE7v+GJib+/HiiktAv9C0cXGsp44K1Mg4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
