@@ -61,19 +61,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>irDHTv7tyFdhlFs0HKVlE9MG8SfCZxrtBrP4kfeT0Tg=</dsig:DigestValue>
+        <dsig:DigestValue>qikIwUe8OKfMQo/WWXTtWitFkx1WtisRXr2RfwYQgdU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="22792608">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="22793120">
       <assemblyIdentity name="El Galpon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nE/HiZWZldUE7v+GJib+/HiiktAv9C0cXGsp44K1Mg4=</dsig:DigestValue>
+        <dsig:DigestValue>X3QrahmSkfc7qTJT3gMisnHl54gTjBHOE8Z/TKYTWeM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

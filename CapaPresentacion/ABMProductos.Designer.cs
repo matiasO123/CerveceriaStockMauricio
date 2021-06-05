@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABMProductos));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.botonAgregar = new System.Windows.Forms.Button();
@@ -46,6 +46,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.panelNuevoProducto = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBoxCodigoBarras = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.comboBoxUMedida = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBoxNuevo = new System.Windows.Forms.ComboBox();
@@ -78,9 +81,6 @@
             this.buttonAceptarAumentoMultiple = new System.Windows.Forms.Button();
             this.buttonCancelarAumentoMultiple = new System.Windows.Forms.Button();
             this.PanelAumentoMultipleMarco = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBoxCodigoBarras = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -102,14 +102,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.Location = new System.Drawing.Point(14, 141);
@@ -118,8 +118,8 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.DividerHeight = 1;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.ShowEditingIcon = false;
@@ -340,6 +340,36 @@
             this.panelNuevoProducto.Size = new System.Drawing.Size(722, 417);
             this.panelNuevoProducto.TabIndex = 11;
             this.panelNuevoProducto.Visible = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.White;
+            this.panel9.Location = new System.Drawing.Point(286, 334);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(395, 3);
+            this.panel9.TabIndex = 57;
+            // 
+            // textBoxCodigoBarras
+            // 
+            this.textBoxCodigoBarras.BackColor = System.Drawing.Color.Black;
+            this.textBoxCodigoBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxCodigoBarras.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.textBoxCodigoBarras.ForeColor = System.Drawing.Color.White;
+            this.textBoxCodigoBarras.Location = new System.Drawing.Point(286, 314);
+            this.textBoxCodigoBarras.Name = "textBoxCodigoBarras";
+            this.textBoxCodigoBarras.Size = new System.Drawing.Size(395, 25);
+            this.textBoxCodigoBarras.TabIndex = 56;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(42, 313);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(123, 24);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Cód. barras";
             // 
             // comboBoxUMedida
             // 
@@ -700,36 +730,6 @@
             this.PanelAumentoMultipleMarco.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.PanelAumentoMultipleMarco.Size = new System.Drawing.Size(930, 472);
             this.PanelAumentoMultipleMarco.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(42, 313);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 24);
-            this.label6.TabIndex = 55;
-            this.label6.Text = "Cód. barras";
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(286, 334);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(395, 3);
-            this.panel9.TabIndex = 57;
-            // 
-            // textBoxCodigoBarras
-            // 
-            this.textBoxCodigoBarras.BackColor = System.Drawing.Color.Black;
-            this.textBoxCodigoBarras.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxCodigoBarras.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F, System.Drawing.FontStyle.Bold);
-            this.textBoxCodigoBarras.ForeColor = System.Drawing.Color.White;
-            this.textBoxCodigoBarras.Location = new System.Drawing.Point(286, 314);
-            this.textBoxCodigoBarras.Name = "textBoxCodigoBarras";
-            this.textBoxCodigoBarras.Size = new System.Drawing.Size(395, 25);
-            this.textBoxCodigoBarras.TabIndex = 56;
             // 
             // ABMProductos
             // 

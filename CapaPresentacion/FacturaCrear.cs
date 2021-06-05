@@ -157,6 +157,7 @@ namespace CapaPresentacion
             buttonCrearFactura.Enabled = true;
             textBoxCantidad.Focus();
             textBox2.Text = "";
+            
         }
 
 
@@ -187,7 +188,8 @@ namespace CapaPresentacion
             textBoxCantidad.Text = "";
             labelPrecioTotal.Text = "";
             buttonAgregarProducto.Enabled = false;
-            
+            textBox3.Text = "";
+
 
 
 
@@ -234,12 +236,13 @@ namespace CapaPresentacion
                     MessageBox.Show("Factura creada");
                     //Vaciar campos
                     textBoxNombre.Text = "";
-                    textoDescuento.Text = "";
+                    textoDescuento.Text = "0";
                     labelPrecioFinalEntero.Text = "";
                     //dataGridView1.DataSource = null;
                     dataGridView1.Rows.Clear();
                     dataGridView1.Refresh();
                     buttonCrearFactura.Enabled = false;
+                    textBox3.Focus();
 
                 }
                 
