@@ -13,10 +13,7 @@ namespace CapaPresentacion
         public FacturaCrear()
         {
             InitializeComponent();
-            
-
         }
-
 
         //constructor para cargar la factura para editarla
         public FacturaCrear(int id, string nombre, string descuento, string fecha)
@@ -42,13 +39,10 @@ namespace CapaPresentacion
             fact.FacturaEditarMostrarFactura(id);
             
 
-
-
             //DETALLE DE FACTURA
             textBoxNombre.Text = nombre;
             facturaFecha.Text = fecha;
             textoDescuento.Text = descuento;
-
 
 
             //BOTONES
@@ -58,10 +52,7 @@ namespace CapaPresentacion
             buttonGuardar.Visible = true;
             buttonEliminarProducto.Visible = true;
             buttonEliminarProducto.Enabled = true;
-            buttonAgregarProducto.Visible = true;
-           
-
-
+            buttonAgregarProducto.Visible = true;         
         }
 
 
@@ -109,8 +100,12 @@ namespace CapaPresentacion
             dataGridView2.DataSource = DS.Tables[0];
             dataGridView2.Columns["productoid"].Visible = false;
             dataGridView2.Columns["productoCantidad"].Visible = false;
-
-
+            dataGridView2.Columns["productoNombre"].HeaderText = "Nombre";
+            dataGridView2.Columns["productoUnidadMedida"].HeaderText = "Uni. Medida";
+            dataGridView2.Columns["productoTipo"].HeaderText = "Tipo";
+            dataGridView2.Columns["productoDesc"].HeaderText = "Descrip.";
+            dataGridView2.Columns["productoPrecioVenta"].HeaderText = "P. Venta";
+            dataGridView2.Columns["productoCodBarras"].Visible = false;
         }
 
 
@@ -149,6 +144,8 @@ namespace CapaPresentacion
                 textoUnidad.Text = dataGridView2.SelectedRows[0].Cells["productoUnidadMedida"].Value.ToString();
                 labelPrecio.Text = dataGridView2.SelectedRows[0].Cells["productoPrecioVenta"].Value.ToString();
                 id = int.Parse(dataGridView2.SelectedRows[0].Cells["productoId"].Value.ToString());
+                textBox3.Text = dataGridView2.SelectedRows[0].Cells["productoCodBarras"].Value.ToString();
+
             }
             textBoxCantidad.Text = "1";
             panelAgregarProd.Visible = false;
@@ -171,15 +168,13 @@ namespace CapaPresentacion
         {
             panelAgregarProd.Visible = true;
             panelAgregarProd.BringToFront();
-            DataGridLlenar();
-            
+            DataGridLlenar();           
         }
       
         private void buttonAgregarProducto_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = new DataGridViewRow();
             this.dataGridView1.Rows.Add(id, textoProducto.Text, textoUnidad.Text, textBoxCantidad.Text, labelPrecio.Text, labelPrecioTotal.Text);
-
 
 
             textoProducto.Text = "";
@@ -191,13 +186,8 @@ namespace CapaPresentacion
             textBox3.Text = "";
 
 
-
-
             actualizarPrecioFinal();
             textBox3.Focus();
-
-
-
         }
 
         private void buttonCrearFactura_Click(object sender, EventArgs e)
@@ -246,9 +236,7 @@ namespace CapaPresentacion
 
                 }
                 
-            }
-
-            
+            }            
         }
        
         private void buttonEliminarProducto_Click(object sender, EventArgs e)
@@ -259,12 +247,10 @@ namespace CapaPresentacion
 
             if (oDlgRes == DialogResult.Yes)
             {
-
                 if (dataGridView1.SelectedRows.Count == 0)
                 {
 
                     MessageBox.Show("Seleccioná un producto");
-
                 }
                 else
                 {
@@ -323,14 +309,10 @@ namespace CapaPresentacion
                     foreach (DataGridViewRow fila in dataGridView1.Rows)
                     {
                         fact.ProductoAgregar(idFactura, fila.Cells[0].Value.ToString(), fila.Cells[3].Value.ToString(), fila.Cells[4].Value.ToString());
-                        
-
                     }
                     MessageBox.Show("Factura Editada");
                     this.Dispose();
                     this.Close();
-
-
 
                 }
                 else
@@ -354,8 +336,6 @@ namespace CapaPresentacion
             /*DataGridViewRow row = new DataGridViewRow();
             this.dataGridView1.Rows.Add(id, textoProducto.Text, textoUnidad.Text, textBoxCantidad.Text, labelPrecio.Text, labelPrecioTotal.Text);
 
-
-
             textoProducto.Text = "";
             labelPrecio.Text = "";
             textoUnidad.Text = "";
@@ -368,14 +348,7 @@ namespace CapaPresentacion
 
 
 
-
-
-
-
         // ///// MANEJADORES DE EVENTOS/////////////////////////////////////////////////////////////////////////////
-
-
-
         public void actualizarPrecioFinal()
         {
             int contador = 0;
@@ -384,17 +357,14 @@ namespace CapaPresentacion
                 if(fila.Cells["productoPrecioFin"].Value != null)
                 {
                     contador = contador + Int32.Parse(fila.Cells["productoPrecioFin"].Value.ToString());  
-                }
-                 
+                }   
             }
             if (Int32.TryParse(textoDescuento.Text, out int descuento))
             {
                 contador = contador - descuento;
             }
-
             labelPrecioFinalEntero.Text = contador.ToString();
         }
-
 
         //Cambio en el descuento
         private void actualizarPrecioFinal(object sender, EventArgs e)
@@ -427,15 +397,10 @@ namespace CapaPresentacion
 
 
 
-
-
-
-
         //OTROS
         //Cuando se carga el código de barras
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-
             if(textBox3.Text != "")
             {
                 DataSet ddtt = new DataSet();
@@ -456,13 +421,8 @@ namespace CapaPresentacion
 
                     textBoxCantidad.Focus();
                     textBox2.Text = "";
-
                 }
             }
-            
-
-
-
         }
     }
 }
