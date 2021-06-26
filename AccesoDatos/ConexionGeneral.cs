@@ -205,10 +205,20 @@ namespace AccesoDatos
 
 
         public DataTable ImprimirFactura(int facturaID)
-        {
-            
+        {   
             DataTable dt = new DataTable();
             SQLiteDataAdapter da = new SQLiteDataAdapter("select * FROM Factura F inner join FacturaProducto FP ON F.facturaID = FP.facturaID inner join Producto P ON P.productoID = FP.productoID WHERE F.facturaID = " + facturaID + "", miConexion);
+            da.Fill(dt);
+            return dt;
+        }
+
+
+
+        public DataTable ImprimirProducto()
+        {
+
+            DataTable dt = new DataTable();
+            SQLiteDataAdapter da = new SQLiteDataAdapter("select * FROM Producto", miConexion);
             da.Fill(dt);
             return dt;
         }

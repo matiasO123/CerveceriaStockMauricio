@@ -41,7 +41,7 @@ namespace CapaDominio
         
         
         
-        public void FacturaCrear(string nombre, string fecha, string descuento, string facturaTotal)
+        public void FacturaCrear(string nombre, string fecha, string descuento, string facturaTotal, string nro)
         {
             int descuentoEntero = 0; 
            ConexionGeneral CG = new ConexionGeneral();
@@ -55,7 +55,7 @@ namespace CapaDominio
             }
 
             int total = Int32.Parse(facturaTotal);
-            if (CG.Ejecutor("INSERT INTO Factura (facturaNombre, facturaFecha, facturaDescuento,  facturaTotal) VALUES ('" + nombre + "', '" + fecha + "', " + descuentoEntero + ", " + total + ")"))
+            if (CG.Ejecutor("INSERT INTO Factura (facturaNombre, facturaFecha, facturaDescuento,  facturaTotal, facturaNum) VALUES ('" + nombre + "', '" + fecha + "', " + descuentoEntero + ", " + total + ",'" + nro + "')"))
             {
                 //MessageBox.Show("Factura Creada");
             }
@@ -195,6 +195,36 @@ namespace CapaDominio
         }
 
 
+
+        //Eliminar factura 
+        public bool FacturaEliminarPorFecha(DateTime fecha)
+        {
+            ConexionGeneral CG = new ConexionGeneral();
+            bool exito = false;
+            DateTime fechaPosta = Convert.ToDateTime(fecha); 
+            DataSet DDSS = new DataSet();
+            DDSS = FacturaMostrar();
+            foreach (DataRow fechaFactura in DDSS.Tables[0].Rows)
+            {
+                DateTime date = Convert.ToDateTime(fechaFactura["facturaFecha"].ToString());
+                if (DateTime.Compare(date, fechaPosta) < 0)
+                {
+                    int id = int.Parse(fechaFactura["facturaID"].ToString());
+                    if (CG.Ejecutor("DELETE FROM FacturaProducto WHERE facturaID = " + id + ""))
+                    {
+                        if (CG.Ejecutor("DELETE FROM Factura WHERE facturaID = " + id + ""))
+                        {
+
+                        }
+                    }
+                }
+            }
+            MessageBox.Show("Facturas eliminadas!");
+            return exito;
+        }
+
+
+
         // //////////////////////////////////////////////////////////////////////////////////
 
 
@@ -228,13 +258,13 @@ namespace CapaDominio
         }
 
         //Edita los datos de una factura
-        public void FacturaEditar(int id, string nombre, string fecha, string descuento, string total )
+        public void FacturaEditar(int id, string nombre, string fecha, string descuento, string total, string nro )
         {
             int descuentoEntero = int.Parse(descuento);
             int totalEntero = int.Parse(total);
             DataSet DDSS = new DataSet();
             ConexionGeneral CG = new ConexionGeneral();
-            if(CG.Ejecutor("UPDATE Factura SET 'facturaNombre' = '" + nombre + "', 'facturaFecha' = '" + fecha + "', 'facturaDescuento' = " + descuentoEntero + ", 'facturaTotal' = " + totalEntero + "  WHERE facturaID = "+ id + "" ))
+            if(CG.Ejecutor("UPDATE Factura SET 'facturaNombre' = '" + nombre + "', 'facturaFecha' = '" + fecha + "', 'facturaDescuento' = " + descuentoEntero + ", 'facturaTotal' = " + totalEntero + ", 'facturaNum' = '" + nro + "'  WHERE facturaID = "+ id + "" ))
             {
                 
             }

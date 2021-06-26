@@ -29,7 +29,11 @@ namespace CapaPresentacion
             Factura fact = new Factura();
             dataGridView1.DataSource = fact.FacturaMostrar().Tables[0];
             panel1.Visible = false;
-            dataGridView1.Columns[0].HeaderText = "Nro";
+            dataGridView1.Columns["facturaID"].Visible = false;
+            dataGridView1.Columns["facturaID"].DisplayIndex = 5;
+
+            dataGridView1.Columns["facturaNum"].DisplayIndex = 0;
+            dataGridView1.Columns["facturaNum"].HeaderCell.Value = "Nro";
             dataGridView1.Columns[1].HeaderCell.Value = "Cliente";
             dataGridView1.Columns[2].HeaderCell.Value = "Fecha";
             dataGridView1.Columns[3].HeaderCell.Value = "Descuento";
@@ -63,7 +67,9 @@ namespace CapaPresentacion
                 // Displays the same value with a blank as the separator.
                 nfi.CurrencyGroupSeparator = ".";
                 labelPrecioFinalEntero.Text = value.ToString("C0", nfi);
-                
+                textBoxNro.Text = dataGridView1.SelectedRows[0].Cells["facturaNum"].Value.ToString();
+
+
                 DataSet DDSS = new DataSet();
                 Factura fact = new Factura();
 
@@ -306,6 +312,27 @@ namespace CapaPresentacion
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void buttonBorrar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Estás seguro de eliminar las facturas indicadas?", "Eliminando facturas",
+               MessageBoxButtons.OKCancel);
+            switch (result)
+            {
+                case DialogResult.OK:
+                    {
+                        Factura fact = new Factura();
+                        fact.FacturaEliminarPorFecha(dateTimePicker1.Value);
+                        LlenarGrid();
+                        break;
+                    }
+                case DialogResult.Cancel:
+                    {
+                        
+                        break;
+                    }
+            }
         }
     }
 }

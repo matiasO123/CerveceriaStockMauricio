@@ -195,12 +195,12 @@ namespace CapaPresentacion
             }
             DS.Clear();
 
-            comboBoxUMedida.Items.Clear();
+            /*comboBoxUMedida.Items.Clear();
             DS = producto.MostrarUnidadMedida();
             foreach (DataRow row in DS.Tables[0].Rows)
             {
                 comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
-            }
+            }*/
 
             
 
@@ -452,11 +452,11 @@ namespace CapaPresentacion
                         DS.Clear();
 
                         comboBoxUMedida.Items.Clear();
-                        DS = producto.MostrarUnidadMedida();
+                        /*DS = producto.MostrarUnidadMedida();
                         foreach (DataRow row in DS.Tables[0].Rows)
                         {
                             comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
-                        }
+                        }*/
 
 
 
@@ -543,13 +543,18 @@ namespace CapaPresentacion
             else
             {
                 MessageBox.Show("El porcentaje de aumento debe ser un número entero");
-            }
-            
+            }     
         }
 
-        
-        
-        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ImprimirProducto imp = new ImprimirProducto();
+            imp.ShowDialog();
+        }
+
+
+
+
         ///////////////IMPRIMIRRRRRRRR\\\\\\\\\\\\\
 
         /*private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)

@@ -196,6 +196,7 @@ namespace CapaPresentacion
             string fecha = facturaFecha.Text;
             string descuento = textoDescuento.Text;
             string total = labelPrecioFinalEntero.Text;
+            string nro = textBoxNro.Text;
             bool validado = true;
             Factura fact = new Factura();
             if (fact.FacturaValidar(nombre, fecha, descuento, total))
@@ -215,7 +216,7 @@ namespace CapaPresentacion
                 }
                 if (validado)
                 {
-                    fact.FacturaCrear(nombre, fecha, descuento, total);
+                    fact.FacturaCrear(nombre, fecha, descuento, total, nro);
                     idFactura = fact.FacturaProductoUltimoID();
                     foreach (DataGridViewRow fila in dataGridView1.Rows)
                     {
@@ -228,6 +229,7 @@ namespace CapaPresentacion
                     textBoxNombre.Text = "";
                     textoDescuento.Text = "0";
                     labelPrecioFinalEntero.Text = "";
+                    textBoxNro.Text = "";
                     //dataGridView1.DataSource = null;
                     dataGridView1.Rows.Clear();
                     dataGridView1.Refresh();
@@ -284,6 +286,7 @@ namespace CapaPresentacion
             string fecha = facturaFecha.Text;
             string descuento = textoDescuento.Text;
             string total = labelPrecioFinalEntero.Text;
+            string nro = textBoxNro.Text;
             bool validado = true;
             Factura fact = new Factura();
             if (fact.FacturaValidar(nombre, fecha, descuento, total))
@@ -303,7 +306,7 @@ namespace CapaPresentacion
                 }
                 if (validado)
                 {
-                    fact.FacturaEditar(idFactura, nombre, fecha, descuento, total);
+                    fact.FacturaEditar(idFactura, nombre, fecha, descuento, total, nro);
                     //idFactura = fact.FacturaProductoUltimoID();
                     fact.EditarEliminarProductosFactura(idFactura);
                     foreach (DataGridViewRow fila in dataGridView1.Rows)

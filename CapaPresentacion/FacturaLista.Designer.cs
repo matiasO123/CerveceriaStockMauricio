@@ -61,6 +61,11 @@ namespace CapaPresentacion
             this.label3 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.labelBorrar = new System.Windows.Forms.Label();
+            this.buttonBorrar = new System.Windows.Forms.Button();
+            this.labelNro = new System.Windows.Forms.Label();
+            this.textBoxNro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -181,6 +186,8 @@ namespace CapaPresentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.textBoxNro);
+            this.panel1.Controls.Add(this.labelNro);
             this.panel1.Controls.Add(this.buttonEliminar);
             this.panel1.Controls.Add(this.buttonEditar);
             this.panel1.Controls.Add(this.puntoFinal);
@@ -278,7 +285,7 @@ namespace CapaPresentacion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(386, 71);
+            this.label5.Location = new System.Drawing.Point(351, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 26);
             this.label5.TabIndex = 74;
@@ -372,9 +379,9 @@ namespace CapaPresentacion
             | System.Windows.Forms.AnchorStyles.Left)));
             this.facturaFecha.Enabled = false;
             this.facturaFecha.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
-            this.facturaFecha.Location = new System.Drawing.Point(466, 72);
+            this.facturaFecha.Location = new System.Drawing.Point(427, 72);
             this.facturaFecha.Name = "facturaFecha";
-            this.facturaFecha.Size = new System.Drawing.Size(283, 25);
+            this.facturaFecha.Size = new System.Drawing.Size(256, 25);
             this.facturaFecha.TabIndex = 66;
             // 
             // textBoxNombre
@@ -384,7 +391,7 @@ namespace CapaPresentacion
             this.textBoxNombre.BackColor = System.Drawing.Color.White;
             this.textBoxNombre.Enabled = false;
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(123, 72);
+            this.textBoxNombre.Location = new System.Drawing.Point(109, 72);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.ReadOnly = true;
@@ -455,6 +462,66 @@ namespace CapaPresentacion
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(599, 52);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(250, 25);
+            this.dateTimePicker1.TabIndex = 57;
+            // 
+            // labelBorrar
+            // 
+            this.labelBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelBorrar.AutoSize = true;
+            this.labelBorrar.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBorrar.Location = new System.Drawing.Point(595, 29);
+            this.labelBorrar.Name = "labelBorrar";
+            this.labelBorrar.Size = new System.Drawing.Size(217, 20);
+            this.labelBorrar.TabIndex = 58;
+            this.labelBorrar.Text = "Borrar facturas anteriores a ";
+            // 
+            // buttonBorrar
+            // 
+            this.buttonBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBorrar.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBorrar.Location = new System.Drawing.Point(859, 52);
+            this.buttonBorrar.Name = "buttonBorrar";
+            this.buttonBorrar.Size = new System.Drawing.Size(75, 25);
+            this.buttonBorrar.TabIndex = 59;
+            this.buttonBorrar.Text = "Borrar";
+            this.buttonBorrar.UseVisualStyleBackColor = true;
+            this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
+            // 
+            // labelNro
+            // 
+            this.labelNro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNro.AutoSize = true;
+            this.labelNro.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNro.Location = new System.Drawing.Point(689, 72);
+            this.labelNro.Name = "labelNro";
+            this.labelNro.Size = new System.Drawing.Size(50, 26);
+            this.labelNro.TabIndex = 81;
+            this.labelNro.Text = "Nro";
+            // 
+            // textBoxNro
+            // 
+            this.textBoxNro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxNro.BackColor = System.Drawing.Color.White;
+            this.textBoxNro.Enabled = false;
+            this.textBoxNro.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNro.Location = new System.Drawing.Point(742, 72);
+            this.textBoxNro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNro.Name = "textBoxNro";
+            this.textBoxNro.ReadOnly = true;
+            this.textBoxNro.Size = new System.Drawing.Size(184, 25);
+            this.textBoxNro.TabIndex = 82;
+            // 
             // FacturaLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -465,6 +532,9 @@ namespace CapaPresentacion
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.buttonBorrar);
+            this.Controls.Add(this.labelBorrar);
+            this.Controls.Add(this.dateTimePicker1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FacturaLista";
             this.Text = "FacturaLista";
@@ -478,6 +548,7 @@ namespace CapaPresentacion
             ((System.ComponentModel.ISupportInitialize)(this.puntoFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -516,5 +587,10 @@ namespace CapaPresentacion
         private System.Windows.Forms.PictureBox puntoFinal;
         private System.Windows.Forms.Button buttonEliminar;
         private System.Windows.Forms.Button buttonEditar;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label labelBorrar;
+        private System.Windows.Forms.Button buttonBorrar;
+        private System.Windows.Forms.TextBox textBoxNro;
+        private System.Windows.Forms.Label labelNro;
     }
 }

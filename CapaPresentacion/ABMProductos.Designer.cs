@@ -44,6 +44,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.botonLlenarTabla = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.panelNuevoProducto = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -190,7 +191,7 @@
             this.botonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonEliminar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonEliminar.ForeColor = System.Drawing.Color.Black;
-            this.botonEliminar.Location = new System.Drawing.Point(325, 3);
+            this.botonEliminar.Location = new System.Drawing.Point(516, 3);
             this.botonEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(154, 43);
@@ -285,13 +286,29 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.BtnEditar);
             this.panel2.Controls.Add(this.botonAgregar);
             this.panel2.Controls.Add(this.botonEliminar);
-            this.panel2.Location = new System.Drawing.Point(88, 413);
+            this.panel2.Location = new System.Drawing.Point(21, 413);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(761, 50);
+            this.panel2.Size = new System.Drawing.Size(901, 50);
             this.panel2.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(254, 3);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 43);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Imprimir Prod.";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnEditar
             // 
@@ -300,7 +317,7 @@
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.ForeColor = System.Drawing.Color.Black;
-            this.BtnEditar.Location = new System.Drawing.Point(604, 3);
+            this.BtnEditar.Location = new System.Drawing.Point(744, 3);
             this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(154, 43);
@@ -380,6 +397,31 @@
             this.comboBoxUMedida.Font = new System.Drawing.Font("Microsoft JhengHei Light", 14F);
             this.comboBoxUMedida.ForeColor = System.Drawing.Color.White;
             this.comboBoxUMedida.FormattingEnabled = true;
+            this.comboBoxUMedida.Items.AddRange(new object[] {
+            "X1",
+            "X2",
+            "X3",
+            "X4",
+            "X5",
+            "X6",
+            "X7",
+            "X8",
+            "X9",
+            "X10",
+            "X11",
+            "X12",
+            "X13",
+            "X14",
+            "X15",
+            "X16",
+            "X17",
+            "X18",
+            "X19",
+            "X20",
+            "X21",
+            "X22",
+            "X23",
+            "X24"});
             this.comboBoxUMedida.Location = new System.Drawing.Point(286, 154);
             this.comboBoxUMedida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxUMedida.Name = "comboBoxUMedida";
@@ -737,12 +779,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(946, 475);
+            this.Controls.Add(this.panelNuevoProducto);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelAumentoMultipleMarco);
-            this.Controls.Add(this.panelNuevoProducto);
             this.Font = new System.Drawing.Font("Microsoft JhengHei Light", 9F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -822,6 +864,7 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox textBoxCodigoBarras;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
 
