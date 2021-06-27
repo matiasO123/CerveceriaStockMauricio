@@ -163,6 +163,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosPropios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosPropios.Designer.cs">
+      <DependentUpon>DatosPropios.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarConfirmar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ABMStock.resx">
       <DependentUpon>ABMStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosPropios.resx">
+      <DependentUpon>DatosPropios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarConfirmar.resx">
       <DependentUpon>EliminarConfirmar.cs</DependentUpon>
@@ -278,6 +292,17 @@
     </None>
     <None Include="DataSet2.xss">
       <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />

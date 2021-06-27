@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatos;
 using Microsoft.Reporting.WinForms;
+using CapaDominio;
 
 namespace CapaPresentacion
 {
@@ -37,9 +38,20 @@ namespace CapaPresentacion
             ReportDataSource rp = new ReportDataSource("DataSet1", dt);
             reportViewer1.LocalReport.DataSources.Add(rp);
 
+            this.reportViewer1.RefreshReport();
 
 
 
+
+            DataTable dt2 = new DataTable();
+            DataSet ddss = new DataSet();
+            DatosPropio dp = new DatosPropio();
+
+            ddss = dp.MostrarDatos();
+            dt2 = ddss.Tables[0];
+            
+            ReportDataSource rp2 = new ReportDataSource("DataSet3", dt2);
+            reportViewer1.LocalReport.DataSources.Add(rp2);
             this.reportViewer1.RefreshReport();
         }
     }

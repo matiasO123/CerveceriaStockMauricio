@@ -295,6 +295,8 @@ namespace CapaPresentacion {
             
             private global::System.Data.DataColumn columnproductoNombre;
             
+            private global::System.Data.DataColumn columnfacturaNum;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public DataTable1DataTable() {
@@ -394,6 +396,14 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn facturaNumColumn {
+                get {
+                    return this.columnfacturaNum;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -429,7 +439,7 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string facturaID, string facturaNombre, string facturaFecha, string facturaDescuento, string productoCantidad, string facturaTotal, string productoPrecioUnitario, string productoNombre) {
+            public DataTable1Row AddDataTable1Row(string facturaID, string facturaNombre, string facturaFecha, string facturaDescuento, string productoCantidad, string facturaTotal, string productoPrecioUnitario, string productoNombre, string facturaNum) {
                 DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         facturaID,
@@ -439,7 +449,8 @@ namespace CapaPresentacion {
                         productoCantidad,
                         facturaTotal,
                         productoPrecioUnitario,
-                        productoNombre};
+                        productoNombre,
+                        facturaNum};
                 rowDataTable1Row.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDataTable1Row);
                 return rowDataTable1Row;
@@ -470,6 +481,7 @@ namespace CapaPresentacion {
                 this.columnfacturaTotal = base.Columns["facturaTotal"];
                 this.columnproductoPrecioUnitario = base.Columns["productoPrecioUnitario"];
                 this.columnproductoNombre = base.Columns["productoNombre"];
+                this.columnfacturaNum = base.Columns["facturaNum"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -491,6 +503,8 @@ namespace CapaPresentacion {
                 base.Columns.Add(this.columnproductoPrecioUnitario);
                 this.columnproductoNombre = new global::System.Data.DataColumn("productoNombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproductoNombre);
+                this.columnfacturaNum = new global::System.Data.DataColumn("facturaNum", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnfacturaNum);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -762,6 +776,22 @@ namespace CapaPresentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string facturaNum {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable1.facturaNumColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'facturaNum\' de la tabla \'DataTable1\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable1.facturaNumColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsfacturaIDNull() {
                 return this.IsNull(this.tableDataTable1.facturaIDColumn);
             }
@@ -854,6 +884,18 @@ namespace CapaPresentacion {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetproductoNombreNull() {
                 this[this.tableDataTable1.productoNombreColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsfacturaNumNull() {
+                return this.IsNull(this.tableDataTable1.facturaNumColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetfacturaNumNull() {
+                this[this.tableDataTable1.facturaNumColumn] = global::System.Convert.DBNull;
             }
         }
         

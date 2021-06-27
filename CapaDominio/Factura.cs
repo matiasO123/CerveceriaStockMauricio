@@ -14,7 +14,7 @@ namespace CapaDominio
         {
             ConexionGeneral CG = new ConexionGeneral();
             
-            return CG.Consultor("SELECT * FROM Factura");
+            return CG.Consultor("SELECT * FROM Factura order by facturaID desc");
         }
 
 

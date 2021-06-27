@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatosPropio.cs" />
     <Compile Include="Factura.cs" />
     <Compile Include="Stock.cs" />
     <Compile Include="Producto.cs" />

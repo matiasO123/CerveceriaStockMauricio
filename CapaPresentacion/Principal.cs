@@ -133,5 +133,10 @@ namespace CapaPresentacion
             }*/
            
         }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            AbrirFormHija(new DatosPropios());
+        }
     }
 }

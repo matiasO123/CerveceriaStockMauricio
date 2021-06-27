@@ -16,7 +16,7 @@ namespace CapaPresentacion
         }
 
         //constructor para cargar la factura para editarla
-        public FacturaCrear(int id, string nombre, string descuento, string fecha)
+        public FacturaCrear(int id, string nombre, string descuento, string fecha, string num)
         {
             InitializeComponent();
 
@@ -43,6 +43,7 @@ namespace CapaPresentacion
             textBoxNombre.Text = nombre;
             facturaFecha.Text = fecha;
             textoDescuento.Text = descuento;
+            textBoxNro.Text = num;
 
 
             //BOTONES
