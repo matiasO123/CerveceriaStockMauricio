@@ -379,6 +379,20 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\btnMenu.png" />
+    <None Include="Resources\btnmenu2.png" />
+    <None Include="Resources\btnMenu1.png" />
+    <None Include="Resources\PrincipalOficial.png" />
+    <None Include="Resources\btnF4.png" />
+    <None Include="Resources\btnL9.png" />
+    <None Include="Resources\btnS3.png" />
+    <None Include="Resources\btnP8.png" />
+    <None Include="Resources\btnM10.png" />
+    <None Include="Resources\Facturas.png" />
+    <None Include="Resources\Lista.png" />
+    <None Include="Resources\Stock.png" />
+    <None Include="Resources\Productos.png" />
+    <None Include="Resources\d.png" />
     <Content Include="SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

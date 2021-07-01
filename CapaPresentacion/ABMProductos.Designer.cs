@@ -69,7 +69,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.panelAumentoMultiple = new System.Windows.Forms.Panel();
@@ -86,7 +85,6 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelNuevoProducto.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panelAumentoMultiple.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -620,21 +618,12 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.label1);
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel6.Location = new System.Drawing.Point(3, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(386, 71);
+            this.panel6.Size = new System.Drawing.Size(537, 92);
             this.panel6.TabIndex = 39;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 34F);
-            this.label1.Location = new System.Drawing.Point(8, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(344, 58);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Lista de Precios";
             // 
             // printPreviewDialog1
             // 
@@ -798,8 +787,6 @@
             this.panel2.ResumeLayout(false);
             this.panelNuevoProducto.ResumeLayout(false);
             this.panelNuevoProducto.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panelAumentoMultiple.ResumeLayout(false);
             this.panelAumentoMultiple.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -848,7 +835,6 @@
         private System.Windows.Forms.Label labelBusquedaNombre;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Panel panelAumentoMultiple;

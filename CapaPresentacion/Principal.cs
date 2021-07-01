@@ -138,5 +138,6 @@ namespace CapaPresentacion
         {
             AbrirFormHija(new DatosPropios());
         }
+
     }
 }

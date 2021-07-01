@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturaCrear));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,8 +71,9 @@
             this.labelPrecioTotal = new System.Windows.Forms.Label();
             this.labelPrecioFinal = new System.Windows.Forms.Label();
             this.labelPrecioFinalEntero = new System.Windows.Forms.Label();
-            this.agregarProd = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxNro = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.buttonEliminarProducto = new System.Windows.Forms.Button();
@@ -79,19 +81,16 @@
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewEditar = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBoxNro = new System.Windows.Forms.TextBox();
+            this.agregarProd = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panelAgregarProd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditar)).BeginInit();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -539,20 +538,6 @@
             this.labelPrecioFinalEntero.Size = new System.Drawing.Size(2, 45);
             this.labelPrecioFinalEntero.TabIndex = 35;
             // 
-            // agregarProd
-            // 
-            this.agregarProd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.agregarProd.Image = global::CapaPresentacion.Properties.Resources.round_add_circle_outline_black_18dp;
-            this.agregarProd.Location = new System.Drawing.Point(277, 138);
-            this.agregarProd.Name = "agregarProd";
-            this.agregarProd.Size = new System.Drawing.Size(36, 36);
-            this.agregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.agregarProd.TabIndex = 16;
-            this.agregarProd.TabStop = false;
-            this.agregarProd.Click += new System.EventHandler(this.agregarProd_Click);
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -584,6 +569,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(317, 383);
             this.panel1.TabIndex = 36;
+            // 
+            // textBoxNro
+            // 
+            this.textBoxNro.BackColor = System.Drawing.Color.White;
+            this.textBoxNro.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNro.Location = new System.Drawing.Point(88, 14);
+            this.textBoxNro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNro.Name = "textBoxNro";
+            this.textBoxNro.Size = new System.Drawing.Size(225, 25);
+            this.textBoxNro.TabIndex = 38;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
+            this.label14.Location = new System.Drawing.Point(7, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 20);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Nro";
             // 
             // textBox3
             // 
@@ -646,7 +651,6 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.panel2);
@@ -690,44 +694,29 @@
             this.dataGridViewEditar.TabIndex = 38;
             this.dataGridViewEditar.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 34F);
-            this.label1.Location = new System.Drawing.Point(10, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(209, 58);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Facturas ";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel4.Location = new System.Drawing.Point(4, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(232, 79);
+            this.panel4.Size = new System.Drawing.Size(417, 79);
             this.panel4.TabIndex = 38;
             // 
-            // label14
+            // agregarProd
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label14.Location = new System.Drawing.Point(7, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 20);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "Nro";
-            // 
-            // textBoxNro
-            // 
-            this.textBoxNro.BackColor = System.Drawing.Color.White;
-            this.textBoxNro.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNro.Location = new System.Drawing.Point(88, 14);
-            this.textBoxNro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxNro.Name = "textBoxNro";
-            this.textBoxNro.Size = new System.Drawing.Size(225, 25);
-            this.textBoxNro.TabIndex = 38;
+            this.agregarProd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.agregarProd.Image = global::CapaPresentacion.Properties.Resources.round_add_circle_outline_black_18dp;
+            this.agregarProd.Location = new System.Drawing.Point(277, 138);
+            this.agregarProd.Name = "agregarProd";
+            this.agregarProd.Size = new System.Drawing.Size(36, 36);
+            this.agregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.agregarProd.TabIndex = 16;
+            this.agregarProd.TabStop = false;
+            this.agregarProd.Click += new System.EventHandler(this.agregarProd_Click);
             // 
             // FacturaCrear
             // 
@@ -748,15 +737,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panelAgregarProd.ResumeLayout(false);
             this.panelAgregarProd.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditar)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -804,7 +791,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.DataGridView dataGridViewEditar;
