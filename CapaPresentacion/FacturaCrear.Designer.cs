@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturaCrear));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -77,20 +76,23 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.buttonEliminarProducto = new System.Windows.Forms.Button();
+            this.agregarProd = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonGuardar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewEditar = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.agregarProd = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panelAgregarProd.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -132,14 +134,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ProductoId,
@@ -148,16 +150,16 @@
             this.productoCantidad,
             this.productoPrecio,
             this.productoPrecioFin});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView1.Location = new System.Drawing.Point(322, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(326, 19);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -165,7 +167,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(616, 265);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 282);
             this.dataGridView1.TabIndex = 4;
             // 
             // ProductoId
@@ -219,7 +221,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label5.Location = new System.Drawing.Point(7, 219);
+            this.label5.Location = new System.Drawing.Point(7, 220);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 5;
@@ -233,7 +235,7 @@
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(225, 25);
-            this.textBoxNombre.TabIndex = 8;
+            this.textBoxNombre.TabIndex = 2;
             // 
             // facturaFecha
             // 
@@ -241,7 +243,7 @@
             this.facturaFecha.Location = new System.Drawing.Point(88, 84);
             this.facturaFecha.Name = "facturaFecha";
             this.facturaFecha.Size = new System.Drawing.Size(225, 25);
-            this.facturaFecha.TabIndex = 10;
+            this.facturaFecha.TabIndex = 3;
             // 
             // labelPrecio
             // 
@@ -250,8 +252,8 @@
             this.labelPrecio.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
             this.labelPrecio.Location = new System.Drawing.Point(88, 219);
             this.labelPrecio.Name = "labelPrecio";
-            this.labelPrecio.Size = new System.Drawing.Size(52, 22);
-            this.labelPrecio.TabIndex = 14;
+            this.labelPrecio.Size = new System.Drawing.Size(52, 25);
+            this.labelPrecio.TabIndex = 8;
             // 
             // label9
             // 
@@ -294,7 +296,7 @@
             this.textoProducto.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoProducto.Name = "textoProducto";
             this.textoProducto.Size = new System.Drawing.Size(164, 25);
-            this.textoProducto.TabIndex = 20;
+            this.textoProducto.TabIndex = 5;
             // 
             // label17
             // 
@@ -375,7 +377,7 @@
             this.panelAgregarProd.Controls.Add(this.label9);
             this.panelAgregarProd.Controls.Add(this.textBox1);
             this.panelAgregarProd.Controls.Add(this.label2);
-            this.panelAgregarProd.Location = new System.Drawing.Point(104, 39);
+            this.panelAgregarProd.Location = new System.Drawing.Point(117, 59);
             this.panelAgregarProd.Name = "panelAgregarProd";
             this.panelAgregarProd.Size = new System.Drawing.Size(722, 417);
             this.panelAgregarProd.TabIndex = 21;
@@ -400,7 +402,7 @@
             this.textoUnidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoUnidad.Name = "textoUnidad";
             this.textoUnidad.Size = new System.Drawing.Size(52, 25);
-            this.textoUnidad.TabIndex = 26;
+            this.textoUnidad.TabIndex = 6;
             // 
             // label8
             // 
@@ -420,7 +422,7 @@
             this.textBoxCantidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxCantidad.Name = "textBoxCantidad";
             this.textBoxCantidad.Size = new System.Drawing.Size(71, 25);
-            this.textBoxCantidad.TabIndex = 24;
+            this.textBoxCantidad.TabIndex = 7;
             this.textBoxCantidad.TextChanged += new System.EventHandler(this.textBoxCantidad_TextChanged);
             // 
             // label6
@@ -460,7 +462,7 @@
             // buttonCerrarFactura
             // 
             this.buttonCerrarFactura.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.buttonCerrarFactura.Location = new System.Drawing.Point(3, 74);
+            this.buttonCerrarFactura.Location = new System.Drawing.Point(3, 83);
             this.buttonCerrarFactura.Name = "buttonCerrarFactura";
             this.buttonCerrarFactura.Size = new System.Drawing.Size(124, 34);
             this.buttonCerrarFactura.TabIndex = 29;
@@ -474,7 +476,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label11.Location = new System.Drawing.Point(341, 13);
+            this.label11.Location = new System.Drawing.Point(376, 26);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 20);
             this.label11.TabIndex = 30;
@@ -485,7 +487,7 @@
             this.textoDescuento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.textoDescuento.BackColor = System.Drawing.Color.White;
             this.textoDescuento.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoDescuento.Location = new System.Drawing.Point(483, 13);
+            this.textoDescuento.Location = new System.Drawing.Point(518, 26);
             this.textoDescuento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoDescuento.Name = "textoDescuento";
             this.textoDescuento.Size = new System.Drawing.Size(119, 25);
@@ -497,7 +499,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label12.Location = new System.Drawing.Point(151, 217);
+            this.label12.Location = new System.Drawing.Point(146, 220);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(95, 20);
             this.label12.TabIndex = 32;
@@ -508,10 +510,10 @@
             this.labelPrecioTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioTotal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.labelPrecioTotal.Location = new System.Drawing.Point(242, 215);
+            this.labelPrecioTotal.Location = new System.Drawing.Point(242, 218);
             this.labelPrecioTotal.Name = "labelPrecioTotal";
-            this.labelPrecioTotal.Size = new System.Drawing.Size(71, 22);
-            this.labelPrecioTotal.TabIndex = 33;
+            this.labelPrecioTotal.Size = new System.Drawing.Size(71, 25);
+            this.labelPrecioTotal.TabIndex = 9;
             // 
             // labelPrecioFinal
             // 
@@ -519,7 +521,7 @@
             this.labelPrecioFinal.AutoSize = true;
             this.labelPrecioFinal.BackColor = System.Drawing.Color.Transparent;
             this.labelPrecioFinal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinal.Location = new System.Drawing.Point(337, 52);
+            this.labelPrecioFinal.Location = new System.Drawing.Point(373, 74);
             this.labelPrecioFinal.Name = "labelPrecioFinal";
             this.labelPrecioFinal.Size = new System.Drawing.Size(90, 43);
             this.labelPrecioFinal.TabIndex = 34;
@@ -533,7 +535,7 @@
             this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(425, 54);
+            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(460, 67);
             this.labelPrecioFinalEntero.Name = "labelPrecioFinalEntero";
             this.labelPrecioFinalEntero.Size = new System.Drawing.Size(2, 45);
             this.labelPrecioFinalEntero.TabIndex = 35;
@@ -565,9 +567,9 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(3, 28);
+            this.panel1.Location = new System.Drawing.Point(3, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(317, 383);
+            this.panel1.Size = new System.Drawing.Size(317, 420);
             this.panel1.TabIndex = 36;
             // 
             // textBoxNro
@@ -578,7 +580,7 @@
             this.textBoxNro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNro.Name = "textBoxNro";
             this.textBoxNro.Size = new System.Drawing.Size(225, 25);
-            this.textBoxNro.TabIndex = 38;
+            this.textBoxNro.TabIndex = 1;
             // 
             // label14
             // 
@@ -598,7 +600,7 @@
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(164, 25);
-            this.textBox3.TabIndex = 36;
+            this.textBox3.TabIndex = 4;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label13
@@ -622,9 +624,22 @@
             this.buttonEliminarProducto.UseVisualStyleBackColor = true;
             this.buttonEliminarProducto.Click += new System.EventHandler(this.buttonEliminarProducto_Click);
             // 
+            // agregarProd
+            // 
+            this.agregarProd.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.agregarProd.Image = global::CapaPresentacion.Properties.Resources.round_add_circle_outline_black_18dp;
+            this.agregarProd.Location = new System.Drawing.Point(273, 140);
+            this.agregarProd.Name = "agregarProd";
+            this.agregarProd.Size = new System.Drawing.Size(36, 36);
+            this.agregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.agregarProd.TabIndex = 16;
+            this.agregarProd.TabStop = false;
+            this.agregarProd.Click += new System.EventHandler(this.agregarProd_Click);
+            // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.buttonGuardar);
             this.panel2.Controls.Add(this.labelPrecioFinalEntero);
@@ -632,15 +647,15 @@
             this.panel2.Controls.Add(this.labelPrecioFinal);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.textoDescuento);
-            this.panel2.Location = new System.Drawing.Point(326, 301);
+            this.panel2.Location = new System.Drawing.Point(326, 303);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(605, 110);
+            this.panel2.Size = new System.Drawing.Size(640, 123);
             this.panel2.TabIndex = 37;
             // 
             // buttonGuardar
             // 
             this.buttonGuardar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.buttonGuardar.Location = new System.Drawing.Point(193, 75);
+            this.buttonGuardar.Location = new System.Drawing.Point(193, 83);
             this.buttonGuardar.Name = "buttonGuardar";
             this.buttonGuardar.Size = new System.Drawing.Size(124, 34);
             this.buttonGuardar.TabIndex = 36;
@@ -656,9 +671,10 @@
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.dataGridViewEditar);
-            this.panel3.Location = new System.Drawing.Point(4, 56);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 79);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(938, 417);
+            this.panel3.Size = new System.Drawing.Size(973, 436);
             this.panel3.TabIndex = 34;
             // 
             // dataGridViewEditar
@@ -667,24 +683,24 @@
             this.dataGridViewEditar.AllowUserToDeleteRows = false;
             this.dataGridViewEditar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewEditar.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEditar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEditar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridViewEditar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewEditar.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewEditar.Location = new System.Drawing.Point(322, 29);
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewEditar.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewEditar.Location = new System.Drawing.Point(326, 19);
             this.dataGridViewEditar.MultiSelect = false;
             this.dataGridViewEditar.Name = "dataGridViewEditar";
             this.dataGridViewEditar.ReadOnly = true;
@@ -697,36 +713,34 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel4.Location = new System.Drawing.Point(4, 0);
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(417, 79);
+            this.panel4.Size = new System.Drawing.Size(973, 79);
             this.panel4.TabIndex = 38;
             // 
-            // agregarProd
+            // pictureBox1
             // 
-            this.agregarProd.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.agregarProd.Image = global::CapaPresentacion.Properties.Resources.round_add_circle_outline_black_18dp;
-            this.agregarProd.Location = new System.Drawing.Point(277, 138);
-            this.agregarProd.Name = "agregarProd";
-            this.agregarProd.Size = new System.Drawing.Size(36, 36);
-            this.agregarProd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.agregarProd.TabIndex = 16;
-            this.agregarProd.TabStop = false;
-            this.agregarProd.Click += new System.EventHandler(this.agregarProd_Click);
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.fac;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(400, 79);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FacturaCrear
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(946, 475);
-            this.Controls.Add(this.panel4);
+            this.ClientSize = new System.Drawing.Size(973, 515);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelAgregarProd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FacturaCrear";
@@ -739,11 +753,14 @@
             this.panelAgregarProd.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.agregarProd)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -800,5 +817,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBoxNro;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

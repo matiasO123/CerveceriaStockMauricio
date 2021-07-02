@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="28052896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="El Galpon.exe" size="28095904">
       <assemblyIdentity name="El Galpon" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Iw/x3vZLtJWjI0f7HaZic0eAQwLhcQViog7uc9AdKYw=</dsig:DigestValue>
+        <dsig:DigestValue>gQ8S5g2hqXDpqmWU7VYWvQgO9GC4/bUN9Cgwi0TjUqc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

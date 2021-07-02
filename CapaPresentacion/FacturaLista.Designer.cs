@@ -29,23 +29,24 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FacturaLista));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.botonAgregar = new System.Windows.Forms.Button();
             this.botonVerFactura = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxNro = new System.Windows.Forms.TextBox();
+            this.labelNro = new System.Windows.Forms.Label();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonEditar = new System.Windows.Forms.Button();
             this.puntoFinal = new System.Windows.Forms.PictureBox();
             this.buttonImprimir = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.labelPrecioFinalEntero = new System.Windows.Forms.Label();
@@ -64,12 +65,10 @@ namespace CapaPresentacion
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelBorrar = new System.Windows.Forms.Label();
             this.buttonBorrar = new System.Windows.Forms.Button();
-            this.labelNro = new System.Windows.Forms.Label();
-            this.textBoxNro = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.puntoFinal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -83,14 +82,14 @@ namespace CapaPresentacion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.White;
             this.dataGridView1.Location = new System.Drawing.Point(14, 83);
@@ -98,31 +97,22 @@ namespace CapaPresentacion
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.RowTemplate.DividerHeight = 3;
             this.dataGridView1.RowTemplate.Height = 30;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(920, 326);
+            this.dataGridView1.Size = new System.Drawing.Size(971, 360);
             this.dataGridView1.TabIndex = 1;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label1);
+            this.panel6.BackgroundImage = global::CapaPresentacion.Properties.Resources.f;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel6.Location = new System.Drawing.Point(4, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(386, 71);
+            this.panel6.Size = new System.Drawing.Size(544, 77);
             this.panel6.TabIndex = 40;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei Light", 34F);
-            this.label1.Location = new System.Drawing.Point(8, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 58);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Lista de Facturas";
             // 
             // panel2
             // 
@@ -131,9 +121,9 @@ namespace CapaPresentacion
             this.panel2.Controls.Add(this.botonAgregar);
             this.panel2.Controls.Add(this.botonVerFactura);
             this.panel2.Controls.Add(this.botonEliminar);
-            this.panel2.Location = new System.Drawing.Point(88, 413);
+            this.panel2.Location = new System.Drawing.Point(88, 447);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(761, 50);
+            this.panel2.Size = new System.Drawing.Size(812, 50);
             this.panel2.TabIndex = 55;
             // 
             // botonAgregar
@@ -158,7 +148,7 @@ namespace CapaPresentacion
             this.botonVerFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonVerFactura.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonVerFactura.ForeColor = System.Drawing.Color.Black;
-            this.botonVerFactura.Location = new System.Drawing.Point(152, 4);
+            this.botonVerFactura.Location = new System.Drawing.Point(178, 4);
             this.botonVerFactura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonVerFactura.Name = "botonVerFactura";
             this.botonVerFactura.Size = new System.Drawing.Size(154, 43);
@@ -174,7 +164,7 @@ namespace CapaPresentacion
             this.botonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botonEliminar.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonEliminar.ForeColor = System.Drawing.Color.Black;
-            this.botonEliminar.Location = new System.Drawing.Point(447, 4);
+            this.botonEliminar.Location = new System.Drawing.Point(498, 4);
             this.botonEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(154, 43);
@@ -186,13 +176,13 @@ namespace CapaPresentacion
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.textBoxNro);
             this.panel1.Controls.Add(this.labelNro);
             this.panel1.Controls.Add(this.buttonEliminar);
             this.panel1.Controls.Add(this.buttonEditar);
             this.panel1.Controls.Add(this.puntoFinal);
             this.panel1.Controls.Add(this.buttonImprimir);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.labelPrecioFinalEntero);
@@ -210,9 +200,48 @@ namespace CapaPresentacion
             this.panel1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(946, 475);
+            this.panel1.Size = new System.Drawing.Size(997, 509);
             this.panel1.TabIndex = 56;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.fac;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(997, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 83;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBoxNro
+            // 
+            this.textBoxNro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxNro.BackColor = System.Drawing.Color.White;
+            this.textBoxNro.Enabled = false;
+            this.textBoxNro.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxNro.Location = new System.Drawing.Point(742, 104);
+            this.textBoxNro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBoxNro.Name = "textBoxNro";
+            this.textBoxNro.ReadOnly = true;
+            this.textBoxNro.Size = new System.Drawing.Size(184, 25);
+            this.textBoxNro.TabIndex = 82;
+            // 
+            // labelNro
+            // 
+            this.labelNro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelNro.AutoSize = true;
+            this.labelNro.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNro.Location = new System.Drawing.Point(689, 104);
+            this.labelNro.Name = "labelNro";
+            this.labelNro.Size = new System.Drawing.Size(50, 26);
+            this.labelNro.TabIndex = 81;
+            this.labelNro.Text = "Nro";
             // 
             // buttonEliminar
             // 
@@ -220,7 +249,7 @@ namespace CapaPresentacion
             this.buttonEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.buttonEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEliminar.ForeColor = System.Drawing.Color.Black;
-            this.buttonEliminar.Location = new System.Drawing.Point(325, 435);
+            this.buttonEliminar.Location = new System.Drawing.Point(376, 469);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(98, 34);
             this.buttonEliminar.TabIndex = 80;
@@ -234,7 +263,7 @@ namespace CapaPresentacion
             this.buttonEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonEditar.ForeColor = System.Drawing.Color.Black;
-            this.buttonEditar.Location = new System.Drawing.Point(221, 435);
+            this.buttonEditar.Location = new System.Drawing.Point(272, 469);
             this.buttonEditar.Name = "buttonEditar";
             this.buttonEditar.Size = new System.Drawing.Size(98, 34);
             this.buttonEditar.TabIndex = 79;
@@ -247,7 +276,7 @@ namespace CapaPresentacion
             this.puntoFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.puntoFinal.BackColor = System.Drawing.Color.Transparent;
             this.puntoFinal.Enabled = false;
-            this.puntoFinal.Location = new System.Drawing.Point(945, 475);
+            this.puntoFinal.Location = new System.Drawing.Point(996, 509);
             this.puntoFinal.Name = "puntoFinal";
             this.puntoFinal.Size = new System.Drawing.Size(10, 10);
             this.puntoFinal.TabIndex = 78;
@@ -260,23 +289,13 @@ namespace CapaPresentacion
             this.buttonImprimir.AutoSize = true;
             this.buttonImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonImprimir.ForeColor = System.Drawing.Color.Black;
-            this.buttonImprimir.Location = new System.Drawing.Point(12, 435);
+            this.buttonImprimir.Location = new System.Drawing.Point(12, 469);
             this.buttonImprimir.Name = "buttonImprimir";
             this.buttonImprimir.Size = new System.Drawing.Size(98, 34);
             this.buttonImprimir.TabIndex = 76;
             this.buttonImprimir.Text = "Imprimir";
             this.buttonImprimir.UseVisualStyleBackColor = true;
             this.buttonImprimir.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(19, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(342, 47);
-            this.label6.TabIndex = 75;
-            this.label6.Text = "Detalles de factura";
             // 
             // label5
             // 
@@ -285,7 +304,7 @@ namespace CapaPresentacion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(351, 71);
+            this.label5.Location = new System.Drawing.Point(351, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 26);
             this.label5.TabIndex = 74;
@@ -298,7 +317,7 @@ namespace CapaPresentacion
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 71);
+            this.label2.Location = new System.Drawing.Point(22, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 26);
             this.label2.TabIndex = 73;
@@ -310,7 +329,7 @@ namespace CapaPresentacion
             this.labelPrecioFinalEntero.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelPrecioFinalEntero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelPrecioFinalEntero.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(713, 432);
+            this.labelPrecioFinalEntero.Location = new System.Drawing.Point(764, 466);
             this.labelPrecioFinalEntero.Name = "labelPrecioFinalEntero";
             this.labelPrecioFinalEntero.Size = new System.Drawing.Size(230, 37);
             this.labelPrecioFinalEntero.TabIndex = 72;
@@ -320,7 +339,7 @@ namespace CapaPresentacion
             this.labelPrecioFinal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPrecioFinal.AutoSize = true;
             this.labelPrecioFinal.Font = new System.Drawing.Font("Microsoft JhengHei Light", 25F);
-            this.labelPrecioFinal.Location = new System.Drawing.Point(630, 429);
+            this.labelPrecioFinal.Location = new System.Drawing.Point(681, 463);
             this.labelPrecioFinal.Name = "labelPrecioFinal";
             this.labelPrecioFinal.Size = new System.Drawing.Size(90, 43);
             this.labelPrecioFinal.TabIndex = 71;
@@ -332,7 +351,7 @@ namespace CapaPresentacion
             this.textoDescuento.BackColor = System.Drawing.Color.White;
             this.textoDescuento.Enabled = false;
             this.textoDescuento.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoDescuento.Location = new System.Drawing.Point(528, 441);
+            this.textoDescuento.Location = new System.Drawing.Point(579, 475);
             this.textoDescuento.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textoDescuento.Name = "textoDescuento";
             this.textoDescuento.ReadOnly = true;
@@ -345,7 +364,7 @@ namespace CapaPresentacion
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft JhengHei Light", 12F);
-            this.label11.Location = new System.Drawing.Point(437, 443);
+            this.label11.Location = new System.Drawing.Point(488, 477);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(87, 20);
             this.label11.TabIndex = 69;
@@ -356,7 +375,7 @@ namespace CapaPresentacion
             this.buttonCerrarFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCerrarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCerrarFactura.ForeColor = System.Drawing.Color.Black;
-            this.buttonCerrarFactura.Location = new System.Drawing.Point(117, 435);
+            this.buttonCerrarFactura.Location = new System.Drawing.Point(168, 469);
             this.buttonCerrarFactura.Name = "buttonCerrarFactura";
             this.buttonCerrarFactura.Size = new System.Drawing.Size(98, 34);
             this.buttonCerrarFactura.TabIndex = 68;
@@ -379,7 +398,7 @@ namespace CapaPresentacion
             | System.Windows.Forms.AnchorStyles.Left)));
             this.facturaFecha.Enabled = false;
             this.facturaFecha.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F);
-            this.facturaFecha.Location = new System.Drawing.Point(427, 72);
+            this.facturaFecha.Location = new System.Drawing.Point(427, 104);
             this.facturaFecha.Name = "facturaFecha";
             this.facturaFecha.Size = new System.Drawing.Size(256, 25);
             this.facturaFecha.TabIndex = 66;
@@ -391,7 +410,7 @@ namespace CapaPresentacion
             this.textBoxNombre.BackColor = System.Drawing.Color.White;
             this.textBoxNombre.Enabled = false;
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNombre.Location = new System.Drawing.Point(109, 72);
+            this.textBoxNombre.Location = new System.Drawing.Point(109, 104);
             this.textBoxNombre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.ReadOnly = true;
@@ -412,19 +431,19 @@ namespace CapaPresentacion
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Enabled = false;
             this.dataGridView2.GridColor = System.Drawing.SystemColors.MenuHighlight;
-            this.dataGridView2.Location = new System.Drawing.Point(14, 108);
+            this.dataGridView2.Location = new System.Drawing.Point(14, 143);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView2.MultiSelect = false;
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F);
+            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.RowTemplate.DividerHeight = 3;
             this.dataGridView2.RowTemplate.Height = 25;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(929, 321);
+            this.dataGridView2.Size = new System.Drawing.Size(980, 320);
             this.dataGridView2.TabIndex = 64;
             // 
             // label4
@@ -466,7 +485,7 @@ namespace CapaPresentacion
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(599, 52);
+            this.dateTimePicker1.Location = new System.Drawing.Point(650, 52);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(250, 25);
             this.dateTimePicker1.TabIndex = 57;
@@ -476,7 +495,7 @@ namespace CapaPresentacion
             this.labelBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelBorrar.AutoSize = true;
             this.labelBorrar.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBorrar.Location = new System.Drawing.Point(595, 29);
+            this.labelBorrar.Location = new System.Drawing.Point(646, 29);
             this.labelBorrar.Name = "labelBorrar";
             this.labelBorrar.Size = new System.Drawing.Size(217, 20);
             this.labelBorrar.TabIndex = 58;
@@ -487,7 +506,7 @@ namespace CapaPresentacion
             this.buttonBorrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBorrar.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrar.Location = new System.Drawing.Point(859, 52);
+            this.buttonBorrar.Location = new System.Drawing.Point(910, 52);
             this.buttonBorrar.Name = "buttonBorrar";
             this.buttonBorrar.Size = new System.Drawing.Size(75, 25);
             this.buttonBorrar.TabIndex = 59;
@@ -495,39 +514,12 @@ namespace CapaPresentacion
             this.buttonBorrar.UseVisualStyleBackColor = true;
             this.buttonBorrar.Click += new System.EventHandler(this.buttonBorrar_Click);
             // 
-            // labelNro
-            // 
-            this.labelNro.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelNro.AutoSize = true;
-            this.labelNro.Font = new System.Drawing.Font("Microsoft JhengHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNro.Location = new System.Drawing.Point(689, 72);
-            this.labelNro.Name = "labelNro";
-            this.labelNro.Size = new System.Drawing.Size(50, 26);
-            this.labelNro.TabIndex = 81;
-            this.labelNro.Text = "Nro";
-            // 
-            // textBoxNro
-            // 
-            this.textBoxNro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxNro.BackColor = System.Drawing.Color.White;
-            this.textBoxNro.Enabled = false;
-            this.textBoxNro.Font = new System.Drawing.Font("Microsoft JhengHei Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNro.Location = new System.Drawing.Point(742, 72);
-            this.textBoxNro.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxNro.Name = "textBoxNro";
-            this.textBoxNro.ReadOnly = true;
-            this.textBoxNro.Size = new System.Drawing.Size(184, 25);
-            this.textBoxNro.TabIndex = 82;
-            // 
             // FacturaLista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(946, 475);
+            this.ClientSize = new System.Drawing.Size(997, 509);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
@@ -540,11 +532,10 @@ namespace CapaPresentacion
             this.Text = "FacturaLista";
             this.Load += new System.EventHandler(this.FacturaLista_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.puntoFinal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -555,7 +546,6 @@ namespace CapaPresentacion
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button botonAgregar;
         private System.Windows.Forms.Button botonVerFactura;
@@ -578,7 +568,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn productoPrecioFin;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Drawing.Printing.PrintDocument printDocument1;
@@ -592,5 +581,6 @@ namespace CapaPresentacion
         private System.Windows.Forms.Button buttonBorrar;
         private System.Windows.Forms.TextBox textBoxNro;
         private System.Windows.Forms.Label labelNro;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

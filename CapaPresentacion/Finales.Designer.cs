@@ -50,20 +50,18 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Snow;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.36364F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.63636F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.72727F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.27273F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -85,7 +83,7 @@
             this.tableLayoutPanel2.Controls.Add(this.labelSemanaPrecio, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.labelMesPrecio, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.labelAnioPrecio, 1, 4);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 84);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 90);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.19512F));
@@ -93,7 +91,8 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.95122F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.95122F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.95122F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 363);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(794, 357);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // labelBuscador
@@ -105,7 +104,7 @@
             this.labelBuscador.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBuscador.Location = new System.Drawing.Point(3, 0);
             this.labelBuscador.Name = "labelBuscador";
-            this.labelBuscador.Size = new System.Drawing.Size(392, 44);
+            this.labelBuscador.Size = new System.Drawing.Size(392, 43);
             this.labelBuscador.TabIndex = 0;
             this.labelBuscador.Text = "Buscador";
             this.labelBuscador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,15 +115,17 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(401, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(390, 38);
+            this.panel1.Size = new System.Drawing.Size(390, 37);
             this.panel1.TabIndex = 2;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(106, 10);
+            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F);
+            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(194, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(390, 33);
             this.dateTimePicker1.TabIndex = 9;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -135,9 +136,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDia.AutoSize = true;
             this.labelDia.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDia.Location = new System.Drawing.Point(3, 44);
+            this.labelDia.Location = new System.Drawing.Point(3, 43);
             this.labelDia.Name = "labelDia";
-            this.labelDia.Size = new System.Drawing.Size(392, 79);
+            this.labelDia.Size = new System.Drawing.Size(392, 78);
             this.labelDia.TabIndex = 1;
             this.labelDia.Text = "Día";
             this.labelDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -149,9 +150,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSemana.AutoSize = true;
             this.labelSemana.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSemana.Location = new System.Drawing.Point(3, 123);
+            this.labelSemana.Location = new System.Drawing.Point(3, 121);
             this.labelSemana.Name = "labelSemana";
-            this.labelSemana.Size = new System.Drawing.Size(392, 79);
+            this.labelSemana.Size = new System.Drawing.Size(392, 78);
             this.labelSemana.TabIndex = 2;
             this.labelSemana.Text = "Semana";
             this.labelSemana.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -163,9 +164,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMes.AutoSize = true;
             this.labelMes.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMes.Location = new System.Drawing.Point(3, 202);
+            this.labelMes.Location = new System.Drawing.Point(3, 199);
             this.labelMes.Name = "labelMes";
-            this.labelMes.Size = new System.Drawing.Size(392, 79);
+            this.labelMes.Size = new System.Drawing.Size(392, 78);
             this.labelMes.TabIndex = 3;
             this.labelMes.Text = "Mes";
             this.labelMes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,9 +178,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAnio.AutoSize = true;
             this.labelAnio.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnio.Location = new System.Drawing.Point(3, 281);
+            this.labelAnio.Location = new System.Drawing.Point(3, 277);
             this.labelAnio.Name = "labelAnio";
-            this.labelAnio.Size = new System.Drawing.Size(392, 82);
+            this.labelAnio.Size = new System.Drawing.Size(392, 80);
             this.labelAnio.TabIndex = 4;
             this.labelAnio.Text = "Año";
             this.labelAnio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,9 +192,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDiaPrecio.AutoSize = true;
             this.labelDiaPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDiaPrecio.Location = new System.Drawing.Point(401, 44);
+            this.labelDiaPrecio.Location = new System.Drawing.Point(401, 43);
             this.labelDiaPrecio.Name = "labelDiaPrecio";
-            this.labelDiaPrecio.Size = new System.Drawing.Size(390, 79);
+            this.labelDiaPrecio.Size = new System.Drawing.Size(390, 78);
             this.labelDiaPrecio.TabIndex = 5;
             this.labelDiaPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -204,9 +205,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSemanaPrecio.AutoSize = true;
             this.labelSemanaPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSemanaPrecio.Location = new System.Drawing.Point(401, 123);
+            this.labelSemanaPrecio.Location = new System.Drawing.Point(401, 121);
             this.labelSemanaPrecio.Name = "labelSemanaPrecio";
-            this.labelSemanaPrecio.Size = new System.Drawing.Size(390, 79);
+            this.labelSemanaPrecio.Size = new System.Drawing.Size(390, 78);
             this.labelSemanaPrecio.TabIndex = 6;
             this.labelSemanaPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -217,9 +218,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMesPrecio.AutoSize = true;
             this.labelMesPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMesPrecio.Location = new System.Drawing.Point(401, 202);
+            this.labelMesPrecio.Location = new System.Drawing.Point(401, 199);
             this.labelMesPrecio.Name = "labelMesPrecio";
-            this.labelMesPrecio.Size = new System.Drawing.Size(390, 79);
+            this.labelMesPrecio.Size = new System.Drawing.Size(390, 78);
             this.labelMesPrecio.TabIndex = 7;
             this.labelMesPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -230,18 +231,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAnioPrecio.AutoSize = true;
             this.labelAnioPrecio.Font = new System.Drawing.Font("Microsoft YaHei", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAnioPrecio.Location = new System.Drawing.Point(401, 281);
+            this.labelAnioPrecio.Location = new System.Drawing.Point(401, 277);
             this.labelAnioPrecio.Name = "labelAnioPrecio";
-            this.labelAnioPrecio.Size = new System.Drawing.Size(390, 82);
+            this.labelAnioPrecio.Size = new System.Drawing.Size(390, 80);
             this.labelAnioPrecio.TabIndex = 8;
             this.labelAnioPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.d;
+            this.pictureBox1.Image = global::CapaPresentacion.Properties.Resources.list1__1_;
             this.pictureBox1.Location = new System.Drawing.Point(3, 13);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(399, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(395, 71);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -277,8 +278,8 @@
         private System.Windows.Forms.Label labelSemanaPrecio;
         private System.Windows.Forms.Label labelMesPrecio;
         private System.Windows.Forms.Label labelAnioPrecio;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

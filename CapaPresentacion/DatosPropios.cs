@@ -45,5 +45,10 @@ namespace CapaPresentacion
             }
             
         }
+
+        private void labelTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

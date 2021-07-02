@@ -393,6 +393,12 @@
     <None Include="Resources\Stock.png" />
     <None Include="Resources\Productos.png" />
     <None Include="Resources\d.png" />
+    <None Include="Resources\list1.png" />
+    <None Include="Resources\list11.png" />
+    <None Include="Resources\list1 %281%29.png" />
+    <None Include="Resources\f.png" />
+    <None Include="Resources\s.png" />
+    <None Include="Resources\fac.png" />
     <Content Include="SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
