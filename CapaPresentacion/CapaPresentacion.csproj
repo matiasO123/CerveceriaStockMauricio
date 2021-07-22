@@ -17,7 +17,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>C:\Users\matia\Desktop\CRUXTOTAL\Publicados\Galpon9\</PublishUrl>
+    <PublishUrl>C:\Users\matia\Desktop\CRUXTOTAL\Publicados\Galpon10\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -29,7 +29,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://www.cruxms.com/CerveceriaStockMauricio/</InstallUrl>
     <UpdateUrl>http://www.cruxms.com/CerveceriaStockMauricio/</UpdateUrl>
-    <ApplicationRevision>29</ApplicationRevision>
+    <ApplicationRevision>30</ApplicationRevision>
     <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

@@ -53,7 +53,9 @@ namespace CapaPresentacion
             buttonGuardar.Visible = true;
             buttonEliminarProducto.Visible = true;
             buttonEliminarProducto.Enabled = true;
-            buttonAgregarProducto.Visible = true;         
+            buttonAgregarProducto.Visible = true;
+            
+            
         }
 
 
@@ -80,6 +82,7 @@ namespace CapaPresentacion
                 }
 
                 labelPrecioFinalEntero.Text = contador.ToString();
+                actualizarPrecioFinal();
             }
 
         }
@@ -146,6 +149,7 @@ namespace CapaPresentacion
                 labelPrecio.Text = dataGridView2.SelectedRows[0].Cells["productoPrecioVenta"].Value.ToString();
                 id = int.Parse(dataGridView2.SelectedRows[0].Cells["productoId"].Value.ToString());
                 //textBox3.Text = dataGridView2.SelectedRows[0].Cells["productoCodBarras"].Value.ToString();
+                textBox3.Text = "";
                 labelPrecioTotal.Text = dataGridView2.SelectedRows[0].Cells["productoPrecioVenta"].Value.ToString();
 
             }
@@ -415,6 +419,7 @@ namespace CapaPresentacion
                 {
                     textoProducto.Text = ddtt.Tables[0].Rows[0]["productoNombre"].ToString();
                     textoUnidad.Text = ddtt.Tables[0].Rows[0]["productoUnidadMedida"].ToString();
+                    labelPrecioTotal.Text = ddtt.Tables[0].Rows[0]["productoPrecioVenta"].ToString();
                     labelPrecio.Text = ddtt.Tables[0].Rows[0]["productoPrecioVenta"].ToString();
                     id = int.Parse(ddtt.Tables[0].Rows[0]["productoId"].ToString());
 
