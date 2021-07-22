@@ -145,7 +145,8 @@ namespace CapaPresentacion
                 textoUnidad.Text = dataGridView2.SelectedRows[0].Cells["productoUnidadMedida"].Value.ToString();
                 labelPrecio.Text = dataGridView2.SelectedRows[0].Cells["productoPrecioVenta"].Value.ToString();
                 id = int.Parse(dataGridView2.SelectedRows[0].Cells["productoId"].Value.ToString());
-                textBox3.Text = dataGridView2.SelectedRows[0].Cells["productoCodBarras"].Value.ToString();
+                //textBox3.Text = dataGridView2.SelectedRows[0].Cells["productoCodBarras"].Value.ToString();
+                labelPrecioTotal.Text = dataGridView2.SelectedRows[0].Cells["productoPrecioVenta"].Value.ToString();
 
             }
             textBoxCantidad.Text = "1";
