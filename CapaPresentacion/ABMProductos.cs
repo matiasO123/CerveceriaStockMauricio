@@ -451,7 +451,10 @@ namespace CapaPresentacion
                         }
                         DS.Clear();
 
-                        comboBoxUMedida.Items.Clear();
+                        if (1 == 2){
+                            comboBoxUMedida.Items.Clear();
+                        }
+                        
                         /*DS = producto.MostrarUnidadMedida();
                         foreach (DataRow row in DS.Tables[0].Rows)
                         {
