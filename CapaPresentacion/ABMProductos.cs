@@ -194,6 +194,13 @@ namespace CapaPresentacion
                 comboBoxNuevo.Items.Add(row["tipoNombre"].ToString());
             }
             DS.Clear();
+            textBoxNom.Text = "";
+            comboBoxNuevo.Text = "";
+            textBoxDescripcion.Text = "";
+            comboBoxUMedida.SelectedIndex = -1;
+            textBoxCantidad.Text = "";
+            textBoxPventa.Text = "";
+            textBoxCodigoBarras.Text = "";
 
             /*comboBoxUMedida.Items.Clear();
             DS = producto.MostrarUnidadMedida();
@@ -202,7 +209,7 @@ namespace CapaPresentacion
                 comboBoxUMedida.Items.Add(row["unidadMedidaNombre"].ToString());
             }*/
 
-            
+
 
         }
 
@@ -451,9 +458,9 @@ namespace CapaPresentacion
                         }
                         DS.Clear();
 
-                        if (1 == 2){
+                        /*if (1 == 2){
                             comboBoxUMedida.Items.Clear();
-                        }
+                        }*/
                         
                         /*DS = producto.MostrarUnidadMedida();
                         foreach (DataRow row in DS.Tables[0].Rows)
